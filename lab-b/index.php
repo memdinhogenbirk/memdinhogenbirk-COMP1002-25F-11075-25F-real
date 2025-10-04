@@ -16,10 +16,9 @@
 <!-- STEP 7: Add an appropriate height and width to the above IMG element - the SVG can be scaled to any size, unlike a bitmap (JPG, PNG, GIF), but keep it square -->
 <!-- STEP 8: Add an appropriate alt attribute to the IMG element above, describing the image -->
 			<img src="lab-b/images/html-logo.svg" height="300" width="300" alt="html lego logo svg"/>
-<!-- STEP 9: Validate your completed page at https://validator.w3.org/ and repair any errors - then .zip all your files up and submit your work -->
-<!-- STEP 10: Upload all files for this lab to your Web server in https://YOUR-SERVERNAME-HERE/week5/lab5/ (URL example would be on a Microsoft Azure server instance) -->
-			<h1>HTML, CSS, and JS Fundamentals</h1>
-			<h2>Building Blocks for Web Developers</h2>
+<!-- STEP 9: Commit your changes to your local repository, then push them to the remote repository -->
+
+<!-- STEP 10: Enable Github Pages on your remote repository, and submit the URL to this page to this lab in Blackboard -->
 		</header>
 		<!-- Page-level main content -->
 		<main>
