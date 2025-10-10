@@ -16,14 +16,10 @@
 			<h1>HTML, CSS, and JS Fundamentals</h1>
 			<h2>Building Blocks for Web Developers</h2>
 <!-- STEP 3: Build a NAV element for global Web site navigation -->
-			<nav>
-				<ul>
-					<li><a>Home</a></li>
-					<li><a href="red.php">Red Blocks</a></li>
-					<li><a href="blue.php">Blue Blocks</a></li>
-					<li><a href="yellow.php">Yellow Blocks</a></li>
-				</ul>
-			</nav>
+			<?php
+				//Grab Site Navigation
+				include("includes/nav.php")
+			?>
 <!-- STEP 4a: Let's build a list of hyperlinks inside the above NAV element linking this page to other pages in the site - create an unordered list element (UL) -->
 <!-- STEP 4b: Create a list item inside the UL (LI) -->
 <!-- STEP 4c: Insert an A element inside the LI, and add an href that points to the HTML page 'red.php' - include also some text for the hyperlink -->
