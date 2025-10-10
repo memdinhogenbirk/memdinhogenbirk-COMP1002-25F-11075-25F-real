@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--$ php -S 0.0.0.0:8000 -->
 	<head>
 		<meta charset="utf-8" />
 		<title>Home | COMP1002 HTML, CSS, and JS Fundamentals</title>
