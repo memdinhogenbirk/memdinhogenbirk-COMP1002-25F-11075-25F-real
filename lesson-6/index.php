@@ -89,7 +89,7 @@
 		<footer>
 <!-- STEP 8a: Create a NAV element in the FOOTER for the legal stuff -->
 		<nav>
-			
+			<a href="about/privacy-policy.php">Privacy Policy</a>
 		</nav>
 <!-- STEP 8b: Build a link to the page 'Privacy Policy' - note that the href will need to be a relative path that points from this page, down into the 'about' folder -->
 <!-- STEP 8c: Construct a second link that takes the visitor to the element with the id="personal-information" on the very same page, by appending the id value to the URL with a hash symbol (#personal-information) - this is called page-level navigation -->
