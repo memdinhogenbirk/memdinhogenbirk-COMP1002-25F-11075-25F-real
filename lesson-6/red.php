@@ -17,7 +17,7 @@
 			<!-- Global site navigation -->
 			
 <!-- STEP 5a: We are now marooned on this page with no way back to the home page except the 'Back' button - build an LI and an A element above pointing back to the index.php page -->
-					<?php
+			<?php
 				//Grab Site Navigation
 				include("includes/nav.php")
 			?>
