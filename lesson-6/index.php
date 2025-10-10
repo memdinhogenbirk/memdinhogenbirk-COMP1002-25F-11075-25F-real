@@ -18,7 +18,7 @@
 <!-- STEP 3: Build a NAV element for global Web site navigation -->
 			<nav>
 				<ul>
-					<li><a href= "index.php">Home</a></li>
+					<li><a>Home</a></li>
 					<li><a href="red.php">Red Blocks</a></li>
 					<li><a href="blue.php">Blue Blocks</a></li>
 					<li><a href="yellow.php">Yellow Blocks</a></li>
