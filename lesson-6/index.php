@@ -18,7 +18,10 @@
 <!-- STEP 3: Build a NAV element for global Web site navigation -->
 			<nav>
 				<ul>
+					<li><a href= "index.php">Home</a></li>
 					<li><a href="red.php">Red Blocks</a></li>
+					<li><a href="blue.php">Blue Blocks</a></li>
+					<li><a href="yellow.php">Yellow Blocks</a></li>
 				</ul>
 			</nav>
 <!-- STEP 4a: Let's build a list of hyperlinks inside the above NAV element linking this page to other pages in the site - create an unordered list element (UL) -->
