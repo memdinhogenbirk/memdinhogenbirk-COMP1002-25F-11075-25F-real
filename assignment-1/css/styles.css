@@ -1,14 +1,20 @@
-html {
-	font-family: verdana;
-	background-color: white;
+html {/**/
+	font-family: verdana;/*font style set to verdana cuz I think it looks nice*/
+	background-color: white;/*background color white*/
 }
 header {
-	padding: 1rem;
-
+	padding: 0.1rem;
+	border-bottom: 1px solid gray;
 }
 .nav-list {
-	list-style: none;/*remove bullet points*/
-	display: flex;
+	list-style: none;/*removes bullet points*/
+	display: flex;/*makes nav bar flex with window expansion, contraction*/
 	justify-content: center;
-	gap: 2rem;
+	
+	gap: 2rem;/*adds space between nav items*/
+}
+.nav-list li a{
+	text-decoration: none;/*removes underline*/
+	color: black;/*Text color black*/
+	padding: 0.5rem 1rem;/*adds padding to clickable area*/
 }
