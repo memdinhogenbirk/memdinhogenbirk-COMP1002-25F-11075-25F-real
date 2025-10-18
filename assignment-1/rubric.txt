@@ -1,0 +1,54 @@
+    Create a new folder in the repository for your lesson files called "/assignment-1/".
+    Construct a properly structured HTML document, including a proper DOCTYPE, character-encoding META tag, and a lang attribute on the HTML start tag.
+    Structure the page with appropriate page-level sectioning elements (header, main and footer) to construct the main document outline.
+    Think of the various pieces of information that you’d need to collect from someone to deliver them a pizza. This might include the following:
+    Number of pizzas
+    Size (number of slices)
+    Shape (square or round)
+    Toppings
+    Deep dish, thin crust or some other crust types
+    Take out, delivery, or eat-in g. And so on…
+    Build a FORM that would allow a visitor to order their pizza(s), including a variety of form controls such as:
+    labels
+    fieldsets/legends
+    text boxes
+    select menus
+    radio buttons
+    checkboxes
+    text areas
+    submit/reset buttons
+    …and any others that you feel make sense.
+    As you are building out your page, be sure to make regular commits with comments that document your progress toward completion - this part is very important. Push each commit up to your remote repository on GitHub.
+    Include at least one <img /> element to insert a relevant illustration or photograph inside a paragraph in the page with an alt attribute. Ensure that the type of file is appropriate to the image (.jpg for a photograph, .png or .gif for an illustration/graphic).
+    Include helpful HTML comments to make the code more friendly and easy to maintain. Ensure that your code is also formatted appropriately.
+    Commit any and all changes to your local Git repository, then push the changes up to your remote repository on GitHub.
+    Have fun.  
+
+
+TAKE IT FURTHER
+
+
+    Consider some more specific FORM elements like:
+    phone
+    email
+    numerical input
+    date
+    option groups
+    color
+    range
+    meter
+    progress
+    Capture some of the user form input and output it to another page to confirm the user’s order using a server-side script like PHP (you will need to use GitHub Pages for this as we did in Lesson 4 - see the lesson recording for how to set this up).
+    Anything else you can think of…
+
+
+SUBMITTING YOUR WORK
+
+
+Enable GitHub Pages for your remote repository and determine the correct URL to your HTML form inside the /assignment-1/ folder (GitHub has a great documentation section that will help you set this up at Quickstart for GitHub Pages. View your HTML form on GitHub Pages to make sure it functions properly and paste the URL to your assignment in the comments section of this assignment. Also - add the URL for your remote code repository on GitHub so that your git commits can be graded.
+
+
+EVALUATION
+
+
+Please refer to the attached assessment rubric. You will be graded on how well you followed the assignment instructions from both a technical and a creative perspective as spelled out in the rubric.
