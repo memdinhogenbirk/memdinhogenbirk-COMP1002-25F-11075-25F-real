@@ -2,3 +2,13 @@ html {
 	font-family: verdana;
 	background-color: white;
 }
+header {
+	padding: 1rem;
+
+}
+.nav-list {
+	list-style: none;/*remove bullet points*/
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+}
