@@ -1,24 +1,4 @@
-<!-- assignment 1, pizza place website-->
-<!--html to be converted to php at appropriate point in progress-->
-<!--things to include
-    Number of pizzas
-    Size (number of slices)
-    Shape (square or round)
-    Toppings
-    Deep dish, thin crust or some other crust types
-    Take out, delivery, or eat-in g. And so on…
--->
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-	    <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
-	    <title>Papapia Pizzaria | Real Fake Pizza</title>
-	    <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body>
-        <header>
-            <nav>
+<nav>
                 <div class="nav-container">
                     <div class="itemsimg itemF"><a href="index.html"><img src="images/papapialogo.png" alt="papapia logo"/></a></div>
                     <!--I made this logo in Krita-->
@@ -32,16 +12,3 @@
                     <div class="items item5"><a href="cart.html" title="shopping cart"><b>CART</a></b></div>
                 </div>
             </nav>
-            <!--<?php
-				//Grab Site Navigation
-				include("assignment-1/nav.php")
-			?>-->
-        </header>
-        <main>
-            
-        </main>
-        <footer>
-
-        </footer>
-    </body>
-</html>
