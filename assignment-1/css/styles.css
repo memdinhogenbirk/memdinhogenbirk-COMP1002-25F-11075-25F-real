@@ -12,7 +12,7 @@ header {
 	border-bottom: 1px solid gray;/*border line for header/navbar */
 }
 .nav-container {
-	display: inline-flex;/*makes nav bar flex with window expansion, contraction*/
+	display: inline-flex;/*makes nav bar flex with window expansion, contraction, also lines from left to right instead of top to bottom default*/
 	width: 100%;
 	padding: 1rem, 1rem;
 }
@@ -20,7 +20,7 @@ header {
 	color: red;
 }
 .items{
-	align-content: center;
+	align-content: center;/*keeps nav bar content centered(with help from margin and padding adjustments made on and individual basis*/
 }
 .itemsimg.itemF{
 	margin-right: auto;/*automatically fills space in between first item and the rest to keep them on the left and right respectively*/
