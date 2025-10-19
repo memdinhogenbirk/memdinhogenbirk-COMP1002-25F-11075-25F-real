@@ -1,4 +1,4 @@
-* {/*reset all margins and padding to 0 by default*/
+* {/*set all margins and padding to 0 by default*/
     margin: 0;
     padding: 0;
     
@@ -25,7 +25,7 @@ header {
 .itemsimg.itemF{
 	margin-right: auto;/*automatically fills space in between first item and the rest to keep them on the left and right respectively*/
 }
-.items.item4{
+.items.item4{/*phone number*/
 	margin-right: auto;/*automatically fills space in between first item and the rest to keep them on the left and right respectively*/
 }
 .items a{
@@ -62,5 +62,11 @@ header {
 	width: auto;
 	padding: .5rem;
 }
-
+.pizzaoptions{
+	display: inline-flex;	
+}
+.pizzaheadings h1{
+	padding-left: auto;
+	padding-right: auto;
+}
 
