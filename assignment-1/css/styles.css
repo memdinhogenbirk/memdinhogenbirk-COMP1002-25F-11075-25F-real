@@ -1,20 +1,65 @@
+* {/*reset all margins and padding to 0 by default*/
+    margin: 0;
+    padding: 0;
+    
+}
 html {/**/
 	font-family: verdana;/*font style set to verdana cuz I think it looks nice*/
 	background-color: white;/*background color white*/
 }
 header {
-	padding: 0.1rem;
-	border-bottom: 1px solid gray;
+	width: 100%;/*ensure header runs width of page*/
+	border-bottom: 1px solid gray;/*border line for header/navbar */
 }
-.nav-list {
-	list-style: none;/*removes bullet points*/
-	display: flex;/*makes nav bar flex with window expansion, contraction*/
-	justify-content: center;
-	
-	gap: 2rem;/*adds space between nav items*/
+.nav-container {
+	display: inline-flex;/*makes nav bar flex with window expansion, contraction*/
+	width: 100%;
+	padding: 1rem, 1rem;
 }
-.nav-list li a{
+.items.item4 strong{
+	color: red;
+}
+.items{
+	align-content: center;
+}
+.itemsimg.itemF{
+	margin-right: auto;/*automatically fills space in between first item and the rest to keep them on the left and right respectively*/
+}
+.items.item4{
+	margin-right: auto;/*automatically fills space in between first item and the rest to keep them on the left and right respectively*/
+}
+.items a{
+	border: 1px solid black;/*may or may not keep, useful for alignment*/
 	text-decoration: none;/*removes underline*/
 	color: black;/*Text color black*/
-	padding: 0.5rem 1rem;/*adds padding to clickable area*/
+	
 }
+.items.item1 a{
+	padding: 1.2rem;
+	
+	margin-right: 1rem;
+}
+.items.item2 a{
+	padding: 1.2rem;
+	margin-right: 1rem;
+}
+.items.item3 a{
+	padding: 1.2rem;
+	margin-right: 1rem;
+}
+
+.items.item5 a{
+	padding: 1.2rem;
+	padding-left: 4rem;
+	margin-left: -4.5rem;
+}
+.items a:hover {
+    background-color: rgba(0,0,0,.05); /* Slightly lighter background on hover, low alpha to allow shoppingcart icon to be seen */
+    border-radius: 5px; /* Rounded corners */
+}
+.itemsimg img{
+	height: 40px;
+	width: auto;
+	padding: .5rem;
+}
+
