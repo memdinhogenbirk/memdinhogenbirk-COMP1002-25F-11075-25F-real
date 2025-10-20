@@ -22,75 +22,107 @@
                 </div>
             </nav>
         </header>
-        <main>
+        <main class="pbmain">
             <form>
                 <h2 class="pizzaCust">CUSTOMIZE YOUR PIZZA</h2>
-                <fieldset>
-                    <div class="pizzaB">
-                        <img src="images/original.jpg" height="400px" width="400px">
+                <fieldset class="pizzaB">
+                    <div class="pizzaBLD">
                         
+                        <div class="pizzatoppings">
                             
-                        <div>
-                        <ul class="toppings">
-                        <h3>CHEESE</h3>
-                        <li><input type="checkbox" name="CHEESE[]" id="CHEESE1" value="push" /><label for="Cheddar">Cheddar</label></li>
-                        
-                        <li><input type="checkbox" name="CHEESE[]" id="CHEESE2" value="push" /><label for="Mozzarella">Mozzarella</label></li>
-                        
-                        <li><input type="checkbox" name="CHEESE[]" id="CHEESE3" value="push" /><label for="Vegan">Vegan</label></li>
-                        
-                        </ul>
+                            <ul>
+                                <li><h3>CHEESE</h3></li>
+                                <li><input type="radio" name="CHEESE[]" id="CHEESE1" value="push" /><label for="CHEESE1">Cheddar</label></li>
+                                
+                                <li><input type="radio" name="CHEESE[]" id="CHEESE2" value="push" /><label for="CHEESE2">Mozzarella</label></li>
+                                
+                                <li><input type="radio" name="CHEESE[]" id="CHEESE3" value="push" /><label for="CHEESE3">Vegan</label></li>
+                                
+                            </ul>
+                            
+                            <ul>
+                                <li><h3>SAUCE</h3></li>
+                                <li><input type="radio" name="SAUCE[]" id="SAUCE1" value="push" /><label for="SAUCE1">Tomato Sauce</label></li>
+                                
+                                <li><input type="radio" name="SAUCE[]" id="SAUCE2" value="push" /><label for="SAUCE2">Marinara Sauce</label></li>
+                                
+                                <li><input type="radio" name="SAUCE[]" id="SAUCE3" value="push" /><label for="SAUCE3">Alfredo Sauce</label></li>
+                                
+                            </ul>
+                            
+                            <ul>
+                                <li><h3>MEAT</h3></li>
+                                <li><input type="checkbox" name="MEAT[]" id="MEAT1" value="push" /><label for="MEAT1">Pepperoni</label></li>
+                                
+                                <li><input type="checkbox" name="MEAT[]" id="MEAT2" value="push" /><label for="MEAT2">Bacon</label></li>
+                                
+                                <li><input type="checkbox" name="MEAT[]" id="MEAT3" value="push" /><label for="MEAT3">Chicken</label></li>
+                                
+                                <li><input type="checkbox" name="MEAT[]" id="MEAT4" value="push" /><label for="MEAT4">Sausage</label></li>
+                                
+                            </ul>
+                            
+                                
+                            <ul>
+                                <li><h3>VEGGIES</h3></li>
+                                <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES1" value="push" /><label for="VEGGIES1">Cheddar</label></li>
+                                
+                                <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES2" value="push" /><label for="VEGGIES2">Onions</label></li>
+                                
+                                <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES3" value="push" /><label for="VEGGIES3">Tomatoes</label></li>
+                                
+                                <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES4" value="push" /><label for="VEGGIES4">Olives</label></li>
+                                
+                            </ul>
+                            <div class="deliverpickup">
+                                <label for="delivorpick"><h3>DELIVERY OR PICKUP</h3></label>
+                                <select name="delivorpick" id="delivorpick">
+                                        <option value="DP">DELIVERY</option>
+                                        <option value="PP">PICKUP</option>
+                                </select>
+                            </div>
+                            
                         </div>
-                        <div>
-                        <ul class="toppings">
-                        <h3>SAUCE</h3>
-                        <li><input type="checkbox" name="SAUCE[]" id="SAUCE1" value="push" /><label for="Tomato">Tomato Sauce</label></li>
+                           
                         
-                        <li><input type="checkbox" name="SAUCE[]" id="SAUCE2" value="push" /><label for="Marinara">Marinara Sauce</label></li>
-                        
-                        <li><input type="checkbox" name="SAUCE[]" id="SAUCE3" value="push" /><label for="Alfredo">Alfredo Sauce</label></li>
-                        
-                        </ul>
-                        </div>
-                        <div>
-                        <ul class="toppings">
-                        <h3>MEAT</h3>
-                        <li><input type="checkbox" name="MEAT[]" id="MEAT1" value="push" /><label for="Pepperoni">Pepperoni</label></li>
-                        
-                        <li><input type="checkbox" name="MEAT[]" id="MEAT2" value="push" /><label for="Bacon">Bacon</label></li>
-                        
-                        <li><input type="checkbox" name="MEAT[]" id="MEAT3" value="push" /><label for="Chicken">Chicken</label></li>
-                        
-                        <li><input type="checkbox" name="MEAT[]" id="MEAT4" value="push" /><label for="Sausage">Sausage</label></li>
-                        
-                        </ul>
-                        </div>
-                        <div>
-                        <h3>VEGGIES</h3>
-                        <ul class="toppings">
-                        <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES1" value="push" /><label for="Green Peppers">Cheddar</label></li>
-                        
-                        <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES2" value="push" /><label for="Onions">Onions</label></li>
-                        
-                        <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES3" value="push" /><label for="Tomatoes">Tomatoes</label></li>
-                        
-                        <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES4" value="push" /><label for="Olives">Olives</label></li>
-                        
-                        </ul>
-                        </div>
-                        
-                        <label for="delivorpick"><h3>DELIVERY OR PICKUP</h3></label>
-                        <select name="delivorpick" id="delivorpick">
-                            <optgroup label="Delivery or Pickup">
-                                <option value="DP">Delivery</option>
-                                <option value="PP">Pickup</option>
-                            </optgroup>
-                        </select>
                     </div>
-                    
+                    <div class="sizes">
+                        <h3>SIZES</h3>
+                        <input type="radio" name="SIZE[]" id="SMALL" value="push" /><label>Small (8")</label>
+                        <input type="radio" name="SIZE[]" id="MEDIUM" value="push" /><label>Medium (12")</label>
+                        <input type="radio" name="SIZE[]" id="LARGE" value="push" /><label>Large (16")</label>
+                        <input type="radio" name="SIZE[]" id="XLARGE" value="push" /><label>Extra-Large (20")</label>
+                        <h3>CRUST</h3>
+                        <input type="radio" name="CRUST[]" id="ORIGINAL" value="push" /><label>Original Crust</label>
+                        <input type="radio" name="CRUST[]" id="THIN" value="push" /><label>Thin Crust</label>
+                        <input type="radio" name="CRUST[]" id="DEEPDISH" value="push" /><label>Deep Dish</label>
+                                    
+                    </div> 
                 </fieldset>
             </form>
+            <aside class="pbaside">
+                <h2>YOUR ORDER</h2>
+                <form>
+                    <fieldset>
+                        <div id="output">
+                            Size: None<br>
+                            Crust: None<br>
+                            Cheese: None<br>
+                            Sauce: None<br>
+                            Veggies: None<br>
+                            Meat: None<br>
+                            For None<br>
+                        </div>
+                        <script>
+                        const checkboxes = document.querySelectorAll('input[name="interest"]');
+                        const radios = document.querySelectorAll('input[name="mood"]');
+                        const outputDiv = document.getElementById('output');
+                        </script>
+                    </fieldset>
+                </form>
+            </aside>
         </main>
+        
         <footer>
 
         </footer>
