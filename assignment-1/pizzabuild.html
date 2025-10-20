@@ -33,21 +33,21 @@
                             
                             <ul>
                                 <li><h3>CHEESE</h3></li>
-                                <li><input type="radio" name="CHEESE[]" id="CHEESE1" value="ch1" /><label for="CHEESE1">Cheddar</label></li>
+                                <li><input type="radio" name="CHEESE" id="CHEESE1" value="ch1" /><label for="CHEESE1">Cheddar</label></li>
                                 
-                                <li><input type="radio" name="CHEESE[]" id="CHEESE2" value="ch2" /><label for="CHEESE2">Mozzarella</label></li>
+                                <li><input type="radio" name="CHEESE" id="CHEESE2" value="ch2" /><label for="CHEESE2">Mozzarella</label></li>
                                 
-                                <li><input type="radio" name="CHEESE[]" id="CHEESE3" value="ch3" /><label for="CHEESE3">Vegan</label></li>
+                                <li><input type="radio" name="CHEESE" id="CHEESE3" value="ch3" /><label for="CHEESE3">Vegan</label></li>
                                 
                             </ul>
                             
                             <ul>
                                 <li><h3>SAUCE</h3></li>
-                                <li><input type="radio" name="SAUCE[]" id="SAUCE1" value="s1" /><label for="SAUCE1">Tomato Sauce</label></li>
+                                <li><input type="radio" name="SAUCE" id="SAUCE1" value="s1" /><label for="SAUCE1">Tomato Sauce</label></li>
                                 
-                                <li><input type="radio" name="SAUCE[]" id="SAUCE2" value="s2" /><label for="SAUCE2">Marinara Sauce</label></li>
+                                <li><input type="radio" name="SAUCE" id="SAUCE2" value="s2" /><label for="SAUCE2">Marinara Sauce</label></li>
                                 
-                                <li><input type="radio" name="SAUCE[]" id="SAUCE3" value="s3" /><label for="SAUCE3">Alfredo Sauce</label></li>
+                                <li><input type="radio" name="SAUCE" id="SAUCE3" value="s3" /><label for="SAUCE3">Alfredo Sauce</label></li>
                                 
                             </ul>
                             
@@ -89,14 +89,14 @@
                     </div>
                     <div class="sizes">
                         <h3>SIZES</h3>
-                        <input type="radio" name="SIZE[]" id="SMALL" value="sm" /><label for="SMALL">Small (8")</label>
-                        <input type="radio" name="SIZE[]" id="MEDIUM" value="md" /><label for="MEDIUM">Medium (12")</label>
-                        <input type="radio" name="SIZE[]" id="LARGE" value="lg" /><label for="LARGE">Large (16")</label>
-                        <input type="radio" name="SIZE[]" id="XLARGE" value="xl" /><label for="XLARGE">Extra-Large (20")</label>
+                        <input type="radio" name="SIZE" id="SMALL" value="sm" /><label for="SMALL">Small (8")</label>
+                        <input type="radio" name="SIZE" id="MEDIUM" value="md" /><label for="MEDIUM">Medium (12")</label>
+                        <input type="radio" name="SIZE" id="LARGE" value="lg" /><label for="LARGE">Large (16")</label>
+                        <input type="radio" name="SIZE" id="XLARGE" value="xl" /><label for="XLARGE">Extra-Large (20")</label>
                         <h3>CRUST</h3>
-                        <input type="radio" name="CRUST[]" id="ORIGINAL" value="ol" /><label for="ORIGINAL">Original Crust</label>
-                        <input type="radio" name="CRUST[]" id="THIN" value="tn" /><label for="THIN">Thin Crust</label>
-                        <input type="radio" name="CRUST[]" id="DEEPDISH" value="dh" /><label for="DEEPDISH">Deep Dish</label>
+                        <input type="radio" name="CRUST" id="ORIGINAL" value="ol" /><label for="ORIGINAL">Original Crust</label>
+                        <input type="radio" name="CRUST" id="THIN" value="tn" /><label for="THIN">Thin Crust</label>
+                        <input type="radio" name="CRUST" id="DEEPDISH" value="dh" /><label for="DEEPDISH">Deep Dish</label>
                                     
                     </div>
                     </div> 
@@ -130,20 +130,30 @@
                         </div>
                         
                         <script>
-                            const crustradios = document.querySelectorAll('CRUST[]');
-                            const sizeradios = document.querySelectorAll('SIZE[]');
-                            const sauceradios = document.querySelectorAll('SAUCE[]');
-                            const cheeseradios = document.querySelectorAll('CHEESE[]');
-                            const meatcheck = document.querySelectorAll('MEAT[]');
-                            const veggiescheck = document.querySelectorAll('VEGGIES[]');
+                            const crustradios = document.querySelectorAll('input [name="CRUST"]');
+                            const sizeradios = document.querySelectorAll('input [name="SIZE"]');
+                            const sauceradios = document.querySelectorAll('input [name="SAUCE"]');
+                            const cheeseradios = document.querySelectorAll('input [name="CHEESE"]');
+                            const meatcheck = document.querySelectorAll('input [name="MEAT[]"]');
+                            const veggiescheck = document.querySelectorAll('input [name="VEGGIES[]"]');
                             const deliverselect = document.getElementById('delivorpick');
                             const orderDIV = document.getElementById('order');
 
+                            const itemspicked = {
+                                sm: 'Small', md: 'Medium', lg: 'Large', xl: 'Extra-Large',
+                                ol: 'Original', tn: 'Thin', dh:'Deep Dish',
+                                ch1:'Cheddar', ch2:'Mozzarella', ch3:'Vegan',
+                                s1:'', s2:'', s3:'',
+                                m1:'', m2:'', m3:'', m4:'',
+                                v1:'', v2:'', v3:'', v4:'',
+                                DP:'Delivery', PP:'Pickup'
+                            };
+
                             function updateOrder(){
-                                const veggiess = Array.from(veggiescheck)
+                                const veggies = Array.from(veggiescheck)
                                 .filter(cb => cb.checked)
                                 .map(cb => cb.value);
-                                const veggiesText = veggiess.length >0? veggiess.join(', '): 'none';
+                                const veggiesText = veggies.length >0? veggies.join(', '): 'none';
                                 const meats = Array.from(meatcheck)
                                 .filter(cb => cb.checked)
                                 .map(cb => cb.value);
@@ -152,7 +162,19 @@
                                 const cheeses = Array.from(cheeseradios).find(r => r.checked)?.value || 'None';
                                 const crusts = Array.from(crustradios).find(r => r.checked)?.value || 'None';
                                 const sizes = Array.from(sizeradios).find(r => r.checked)?.value || 'None';
-                                const dlvpck = Array.from(deliverselect).find(r => r.checked)?.value || 'None';
+                                const dlvpck = deliverselect.value;
+
+                                orderDIV.innerHTML = `
+
+                                <li>${}</li>
+                                <li>${}</li>
+                                <li>${}</li>
+                                <li>${}</li>
+                                <li>${}</li>
+                                <li>${}</li>
+                                <li>${}</li>
+                                <li><button type="reset">RESET</button></li>
+                                `;
                             }
                         
                         </script>
