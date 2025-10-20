@@ -7,6 +7,9 @@ html {/**/
 	font-family: verdana;/*font style set to verdana cuz I think it looks nice*/
 	background-color: white;/*background color white*/
 }
+ul{
+	list-style: none;/*removes bullet points*/
+}
 header {
 	width: 100%;/*ensure header runs width of page*/
 	border-bottom: 1px solid gray;/*border line for header/navbar */
@@ -116,10 +119,20 @@ header {
 }
 .pbaside{
 	width: 30%;
-	
 	padding-left: 1rem;
 	display: block;
-	
+}
+.pbaside h2{
+	margin-left: 30%;
+}
+.pbaside div{
+	display: flex;
+}
+.pbaside ul{
+	padding-right: 20%;
+}
+.pbaside ul li{
+	padding-top: 1rem;
 }
 
 .pizzaCust{
@@ -144,7 +157,7 @@ header {
 	padding: 2rem;
 }
 .pizzatoppings ul li{
-	list-style: none;/*removes bullet points*/
+	
 	padding-top: 1rem;
 }
 .sizes{
