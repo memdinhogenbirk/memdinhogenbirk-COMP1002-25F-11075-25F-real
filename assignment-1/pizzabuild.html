@@ -136,8 +136,24 @@
                             const cheeseradios = document.querySelectorAll('CHEESE[]');
                             const meatcheck = document.querySelectorAll('MEAT[]');
                             const veggiescheck = document.querySelectorAll('VEGGIES[]');
-                            const deliverselect = document.querySelectorAll('delivorpick');
+                            const deliverselect = document.getElementById('delivorpick');
                             const orderDIV = document.getElementById('order');
+
+                            function updateOrder(){
+                                const veggiess = Array.from(veggiescheck)
+                                .filter(cb => cb.checked)
+                                .map(cb => cb.value);
+                                const veggiesText = veggiess.length >0? veggiess.join(', '): 'none';
+                                const meats = Array.from(meatcheck)
+                                .filter(cb => cb.checked)
+                                .map(cb => cb.value);
+                                const meatsText = meats.length >0? meats.join(', '): 'none';
+                                const sauces = Array.from(sauceradios).find(r => r.checked)?.value || 'None';
+                                const cheeses = Array.from(cheeseradios).find(r => r.checked)?.value || 'None';
+                                const crusts = Array.from(crustradios).find(r => r.checked)?.value || 'None';
+                                const sizes = Array.from(sizeradios).find(r => r.checked)?.value || 'None';
+                                const dlvpck = Array.from(deliverselect).find(r => r.checked)?.value || 'None';
+                            }
                         
                         </script>
                     </fieldset>
