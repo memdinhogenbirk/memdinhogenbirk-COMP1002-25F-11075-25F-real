@@ -24,16 +24,70 @@
         </header>
         <main>
             <form>
-                <h2>CUSTOMIZE YOUR PIZZA</h2>
+                <h2 class="pizzaCust">CUSTOMIZE YOUR PIZZA</h2>
                 <fieldset>
-                    <div>
-                        <button type="button"><h3>CHEESE</h3></button>
-                        <button type="button"><h3>SAUCE</h3></button>
-                        <button type="button"><h3>MEAT</h3></button>
-                        <button type="button"><h3>VEGGIES</h3></button>
-                         
+                    <div class="pizzaB">
+                        <img src="images/original.jpg" height="400px" width="400px">
+                        
+                            
+                        <div>
+                        <ul class="toppings">
+                        <h3>CHEESE</h3>
+                        <li><input type="checkbox" name="CHEESE[]" id="CHEESE1" value="push" /><label for="Cheddar">Cheddar</label></li>
+                        
+                        <li><input type="checkbox" name="CHEESE[]" id="CHEESE2" value="push" /><label for="Mozzarella">Mozzarella</label></li>
+                        
+                        <li><input type="checkbox" name="CHEESE[]" id="CHEESE3" value="push" /><label for="Vegan">Vegan</label></li>
+                        
+                        </ul>
+                        </div>
+                        <div>
+                        <ul class="toppings">
+                        <h3>SAUCE</h3>
+                        <li><input type="checkbox" name="SAUCE[]" id="SAUCE1" value="push" /><label for="Tomato">Tomato Sauce</label></li>
+                        
+                        <li><input type="checkbox" name="SAUCE[]" id="SAUCE2" value="push" /><label for="Marinara">Marinara Sauce</label></li>
+                        
+                        <li><input type="checkbox" name="SAUCE[]" id="SAUCE3" value="push" /><label for="Alfredo">Alfredo Sauce</label></li>
+                        
+                        </ul>
+                        </div>
+                        <div>
+                        <ul class="toppings">
+                        <h3>MEAT</h3>
+                        <li><input type="checkbox" name="MEAT[]" id="MEAT1" value="push" /><label for="Pepperoni">Pepperoni</label></li>
+                        
+                        <li><input type="checkbox" name="MEAT[]" id="MEAT2" value="push" /><label for="Bacon">Bacon</label></li>
+                        
+                        <li><input type="checkbox" name="MEAT[]" id="MEAT3" value="push" /><label for="Chicken">Chicken</label></li>
+                        
+                        <li><input type="checkbox" name="MEAT[]" id="MEAT4" value="push" /><label for="Sausage">Sausage</label></li>
+                        
+                        </ul>
+                        </div>
+                        <div>
+                        <h3>VEGGIES</h3>
+                        <ul class="toppings">
+                        <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES1" value="push" /><label for="Green Peppers">Cheddar</label></li>
+                        
+                        <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES2" value="push" /><label for="Onions">Onions</label></li>
+                        
+                        <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES3" value="push" /><label for="Tomatoes">Tomatoes</label></li>
+                        
+                        <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES4" value="push" /><label for="Olives">Olives</label></li>
+                        
+                        </ul>
+                        </div>
+                        
+                        <label for="delivorpick"><h3>DELIVERY OR PICKUP</h3></label>
+                        <select name="delivorpick" id="delivorpick">
+                            <optgroup label="Delivery or Pickup">
+                                <option value="DP">Delivery</option>
+                                <option value="PP">Pickup</option>
+                            </optgroup>
+                        </select>
                     </div>
-                    <img src="images/original.jpg" height="400px" width="400px">
+                    
                 </fieldset>
             </form>
         </main>
