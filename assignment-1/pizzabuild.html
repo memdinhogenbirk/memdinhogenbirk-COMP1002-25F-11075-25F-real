@@ -24,6 +24,7 @@
         </header>
         <main class="pbmain">
             <form>
+                <div>
                 <h2 class="pizzaCust">CUSTOMIZE YOUR PIZZA</h2>
                 <fieldset class="pizzaB">
                     <div class="pizzaBLD">
@@ -97,12 +98,13 @@
                         <input type="radio" name="CRUST[]" id="THIN" value="push" /><label>Thin Crust</label>
                         <input type="radio" name="CRUST[]" id="DEEPDISH" value="push" /><label>Deep Dish</label>
                                     
+                    </div>
                     </div> 
                 </fieldset>
-            </form>
-            <aside class="pbaside">
+            
+                <aside class="pbaside">
                 <h2>YOUR ORDER</h2>
-                <form>
+                
                     <fieldset>
                         <div id="output">
                             <ul>
@@ -124,16 +126,17 @@
                                 <li>none</li>
                             </ul>
                         </div>
-                        <button>Review Order</button>
-                        <button>Reset</button>
+                        <button type="submit">Review Order</button>
+                        <button type="reset">Reset</button>
                         <!--<script>
                         const checkboxes = document.querySelectorAll('input[name="iunnowhatgoeshereyet"]');
                         const radios = document.querySelectorAll('input[name="iunnowhatgoeshereyet"]');
                         const outputDiv = document.getElementById('output');
                         </script>-->
                     </fieldset>
-                </form>
-            </aside>
+                </aside>
+            </form>
+            
         </main>
         
         <footer>
