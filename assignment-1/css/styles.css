@@ -132,8 +132,10 @@ header {
 .pbaside div{
 	display: flex;
 }
+
 .pbaside ul{
-	padding-left: 20%;
+	padding-right: 1rem;
+	padding-left: 1rem;
 	
 }
 .pbaside ul li{

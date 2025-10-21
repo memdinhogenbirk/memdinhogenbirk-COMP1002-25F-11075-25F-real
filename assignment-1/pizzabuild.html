@@ -23,7 +23,7 @@
             </nav>
         </header>
         <main class="pbmain">
-            <form>
+            <form id="pform">
                 <div>
                 <h2 class="pizzaCust">CUSTOMIZE YOUR PIZZA</h2>
                 <fieldset class="pizzaB">
@@ -107,13 +107,13 @@
                 
                     <fieldset>
                         <div id="order">
-                            <ul>
+                            <ul class="itemdec">
                                 <li>Size:</li>
                                 <li>Crust:</li>
                                 <li>Cheese:</li>
                                 <li>Sauce:</li>
-                                <li>Veggies:</li>
                                 <li>Meat:</li>
+                                <li>Veggies:</li>
                                 <li>For</li>
                                 <li><button type="submit">CHECKOUT</button></li>
                             </ul>
@@ -138,6 +138,7 @@
                             const veggiescheck = document.querySelectorAll('input[name="VEGGIES[]"]');
                             const deliverselect = document.getElementById('delivorpick');
                             const orderDIV = document.getElementById('orderoutput');
+                            const form = document.getElementById('pform');
 
                             const itemspicked = {
                                 sm: 'Small', md: 'Medium', lg: 'Large', xl: 'Extra-Large',
@@ -177,8 +178,8 @@
                                 <li>${crustText}</li>
                                 <li>${cheeseText}</li>
                                 <li>${sauceText}</li>
-                                <li>${veggieText}</li>
                                 <li>${meatText}</li>
+                                <li>${veggieText}</li>
                                 <li>${deliveryText}</li>
                                 <li><button type="reset">RESET</button></li>
                                 `;
@@ -190,9 +191,10 @@
                             meatcheck.forEach(cb => cb.addEventListener('change', updateOrder));
                             veggiescheck.forEach(cb => cb.addEventListener('change', updateOrder));
                             deliverselect.addEventListener('change', updateOrder);
-                            document.querySelector('button[type="reset"]').addEventListener('click',()=>{document.querySelector('form').reset();
+                            form.addEventListener('reset',() => {deliverselect.value = 'DP';
                             updateOrder();
                             });
+                            
                         
                             
                             updateOrder();
