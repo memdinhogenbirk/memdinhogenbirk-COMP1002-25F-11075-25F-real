@@ -152,27 +152,34 @@
                             function updateOrder(){
                                 const veggies = Array.from(veggiescheck)
                                 .filter(cb => cb.checked)
-                                .map(cb => cb.value);
-                                const veggiesText = veggies.length >0? veggies.join(', '): 'none';
+                                .map(cb => itemspicked[cb.value]);
+                                
                                 const meats = Array.from(meatcheck)
                                 .filter(cb => cb.checked)
-                                .map(cb => cb.value);
-                                const meatsText = meats.length >0? meats.join(', '): 'none';
+                                .map(cb => itemspicked[cb.value]);
+                                
                                 const sauces = Array.from(sauceradios).find(r => r.checked)?.value || 'None';
                                 const cheeses = Array.from(cheeseradios).find(r => r.checked)?.value || 'None';
                                 const crusts = Array.from(crustradios).find(r => r.checked)?.value || 'None';
                                 const sizes = Array.from(sizeradios).find(r => r.checked)?.value || 'None';
                                 const dlvpck = deliverselect.value;
 
+                                const sizeText = itemspicked [sizes] || 'none'
+                                const crustText = itemspicked [crusts] || 'none'
+                                const cheeseText = itemspicked [cheeses] || 'none'
+                                const sauceText = itemspicked [sauces] || 'none'
+                                const meatText = itemspicked [meats] || 'none'
+                                const veggieText = itemspicked [veggies] || 'none'
+                                const deliveryText = itemspicked [dlvpck] || 'none'
                                 orderDIV.innerHTML = `
 
-                                <li>${}</li>
-                                <li>${}</li>
-                                <li>${}</li>
-                                <li>${}</li>
-                                <li>${}</li>
-                                <li>${}</li>
-                                <li>${}</li>
+                                <li>${sizeText}</li>
+                                <li>${crustText}</li>
+                                <li>${cheeseText}</li>
+                                <li>${sauceText}</li>
+                                <li>${meatText}</li>
+                                <li>${veggieText}</li>
+                                <li>${deliveryText}</li>
                                 <li><button type="reset">RESET</button></li>
                                 `;
                             }
