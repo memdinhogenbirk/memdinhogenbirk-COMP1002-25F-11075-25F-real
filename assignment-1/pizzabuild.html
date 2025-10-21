@@ -128,7 +128,9 @@
                                 <li><button type="reset">RESET</button></li>
                             </ul>
                         </div>
-                        
+                         </fieldset>
+                </aside>
+            </form>
                         <script>
                             const crustradios = document.querySelectorAll('input[name="CRUST"]');
                             const sizeradios = document.querySelectorAll('input[name="SIZE"]');
@@ -192,14 +194,9 @@
                             veggiescheck.forEach(cb => cb.addEventListener('change', updateOrder));
                             deliverselect.addEventListener('change', updateOrder);
                             form.addEventListener('reset', updateOrder);
-                            
-                        
-                            
                             updateOrder();
                         </script>
-                    </fieldset>
-                </aside>
-            </form>
+                   
             
         </main>
         
