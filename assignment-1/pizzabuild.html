@@ -117,7 +117,7 @@
                                 <li>For</li>
                                 <li><button type="submit">CHECKOUT</button></li>
                             </ul>
-                            <ul id="orderouput">
+                            <ul id="orderoutput">
                                 <li>none</li>
                                 <li>none</li>
                                 <li>none</li>
@@ -177,18 +177,18 @@
                                 <li>${crustText}</li>
                                 <li>${cheeseText}</li>
                                 <li>${sauceText}</li>
-                                <li>${meatText}</li>
                                 <li>${veggieText}</li>
+                                <li>${meatText}</li>
                                 <li>${deliveryText}</li>
                                 <li><button type="reset">RESET</button></li>
                                 `;
                             }
-                            crustradios.forEach(r=>r.addEventListener('change', updateOrder));
-                            sizeradios.forEach(r=>r.addEventListener('change', updateOrder));
-                            sauceradios.forEach(r=>r.addEventListener('change', updateOrder));
-                            cheeseradios.forEach(r=>r.addEventListener('change', updateOrder));
-                            meatcheck.forEach(cb=>cb.addEventListener('change', updateOrder));
-                            veggiescheck.forEach(cb=>cb.addEventListener('change', updateOrder));
+                            crustradios.forEach(r => r.addEventListener('change', updateOrder));
+                            sizeradios.forEach(r => r.addEventListener('change', updateOrder));
+                            sauceradios.forEach(r => r.addEventListener('change', updateOrder));
+                            cheeseradios.forEach(r => r.addEventListener('change', updateOrder));
+                            meatcheck.forEach(cb => cb.addEventListener('change', updateOrder));
+                            veggiescheck.forEach(cb => cb.addEventListener('change', updateOrder));
                             deliverselect.addEventListener('change', updateOrder);
                             document.querySelector('button[type="reset"]').addEventListener('click',()=>{document.querySelector('form').reset();
                             updateOrder();
