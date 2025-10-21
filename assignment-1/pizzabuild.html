@@ -189,7 +189,10 @@
                             cheeseradios.forEach(r=>r.addEventListener('change', updateOrder));
                             meatcheck.forEach(cb=>cb.addEventListener('change', updateOrder));
                             veggiescheck.forEach(cb=>cb.addEventListener('change', updateOrder));
-                            deliverselect.forEach(r=>r.addEventListener('change', updateOrder));
+                            deliverselect.addEventListener('change', updateOrder);
+                            document.querySelector('button[type="reset"]').addEventListener('click',()=>{documet.querySelector('form').reset();
+                            updateOrder();
+                            });
                         
                             
                             updateOrder();
