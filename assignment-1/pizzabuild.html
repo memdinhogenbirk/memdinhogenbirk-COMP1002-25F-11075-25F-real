@@ -191,9 +191,7 @@
                             meatcheck.forEach(cb => cb.addEventListener('change', updateOrder));
                             veggiescheck.forEach(cb => cb.addEventListener('change', updateOrder));
                             deliverselect.addEventListener('change', updateOrder);
-                            form.addEventListener('reset',() => {deliverselect.value = 'DP';
-                            updateOrder();
-                            });
+                            form.addEventListener('reset', updateOrder);
                             
                         
                             
