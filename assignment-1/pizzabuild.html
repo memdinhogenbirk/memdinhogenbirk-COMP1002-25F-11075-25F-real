@@ -117,7 +117,7 @@
                                 <li>For</li>
                                 <li><button type="submit">CHECKOUT</button></li>
                             </ul>
-                            <ul>
+                            <ul id="orderouput">
                                 <li>none</li>
                                 <li>none</li>
                                 <li>none</li>
@@ -137,7 +137,7 @@
                             const meatcheck = document.querySelectorAll('input [name="MEAT[]"]');
                             const veggiescheck = document.querySelectorAll('input [name="VEGGIES[]"]');
                             const deliverselect = document.getElementById('delivorpick');
-                            const orderDIV = document.getElementById('order');
+                            const orderDIV = document.getElementById('orderoutput');
 
                             const itemspicked = {
                                 sm: 'Small', md: 'Medium', lg: 'Large', xl: 'Extra-Large',
@@ -183,7 +183,16 @@
                                 <li><button type="reset">RESET</button></li>
                                 `;
                             }
+                            crustradios.forEach(r=>r.addEventListener('change', updateOrder));
+                            sizeradios.forEach(r=>r.addEventListener('change', updateOrder));
+                            sauceradios.forEach(r=>r.addEventListener('change', updateOrder));
+                            cheeseradios.forEach(r=>r.addEventListener('change', updateOrder));
+                            meatcheck.forEach(cb=>cb.addEventListener('change', updateOrder));
+                            veggiescheck.forEach(cb=>cb.addEventListener('change', updateOrder));
+                            deliverselect.forEach(r=>r.addEventListener('change', updateOrder));
                         
+                            
+                            updateOrder();
                         </script>
                     </fieldset>
                 </aside>
