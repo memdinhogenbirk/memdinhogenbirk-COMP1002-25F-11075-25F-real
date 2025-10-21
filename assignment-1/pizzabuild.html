@@ -66,7 +66,7 @@
                                 
                             <ul>
                                 <li><h3>VEGGIES</h3></li>
-                                <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES1" value="v1" /><label for="VEGGIES1">Cheddar</label></li>
+                                <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES1" value="v1" /><label for="VEGGIES1">Peppers</label></li>
                                 
                                 <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES2" value="v2" /><label for="VEGGIES2">Onions</label></li>
                                 
@@ -130,12 +130,12 @@
                         </div>
                         
                         <script>
-                            const crustradios = document.querySelectorAll('input [name="CRUST"]');
-                            const sizeradios = document.querySelectorAll('input [name="SIZE"]');
-                            const sauceradios = document.querySelectorAll('input [name="SAUCE"]');
-                            const cheeseradios = document.querySelectorAll('input [name="CHEESE"]');
-                            const meatcheck = document.querySelectorAll('input [name="MEAT[]"]');
-                            const veggiescheck = document.querySelectorAll('input [name="VEGGIES[]"]');
+                            const crustradios = document.querySelectorAll('input[name="CRUST"]');
+                            const sizeradios = document.querySelectorAll('input[name="SIZE"]');
+                            const sauceradios = document.querySelectorAll('input[name="SAUCE"]');
+                            const cheeseradios = document.querySelectorAll('input[name="CHEESE"]');
+                            const meatcheck = document.querySelectorAll('input[name="MEAT[]"]');
+                            const veggiescheck = document.querySelectorAll('input[name="VEGGIES[]"]');
                             const deliverselect = document.getElementById('delivorpick');
                             const orderDIV = document.getElementById('orderoutput');
 
@@ -143,9 +143,9 @@
                                 sm: 'Small', md: 'Medium', lg: 'Large', xl: 'Extra-Large',
                                 ol: 'Original', tn: 'Thin', dh:'Deep Dish',
                                 ch1:'Cheddar', ch2:'Mozzarella', ch3:'Vegan',
-                                s1:'', s2:'', s3:'',
-                                m1:'', m2:'', m3:'', m4:'',
-                                v1:'', v2:'', v3:'', v4:'',
+                                s1:'Tomato', s2:'Marinara', s3:'Alfredo',
+                                m1:'Pepperoni', m2:'Bacon', m3:'Chicken', m4:'Sausage',
+                                v1:'Peppers', v2:'Onions', v3:'Tomatoes', v4:'Olives',
                                 DP:'Delivery', PP:'Pickup'
                             };
 
@@ -164,13 +164,13 @@
                                 const sizes = Array.from(sizeradios).find(r => r.checked)?.value || 'None';
                                 const dlvpck = deliverselect.value;
 
-                                const sizeText = itemspicked [sizes] || 'none'
-                                const crustText = itemspicked [crusts] || 'none'
-                                const cheeseText = itemspicked [cheeses] || 'none'
-                                const sauceText = itemspicked [sauces] || 'none'
-                                const meatText = itemspicked [meats] || 'none'
-                                const veggieText = itemspicked [veggies] || 'none'
-                                const deliveryText = itemspicked [dlvpck] || 'none'
+                                const sizeText = itemspicked[sizes] || 'none';
+                                const crustText = itemspicked[crusts] || 'none';
+                                const cheeseText = itemspicked[cheeses] || 'none';
+                                const sauceText = itemspicked[sauces] || 'none';
+                                const meatText =  meats.length >0? meats.join(', '): 'none';
+                                const veggieText = veggies.length >0? veggies.join(', '): 'none';
+                                const deliveryText = itemspicked[dlvpck] || 'none';
                                 orderDIV.innerHTML = `
 
                                 <li>${sizeText}</li>
@@ -190,7 +190,7 @@
                             meatcheck.forEach(cb=>cb.addEventListener('change', updateOrder));
                             veggiescheck.forEach(cb=>cb.addEventListener('change', updateOrder));
                             deliverselect.addEventListener('change', updateOrder);
-                            document.querySelector('button[type="reset"]').addEventListener('click',()=>{documet.querySelector('form').reset();
+                            document.querySelector('button[type="reset"]').addEventListener('click',()=>{document.querySelector('form').reset();
                             updateOrder();
                             });
                         
