@@ -182,3 +182,27 @@ header {
 .sizes label{
 	padding-right: 2rem;
 }
+.homepage{
+	display: flex;
+	align-items: top;
+	padding: 1rem;
+}
+.address{
+	padding: 1rem;
+}
+.storehours{
+	margin-bottom: 1rem;
+	margin-left: 1rem;
+}
+.hours{
+	display: flex;
+	align-items: top;
+}
+.hours ul li{
+	padding-top: 1rem;
+	padding-right: 2rem;
+}
+footer{
+	display: block;
+	padding: 5rem;
+}
