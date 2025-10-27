@@ -217,6 +217,15 @@ footer{
 	padding: 5rem;
 }
 .checkout{
+	display:flex;
+}
+.selectionbox{
 	display: block;
 	align-content: center;
+	width: 50%;
+}
+.infobox{
+	width:50%;
+	display: block;
+	
 }

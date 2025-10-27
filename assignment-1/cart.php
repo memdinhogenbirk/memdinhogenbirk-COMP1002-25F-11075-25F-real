@@ -14,8 +14,8 @@
 			?>
         </header>
         <main>
-            <form>
-                <fieldset class="checkout">
+            <form class="checkout">
+                <fieldset class="selectionbox">
                     <div><!--items in cart-->
                         <?php 
                         $cheese = $_GET["CHEESE"];
@@ -28,39 +28,41 @@
                         
                         echo('<p><b>For: </b>'.$delvorpick.'</p>');	
     
-	echo('<ul>');	
-			echo('<li><b>Crust: </b>'.$crust.'</li>');
-		
-			echo('<li><b>Sauce: </b>'.$sauce.'</li>');
-    
-			echo('<li><b>Cheese: </b>'.$cheese.'</li>');
-	echo('</ul>');		
-    echo('<b>Toppings:</b><ul>');
-		foreach ($veggies as $item){
-			echo('<li>'.$item.'</li>');
-		};
-        foreach ($meat as $item){
-			echo('<li>'.$item.'</li>');
-		};
-	echo('</ul>');
-			echo('<b>Size: </b>'.$size.'');
-            echo('<br><b>Total: </b>');
-            if ($size=="Xlarge"){
-                print('$19.99');
-            }
-            elseif ($size=="Large"){
-                print('$14.99');
-            }
-            elseif ($size=="Medium"){
-                print('$11.99');
-            }
-            elseif ($size=="Small"){
-                print('$8.99');
-            };
-            
-		
-    
-                        ?>
+	                echo('<ul>');	
+	                		echo('<li><b>Crust: </b>'.$crust.'</li>');
+
+	                		echo('<li><b>Sauce: </b>'.$sauce.'</li>');
+
+	                		echo('<li><b>Cheese: </b>'.$cheese.'</li>');
+	                echo('</ul>');		
+                    echo('<b>Toppings:</b><ul>');
+	                	foreach ($veggies as $item){
+	                		echo('<li>'.$item.'</li>');
+	                	};
+                        foreach ($meat as $item){
+	                		echo('<li>'.$item.'</li>');
+	                	};
+	                echo('</ul>');
+	                		echo('<b>Size: </b>'.$size.'');
+                            echo('<br><b>Total: </b>');
+                            if ($size=="Xlarge"){
+                                print('$19.99');
+                            }
+                            elseif ($size=="Large"){
+                                print('$14.99');
+                            }
+                            elseif ($size=="Medium"){
+                                print('$11.99');
+                            }
+                            elseif ($size=="Small"){
+                                print('$8.99');
+                            };
+
+                        
+                        
+                                        ?>
+                </fieldset>
+                <fieldset class="infobox">
                     </div>
                     <div><!--Total cost-->
                     
@@ -70,6 +72,10 @@
                         <label for="fname">First Name</label>
                         <input type="text" name="lname">
                         <label for="lname">Last Name</label>
+                        <input type="text" name="address1">
+                        <label for="address1">Address Line 1</label>
+                        <input type="text" name="address2">
+                        <label for="address2">Address Line 2</label>
                     </div>
                     <div><!--notifications options contact info-->
                         <input type="checkbox" name="alert[]" id="alert1" value="call" />
