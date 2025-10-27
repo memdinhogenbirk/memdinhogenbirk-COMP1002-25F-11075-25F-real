@@ -44,6 +44,20 @@
 		};
 	echo('</ul>');
 			echo('<b>Size: </b>'.$size.'');
+            echo('<br><b>Total: </b>');
+            if ($size=="Xlarge"){
+                print('$19.99');
+            }
+            elseif ($size=="Large"){
+                print('$14.99');
+            }
+            elseif ($size=="Medium"){
+                print('$11.99');
+            }
+            elseif ($size=="Small"){
+                print('$8.99');
+            };
+            
 		
     
                         ?>
