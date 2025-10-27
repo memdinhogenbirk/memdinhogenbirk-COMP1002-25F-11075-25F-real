@@ -1,3 +1,4 @@
+<head><link href="css/styles.css" rel="stylesheet" /></head>
 <nav>
     <div class="nav-container">
         <div class="itemsimg itemF"><a href="index.html"><img src="images/papapialogo.png" alt="papapia logo"/></a></div>
