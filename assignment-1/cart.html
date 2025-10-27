@@ -24,27 +24,32 @@
         </header>
         <main>
             <form>
-                <fieldset>
-                    <div>
-                        <!--Name Address-->
+                <fieldset class="checkout">
+                    <div><!--items in cart-->
+                        <input type="text" name="size">
                     </div>
-                    <div>
-                        <!--items in cart-->
+                    <div><!--Total cost-->
+                    
                     </div>
-                    <!--notifications options contact info-->
+                    <div><!--Name Address-->
+                        <input type="text" name="fname">
+                        <label for="fname">First Name</label>
+                        <input type="text" name="lname">
+                        <label for="lname">Last Name</label>
+                    </div>
+                    <div><!--notifications options contact info-->
+                        <input type="checkbox" name="alert[]" id="alert1" value="call" />
+                        <label for="alert1">Call Me</label>
+                        <input type="checkbox" name="alert[]" id="alert2" value="email" />
+                        <label for="alert2">Email Me</label>
+                        <input type="checkbox" name="alert[]" id="alert3" value="sms" />
+                        <label for="alert3">Text Me</label>
+                    </div>
                     <div>
                         <input type="Email" name="email">
                         <label for="email">Email</label>
                         <input type="Phone Number" name="phone">
                         <label for="phone">Phone Number</label>
-                    </div>
-                    <div>
-                    <input type="checkbox" name="alert[]" id="alert1" value="call" />
-                    <label for="alert1">Call Me</label>
-                    <input type="checkbox" name="alert[]" id="alert2" value="email" />
-                    <label for="alert2">Email Me</label>
-                    <input type="checkbox" name="alert[]" id="alert3" value="sms" />
-                    <label for="alert3">Text Me</label>
                     </div>
                     <div>
                         <!--Payment info-->
@@ -56,19 +61,9 @@
                         <label for="payment">Payment</label>
                     </div>
                     <div>
-                        <input type="text" name="fname">
-                        <label for="fname">First Name</label>
-                        <input type="text" name="lname">
-                        <label for="lname">Last Name</label>
-                    </div>
-                    <div>
                         <!--purchase button reset button-->
                         <button id="submit">Place Order</button>
                         <button id="reset">Reset</button>
-                    </div>
-                    <!--Total cost-->
-                    <div>
-
                     </div>
 
                 </fieldset>

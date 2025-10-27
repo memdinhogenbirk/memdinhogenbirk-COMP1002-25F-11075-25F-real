@@ -210,3 +210,7 @@ footer{
 	display: block;
 	padding: 5rem;
 }
+.checkout{
+	display: block;
+	align-content: center;
+}
