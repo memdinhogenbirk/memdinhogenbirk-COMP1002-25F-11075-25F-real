@@ -24,21 +24,21 @@
                             
                             <ul>
                                 <li><h3>CHEESE</h3></li>
-                                <li><input type="radio" name="CHEESE[]" id="CHEESE1" value="Cheddar" /><label for="CHEESE1">Cheddar</label></li>
+                                <li><input type="radio" name="CHEESE" id="CHEESE1" value="Cheddar" /><label for="CHEESE1">Cheddar</label></li>
                                 
-                                <li><input type="radio" name="CHEESE[]" id="CHEESE2" value="Mozzarella" /><label for="CHEESE2">Mozzarella</label></li>
+                                <li><input type="radio" name="CHEESE" id="CHEESE2" value="Mozzarella" /><label for="CHEESE2">Mozzarella</label></li>
                                 
-                                <li><input type="radio" name="CHEESE[]" id="CHEESE3" value="Vegan" /><label for="CHEESE3">Vegan</label></li>
+                                <li><input type="radio" name="CHEESE" id="CHEESE3" value="Vegan" /><label for="CHEESE3">Vegan</label></li>
                                 
                             </ul>
                             
                             <ul>
                                 <li><h3>SAUCE</h3></li>
-                                <li><input type="radio" name="SAUCE[]" id="SAUCE1" value="Tomato" /><label for="SAUCE1">Tomato Sauce</label></li>
+                                <li><input type="radio" name="SAUCE" id="SAUCE1" value="Tomato" /><label for="SAUCE1">Tomato Sauce</label></li>
                                 
-                                <li><input type="radio" name="SAUCE[]" id="SAUCE2" value="Marinara" /><label for="SAUCE2">Marinara Sauce</label></li>
+                                <li><input type="radio" name="SAUCE" id="SAUCE2" value="Marinara" /><label for="SAUCE2">Marinara Sauce</label></li>
                                 
-                                <li><input type="radio" name="SAUCE[]" id="SAUCE3" value="Alfredo" /><label for="SAUCE3">Alfredo Sauce</label></li>
+                                <li><input type="radio" name="SAUCE" id="SAUCE3" value="Alfredo" /><label for="SAUCE3">Alfredo Sauce</label></li>
                                 
                             </ul>
                             
@@ -69,8 +69,8 @@
                             <div class="deliverpickup">
                                 <label for="delivorpick"><h3>DELIVERY OR PICKUP</h3></label>
                                 <select name="delivorpick" id="delivorpick">
-                                        <option value="DP">DELIVERY</option>
-                                        <option value="PP">PICKUP</option>
+                                        <option value="Delivery">DELIVERY</option>
+                                        <option value="Pickup">PICKUP</option>
                                 </select>
                             </div>
                             
@@ -80,14 +80,14 @@
                     </div>
                     <div class="sizes">
                         <h3>SIZES</h3>
-                        <input type="radio" name="SIZE[]" id="SMALL" value="Small" /><label for="SMALL">Small (8")</label>
-                        <input type="radio" name="SIZE[]" id="MEDIUM" value="Medium" /><label for="MEDIUM">Medium (12")</label>
-                        <input type="radio" name="SIZE[]" id="LARGE" value="Large" /><label for="LARGE">Large (16")</label>
-                        <input type="radio" name="SIZE[]" id="XLARGE" value="Xlarge" /><label for="XLARGE">Extra-Large (20")</label>
+                        <input type="radio" name="SIZE" id="SMALL" value="Small" /><label for="SMALL">Small (8")</label>
+                        <input type="radio" name="SIZE" id="MEDIUM" value="Medium" /><label for="MEDIUM">Medium (12")</label>
+                        <input type="radio" name="SIZE" id="LARGE" value="Large" /><label for="LARGE">Large (16")</label>
+                        <input type="radio" name="SIZE" id="XLARGE" value="Xlarge" /><label for="XLARGE">Extra-Large (20")</label>
                         <h3>CRUST</h3>
-                        <input type="radio" name="CRUST[]" id="ORIGINAL" value="Original" /><label for="ORIGINAL">Original Crust</label>
-                        <input type="radio" name="CRUST[]" id="THIN" value="Thin" /><label for="THIN">Thin Crust</label>
-                        <input type="radio" name="CRUST[]" id="DEEPDISH" value="Deepdish" /><label for="DEEPDISH">Deep Dish</label>
+                        <input type="radio" name="CRUST" id="ORIGINAL" value="Original" /><label for="ORIGINAL">Original Crust</label>
+                        <input type="radio" name="CRUST" id="THIN" value="Thin" /><label for="THIN">Thin Crust</label>
+                        <input type="radio" name="CRUST" id="DEEPDISH" value="Deepdish" /><label for="DEEPDISH">Deep Dish</label>
                                     
                     </div>
                     </div> 
@@ -127,10 +127,10 @@
                 </aside>
             </form>
                         <script>
-                            const crustradios = document.querySelectorAll('input[name="CRUST[]"]');
-                            const sizeradios = document.querySelectorAll('input[name="SIZE[]"]');
-                            const sauceradios = document.querySelectorAll('input[name="SAUCE[]"]');
-                            const cheeseradios = document.querySelectorAll('input[name="CHEESE[]"]');
+                            const crustradios = document.querySelectorAll('input[name="CRUST"]');
+                            const sizeradios = document.querySelectorAll('input[name="SIZE"]');
+                            const sauceradios = document.querySelectorAll('input[name="SAUCE"]');
+                            const cheeseradios = document.querySelectorAll('input[name="CHEESE"]');
                             const meatcheck = document.querySelectorAll('input[name="MEAT[]"]');
                             const veggiescheck = document.querySelectorAll('input[name="VEGGIES[]"]');
                             const deliverselect = document.getElementById('delivorpick');
@@ -144,7 +144,7 @@
                                 Tomato:'Tomato', Marinara:'Marinara', Alfredo:'Alfredo',
                                 Pepperoni:'Pepperoni', Bacon:'Bacon', Chicken:'Chicken', Ham:'Ham',
                                 Peppers:'Peppers', Onions:'Onions', Tomatoes:'Tomatoes', Olives:'Olives',
-                                DP:'Delivery', PP:'Pickup'
+                                Delivery:'Delivery', Pickup:'Pickup'
                             };
 
                             function updateOrder(){

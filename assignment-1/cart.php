@@ -24,38 +24,27 @@
                         $veggies = $_GET["VEGGIES"];
                         $size = $_GET["SIZE"];
                         $crust = $_GET["CRUST"];
-
-                        echo('<p>Thank you, ' .$cheese.' '.$crust.'!</p>');	
-    echo('<ul>');
-		foreach ($crust as $item){
-			echo('crust: '.$item.'');
-		};
-    echo('<ul>');	
-	echo('<ul>');
-		foreach ($sauce as $item){
-			echo('Sauce: '.$item.'');
-		};
-    echo('</ul>');
-    echo('<ul>');
-		foreach ($cheese as $item){
-			echo('Cheese: '.$item.'');
-		};
-    echo('</ul>');		
-    echo('<ul>');
+                        $delvorpick = $_GET["delivorpick"];
+                        
+                        echo('<p><b>For: </b>'.$delvorpick.'</p>');	
+    
+	echo('<ul>');	
+			echo('<li><b>Crust: </b>'.$crust.'</li>');
+		
+			echo('<li><b>Sauce: </b>'.$sauce.'</li>');
+    
+			echo('<li><b>Cheese: </b>'.$cheese.'</li>');
+	echo('</ul>');		
+    echo('<b>Toppings:</b><ul>');
 		foreach ($veggies as $item){
 			echo('<li>'.$item.'</li>');
 		};
-	echo('</ul>');
-    echo('<ul>');
-		foreach ($meat as $item){
+        foreach ($meat as $item){
 			echo('<li>'.$item.'</li>');
 		};
 	echo('</ul>');
-    echo('<ul>');
-		foreach ($size as $item){
-			echo('Size: '.$item.'');
-		};
-    echo('</ul>');
+			echo('<b>Size: </b>'.$size.'');
+		
     
                         ?>
                     </div>
