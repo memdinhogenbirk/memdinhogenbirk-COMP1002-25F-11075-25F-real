@@ -24,46 +24,46 @@
                             
                             <ul>
                                 <li><h3>CHEESE</h3></li>
-                                <li><input type="radio" name="CHEESE[]" id="CHEESE1" value="cheddar" /><label for="CHEESE1">Cheddar</label></li>
+                                <li><input type="radio" name="CHEESE[]" id="CHEESE1" value="Cheddar" /><label for="CHEESE1">Cheddar</label></li>
                                 
-                                <li><input type="radio" name="CHEESE[]" id="CHEESE2" value="mozzarella" /><label for="CHEESE2">Mozzarella</label></li>
+                                <li><input type="radio" name="CHEESE[]" id="CHEESE2" value="Mozzarella" /><label for="CHEESE2">Mozzarella</label></li>
                                 
-                                <li><input type="radio" name="CHEESE[]" id="CHEESE3" value="vegan" /><label for="CHEESE3">Vegan</label></li>
+                                <li><input type="radio" name="CHEESE[]" id="CHEESE3" value="Vegan" /><label for="CHEESE3">Vegan</label></li>
                                 
                             </ul>
                             
                             <ul>
                                 <li><h3>SAUCE</h3></li>
-                                <li><input type="radio" name="SAUCE[]" id="SAUCE1" value="tomatosauce" /><label for="SAUCE1">Tomato Sauce</label></li>
+                                <li><input type="radio" name="SAUCE[]" id="SAUCE1" value="Tomato" /><label for="SAUCE1">Tomato Sauce</label></li>
                                 
-                                <li><input type="radio" name="SAUCE[]" id="SAUCE2" value="marinara" /><label for="SAUCE2">Marinara Sauce</label></li>
+                                <li><input type="radio" name="SAUCE[]" id="SAUCE2" value="Marinara" /><label for="SAUCE2">Marinara Sauce</label></li>
                                 
-                                <li><input type="radio" name="SAUCE[]" id="SAUCE3" value="alfredo" /><label for="SAUCE3">Alfredo Sauce</label></li>
+                                <li><input type="radio" name="SAUCE[]" id="SAUCE3" value="Alfredo" /><label for="SAUCE3">Alfredo Sauce</label></li>
                                 
                             </ul>
                             
                             <ul>
                                 <li><h3>MEAT</h3></li>
-                                <li><input type="checkbox" name="MEAT[]" id="MEAT1" value="pepperoni" /><label for="MEAT1">Pepperoni</label></li>
+                                <li><input type="checkbox" name="MEAT[]" id="MEAT1" value="Pepperoni" /><label for="MEAT1">Pepperoni</label></li>
                                 
-                                <li><input type="checkbox" name="MEAT[]" id="MEAT2" value="bacon" /><label for="MEAT2">Bacon</label></li>
+                                <li><input type="checkbox" name="MEAT[]" id="MEAT2" value="Bacon" /><label for="MEAT2">Bacon</label></li>
                                 
-                                <li><input type="checkbox" name="MEAT[]" id="MEAT3" value="chicken" /><label for="MEAT3">Chicken</label></li>
+                                <li><input type="checkbox" name="MEAT[]" id="MEAT3" value="Chicken" /><label for="MEAT3">Chicken</label></li>
                                 
-                                <li><input type="checkbox" name="MEAT[]" id="MEAT4" value="ham" /><label for="MEAT4">Ham</label></li>
+                                <li><input type="checkbox" name="MEAT[]" id="MEAT4" value="Ham" /><label for="MEAT4">Ham</label></li>
                                 
                             </ul>
                             
                                 
                             <ul>
                                 <li><h3>VEGGIES</h3></li>
-                                <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES1" value="pepper" /><label for="VEGGIES1">Peppers</label></li>
+                                <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES1" value="Peppers" /><label for="VEGGIES1">Peppers</label></li>
                                 
-                                <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES2" value="onion" /><label for="VEGGIES2">Onions</label></li>
+                                <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES2" value="Onions" /><label for="VEGGIES2">Onions</label></li>
                                 
-                                <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES3" value="tomato" /><label for="VEGGIES3">Tomatoes</label></li>
+                                <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES3" value="Tomatoes" /><label for="VEGGIES3">Tomatoes</label></li>
                                 
-                                <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES4" value="olive" /><label for="VEGGIES4">Olives</label></li>
+                                <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES4" value="Olives" /><label for="VEGGIES4">Olives</label></li>
                                 
                             </ul>
                             <div class="deliverpickup">
@@ -80,14 +80,14 @@
                     </div>
                     <div class="sizes">
                         <h3>SIZES</h3>
-                        <input type="radio" name="SIZE[]" id="SMALL" value="small" /><label for="SMALL">Small (8")</label>
-                        <input type="radio" name="SIZE[]" id="MEDIUM" value="medium" /><label for="MEDIUM">Medium (12")</label>
-                        <input type="radio" name="SIZE[]" id="LARGE" value="large" /><label for="LARGE">Large (16")</label>
-                        <input type="radio" name="SIZE[]" id="XLARGE" value="xlarge" /><label for="XLARGE">Extra-Large (20")</label>
+                        <input type="radio" name="SIZE[]" id="SMALL" value="Small" /><label for="SMALL">Small (8")</label>
+                        <input type="radio" name="SIZE[]" id="MEDIUM" value="Medium" /><label for="MEDIUM">Medium (12")</label>
+                        <input type="radio" name="SIZE[]" id="LARGE" value="Large" /><label for="LARGE">Large (16")</label>
+                        <input type="radio" name="SIZE[]" id="XLARGE" value="Xlarge" /><label for="XLARGE">Extra-Large (20")</label>
                         <h3>CRUST</h3>
-                        <input type="radio" name="CRUST[]" id="ORIGINAL" value="original" /><label for="ORIGINAL">Original Crust</label>
-                        <input type="radio" name="CRUST[]" id="THIN" value="thin" /><label for="THIN">Thin Crust</label>
-                        <input type="radio" name="CRUST[]" id="DEEPDISH" value="deepdish" /><label for="DEEPDISH">Deep Dish</label>
+                        <input type="radio" name="CRUST[]" id="ORIGINAL" value="Original" /><label for="ORIGINAL">Original Crust</label>
+                        <input type="radio" name="CRUST[]" id="THIN" value="Thin" /><label for="THIN">Thin Crust</label>
+                        <input type="radio" name="CRUST[]" id="DEEPDISH" value="Deepdish" /><label for="DEEPDISH">Deep Dish</label>
                                     
                     </div>
                     </div> 
@@ -138,12 +138,12 @@
                             const form = document.getElementById('pform');
 
                             const itemspicked = {
-                                small: 'Small', medium: 'Medium', large: 'Large', xlarge: 'Extra-Large',
-                                original: 'Original', thin: 'Thin', deepdish:'Deep Dish',
-                                cheddar:'Cheddar', mozzarella:'Mozzarella', vegan:'Vegan',
-                                tomatosauce:'Tomato', marinara:'Marinara', alfredo:'Alfredo',
-                                pepperoni:'Pepperoni', bacon:'Bacon', chicken:'Chicken', ham:'Ham',
-                                pepper:'Peppers', onion:'Onions', tomato:'Tomatoes', olive:'Olives',
+                                Small: 'Small', Medium: 'Medium', Large: 'Large', Xlarge: 'Extra-Large',
+                                Original: 'Original', Thin: 'Thin', Deepdish:'Deep Dish',
+                                Cheddar:'Cheddar', Mozzarella:'Mozzarella', Vegan:'Vegan',
+                                Tomato:'Tomato', Marinara:'Marinara', Alfredo:'Alfredo',
+                                Pepperoni:'Pepperoni', Bacon:'Bacon', Chicken:'Chicken', Ham:'Ham',
+                                Peppers:'Peppers', Onions:'Onions', Tomatoes:'Tomatoes', Olives:'Olives',
                                 DP:'Delivery', PP:'Pickup'
                             };
 

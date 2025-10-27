@@ -19,6 +19,44 @@
                     <div><!--items in cart-->
                         <?php 
                         $cheese = $_GET["CHEESE"];
+                        $sauce = $_GET["SAUCE"];
+                        $meat = $_GET["MEAT"];
+                        $veggies = $_GET["VEGGIES"];
+                        $size = $_GET["SIZE"];
+                        $crust = $_GET["CRUST"];
+
+                        echo('<p>Thank you, ' .$cheese.' '.$crust.'!</p>');	
+    echo('<ul>');
+		foreach ($crust as $item){
+			echo('crust: '.$item.'');
+		};
+    echo('<ul>');	
+	echo('<ul>');
+		foreach ($sauce as $item){
+			echo('Sauce: '.$item.'');
+		};
+    echo('</ul>');
+    echo('<ul>');
+		foreach ($cheese as $item){
+			echo('Cheese: '.$item.'');
+		};
+    echo('</ul>');		
+    echo('<ul>');
+		foreach ($veggies as $item){
+			echo('<li>'.$item.'</li>');
+		};
+	echo('</ul>');
+    echo('<ul>');
+		foreach ($meat as $item){
+			echo('<li>'.$item.'</li>');
+		};
+	echo('</ul>');
+    echo('<ul>');
+		foreach ($size as $item){
+			echo('Size: '.$item.'');
+		};
+    echo('</ul>');
+    
                         ?>
                     </div>
                     <div><!--Total cost-->
