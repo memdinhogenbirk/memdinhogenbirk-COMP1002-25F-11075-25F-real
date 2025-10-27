@@ -143,8 +143,12 @@ header {
 }
 .pbaside button{
 	font-size: 20px;
-	margin-top: 8rem;
-	margin-bottom:6%;
+	margin-top: 7.4rem;
+	margin-left: 1rem;
+}
+.asidebuttons{
+	padding: 1rem;
+	
 }
 
 .pizzaCust{
@@ -204,6 +208,8 @@ header {
 }
 footer{
 	display: block;
+	margin-top: 10rem;
+	border-top: solid grey 1px;
 	padding: 5rem;
 }
 .infopage{

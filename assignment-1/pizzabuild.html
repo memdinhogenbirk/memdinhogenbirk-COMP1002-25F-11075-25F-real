@@ -115,7 +115,7 @@
                                 <li>Meat:</li>
                                 <li>Veggies:</li>
                                 <li>For</li>
-                                <li><button type="submit">CHECKOUT</button></li>
+                                
                             </ul>
                             <ul id="orderoutput">
                                 <li>none</li>
@@ -125,8 +125,12 @@
                                 <li>none</li>
                                 <li>none</li>
                                 <li>none</li>
-                                <li><button type="reset">RESET</button></li>
+                                
                             </ul>
+                        </div>
+                        <div class="asidebuttons">
+                            <button type="submit">CHECKOUT</button>
+                            <button type="reset">RESET</button>
                         </div>
                     </fieldset>
                 </aside>
@@ -183,7 +187,7 @@
                                 <li>${meatText}</li>
                                 <li>${veggieText}</li>
                                 <li>${deliveryText}</li>
-                                <li><button type="reset">RESET</button></li>
+                                
                                 `;
                             }
                             crustradios.forEach(r => r.addEventListener('change', updateOrder));
