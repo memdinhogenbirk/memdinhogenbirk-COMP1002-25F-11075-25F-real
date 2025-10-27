@@ -18,7 +18,7 @@
 <!-- STEP 3: Build a NAV element for global Web site navigation -->
 			<?php
 				//Grab Site Navigation
-				include("includes/nav.php")
+				include('includes/nav.php')
 			?>
 <!-- STEP 4a: Let's build a list of hyperlinks inside the above NAV element linking this page to other pages in the site - create an unordered list element (UL) -->
 <!-- STEP 4b: Create a list item inside the UL (LI) -->
