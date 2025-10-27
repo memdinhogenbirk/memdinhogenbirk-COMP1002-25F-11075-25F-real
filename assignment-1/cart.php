@@ -67,17 +67,19 @@
                     <div><!--Total cost-->
                     
                     </div>
-                    <div><!--Name Address-->
-                        <input type="text" name="fname">
-                        <label for="fname">First Name</label>
-                        <input type="text" name="lname">
-                        <label for="lname">Last Name</label>
-                        <input type="text" name="address1">
-                        <label for="address1">Address Line 1</label>
-                        <input type="text" name="address2">
-                        <label for="address2">Address Line 2</label>
+                    <div class="personal"><!--Name Address-->
+                        <ul>
+                            <li><label for="fname">First Name</label>
+                            <input type="text" name="fname"></li>
+                            <li><label for="lname">Last Name</label>
+                            <input type="text" name="lname"></li>
+                            <li><label for="address1">Address Line 1</label>
+                            <input type="text" name="address1"></li>
+                            <li><label for="address2">Address Line 2</label>
+                            <input type="text" name="address2"></li>
+                        </ul>
                     </div>
-                    <div><!--notifications options contact info-->
+                    <div class="notifications"><!--notifications options contact info-->
                         <input type="checkbox" name="alert[]" id="alert1" value="call" />
                         <label for="alert1">Call Me</label>
                         <input type="checkbox" name="alert[]" id="alert2" value="email" />
@@ -85,13 +87,13 @@
                         <input type="checkbox" name="alert[]" id="alert3" value="sms" />
                         <label for="alert3">Text Me</label>
                     </div>
-                    <div>
+                    <div class="contact">
                         <input type="Email" name="email">
                         <label for="email">Email</label>
                         <input type="Phone Number" name="phone">
                         <label for="phone">Phone Number</label>
                     </div>
-                    <div>
+                    <div class="payment">
                         <!--Payment info-->
                         <input type="radio" name="debit">
                         <label for="debit">Debit</label>
@@ -100,7 +102,7 @@
                         <input type="text" name="payment">
                         <label for="payment">Payment</label>
                     </div>
-                    <div>
+                    <div class="finalbuttons">
                         <!--purchase button reset button-->
                         <button id="submit">Place Order</button>
                         <button id="reset">Reset</button>
