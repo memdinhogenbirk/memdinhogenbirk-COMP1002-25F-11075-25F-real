@@ -228,5 +228,13 @@ footer{
 	width:50%;
 	display: block;
 }
-.personal ul{
+.personal {
+	display:block;
+	padding: 1rem;
+}
+.personal li {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem;
 }
