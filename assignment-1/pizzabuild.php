@@ -24,7 +24,7 @@
                             
                             <ul>
                                 <li><h3>CHEESE</h3></li>
-                                <li><input type="radio" name="CHEESE" id="CHEESE1" value="Cheddar" /><label for="CHEESE1">Cheddar</label></li>
+                                <li><input type="radio" name="CHEESE" id="CHEESE1" value="Cheddar" required/><label for="CHEESE1">Cheddar</label></li>
                                 
                                 <li><input type="radio" name="CHEESE" id="CHEESE2" value="Mozzarella" /><label for="CHEESE2">Mozzarella</label></li>
                                 
@@ -34,7 +34,7 @@
                             
                             <ul>
                                 <li><h3>SAUCE</h3></li>
-                                <li><input type="radio" name="SAUCE" id="SAUCE1" value="Tomato" /><label for="SAUCE1">Tomato Sauce</label></li>
+                                <li><input type="radio" name="SAUCE" id="SAUCE1" value="Tomato" required/><label for="SAUCE1">Tomato Sauce</label></li>
                                 
                                 <li><input type="radio" name="SAUCE" id="SAUCE2" value="Marinara" /><label for="SAUCE2">Marinara Sauce</label></li>
                                 
@@ -87,12 +87,12 @@
                     </div>
                     <div class="sizes">
                         <h3>SIZES</h3>
-                        <input type="radio" name="SIZE" id="SMALL" value="Small" /><label for="SMALL">Small (8")</label>
+                        <input type="radio" name="SIZE" id="SMALL" value="Small" required/><label for="SMALL">Small (8")</label>
                         <input type="radio" name="SIZE" id="MEDIUM" value="Medium" /><label for="MEDIUM">Medium (12")</label>
                         <input type="radio" name="SIZE" id="LARGE" value="Large" /><label for="LARGE">Large (16")</label>
                         <input type="radio" name="SIZE" id="XLARGE" value="Xlarge" /><label for="XLARGE">Extra-Large (20")</label>
                         <h3>CRUST</h3>
-                        <input type="radio" name="CRUST" id="ORIGINAL" value="Original" /><label for="ORIGINAL">Original Crust</label>
+                        <input type="radio" name="CRUST" id="ORIGINAL" value="Original" required/><label for="ORIGINAL">Original Crust</label>
                         <input type="radio" name="CRUST" id="THIN" value="Thin" /><label for="THIN">Thin Crust</label>
                         <input type="radio" name="CRUST" id="DEEPDISH" value="Deepdish" /><label for="DEEPDISH">Deep Dish</label>
                                     

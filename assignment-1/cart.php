@@ -22,7 +22,7 @@
                         $veggies = $_GET["VEGGIES"];
                         $size = $_GET["SIZE"];
                         $crust = $_GET["CRUST"];
-                        $delvorpick = $_GET["quantity"];
+                        $quantity = $_GET["quantity"];
                         	
                     echo('<p><b>Size: </b>'.$size.'</p>');
 	            	echo('<p><b>Crust: </b>'.$crust.'</p>');
@@ -39,24 +39,25 @@
 	                		echo('<li>'.$item.' </li>');
 	                	};
 	                echo('</ul>');
-	                echo('<p><b>Quantity: </b>'.$delvorpick.'</p>');		
-                            echo('<b>Total: </b>');
+	                echo('<p><b>Quantity: </b>'.$quantity.'</p>');		
+                            echo('<b>Total: </b> $');
                             if ($size=="Xlarge"){
-                                print('$19.99');
+                                $price=19.99;
+                                print($price * $quantity);
                             }
                             elseif ($size=="Large"){
-                                print('$14.99');
+                                $price=14.99;
+                                print($price * $quantity);
                             }
                             elseif ($size=="Medium"){
-                                print('$11.99');
+                                $price=11.99;
+                                print($price * $quantity);
                             }
                             elseif ($size=="Small"){
-                                print('$8.99');
+                                $price=8.99;
+                                print($price * $quantity);
                             };
-
-                        
-                    
-                                        ?>
+                            ?>
                         </div>                
                 </fieldset>
         
