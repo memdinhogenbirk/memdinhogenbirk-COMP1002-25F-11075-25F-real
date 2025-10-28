@@ -61,12 +61,9 @@
                         
                         
                                         ?>
+                        </div>                
                 </fieldset>
                 <fieldset class="infobox">
-                    </div>
-                    <div><!--Total cost-->
-                    
-                    </div>
                     <div class="personal"><!--Name Address-->
                         <ul>
                             <li><label for="fname">First Name</label>
