@@ -13,10 +13,8 @@
                 
 			?>
         </header>
-        <main>
-            <form class="checkout">
-                <fieldset class="selectionbox">
-                    <div><!--items in cart-->
+        <main class="cartmain">
+                    <div class="cartitems"><!--items in cart-->
                         <?php 
                         $cheese = $_GET["CHEESE"];
                         $sauce = $_GET["SAUCE"];
@@ -26,7 +24,7 @@
                         $crust = $_GET["CRUST"];
                         $delvorpick = $_GET["delivorpick"];
                         
-                        echo('<p><b>For: </b>'.$delvorpick.'</p>');	
+                    echo('<p><b>For: </b>'.$delvorpick.'</p>');	
     
 	                echo('<ul>');	
 	                		echo('<li><b>Crust: </b>'.$crust.'</li>');
@@ -63,6 +61,8 @@
                                         ?>
                         </div>                
                 </fieldset>
+        
+            <form class="checkout">
                 <fieldset class="infobox">
                     <div class="personal"><!--Name Address-->
                         <ul>
@@ -77,10 +77,12 @@
                         </ul>
                     </div>
                     <div class="contact">
-                        <input type="Email" name="email">
-                        <label for="email">Email</label>
-                        <input type="Phone Number" name="phone">
-                        <label for="phone">Phone Number</label>
+                        <ul>
+                            <li><label for="email">Email</label>
+                            <input type="Email" name="email"></li>
+                            <li><label for="phone">Phone Number</label>
+                            <input type="Phone Number" name="phone"></li>
+                        </ul>
                     </div>
                     <div class="notifications"><!--notifications options contact info-->
                         <input type="checkbox" name="alert[]" id="alert1" value="call" />
@@ -96,8 +98,10 @@
                         <label for="debit">Debit</label>
                         <input type="radio" name="credit">
                         <label for="credit">Credit</label>
-                        <input type="text" name="payment">
-                        <label for="payment">Card Number</label>
+                        <div>
+                            <label for="payment">Card Number</label>
+                            <input type="text" name="payment">
+                        </div>
                     </div>
                     <div class="finalbuttons">
                         <!--purchase button reset button-->
@@ -107,6 +111,7 @@
 
                 </fieldset>
             </form>
+        
         </main>
         <footer>
             <?php
