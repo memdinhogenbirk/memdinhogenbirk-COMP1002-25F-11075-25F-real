@@ -15,6 +15,7 @@
 	    <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 	    <title>Papapia Pizzaria | Real Fake Pizza</title>
+        <link rel="icon" type="image/pizzaicon" href="images/pizzaicon.png">
 	    <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body>

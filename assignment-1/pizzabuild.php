@@ -2,8 +2,9 @@
 <html lang="en">
     <head>
 	    <meta charset="utf-8" />
-	    <title>Papapia Pizzaria | Real Fake Pizza</title>
+	    <title>Customize Your Pizza</title>
 	    <link href="css/styles.css" rel="stylesheet" />
+        <link rel="icon" type="image/pizzaicon" href="images/pizzaicon.png">
     </head>
     <body>
         <header>

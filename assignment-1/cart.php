@@ -2,8 +2,9 @@
 <html lang="en">
     <head>
 	    <meta charset="utf-8" />
-	    <title>Papapia Pizzaria | Checkout</title>
+	    <title>Checkout</title>
 	    <link href="css/styles.css" rel="stylesheet" />
+        <link rel="icon" type="image/pizzaicon" href="images/pizzaicon.png">
     </head>
     <body>
         <header>
