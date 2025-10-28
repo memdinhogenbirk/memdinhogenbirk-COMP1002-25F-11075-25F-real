@@ -147,8 +147,8 @@ header {
 	margin-left: 1rem;
 }
 .asidebuttons{
-	padding: 1rem;
-	
+	padding-left: 7rem;
+	padding-bottom: 2rem;
 }
 
 .pizzaCust{
@@ -165,9 +165,13 @@ header {
 	width: 100%;
 	font-size: 16px;
 }
-.deliverpickup{
-	padding: 3rem;
-	
+.quantity{
+	padding-top: 2.95rem;
+	padding-right: 1rem;
+}
+.quantity select{
+	margin-top: 1rem;
+	text-align: end;
 }
 .pizzatoppings ul{
 	padding: 2rem;
@@ -219,16 +223,21 @@ footer{
 .cartitems{
 	width: 30%;
 	padding-left: 5rem;
-	padding-top: 5rem;
+	padding-top: 2rem;
+	margin-left: 10rem;
 	border: solid black 1px;
 }
+.cartitems p{
+	padding-bottom: .5rem;
+}
+.cartitems li{
+	display: inline;
+}
 .cartitems ul{
-	padding-top: 1rem;
+	padding-bottom: 0.5rem;
 }
 .infobox{
-	
-	padding-top: 2rem;
-	padding-bottom: 2rem;
+	padding: 2rem;
 	border: solid black 1px;
 	
 }

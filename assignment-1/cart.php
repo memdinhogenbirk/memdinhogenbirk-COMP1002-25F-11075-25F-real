@@ -22,27 +22,25 @@
                         $veggies = $_GET["VEGGIES"];
                         $size = $_GET["SIZE"];
                         $crust = $_GET["CRUST"];
-                        $delvorpick = $_GET["delivorpick"];
-                        
-                    echo('<p><b>For: </b>'.$delvorpick.'</p>');	
-    
-	                echo('<ul>');	
-	                		echo('<li><b>Crust: </b>'.$crust.'</li>');
-
-	                		echo('<li><b>Sauce: </b>'.$sauce.'</li>');
-
-	                		echo('<li><b>Cheese: </b>'.$cheese.'</li>');
-	                echo('</ul>');		
-                    echo('<b>Toppings:</b><ul>');
+                        $delvorpick = $_GET["quantity"];
+                        	
+                    echo('<p><b>Size: </b>'.$size.'</p>');
+	            	echo('<p><b>Crust: </b>'.$crust.'</p>');
+	            	echo('<p><b>Sauce: </b>'.$sauce.'</p>');
+	            	echo('<p><b>Cheese: </b>'.$cheese.'</p>');
+	            		
+                    echo('<b>Veggie Toppings:</b><ul>');
 	                	foreach ($veggies as $item){
-	                		echo('<li>'.$item.'</li>');
+	                		echo('<li>'.$item.' </li>');
 	                	};
+                    echo('</ul>');    
+                    echo('<b>Meat Toppings:</b><ul>');
                         foreach ($meat as $item){
-	                		echo('<li>'.$item.'</li>');
+	                		echo('<li>'.$item.' </li>');
 	                	};
 	                echo('</ul>');
-	                		echo('<b>Size: </b>'.$size.'');
-                            echo('<br><b>Total: </b>');
+	                echo('<p><b>Quantity: </b>'.$delvorpick.'</p>');		
+                            echo('<b>Total: </b>');
                             if ($size=="Xlarge"){
                                 print('$19.99');
                             }
@@ -57,7 +55,7 @@
                             };
 
                         
-                        
+                    
                                         ?>
                         </div>                
                 </fieldset>

@@ -66,11 +66,18 @@
                                 <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES4" value="Olives" /><label for="VEGGIES4">Olives</label></li>
                                 
                             </ul>
-                            <div class="deliverpickup">
-                                <label for="delivorpick"><h3>DELIVERY OR PICKUP</h3></label>
-                                <select name="delivorpick" id="delivorpick">
-                                        <option value="Delivery">DELIVERY</option>
-                                        <option value="Pickup">PICKUP</option>
+                            <div class="quantity">
+                                <label for="quantity"><h3>QUANTITY</h3></label>
+                                <select name="quantity" id="quantity">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
                                 </select>
                             </div>
                             
@@ -105,7 +112,7 @@
                                 <li>Sauce:</li>
                                 <li>Meat:</li>
                                 <li>Veggies:</li>
-                                <li>For</li>
+                                <li>Quantity:</li>
                                 
                             </ul>
                             <ul id="orderoutput">
@@ -133,7 +140,7 @@
                             const cheeseradios = document.querySelectorAll('input[name="CHEESE"]');
                             const meatcheck = document.querySelectorAll('input[name="MEAT[]"]');
                             const veggiescheck = document.querySelectorAll('input[name="VEGGIES[]"]');
-                            const deliverselect = document.getElementById('delivorpick');
+                            const quantityselect = document.getElementById('quantity');
                             const orderDIV = document.getElementById('orderoutput');
                             const form = document.getElementById('pform');
 
@@ -144,7 +151,7 @@
                                 Tomato:'Tomato', Marinara:'Marinara', Alfredo:'Alfredo',
                                 Pepperoni:'Pepperoni', Bacon:'Bacon', Chicken:'Chicken', Ham:'Ham',
                                 Peppers:'Peppers', Onions:'Onions', Tomatoes:'Tomatoes', Olives:'Olives',
-                                Delivery:'Delivery', Pickup:'Pickup'
+                                1:'x1', 2:'x2', 3:'x3', 4:'x4', 5:'x5', 6:'x6', 7:'x7', 8:'x8', 9:'x9'
                             };
 
                             function updateOrder(){
@@ -160,7 +167,7 @@
                                 const cheeses = Array.from(cheeseradios).find(r => r.checked)?.value || 'None';
                                 const crusts = Array.from(crustradios).find(r => r.checked)?.value || 'None';
                                 const sizes = Array.from(sizeradios).find(r => r.checked)?.value || 'None';
-                                const dlvpck = deliverselect.value;
+                                const quant = quantity.value;
 
                                 const sizeText = itemspicked[sizes] || 'none';
                                 const crustText = itemspicked[crusts] || 'none';
@@ -168,7 +175,7 @@
                                 const sauceText = itemspicked[sauces] || 'none';
                                 const meatText =  meats.length >0? meats.join(', '): 'none';
                                 const veggieText = veggies.length >0? veggies.join(', '): 'none';
-                                const deliveryText = itemspicked[dlvpck] || 'none';
+                                const quantityText = itemspicked[quant] || 'none';
                                 orderDIV.innerHTML = `
 
                                 <li>${sizeText}</li>
@@ -177,7 +184,7 @@
                                 <li>${sauceText}</li>
                                 <li>${meatText}</li>
                                 <li>${veggieText}</li>
-                                <li>${deliveryText}</li>
+                                <li>${quantityText}</li>
                                 
                                 `;
                             }
@@ -187,7 +194,7 @@
                             cheeseradios.forEach(r => r.addEventListener('change', updateOrder));
                             meatcheck.forEach(cb => cb.addEventListener('change', updateOrder));
                             veggiescheck.forEach(cb => cb.addEventListener('change', updateOrder));
-                            deliverselect.addEventListener('change', updateOrder);
+                            quantityselect.addEventListener('change', updateOrder);
                             form.addEventListener('reset', updateOrder);
                             updateOrder();
                         </script>
