@@ -33,11 +33,17 @@
 	                	foreach ($veggies as $item){
 	                		echo('<li>'.$item.' </li>');
 	                	};
+                        if (empty($veggies)){
+                            print ('none');
+                        }
                     echo('</ul>');    
                     echo('<b>Meat Toppings:</b><ul>');
                         foreach ($meat as $item){
 	                		echo('<li>'.$item.' </li>');
 	                	};
+                        if (empty($meat)){
+                            print ('none');
+                        }
 	                echo('</ul>');
 	                echo('<p><b>Quantity: </b>'.$quantity.'</p>');		
                             echo('<b>Total: </b> $');
