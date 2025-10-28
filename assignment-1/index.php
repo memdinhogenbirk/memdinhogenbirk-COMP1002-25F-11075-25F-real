@@ -7,6 +7,7 @@
     Toppings
     Deep dish, thin crust or some other crust types
     Take out, delivery, or eat-in g. And so on…
+    php -S 0.0.0.0:8000
 -->
 <!DOCTYPE html>
 <html lang="en">

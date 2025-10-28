@@ -227,6 +227,7 @@ footer{
 .infobox{
 	width:50%;
 	display: block;
+	
 }
 .personal {
 	display:block;
@@ -236,5 +237,6 @@ footer{
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 1rem;
+  padding-right: 10rem;
+  padding-bottom: .5rem;
 }

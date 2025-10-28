@@ -76,6 +76,12 @@
                             <input type="text" name="address2"></li>
                         </ul>
                     </div>
+                    <div class="contact">
+                        <input type="Email" name="email">
+                        <label for="email">Email</label>
+                        <input type="Phone Number" name="phone">
+                        <label for="phone">Phone Number</label>
+                    </div>
                     <div class="notifications"><!--notifications options contact info-->
                         <input type="checkbox" name="alert[]" id="alert1" value="call" />
                         <label for="alert1">Call Me</label>
@@ -84,12 +90,6 @@
                         <input type="checkbox" name="alert[]" id="alert3" value="sms" />
                         <label for="alert3">Text Me</label>
                     </div>
-                    <div class="contact">
-                        <input type="Email" name="email">
-                        <label for="email">Email</label>
-                        <input type="Phone Number" name="phone">
-                        <label for="phone">Phone Number</label>
-                    </div>
                     <div class="payment">
                         <!--Payment info-->
                         <input type="radio" name="debit">
@@ -97,7 +97,7 @@
                         <input type="radio" name="credit">
                         <label for="credit">Credit</label>
                         <input type="text" name="payment">
-                        <label for="payment">Payment</label>
+                        <label for="payment">Card Number</label>
                     </div>
                     <div class="finalbuttons">
                         <!--purchase button reset button-->
