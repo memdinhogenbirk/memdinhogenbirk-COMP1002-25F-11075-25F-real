@@ -10,6 +10,7 @@ html {/**/
 ul{
 	list-style: none;/*removes bullet points*/
 }
+/*nav bar controls*/
 header {
 	width: 100%;/*ensure header runs width of page*/
 	border-bottom: 1px solid gray;/*border line for header/navbar */
@@ -65,6 +66,14 @@ header {
 	width: auto;
 	padding: .5rem;
 }
+/*footer controls*/
+footer{
+	display: block;
+	margin-top: 10rem;
+	border-top: solid grey 1px;
+	padding: 5rem;
+}
+/*Pizza builder controls*/
 .pizzaoptions{
 	display: flex;
 	justify-content: center; /* Centers horizontally */
@@ -190,10 +199,14 @@ header {
 .sizes label{
 	padding-right: 2rem;
 }
+/*index controls*/
 .homepage{
 	display: flex;
 	align-items: top;
 	padding: 1rem;
+}
+.homepage a{
+	margin-bottom: 3rem;
 }
 .address{
 	padding: 1rem;
@@ -201,6 +214,11 @@ header {
 .storehours{
 	margin-bottom: 1rem;
 	margin-left: 1rem;
+}
+.storehours img{
+	margin-top: -6rem;
+	width: 450px; 
+	height: 450px;
 }
 .hours{
 	display: flex;
@@ -210,12 +228,8 @@ header {
 	padding-top: 1rem;
 	padding-right: 2rem;
 }
-footer{
-	display: block;
-	margin-top: 10rem;
-	border-top: solid grey 1px;
-	padding: 5rem;
-}
+
+/*cart controls*/
 .infopage{
 	display: block;
 	padding: 5rem;
@@ -235,6 +249,10 @@ footer{
 }
 .cartitems ul{
 	padding-bottom: 0.5rem;
+}
+.cartitems h3{
+	display: flex;
+	padding-top: 5rem;
 }
 .infobox{
 	padding: 2rem;
@@ -277,4 +295,6 @@ footer{
 }
 .cartmain{
 	display: flex;
+	border: solid black 1px;
+	padding-left:3rem;
 }

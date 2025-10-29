@@ -56,9 +56,11 @@
                                 <li>10:00am - 2:00am</li>
                                 <li>Closed</li>
                             </ul>
+                            <img src="images/cheffella.gif" alt="lil chef guy tossing some pizza"/>
                             </div>
                         
                     </div>
+                    
                 </div>
             </div>
         </main>

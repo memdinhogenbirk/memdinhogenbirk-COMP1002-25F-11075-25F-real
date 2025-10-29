@@ -47,7 +47,7 @@
                         }
 	                echo('</ul>');
 	                echo('<p><b>Quantity: </b>'.$quantity.'</p>');		
-                            echo('<b>Total: </b> $');
+                            echo('<h3>Total: $');
                             if ($size=="Xlarge"){
                                 $price=19.99;
                                 print($price * $quantity);
@@ -64,6 +64,7 @@
                                 $price=8.99;
                                 print($price * $quantity);
                             };
+                            echo('</h3>');
                             ?>
                         </div>                
                 </fieldset>
