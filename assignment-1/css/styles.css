@@ -73,7 +73,7 @@ footer{
 	border-top: solid grey 1px;
 	padding: 5rem;
 }
-/*Pizza builder controls*/
+/*Menu controls*/
 .pizzaoptions{
 	display: flex;
 	justify-content: center; /* Centers horizontally */
@@ -116,6 +116,7 @@ footer{
 	width: 390px;
 	padding-top: 1rem;
 }
+/*Pizza builder controls*/
 .pbmain{
 	margin: 0;
 	display: flex;
@@ -223,10 +224,17 @@ footer{
 	margin-bottom: 1rem;
 	margin-left: 1rem;
 }
-.storehours img{
+.imgcontain{
+	overflow:hidden;
+	height: 450px;
 	margin-top: -6rem;
+}
+.imgcontain img{
 	width: 450px; 
 	height: 450px;
+	margin-right:-45px;
+	margin-left:-60px;
+	
 }
 .hours{
 	display: flex;
