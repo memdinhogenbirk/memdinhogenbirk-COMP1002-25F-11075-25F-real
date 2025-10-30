@@ -26,12 +26,18 @@
                         $shape = $_GET["SHAPE"];
                         $quantity = $_GET["quantity"];
                         $delvorpick = $_GET["deliverypickup"];
-                        $image1 = 'images/original.jpg';
+                        $image1 = "images/original2.jpg";
                     echo('<h1>YOUR ORDER</h1>');
-                    echo('<p><b>'.$quantity.' '.$size.' '.$shape.' '.$crust.' crust</b></p>');
+                    echo('<p><b>'.$quantity.' '.$size.' '.$shape.' '.$crust.' Crust</b></p>');
                     echo('<figure>');
-                        if ($crust=="original"){
-                            readfile($image1);
+                        if ($crust=="Original"){
+                            print"<img src=\"$image1\" width=\"100px\" height=\"100px\"/>";
+                        }
+                        if ($crust=="Deepdish"){
+                            print'<img src="'.$image1.'"width="100" height="100"/>';
+                        }
+                        if ($crust=="Thin"){
+                            print"<img src=\"$image1\" width=\"100px\" height=\"100px\"/>";
                         }
                     echo('</figure>');
 	            	echo('<p><b>Cheese: </b>'.$cheese.'</p>');
