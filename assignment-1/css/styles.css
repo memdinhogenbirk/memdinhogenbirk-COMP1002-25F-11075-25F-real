@@ -73,6 +73,42 @@ footer{
 	border-top: solid grey 1px;
 	padding: 5rem;
 }
+/*index controls*/
+.homepage{
+	display: flex;
+	align-items: top;
+	padding: 1rem;
+}
+.homepage a{
+	margin-bottom: 3rem;
+}
+.address{
+	padding: 1rem;
+}
+.storehours{
+	margin-bottom: 1rem;
+	margin-left: 1rem;
+}
+.imgcontain{
+	overflow:hidden;
+	height: 450px;
+	margin-top: -6rem;
+}
+.imgcontain img{
+	width: 450px; 
+	height: 450px;
+	margin-right:-45px;
+	margin-left:-60px;
+	
+}
+.hours{
+	display: flex;
+	align-items: top;
+}
+.hours ul li{
+	padding-top: 1rem;
+	padding-right: 2rem;
+}
 /*Menu controls*/
 .pizzaoptions{
 	display: flex;
@@ -115,11 +151,41 @@ footer{
 	width: 390px;
 	padding-top: 1rem;
 }
+.menutoppings{
+	padding-top: 1rem;
+	width:100%;
+}
+.menutoppings h2{
+	padding-left: 39%;
+	padding-bottom:1rem;
+	
+}
 .toppingoptions{
 	display: flex;
+	border: solid grey 1px;
+	
 }
 .toppingoptions ul{
 	padding: 1rem;
+	padding-left: 9%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	
+}
+.toppingoptions li{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.toppingoptions img{
+	width: 100px;
+	height: 100px;
+}
+.hamimg{
+	margin-right: -20px;
+	padding-left:1rem;
 }
 /*Pizza builder controls*/
 .pbmain{
@@ -213,42 +279,7 @@ footer{
 .sizes label{
 	padding-right: 2rem;
 }
-/*index controls*/
-.homepage{
-	display: flex;
-	align-items: top;
-	padding: 1rem;
-}
-.homepage a{
-	margin-bottom: 3rem;
-}
-.address{
-	padding: 1rem;
-}
-.storehours{
-	margin-bottom: 1rem;
-	margin-left: 1rem;
-}
-.imgcontain{
-	overflow:hidden;
-	height: 450px;
-	margin-top: -6rem;
-}
-.imgcontain img{
-	width: 450px; 
-	height: 450px;
-	margin-right:-45px;
-	margin-left:-60px;
-	
-}
-.hours{
-	display: flex;
-	align-items: top;
-}
-.hours ul li{
-	padding-top: 1rem;
-	padding-right: 2rem;
-}
+
 
 /*cart controls*/
 .infopage{
