@@ -135,16 +135,34 @@
                 </aside>
             </form>
                         <script>
+                            //READ ME:
+//please note, I have never used Java before. I have learned all this from the internet.
+//most of these annotations are pour moi, not pour vous.
+//I am explaining what the heck I wrote to myself now that it is working as I wanted it to.
+//You did say "don't use AI". I take this as, don't have AI write your code for you.
+//To learn the syntax, I asked Google and Grok, 
+//"How do I store radio, checkbox and selection inputs from a page?"
+//"How do I output inputs to a ul?"
+//I then used the examples they came up with to create my own code.
+//nothing here was copied and pasted, other than syntax examples to work off of.
+//I feel my commits will back me up on this given the multitude of errors and rewrites I had to do to get it working.
+
+                            //radio, check box, and select box info grabber
+                            //querySelectorAll grabs all matching elements(by name in this case)
                             const crustradios = document.querySelectorAll('input[name="CRUST"]');
                             const sizeradios = document.querySelectorAll('input[name="SIZE"]');
                             const sauceradios = document.querySelectorAll('input[name="SAUCE"]');
                             const cheeseradios = document.querySelectorAll('input[name="CHEESE"]');
                             const meatcheck = document.querySelectorAll('input[name="MEAT[]"]');
                             const veggiescheck = document.querySelectorAll('input[name="VEGGIES[]"]');
+                            //.getElementById pretty self expanatory, grabs elements based on id
+                            //used for quantity selection elements in this case
                             const quantityselect = document.getElementById('quantity');
+                            //used for li items of ul orderoutput in this case
                             const orderDIV = document.getElementById('orderoutput');
+                            //used to grab form elements
                             const form = document.getElementById('pform');
-
+                            //array for every single checkbox, radio, or select element, to be used for output list
                             const itemspicked = {
                                 Small: 'Small', Medium: 'Medium', Large: 'Large', Xlarge: 'Extra-Large',
                                 Original: 'Original', Thin: 'Thin', Deepdish:'Deep Dish',
@@ -154,22 +172,39 @@
                                 Peppers:'Peppers', Onions:'Onions', Tomatoes:'Tomatoes', Olives:'Olives',
                                 1:'x1', 2:'x2', 3:'x3', 4:'x4', 5:'x5', 6:'x6', 7:'x7', 8:'x8', 9:'x9'
                             };
-
+                            //big ol function begins for updating the "your order" output list
                             function updateOrder(){
+                                //constant variable veggies defined (declared?) as the array of vegetable checkboxes
                                 const veggies = Array.from(veggiescheck)
                                 .filter(cb => cb.checked)
+                                //assigns cb(for checkboxes) as filtered checkboxes (checked checkboxes only)
+                                //cb=> is shortform of function(cb){...}
                                 .map(cb => itemspicked[cb.value]);
-                                
+                                //maps checked cbs to their respective values in the itemspicked array
+                                //rince repeat for meat
                                 const meats = Array.from(meatcheck)
                                 .filter(cb => cb.checked)
                                 .map(cb => itemspicked[cb.value]);
-                                
+                                //simpler constant variables given only 1 item is checked at a time
                                 const sauces = Array.from(sauceradios).find(r => r.checked)?.value || 'None';
+                                //find returns the first checked value(the only checked value)
+                                //r for radios, assigned to checked values or none if none checked
+                                //r=> is shortform of function(r){...}
+                                //.value is called a "chains" the value to r
                                 const cheeses = Array.from(cheeseradios).find(r => r.checked)?.value || 'None';
                                 const crusts = Array.from(crustradios).find(r => r.checked)?.value || 'None';
                                 const sizes = Array.from(sizeradios).find(r => r.checked)?.value || 'None';
                                 const quant = quantity.value;
+                                //quantity is a selection, only one value is in it at any given time once selected
+                                //.value "chains" the current selection value to quantity
 
+                                //variables for text outputs of each previously defined variable
+                                //uses items picked array for radios and quantities
+                                //check boxes already assigned to itemspicked array values
+                                //check boxes use .length to make as many outputs as there are checkboxes selected
+                                //.join joins each item together with(', ')adding a comma and space between
+                                //>0?....: 'none' is a if else operation saying if there are more than 0 boxes checked
+                                //the meat values will print, else print none
                                 const sizeText = itemspicked[sizes] || 'none';
                                 const crustText = itemspicked[crusts] || 'none';
                                 const cheeseText = itemspicked[cheeses] || 'none';
@@ -177,6 +212,9 @@
                                 const meatText =  meats.length >0? meats.join(', '): 'none';
                                 const veggieText = veggies.length >0? veggies.join(', '): 'none';
                                 const quantityText = itemspicked[quant] || 'none';
+                                //.innerHTML reads or writes html inside of an element
+                                //orderDIV is the variable that acquired the orderoutput list elements
+                                //=`...` contains the new html text, with newly acquired variable text values
                                 orderDIV.innerHTML = `
 
                                 <li>${sizeText}</li>
@@ -189,17 +227,27 @@
                                 
                                 `;
                             }
+                            //for each radio, do function addEventListener
+                            //event listener is "listening" for user inputs, which will then trigger the overall
+                            //updateOrder function, each time something is checked or selected
+                            //'change' is the event in question
+                            //for when something is "changed" in the various user input options                          
                             crustradios.forEach(r => r.addEventListener('change', updateOrder));
                             sizeradios.forEach(r => r.addEventListener('change', updateOrder));
                             sauceradios.forEach(r => r.addEventListener('change', updateOrder));
                             cheeseradios.forEach(r => r.addEventListener('change', updateOrder));
+                            //for each checkbox, do function addEvenListener
                             meatcheck.forEach(cb => cb.addEventListener('change', updateOrder));
                             veggiescheck.forEach(cb => cb.addEventListener('change', updateOrder));
                             quantityselect.addEventListener('change', updateOrder);
+                            //form event listener is listening for the reset button to be pressed
+                            //without this, only the form options reset, not the java
                             form.addEventListener('reset', () => {
                             setTimeout(updateOrder, 0);
+                            //run updateOrder later, 0=no delay
+                            //necessary little bit of code to ensure reset button actually resets the java scripted outputs
                             });
-                            updateOrder();
+                            //updateOrder(); no longer needed, requires a second reset input if done this way
                         </script>
                    
             
