@@ -149,6 +149,14 @@ footer{
 }
 .pbaside ul li{
 	padding-top: 1rem;
+	
+}
+.delvorpick{
+	display: flex;
+	position: absolute;
+	margin-left: 18rem;
+	margin-top: 1rem;
+	font-size: 20px;
 }
 .pbaside button{
 	font-size: 20px;
@@ -252,7 +260,7 @@ footer{
 }
 .cartitems h3{
 	display: flex;
-	padding-top: 5rem;
+	padding-top: 3rem;
 }
 .infobox{
 	padding: 2rem;

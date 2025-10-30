@@ -126,7 +126,12 @@
                                 <li>none</li>
                                 
                             </ul>
+                            <select class="delvorpick" name="delivorypickup"/>
+                                <option value="Pickup"<?php echo (($_GET['type'] ?? 'pickup') === 'pickup') ? 'selected' : ''; ?>>PICKUP</option>
+                                <option value="Delivory"<?php echo (($_GET['type'] ?? 'delivery') === 'delivery') ? 'selected' : ''; ?>>DELIVORY</option>
+                            </select>
                         </div>
+                        
                         <div class="asidebuttons">
                             <button type="submit">CHECKOUT</button>
                             <button type="reset">CLEAR SELECTION</button>
