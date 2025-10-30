@@ -93,6 +93,7 @@
         
             <form class="checkout" action="orderplaced.php" method="get">
                 <fieldset class="infobox">
+                    <h3>PERSONAL INFORMATION</h3>
                     <div class="personal"><!--Name Address-->
                         <ul>
                             <li><label for="fname">First Name</label>
@@ -121,16 +122,25 @@
                         <input type="checkbox" name="alert[]" id="alert3" value="sms" />
                         <label for="alert3">Text Me</label>
                     </div>
+                    <h3>PAYMENT INFO</h3>
                     <div class="payment">
                         <!--Payment info-->
                         <input type="radio" name="debit">
                         <label for="debit">Debit</label>
                         <input type="radio" name="credit">
                         <label for="credit">Credit</label>
-                        <div>
+                       
+                            <label for="cfname">Name On Card</label>
+                            <input type="tel" placeholder="FIRST NAME" name="cfname">
+                            <input type="tel" placeholder="LAST NAME" name="clname">
                             <label for="payment">Card Number</label>
-                            <input type="text" name="payment">
-                        </div>
+                            <input type="tel" placeholder="xxxx-xxxx-xxxx-xxxx" name="payment">
+                            <label for="securitycode">CSC</label>
+                            <input type="tel" placeholder="xxxx" name="securitycode">
+                            <label for="mexpiry">Expiry Date</label>
+                            <input type="tel" placeholder="mm" name="mexpiry">
+                            <input type="tel" placeholder="yy" name="yexpiry">
+                        
                     </div>
                     <div class="finalbuttons">
                         <!--purchase button reset button-->
