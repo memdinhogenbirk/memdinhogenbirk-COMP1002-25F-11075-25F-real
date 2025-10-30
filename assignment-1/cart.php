@@ -24,7 +24,7 @@
                         $size = $_GET["SIZE"];
                         $crust = $_GET["CRUST"];
                         $quantity = $_GET["quantity"];
-                        $delvorpick = $_GET["delivorypickup"];	
+                        $delvorpick = $_GET["deliverypickup"];	
                     echo('<p><b>Size: </b>'.$size.'</p>');
 	            	echo('<p><b>Crust: </b>'.$crust.'</p>');
 	            	echo('<p><b>Sauce: </b>'.$sauce.'</p>');
@@ -48,7 +48,7 @@
 	                echo('</ul>');
                     echo('<p><b>For: </b>'.$delvorpick.'</p>');	
 	                echo('<p><b>Quantity: </b>'.$quantity.'</p>');		
-                            echo('<h3>Sub-Total: $');
+                            echo('<p><b>SubTotal:</b> $');
                             if ($size=="Xlarge"){
                                 $price=19.99;
                                 print($price * $quantity);
@@ -65,17 +65,27 @@
                                 $price=8.99;
                                 print($price * $quantity);
                             };
-                            echo('</h3>');
-                            echo('<p>Taxes: $'.($price*0.13).'</p>');
-                            echo('<p>Delivory Fee: $</p>');
-                            if ($delvorpick==Delivory){
-                                print($price*0.13);
+                            echo('</p>');
+                            echo('<p><b>Delivory Fee:</b> $');
+                            if ($delvorpick=="Delivery"){
+                                $fee=5;
+                                print($fee);
                             }
-                            elseif ($delvorpick==Pickup)
-                            {
-                                echo('<p>Delivory Fee: None</p>');
+                            elseif ($delvorpick=="Pickup"){
+                                $fee=0;
+                                print('none');
                             };
-                            echo('<h3>Total: $'.($price + 5).'</h3>');
+                            echo('</p>');
+                            echo('<h3>Total: $');
+                            if ($delvorpick=="Delivery"){
+                                $fee=5;
+                                print($price * $quantity + $fee);
+                            }
+                            elseif ($delvorpick=="Pickup"){
+                                $fee=0;
+                                print($price * $quantity + $fee);
+                            };
+                            echo('</h3>');
                             ?>
                         </div>                
                 

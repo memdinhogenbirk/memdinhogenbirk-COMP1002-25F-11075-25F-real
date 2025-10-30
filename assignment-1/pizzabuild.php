@@ -126,9 +126,9 @@
                                 <li>none</li>
                                 
                             </ul>
-                            <select class="delvorpick" name="delivorypickup"/>
+                            <select class="delvorpick" name="deliverypickup"/>
                                 <option value="Pickup"<?php echo (($_GET['type'] ?? 'pickup') === 'pickup') ? 'selected' : ''; ?>>PICKUP</option>
-                                <option value="Delivory"<?php echo (($_GET['type'] ?? 'delivery') === 'delivery') ? 'selected' : ''; ?>>DELIVORY</option>
+                                <option value="Delivery"<?php echo (($_GET['type'] ?? 'delivery') === 'delivery') ? 'selected' : ''; ?>>DELIVERY</option>
                             </select>
                         </div>
                         
