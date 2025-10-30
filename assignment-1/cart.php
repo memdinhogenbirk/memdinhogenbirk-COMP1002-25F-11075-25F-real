@@ -104,10 +104,6 @@
                             <input type="text" name="address1"></li>
                             <li><label for="address2">Address Line 2</label>
                             <input type="text" name="address2"></li>
-                        </ul>
-                    </div>
-                    <div class="contact">
-                        <ul>
                             <li><label for="email">Email</label>
                             <input type="Email" name="email"></li>
                             <li><label for="phone">Phone Number</label>
