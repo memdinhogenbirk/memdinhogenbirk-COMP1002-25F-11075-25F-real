@@ -129,7 +129,7 @@
                         </div>
                         <div class="asidebuttons">
                             <button type="submit">CHECKOUT</button>
-                            <button type="reset">RESET</button>
+                            <button type="reset">CLEAR SELECTION</button>
                         </div>
                     </fieldset>
                 </aside>
@@ -196,7 +196,9 @@
                             meatcheck.forEach(cb => cb.addEventListener('change', updateOrder));
                             veggiescheck.forEach(cb => cb.addEventListener('change', updateOrder));
                             quantityselect.addEventListener('change', updateOrder);
-                            form.addEventListener('reset', updateOrder);
+                            form.addEventListener('reset', () => {
+                            setTimeout(updateOrder, 0);
+                            });
                             updateOrder();
                         </script>
                    

@@ -67,9 +67,9 @@
                             echo('</h3>');
                             ?>
                         </div>                
-                </fieldset>
+                
         
-            <form class="checkout">
+            <form class="checkout" action="orderplaced.php" method="get">
                 <fieldset class="infobox">
                     <div class="personal"><!--Name Address-->
                         <ul>
@@ -112,8 +112,8 @@
                     </div>
                     <div class="finalbuttons">
                         <!--purchase button reset button-->
-                        <button id="submit">Place Order</button>
-                        <button id="reset">Reset</button>
+                        <button type="submit">Place Order</button>
+                        <button type="reset">Reset</button>
                     </div>
 
                 </fieldset>
