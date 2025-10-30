@@ -86,6 +86,11 @@
                            
                         
                     </div>
+                    <div class="shape">
+                        <h3>SHAPE</h3>
+                        <input type="radio" name="SHAPE" id="SQUARE" value="Square"/><label for="SQUARE" required>Square</label>
+                        <input type="radio" name="SHAPE" id="ROUND" value="Round"/><label for="ROUND">Round</label>
+                    </div>
                     <div class="sizes">
                         <h3>SIZES</h3>
                         <input type="radio" name="SIZE" id="SMALL" value="Small" required/><label for="SMALL">Small (8")</label>
@@ -109,6 +114,7 @@
                             <ul class="itemdec">
                                 <li>Size:</li>
                                 <li>Crust:</li>
+                                <li>Shape:</li>
                                 <li>Cheese:</li>
                                 <li>Sauce:</li>
                                 <li>Meat:</li>
@@ -124,6 +130,7 @@
                                 <li>none</li>
                                 <li>none</li>
                                 <li>none</li>
+                                <li>x1</li>
                                 
                             </ul>
                             <select class="delvorpick" name="deliverypickup"/>
@@ -148,6 +155,7 @@
 //To learn the syntax, I asked Google and Grok, 
 //"How do I store radio, checkbox and selection inputs from a page?"
 //"How do I output inputs to a ul?"
+//etc.
 //I then used the examples they came up with to create my own code.
 //nothing here was copied and pasted, other than syntax examples to work off of.
 //I feel my commits will back me up on this given the multitude of errors and rewrites I had to do to get it working.
@@ -158,6 +166,7 @@
                             const sizeradios = document.querySelectorAll('input[name="SIZE"]');
                             const sauceradios = document.querySelectorAll('input[name="SAUCE"]');
                             const cheeseradios = document.querySelectorAll('input[name="CHEESE"]');
+                            const shaperadios = document.querySelectorAll('input[name="SHAPE"]')
                             const meatcheck = document.querySelectorAll('input[name="MEAT[]"]');
                             const veggiescheck = document.querySelectorAll('input[name="VEGGIES[]"]');
                             //.getElementById pretty self expanatory, grabs elements based on id
@@ -170,7 +179,8 @@
                             //array for every single checkbox, radio, or select element, to be used for output list
                             const itemspicked = {
                                 Small: 'Small', Medium: 'Medium', Large: 'Large', Xlarge: 'Extra-Large',
-                                Original: 'Original', Thin: 'Thin', Deepdish:'Deep Dish',
+                                Original: 'Original', Thin: 'Thin', Deepdish:'Deep Dish', 
+                                Square: 'Square', Round: 'Round',
                                 Cheddar:'Cheddar', Mozzarella:'Mozzarella', Vegan:'Vegan',
                                 Tomato:'Tomato', Marinara:'Marinara', Alfredo:'Alfredo',
                                 Pepperoni:'Pepperoni', Bacon:'Bacon', Chicken:'Chicken', Ham:'Ham',
@@ -199,6 +209,7 @@
                                 const cheeses = Array.from(cheeseradios).find(r => r.checked)?.value || 'None';
                                 const crusts = Array.from(crustradios).find(r => r.checked)?.value || 'None';
                                 const sizes = Array.from(sizeradios).find(r => r.checked)?.value || 'None';
+                                const shapes = Array.from(shaperadios).find(r => r.checked)?.value || 'None';
                                 const quant = quantity.value;
                                 //quantity is a selection, only one value is in it at any given time once selected
                                 //.value "chains" the current selection value to quantity
@@ -214,6 +225,7 @@
                                 const crustText = itemspicked[crusts] || 'none';
                                 const cheeseText = itemspicked[cheeses] || 'none';
                                 const sauceText = itemspicked[sauces] || 'none';
+                                const shapeText = itemspicked[shapes] || 'none';
                                 const meatText =  meats.length >0? meats.join(', '): 'none';
                                 const veggieText = veggies.length >0? veggies.join(', '): 'none';
                                 const quantityText = itemspicked[quant] || 'none';
@@ -224,6 +236,7 @@
 
                                 <li>${sizeText}</li>
                                 <li>${crustText}</li>
+                                <li>${shapeText}</li>
                                 <li>${cheeseText}</li>
                                 <li>${sauceText}</li>
                                 <li>${meatText}</li>
@@ -239,6 +252,7 @@
                             //for when something is "changed" in the various user input options                          
                             crustradios.forEach(r => r.addEventListener('change', updateOrder));
                             sizeradios.forEach(r => r.addEventListener('change', updateOrder));
+                            shaperadios.forEach(r => r.addEventListener('change', updateOrder));
                             sauceradios.forEach(r => r.addEventListener('change', updateOrder));
                             cheeseradios.forEach(r => r.addEventListener('change', updateOrder));
                             //for each checkbox, do function addEvenListener

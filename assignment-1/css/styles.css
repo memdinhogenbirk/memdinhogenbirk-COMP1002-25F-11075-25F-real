@@ -197,13 +197,14 @@ footer{
 .pbmain form{
 	display: flex;
 	width: 100%;
+	padding-left: 3rem;
 }
 .pizzaB{
 	width: 100%;
 	
 }
 .pbaside{
-	width: 30%;
+	width: 35%;
 	padding-left: 1rem;
 	display: block;
 }
@@ -232,7 +233,7 @@ footer{
 }
 .pbaside button{
 	font-size: 20px;
-	margin-top: 7.4rem;
+	margin-top: 11.7rem;
 	margin-left: 1rem;
 }
 .asidebuttons{
@@ -277,6 +278,16 @@ footer{
 	padding-top: 2rem;
 }
 .sizes label{
+	padding-right: 2rem;
+}
+.shape{
+	padding-left: 2rem;
+	padding-bottom: 2rem;
+}
+.shape h3{
+	padding-top: 2rem;
+}
+.shape label{
 	padding-right: 2rem;
 }
 
