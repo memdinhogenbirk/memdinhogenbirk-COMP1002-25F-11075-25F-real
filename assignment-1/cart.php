@@ -23,13 +23,22 @@
                         $veggies = $_GET["VEGGIES"];
                         $size = $_GET["SIZE"];
                         $crust = $_GET["CRUST"];
+                        $shape = $_GET["SHAPE"];
                         $quantity = $_GET["quantity"];
                         $delvorpick = $_GET["deliverypickup"];	
                     echo('<p><b>Size: </b>'.$size.'</p>');
 	            	echo('<p><b>Crust: </b>'.$crust.'</p>');
-	            	echo('<p><b>Sauce: </b>'.$sauce.'</p>');
+	            	echo('<p><b>Shape: </b>'.$shape.'</p>');
 	            	echo('<p><b>Cheese: </b>'.$cheese.'</p>');
-	            		
+                    echo('<p><b>Sauce: </b>'.$sauce.'</p>');
+	            	echo('<b>Meat Toppings:</b><ul>');
+                        foreach ($meat as $item){
+	                		echo('<li>'.$item.' </li>');
+	                	};
+                        if (empty($meat)){
+                            print ('none');
+                        }	
+                    echo('</ul>');
                     echo('<b>Veggie Toppings:</b><ul>');
 	                	foreach ($veggies as $item){
 	                		echo('<li>'.$item.' </li>');
@@ -38,14 +47,6 @@
                             print ('none');
                         }
                     echo('</ul>');    
-                    echo('<b>Meat Toppings:</b><ul>');
-                        foreach ($meat as $item){
-	                		echo('<li>'.$item.' </li>');
-	                	};
-                        if (empty($meat)){
-                            print ('none');
-                        }
-	                echo('</ul>');
                     echo('<p><b>For: </b>'.$delvorpick.'</p>');	
 	                echo('<p><b>Quantity: </b>'.$quantity.'</p>');		
                             echo('<p><b>SubTotal:</b> $');

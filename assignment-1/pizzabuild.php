@@ -146,19 +146,19 @@
                     </fieldset>
                 </aside>
             </form>
-                        <script>
+            <script>
                             //READ ME:
-//please note, I have never used Java before. I have learned all this from the internet.
-//most of these annotations are pour moi, not pour vous.
-//I am explaining what the heck I wrote to myself now that it is working as I wanted it to.
-//You did say "don't use AI". I take this as, don't have AI write your code for you.
-//To learn the syntax, I asked Google and Grok, 
-//"How do I store radio, checkbox and selection inputs from a page?"
-//"How do I output inputs to a ul?"
-//etc.
-//I then used the examples they came up with to create my own code.
-//nothing here was copied and pasted, other than syntax examples to work off of.
-//I feel my commits will back me up on this given the multitude of errors and rewrites I had to do to get it working.
+                //please note, I have never used Java before. I have learned all this from the internet.
+                //most of these annotations are pour moi, not pour vous.
+                //I am explaining what the heck I wrote to myself now that it is working as I wanted it to.
+                //You did say "don't use AI". I take this as, don't have AI write your code for you.
+                //To learn the syntax, I asked Google and Grok, 
+                //"How do I store radio, checkbox and selection inputs from a page?"
+                //"How do I output inputs to a ul?"
+                //etc.
+                //I then used the examples they came up with to create my own code.
+                //nothing here was copied and pasted, other than syntax examples to work off of.
+                //I feel my commits will back me up on this given the multitude of errors and rewrites I had to do to get it working.
 
                             //radio, check box, and select box info grabber
                             //querySelectorAll grabs all matching elements(by name in this case)
@@ -267,7 +267,7 @@
                             //necessary little bit of code to ensure reset button actually resets the java scripted outputs
                             });
                             //updateOrder(); no longer needed, requires a second reset input if done this way
-                        </script>
+            </script>
                    
             
         </main>
