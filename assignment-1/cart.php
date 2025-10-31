@@ -125,6 +125,8 @@
                             $total=$price * $quantity + round($taxes,2) + ($fee==5 ? 5: 0);
                             $_SESSION["total"] = $total;
                             $_SESSION["CHEESE"] = $cheese;
+                            $_SESSION["MEAT"] = $meat;
+                            $_SESSION["VEGGIES"] = $veggies;
                             $_SESSION["SIZE"] = $size;
                             $_SESSION["CRUST"] = $crust;
                             $_SESSION["SHAPE"] = $shape;
@@ -158,12 +160,12 @@
                             <input type="Phone Number" name="phone"></li>
                         </ul>
                         <div class="notifications"><!--notifications options contact info-->
-                        <input type="radio" name="alert" id="alert1" value="phone call" />
-                        <label for="alert1">Call Me</label>
-                        <input type="radio" name="alert" id="alert2" value="email" />
-                        <label for="alert2">Email Me</label>
-                        <input type="radio" name="alert" id="alert3" value="sms" />
-                        <label for="alert3">Text Me</label>
+                            <input type="radio" name="alert" id="alert1" value="phone call" />
+                            <label for="alert1">Call Me</label>
+                            <input type="radio" name="alert" id="alert2" value="email" />
+                            <label for="alert2">Email Me</label>
+                            <input type="radio" name="alert" id="alert3" value="sms" />
+                            <label for="alert3">Text Me</label>
                         </div>
                     </div>
                     
@@ -179,18 +181,18 @@
                         </div>
                         <div class="carddetails">
                             <ul>
-                            <li><label for="cfname">Name On Card</label></li>
-                            <li><input type="tel" class="namef" placeholder="FIRST NAME" name="cfname">
-                            <input type="tel" class=namel placeholder="LAST NAME" name="clname"></li>
+                                <li><label for="cfname">Name On Card</label></li>
+                                <li><input type="tel" class="namef" placeholder="FIRST NAME" name="cfname">
+                                <input type="tel" class=namel placeholder="LAST NAME" name="clname"></li>
                             </ul>
                             <ul>
-                            <li><label for="payment">Card Number</label></li>
-                            <li><input type="tel" class="ccnumber" placeholder="xxxx-xxxx-xxxx-xxxx" name="payment"></li>
-                            <li><label for="securitycode">CSC <small>(3 or 4 digit security code)</small></label></li>
-                            <li><input type="tel" class="ccsecurity" placeholder="xxxx" name="securitycode"></li>
-                            <li><label for="mexpiry">Expiry Date</label></li>
-                            <li><input type="tel" class="ccexpire" placeholder="mm" name="mexpiry">
-                            <input type="tel" class="ccexpire" placeholder="yy" name="yexpiry"></li>
+                                <li><label for="payment">Card Number</label></li>
+                                <li><input type="tel" class="ccnumber" placeholder="xxxx-xxxx-xxxx-xxxx" name="payment"></li>
+                                <li><label for="securitycode">CSC <small>(3 or 4 digit security code)</small></label></li>
+                                <li><input type="tel" class="ccsecurity" placeholder="xxxx" name="securitycode"></li>
+                                <li><label for="mexpiry">Expiry Date</label></li>
+                                <li><input type="tel" class="ccexpire" placeholder="mm" name="mexpiry">
+                                <input type="tel" class="ccexpire" placeholder="yy" name="yexpiry"></li>
                             </ul>
                         </div>
                 </div>      

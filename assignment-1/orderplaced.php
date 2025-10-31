@@ -25,7 +25,8 @@
                 $alert = $_GET["alert"];
                 $cheese = $_SESSION["CHEESE"];
                 $sauce = $_SESSION["SAUCE"];
-                $toppings = $_SESSION["toppings"];
+                $meat = $_SESSION["MEAT"];
+                $veggies = $_SESSION["VEGGIES"];
                 $size = $_SESSION["SIZE"];
                 $crust = $_SESSION["CRUST"];
                 $total = $_SESSION["total"] ?? 0.00;
@@ -55,14 +56,29 @@
             echo('<div>');
             echo('<h2>ORDER SUMMARY</h2>');
             echo('<ul>');
-            echo('<li>Quantity x'.$quantity.'</li>');
-            echo('<li>Size: '.$size.'</li>');
-            echo('<li>Shape: '.$shape.'</li>');
-            echo('<li>Crust: '.$crust.'</li>');
-            echo('<li>Cheese: '.$cheese.'</li>');
-            echo('<li>Sauce: '.$sauce.'</li>');
-            echo('<li>Toppings: '.$toppings.'</li>');
+                echo('<li>Quantity x'.$quantity.'</li>');
+                echo('<li>Size: '.$size.'</li>');
+                echo('<li>Shape: '.$shape.'</li>');
+                echo('<li>Crust: '.$crust.'</li>');
+                echo('<li>Cheese: '.$cheese.'</li>');
+                echo('<li>Sauce: '.$sauce.'</li>');
             echo('</ul>');
+            echo('<ul>Meat Toppings: ');
+                        foreach ($meat as $item){
+	                		echo('<li>'.$item.' </li>');
+	                	};
+                        if (empty($meat)){
+                            print ('none');
+                        }	
+                    echo('</ul>');
+                    echo('<ul>Veggie Toppings: ');
+	                	foreach ($veggies as $item){
+	                		echo('<li>'.$item.' </li>');
+	                	};
+                        if (empty($veggies)){
+                            print ('none');
+                        }
+                        echo('</ul>');
             echo('<h3>Order Total: '.$total.'</h3>');
             echo('</div>');
 			?>
