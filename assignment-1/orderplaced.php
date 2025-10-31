@@ -28,7 +28,7 @@
                 $toppings = $_SESSION["toppings"];
                 $size = $_SESSION["SIZE"];
                 $crust = $_SESSION["CRUST"];
-                $rtotal = $_SESSION["Total"] ?? 0.00;
+                $total = $_SESSION["total"] ?? 0.00;
                 $shape = $_SESSION["SHAPE"];
                 $quantity = $_SESSION["quantity"];
                 $delvorpick = $_SESSION["deliverypickup"];
@@ -63,7 +63,7 @@
             echo('<li>Sauce: '.$sauce.'</li>');
             echo('<li>Toppings: '.$toppings.'</li>');
             echo('</ul>');
-            echo('<h3>Order Total: '.$rtotal.'</h3>');
+            echo('<h3>Order Total: '.$total.'</h3>');
             echo('</div>');
 			?>
         </main>

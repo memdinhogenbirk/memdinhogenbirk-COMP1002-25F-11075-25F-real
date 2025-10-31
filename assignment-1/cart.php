@@ -115,13 +115,13 @@
                             }
                             elseif ($delvorpick=="Pickup"){
                                 $total=$price * $quantity + round($taxes,2);
-                                $rtotal=number_format($total, 2);
-                                print($rtotal);
+                                print($total);
                             };
                             echo('</h2>');
                         echo('</div>');
                             /*echo "SESSION: "; var_dump($_SESSION);*/
-                            $_SESSION["Total"] = $rtotal;
+                            $total=$price * $quantity + round($taxes,2);
+                            $_SESSION["total"] = $total;
                             $_SESSION["CHEESE"] = $cheese;
                             $_SESSION["SIZE"] = $size;
                             $_SESSION["CRUST"] = $crust;
