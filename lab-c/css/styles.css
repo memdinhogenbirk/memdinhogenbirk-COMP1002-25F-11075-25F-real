@@ -2,21 +2,8 @@
 
 /* STEP 2: TYPE/ELEMENT Selector - Create a selector that targets the HTML element, with a rule that sets the background-color to 'lightskyblue' */
 /*READ ME
-The final step in this section would imply that this
-
-html{
-	background-color: lightskyblue;
-}
-
-is not what you want, but instead
-
-*{
-	background-color: lightskyblue;
-}
-/*Else the final color change to white for the footers and headings will be invisible since html{} controls will be overrided
-by the main element background color white. Where as *{} ignores main{}, setting every background color to lightskyblue
-HOWEVER, the main a{} is also set to lightskyblue, so it becomes invisible as well. For this reason I have elected to use html{},
-and below I have annoted color: white; and replaced it with purple.
+Presumably you do mean the html element, and not
+*{} as this is the universal selector, and ruins the page by turning every background color blue
 */
 html{
 	background-color: lightskyblue;
@@ -116,7 +103,6 @@ would be the appropriate syntax
 */
 
 /* STEP 10: GROUPED Selector - To wrap up, create a selector that sets the color to 'white' for H1, H2 and FOOTER elements */
-h1,h2,h3,footer{
-	/*color: white; annotated out due to the text turning invisible, see first comment above for context*/
-	color: purple;/*visible against white background*/
+h1,h2,footer{
+	color: white;
 }
