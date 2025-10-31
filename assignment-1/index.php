@@ -65,6 +65,9 @@
                     
                 </div>
             </div>
+            <div class="gotopb">
+                <a href="pizzabuild.php"><h1>CUSTOMIZE YOUR PIZZA!</h1></a>
+            </div>
         </main>
         <footer>
             <?php
