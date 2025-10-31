@@ -17,9 +17,20 @@
         <main>
             <h1>YOUR ORDER HAS BEEN PLACED</h1>
             <?php
-                
+                $fname = $_GET["fname"];
+                $address1 = $_GET["address1"];
+                $address2 = $_GET["address2"];
+                $cheese = $_GET["CHEESE"];
+                $sauce = $_GET["SAUCE"];
+                $meat = $_GET["MEAT"];
+                $veggies = $_GET["VEGGIES"];
+                $size = $_GET["SIZE"];
+                $crust = $_GET["CRUST"];
+                $shape = $_GET["SHAPE"];
+                $quantity = $_GET["quantity"];
+                $delvorpick = $_GET["deliverypickup"];
 			?>
-            <p>Thank you for purchase fname lname</p>
+            <p>Thank you for purchase fname</p>
             <p>Your order will be ready for pickup in 15min.</p>
             <p>Your order will be on it's way shortly.</p>
             <h2>Thank you for ordering from PAPAPIA PIZZERIA</h2>
