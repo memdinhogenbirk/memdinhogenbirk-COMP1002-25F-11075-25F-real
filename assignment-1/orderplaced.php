@@ -21,12 +21,13 @@
                 $fname = $_GET["fname"];
                 $address1 = $_GET["address1"];
                 $address2 = $_GET["address2"];
+                $alert = $_GET["alert"];
                 $cheese = $_SESSION["CHEESE"];
                 $sauce = $_SESSION["SAUCE"];
                 $toppings = $_SESSION[""];
                 $size = $_SESSION["SIZE"];
                 $crust = $_SESSION["CRUST"];
-                $alert = $_SESSION["alert"];
+                $total = $_SESSION["Total"];
                 $shape = $_SESSION["SHAPE"];
                 $quantity = $_SESSION["quantity"];
                 $delvorpick = $_SESSION["deliverypickup"];

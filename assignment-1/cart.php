@@ -121,7 +121,7 @@
                             echo('</h2>');
                         echo('</div>');
                             
-                            
+                            $_SESSION["Total"] = $total;
                             $_SESSION["CHEESE"] = $cheese;
                             $_SESSION["SIZE"] = $size;
                             $_SESSION["CRUST"] = $crust;
