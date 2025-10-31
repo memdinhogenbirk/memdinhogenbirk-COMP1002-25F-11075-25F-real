@@ -3,7 +3,6 @@
 	/*php -S 0.0.0.0:8000*/
     margin: 0;
     padding: 0;
-    
 }
 html {/**/
 	font-family: verdana;/*font style set to verdana cuz I think it looks nice*/
@@ -11,6 +10,9 @@ html {/**/
 }
 ul{
 	list-style: none;/*removes bullet points*/
+}
+i {
+	color: red;
 }
 /*nav bar controls*/
 header {
@@ -479,9 +481,6 @@ input::placeholder {
 .orderp h1, h2, h3{
 	
 	padding-bottom: 1rem;
-}
-i {
-	color: red;
 }
 .orderp ul > b{
 	border-bottom: 2px black solid;
