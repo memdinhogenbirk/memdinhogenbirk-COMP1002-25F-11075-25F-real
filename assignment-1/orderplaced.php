@@ -30,7 +30,7 @@
                 $shape = $_SESSION["SHAPE"];
                 $quantity = $_SESSION["quantity"];
                 $delvorpick = $_SESSION["deliverypickup"];
-                $total = $_SESSION['total'];
+                
             echo('<div>');
             echo('<p>Thank you for your purchase '.$fname.'!</p>');
             echo('<p>Your order will be ');
