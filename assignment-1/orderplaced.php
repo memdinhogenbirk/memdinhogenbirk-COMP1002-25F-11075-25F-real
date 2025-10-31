@@ -17,6 +17,7 @@
         <main class="orderp">
             
             <?php
+            echo('<section>');
             echo('<h1>YOUR ORDER HAS BEEN PLACED</h1>');
             session_start();
             /*echo "SESSION: "; var_dump($_SESSION);*/
@@ -34,8 +35,10 @@
                 $shape = $_SESSION["SHAPE"];
                 $quantity = $_SESSION["quantity"];
                 $delvorpick = $_SESSION["deliverypickup"];
+                $pickgif = "images/original2.jpg";
+                $delvgif = "images/original2.jpg";
             if (!empty($crust)){    
-            echo('<section>');
+            
             echo('<p>Thank you for your purchase '.$fname.'!</p><br>');
             echo('<p>Your order will be ');
                 if ($delvorpick=="Delivery"){
@@ -52,8 +55,8 @@
                 print($alert.' when it is ready.');
 		        
             echo('</p>');
-            echo('<h3>Thank you for ordering from <i>PAPAPIA PIZZERIA</i>!</h3>');
-            echo('</section>');
+            echo('<h3><br>Thank you for ordering from <i>PAPAPIA PIZZERIA</i>!</h3>');
+            
             echo('<div>');
             echo('<h2>ORDER SUMMARY</h2>');
             echo('<span>');
@@ -84,10 +87,20 @@
                 echo('</span>');
             echo('<h3>Order Total: '.$total.'</h3>');
             echo('</div>');
+            echo('</section>');
+            echo('<figure>');
+                if($delvorpick=="Delivery")
+                    print'<img src="'.$delvgif.'"width="600" height="500"/>';
+                
+                elseif($delvorpick=="Pickup")
+                    print'<img src="'.$pickgif.'"width="600" height="500"/>';
+                
+            echo('</figure>');
             }
             else{
                 echo('<h1>You have placed an order for nothing. Well done.</h1>');
             };
+            
 			?>
         </main>
         <footer>
