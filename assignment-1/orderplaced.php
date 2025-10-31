@@ -14,7 +14,7 @@
                 
 			?>
         </header>
-        <main>
+        <main class="orderp">
             <h1>YOUR ORDER HAS BEEN PLACED</h1>
             <?php
             session_start();
@@ -39,7 +39,7 @@
             echo('<p>Your order will be ');
                 if ($delvorpick=="Delivery"){
                     print('on its way shortly. ');
-                    print('To be delivered to '.$address1.'');
+                    print('To be delivered to '.$address1.',');
                     if (!empty($address2)){
                         print(' Unit '.$address2.'');
                     }

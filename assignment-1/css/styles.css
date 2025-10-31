@@ -454,3 +454,10 @@ input::placeholder {
 	padding-bottom: 1rem;
 	padding-top: 1rem;
 }
+/*Order placed Controls*/
+.orderp{
+	padding: 1rem;
+}
+i {
+	color: red;
+}

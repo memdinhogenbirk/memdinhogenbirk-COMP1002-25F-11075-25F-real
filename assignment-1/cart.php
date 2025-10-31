@@ -147,21 +147,21 @@
                         <h3>PERSONAL INFORMATION</h3>
                         <ul>
                             
-                            <li><label for="fname">First Name</label>
+                            <li><label for="fname"><i>*</i>First Name</label>
                             <input type="text" name="fname"></li>
-                            <li><label for="lname">Last Name</label>
+                            <li><label for="lname"><i>*</i>Last Name</label>
                             <input type="text" name="lname"></li>
-                            <li><label for="address1">Address Line 1</label>
-                            <input type="text" name="address1"></li>
+                            <li><label for="address1"><i>*</i>Address Line 1</label>
+                            <input type="text" name="address1" required></li>
                             <li><label for="address2">Address Line 2</label>
                             <input type="text" name="address2"></li>
-                            <li><label for="email">Email</label>
-                            <input type="Email" name="email"></li>
-                            <li><label for="phone">Phone Number</label>
-                            <input type="Phone Number" name="phone"></li>
+                            <li><label for="email"><i>*</i>Email</label>
+                            <input type="email" name="emailphone" id="email" required></li>
+                            <li><label for="phone"><i>*</i>Phone Number</label>
+                            <input type="tel" name="emailphone" id="phone" required></li>
                         </ul>
                         <div class="notifications"><!--notifications options contact info-->
-                            <input type="radio" name="alert" id="alert1" value="phone call" />
+                            <i>*</i><input type="radio" name="alert" required id="alert1" value="phone call" />
                             <label for="alert1">Call Me</label>
                             <input type="radio" name="alert" id="alert2" value="email" />
                             <label for="alert2">Email Me</label>
@@ -175,25 +175,25 @@
                         <!--Payment info-->
                         <h3>PAYMENT INFO</h3>
                         <div class="debitcredit">
-                            <input type="radio" name="debit">
+                            <i>*</i><input type="radio" name="debitcredit" id="debit" required>
                             <label for="debit">Debit</label>
-                            <input type="radio" name="credit">
+                            <input type="radio" name="debitcredit" id="credit">
                             <label for="credit">Credit</label>
                         </div>
                         <div class="carddetails">
                             <ul>
-                                <li><label for="cfname">Name On Card</label></li>
-                                <li><input type="tel" class="namef" placeholder="FIRST NAME" name="cfname">
-                                <input type="tel" class=namel placeholder="LAST NAME" name="clname"></li>
+                                <li><label for="cfname"><i>*</i>Name On Card</label></li>
+                                <li><input type="tel" class="namef" placeholder="FIRST NAME" name="cfname" required>
+                                <input type="tel" class=namel placeholder="LAST NAME" name="clname" required></li>
                             </ul>
                             <ul>
-                                <li><label for="payment">Card Number</label></li>
-                                <li><input type="tel" class="ccnumber" placeholder="xxxx-xxxx-xxxx-xxxx" name="payment"></li>
-                                <li><label for="securitycode">CSC <small>(3 or 4 digit security code)</small></label></li>
-                                <li><input type="tel" class="ccsecurity" placeholder="xxxx" name="securitycode"></li>
-                                <li><label for="mexpiry">Expiry Date</label></li>
-                                <li><input type="tel" class="ccexpire" placeholder="mm" name="mexpiry">
-                                <input type="tel" class="ccexpire" placeholder="yy" name="yexpiry"></li>
+                                <li><label for="payment"><i>*</i>Card Number</label></li>
+                                <li><input type="tel" class="ccnumber" placeholder="xxxx-xxxx-xxxx-xxxx" name="payment" required></li>
+                                <li><label for="securitycode"><i>*</i>CSC <small>(3 or 4 digit security code)</small></label></li>
+                                <li><input type="tel" class="ccsecurity" placeholder="xxxx" name="securitycode" required></li>
+                                <li><label for="mexpiry"><i>*</i>Expiry Date</label></li>
+                                <li><input type="tel" class="ccexpire" placeholder="mm" name="mexpiry" required>
+                                <input type="tel" class="ccexpire" placeholder="yy" name="yexpiry" required></li>
                             </ul>
                         </div>
                 </div>      

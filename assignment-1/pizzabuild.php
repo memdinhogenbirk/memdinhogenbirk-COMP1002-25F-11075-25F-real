@@ -25,6 +25,7 @@
                             
                             <ul>
                                 <li><h3>CHEESE</h3></li>
+                                
                                 <li><input type="radio" name="CHEESE" id="CHEESE1" value="Cheddar" required/><label for="CHEESE1">Cheddar</label></li>
                                 
                                 <li><input type="radio" name="CHEESE" id="CHEESE2" value="Mozzarella" /><label for="CHEESE2">Mozzarella</label></li>
@@ -123,11 +124,11 @@
                                 
                             </ul>
                             <ul id="orderoutput">
-                                <li>none</li>
-                                <li>none</li>
-                                <li>none</li>
-                                <li>none</li>
-                                <li>none</li>
+                                <li>required<i>*</i></li>
+                                <li>required<i>*</i></li>
+                                <li>required<i>*</i></li>
+                                <li>required<i>*</i></li>
+                                <li>required<i>*</i></li>
                                 <li>none</li>
                                 <li>none</li>
                                 <li>x1</li>
@@ -221,11 +222,11 @@
                                 //.join joins each item together with(', ')adding a comma and space between
                                 //>0?....: 'none' is a if else operation saying if there are more than 0 boxes checked
                                 //the meat values will print, else print none
-                                const sizeText = itemspicked[sizes] || 'none';
-                                const crustText = itemspicked[crusts] || 'none';
-                                const cheeseText = itemspicked[cheeses] || 'none';
-                                const sauceText = itemspicked[sauces] || 'none';
-                                const shapeText = itemspicked[shapes] || 'none';
+                                const sizeText = itemspicked[sizes] || 'required<i>*</i>';
+                                const crustText = itemspicked[crusts] || 'required<i>*</i>';
+                                const cheeseText = itemspicked[cheeses] || 'required<i>*</i>';
+                                const sauceText = itemspicked[sauces] || 'required<i>*</i>';
+                                const shapeText = itemspicked[shapes] || 'required<i>*</i>';
                                 const meatText =  meats.length >0? meats.join(', '): 'none';
                                 const veggieText = veggies.length >0? veggies.join(', '): 'none';
                                 const quantityText = itemspicked[quant] || 'none';
