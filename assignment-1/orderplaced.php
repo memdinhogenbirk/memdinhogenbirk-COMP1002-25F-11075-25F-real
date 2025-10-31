@@ -18,16 +18,17 @@
             <h1>YOUR ORDER HAS BEEN PLACED</h1>
             <?php
             session_start();
+            /*echo "SESSION: "; var_dump($_SESSION);*/
                 $fname = $_GET["fname"];
                 $address1 = $_GET["address1"];
                 $address2 = $_GET["address2"];
                 $alert = $_GET["alert"];
                 $cheese = $_SESSION["CHEESE"];
                 $sauce = $_SESSION["SAUCE"];
-                $toppings = $_SESSION[""];
+                $toppings = $_SESSION["toppings"];
                 $size = $_SESSION["SIZE"];
                 $crust = $_SESSION["CRUST"];
-                $total = $_SESSION["Total"];
+                $rtotal = $_SESSION["Total"] ?? 0.00;
                 $shape = $_SESSION["SHAPE"];
                 $quantity = $_SESSION["quantity"];
                 $delvorpick = $_SESSION["deliverypickup"];
@@ -62,7 +63,7 @@
             echo('<li>Sauce: '.$sauce.'</li>');
             echo('<li>Toppings: '.$toppings.'</li>');
             echo('</ul>');
-            echo('<h3>Order Total: '.$total.'</h3>');
+            echo('<h3>Order Total: '.$rtotal.'</h3>');
             echo('</div>');
 			?>
         </main>
