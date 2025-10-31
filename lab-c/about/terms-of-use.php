@@ -15,7 +15,7 @@
 			<h1>HTML, CSS, and JS Fundamentals</h1>
 			<h2>Building Blocks for Web Developers</h2>
 <?php
-	include('../includes/footer-nav.php');
+	include('../includes/global-nav.php');
 ?>
 		</header>
 		<!-- Page-level main content -->
@@ -40,7 +40,8 @@
 		<!-- Page-level footer -->
 		<footer>
 <?php
-	require $_SERVER['DOCUMENT_ROOT'].'\includes\footer-nav.php';
+	
+	include('../includes/footer-nav.php');
 ?>
 			<p><small>© HTML, CSS, and JS Blocks Inc.</small></p>
 		</footer>
