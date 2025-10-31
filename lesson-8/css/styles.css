@@ -78,7 +78,7 @@ main h3 {
 	text-align: right;
 }
 /* STEP 3: Style the H4 element, creating a selector, and setting CSS properties and values that will display fourth-level headings in boldface and red in colour - save the file, observe the change in your browser and head back to ion-storm.html for STEP 4 */
-
+/*only thing to note here is that embedded styles on the html page will override what is declared here*/
 
 main p {
 	margin-bottom: 1em;
@@ -96,7 +96,9 @@ nav li {
 	margin-bottom: 0.25em;
 }
 /* STEP 7a: ORDER - Change the case of the A elements by setting the text-transform property to 'uppercase' */
-
+a{
+	text-transform: uppercase;
+}
 
 /* STEP 7b: ORDER - Change the case of the A elements again, setting them this time to 'lowercase' - notice that the later value wins out */
 
