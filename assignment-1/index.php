@@ -68,7 +68,7 @@
         </main>
         <footer>
             <?php
-				//Grab Site Navigation
+				//Grab footer
 				include('footer.php')
                 
 			?>

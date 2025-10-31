@@ -84,7 +84,7 @@ Ham https://kerrigans.ie/products/diced-ham
         </main>
         <footer>
             <?php
-				//Grab Site Navigation
+				//Grab footer
 				include('footer.php')
                 
 			?>
