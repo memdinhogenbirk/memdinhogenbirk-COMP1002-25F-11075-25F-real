@@ -112,17 +112,18 @@
                             echo('</p>');
                             echo('<h2>Total: $');
                             if ($delvorpick=="Delivery"){
-                                $fee=5;
-                                print($price * $quantity + $fee + round($taxes,2));
+                                
+                                $total=(number_format($price * $quantity + $fee + round($taxes,2),2));
+                                print($total);
                             }
                             elseif ($delvorpick=="Pickup"){
-                                $total=($price * $quantity + round($taxes,2));
+                                $total=(number_format($price * $quantity + round($taxes,2),2));
                                 print($total);
                             };
                             echo('</h2>');
                         echo('</div>');
                             /*echo "SESSION: "; var_dump($_SESSION);*/
-                            $total=$price * $quantity + round($taxes,2) + ($fee==5 ? 5: 0);
+                            $total=(number_format($price * $quantity + round($taxes,2) + ($fee==5 ? 5: 0),2));
                             $_SESSION["total"] = $total;
                             $_SESSION["CHEESE"] = $cheese;
                             $_SESSION["MEAT"] = $meat;
