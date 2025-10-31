@@ -7,21 +7,34 @@
 /* STEP 2c: Include the 'color' property inside the braces, followed by a ': ' */
 /* STEP 2d: Set the value of the property to 'red', and complete the declaration (consisting of a value and a property) with a semi-colon */
 /* STEP 2e: Save this file and view/refresh the index.html page in your browser - you have created a CSS rule or ruleset */
-
+h1{
+	color: red;
+}
 /* STEP 3: TYPE/ELEMENT Selector - Create a rule with a selector that targets all H3 elements, setting them to the color 'orange' */
-
+h3{
+	color: orange;
+}
 
 /* STEP 4: CLASS Selector - Build another CSS rule that targets all elements with the class 'threat' and sets the background-color to 'yellow' */
-
+.threat{
+	background-color: yellow;
+}
 
 /* STEP 5: ID Selector - Make another CSS rule that targets an element with the id 'robot', and sets the background-color to 'hotpink' */
-
+#robot{
+	background-color: hotpink;
+}
 
 /* STEP 6: UNIVERSAL Selector - Craft a selector that targets EVERY element and sets the border property to '3px solid lightblue' - be aware that this can slow page rendering as it is very resource intensive */
-
+*{
+	border: solid lightblue 3px;
+}
 
 /* STEP 7a: ATTRIBUTE Selector - Build a selector that targets any element with the attribute, 'lang', setting the border to '5px dotted red' */
-
+[lang]{
+border: dotted red 5px;
+margin:1rem;
+}
 /* STEP7b: Try some other regular expression type variations -
 
 	[attr|="val"] - all elements with the attribute attr for which the value is exactly "val" or starts with "val-" (the trailing dash here handles language codes)
@@ -30,9 +43,13 @@
 	[attr*="val"] - all elements with the attribute attr for which the value contains the substring "val"
 
 See https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Attribute_selectors for more specifics */
-
+p[class]{
+	font-size: 50px;
+}
 /* STEP 8: PSEUDOCLASS Selector - Build another selector that targets and paragraph element that is being hovered over with a pointer (:hover), setting the background-color to 'limegreen' */
-
+p:hover{
+	background-color: limegreen;
+}
 
 /* STEP 9a: PSEUDOELEMENT Selector - Create a selector to set the first letter of each paragraph to a llarger size with font-size: 300% */
 
