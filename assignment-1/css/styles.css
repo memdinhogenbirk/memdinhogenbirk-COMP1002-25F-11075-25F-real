@@ -136,7 +136,7 @@ footer{
 }
 
 .pizzaheadings a h1{
-	border: 1px solid yellowgreen;/*may or may not keep, useful for alignment*/
+	border: 1px solid yellowgreen;
 	background-color:gold;
 	color: black;/*Text color black*/
 	border-radius: 30px; /* Rounded corners */
@@ -310,6 +310,8 @@ footer{
 }
 .cost{
 	border: solid grey 1px;
+	padding: 1rem;
+	border-radius: 1rem;
 }
 .cartitems{
 	width: 50%;
@@ -380,13 +382,20 @@ footer{
 }
 .finalbuttons{
 	display: flex;
-	padding-left: 8rem;
+	padding-left: 1rem;
 }
 .finalbuttons button{
 	padding: 1rem;
 	font-size: 30px;
 	margin-top: 3rem;
 	margin-left: 3rem;
+	width: 300px;
+	border: 1px solid yellowgreen;
+	border-radius: 30px;
+	background-color:gold;
+}
+.finalbuttons button:hover{
+	background-color:yellowgreen;
 }
 .cartmain{
 	display: flex;
@@ -400,7 +409,9 @@ footer{
 	margin-left:12rem;
 }
 .cartmain h2{
-	padding-top: 5rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	border-top: solid grey 1px
 }
 .cartmain img{
 	padding-right: 1rem;

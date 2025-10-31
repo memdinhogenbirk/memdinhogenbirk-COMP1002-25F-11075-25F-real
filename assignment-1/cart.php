@@ -66,7 +66,7 @@
                     echo('</ul>');
                     echo('</div>');
                     echo('</div>');
-                    echo('<div class="cost">');    
+                    echo('<div class="cost">');   
                     echo('<p><b>For: </b>'.$delvorpick.'</p>');	
 	                		
                             echo('<p class="subtotal"><b>SubTotal:</b> $');
@@ -182,7 +182,7 @@
                     <div class="finalbuttons">
                         <!--purchase button reset button-->
                         <button type="submit">Place Order</button>
-                        <button type="reset">Reset</button>
+                        <button type="reset">Clear Info</button>
                     </div>
                 
                 </fieldset>
