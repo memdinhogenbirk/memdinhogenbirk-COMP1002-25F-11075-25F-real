@@ -296,14 +296,27 @@ footer{
 	padding: 5rem;
 }
 /*cart controls*/
-.subtotal{
-	padding-top: 1rem;
+.qssc{/*quantity size shape crust heading*/
+	display: flex;
+	padding-bottom: 1rem;
+}
+.sideitems{
+	display: flex;
+}
+.subsideitems{
+	display: flex;
+	flex-direction: column;
+	
+}
+.cost{
+	border: solid grey 1px;
 }
 .cartitems{
-	width: 30%;
-	padding-left: 5rem;
-	padding-top: 2rem;
-	padding-right: 6rem;
+	width: 50%;
+	padding-left: 1rem;
+	display: flex;
+	flex-direction: column;
+	
 	margin-right: 3rem;
 	
 }
@@ -381,6 +394,17 @@ footer{
 	
 	margin-left: 1%;
 	margin-right: 1%;
+	padding-top: 1rem;
+}
+.cartmain h1{
+	margin-left:12rem;
+}
+.cartmain h2{
+	padding-top: 5rem;
+}
+.cartmain img{
+	padding-right: 1rem;
+	padding-bottom: 1rem;
 	padding-top: 1rem;
 }
 .checkout{

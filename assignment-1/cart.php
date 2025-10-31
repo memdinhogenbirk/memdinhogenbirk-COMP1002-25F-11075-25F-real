@@ -27,22 +27,28 @@
                         $quantity = $_GET["quantity"];
                         $delvorpick = $_GET["deliverypickup"];
                         $image1 = "images/original2.jpg";
+                        $image2 = "images/thincrust.jpg";
+                        $image3 = "images/deepdish.jpg";
                     echo('<h1>YOUR ORDER</h1>');
-                    echo('<p><b>'.$quantity.' '.$size.' '.$shape.' '.$crust.' Crust</b></p>');
+                    echo('<div class="sideitems">'); 
+                    
                     echo('<figure>');
                         if ($crust=="Original"){
-                            print"<img src=\"$image1\" width=\"100px\" height=\"100px\"/>";
-                        }
-                        if ($crust=="Deepdish"){
-                            print'<img src="'.$image1.'"width="100" height="100"/>';
+                            print'<img src="'.$image1.'"width="200" height="200"/>';
                         }
                         if ($crust=="Thin"){
-                            print"<img src=\"$image1\" width=\"100px\" height=\"100px\"/>";
+                            print'<img src="'.$image2.'"width="200" height="200"/>';
+                        }
+                        if ($crust=="Deepdish"){
+                            print'<img src="'.$image3.'"width="200" height="200"/>';
                         }
                     echo('</figure>');
-	            	echo('<p><b>Cheese: </b>'.$cheese.'</p>');
-                    echo('<p><b>Sauce: </b>'.$sauce.'</p>');
-	            	echo('<ul><b>Meat Toppings: </b>');
+                    echo('<div class="subsideitems">');
+                    echo('<h3 class="qssc">'.$quantity.' '.$size.' '.$shape.' '.$crust.' Crust</h3>');
+                    
+	            	echo('<p>'.$cheese.' Cheese</p>');
+                    echo('<p>'.$sauce.' Sauce</p>');
+	            	echo('<ul>Meat Toppings: ');
                         foreach ($meat as $item){
 	                		echo('<li>'.$item.' </li>');
 	                	};
@@ -50,16 +56,19 @@
                             print ('none');
                         }	
                     echo('</ul>');
-                    echo('<ul><b>Veggie Toppings: </b>');
+                    echo('<ul>Veggie Toppings: ');
 	                	foreach ($veggies as $item){
 	                		echo('<li>'.$item.' </li>');
 	                	};
                         if (empty($veggies)){
                             print ('none');
                         }
-                    echo('</ul>');    
+                    echo('</ul>');
+                    echo('</div>');
+                    echo('</div>');
+                    echo('<div class="cost">');    
                     echo('<p><b>For: </b>'.$delvorpick.'</p>');	
-	                echo('<p><b>Quantity: </b>'.$quantity.'</p>');		
+	                		
                             echo('<p class="subtotal"><b>SubTotal:</b> $');
                             if ($size=="Xlarge"){
                                 $price=19.99;
@@ -98,7 +107,7 @@
                                 print(round($taxes,2));
                             };
                             echo('</p>');
-                            echo('<h3>Total: $');
+                            echo('<h2>Total: $');
                             if ($delvorpick=="Delivery"){
                                 $fee=5;
                                 print($price * $quantity + $fee + round($taxes,2));
@@ -106,7 +115,8 @@
                             elseif ($delvorpick=="Pickup"){
                                 print($price * $quantity + round($taxes,2));
                             };
-                            echo('</h3>');
+                            echo('</h2>');
+                        echo('</div>');
                             ?>
                         </div>                
                 
