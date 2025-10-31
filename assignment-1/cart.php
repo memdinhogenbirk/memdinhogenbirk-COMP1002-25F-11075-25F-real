@@ -44,29 +44,35 @@
                             print'<img src="'.$image3.'"width="200" height="200"/>';
                         }
                     echo('</figure>');
-                    echo('<div class="subsideitems">');
-                    echo('<h3 class="qssc">'.$quantity.' '.$size.' '.$shape.' '.$crust.' Crust</h3>');
-                    
-	            	echo('<p>'.$cheese.' Cheese</p>');
-                    echo('<p>'.$sauce.' Sauce</p>');
-	            	echo('<ul>Meat Toppings: ');
-                        foreach ($meat as $item){
-	                		echo('<li>'.$item.' </li>');
-	                	};
-                        if (empty($meat)){
-                            print ('none');
-                        }	
-                    echo('</ul>');
-                    echo('<ul>Veggie Toppings: ');
-	                	foreach ($veggies as $item){
-	                		echo('<li>'.$item.' </li>');
-	                	};
-                        if (empty($veggies)){
-                            print ('none');
+                    if (!empty($crust)){
+                        echo('<div class="subsideitems">');
+                            echo('<h3 class="qssc">'.$quantity.' '.$size.' '.$shape.' '.$crust.' Crust</h3>');
+
+	            	        echo('<p>'.$cheese.' Cheese</p>');
+                            echo('<p>'.$sauce.' Sauce</p>');
+	            	        echo('<ul>Meat Toppings: ');
+                                foreach ($meat as $item){
+	                        		echo('<li>'.$item.' </li>');
+	                        	};
+                                if (empty($meat)){
+                                    print ('none');
+                                }	
+                            echo('</ul>');
+                            echo('<ul>Veggie Toppings: ');
+	                        	foreach ($veggies as $item){
+	                        		echo('<li>'.$item.' </li>');
+	                        	};
+                                if (empty($veggies)){
+                                    print ('none');
+                                }
+                            echo('</ul>');
+                        echo('</div>');
                         }
-                    echo('</ul>');
+                        else {
+                            print('<div><h3>CART IS EMPTY</h3><i>Please add at least one pizza to your cart</i><br><br></div>');
+                        };   
                     echo('</div>');
-                    echo('</div>');
+                    
                     echo('<div class="cost">');   
                     echo('<p><b>For: </b>'.$delvorpick.'</p>');	
 	                		
