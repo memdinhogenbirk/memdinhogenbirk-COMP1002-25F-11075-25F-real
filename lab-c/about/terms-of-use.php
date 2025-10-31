@@ -15,7 +15,7 @@
 			<h1>HTML, CSS, and JS Fundamentals</h1>
 			<h2>Building Blocks for Web Developers</h2>
 <?php
-	include('../includes/global-nav.php');
+	include('../includes/global-nav.php');/*I moved the footer to the footer, and replaced it here with the nav bar*/
 ?>
 		</header>
 		<!-- Page-level main content -->
