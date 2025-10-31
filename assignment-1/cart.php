@@ -120,16 +120,17 @@
                             };
                             echo('</h2>');
                         echo('</div>');
+                            
                             $_SESSION["total"] = $total;
                             $_SESSION["CHEESE"] = $cheese;
-                            $_SESSION["MEAT"] = $meat;
-                            $_SESSION["VEGGIES"] = $veggies;
                             $_SESSION["SIZE"] = $size;
                             $_SESSION["CRUST"] = $crust;
                             $_SESSION["SHAPE"] = $shape;
                             $_SESSION["SAUCE"] = $sauce;
+                            $_SESSION["toppings"] = $toppings;
                             $_SESSION["quantity"] = $quantity;
                             $_SESSION["deliverypickup"] = $delvorpick;
+                            
                             ?>
                         </div>                
                 

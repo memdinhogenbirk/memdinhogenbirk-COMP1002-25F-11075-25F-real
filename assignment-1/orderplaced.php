@@ -18,13 +18,11 @@
             <h1>YOUR ORDER HAS BEEN PLACED</h1>
             <?php
             session_start();
-                $fname = $_SESSION["fname"];
-                $address1 = $_SESSION["address1"];
-                $address2 = $_SESSION["address2"];
+                $fname = $_GET["fname"];
+                $address1 = $_GET["address1"];
+                $address2 = $_GET["address2"];
                 $cheese = $_SESSION["CHEESE"];
                 $sauce = $_SESSION["SAUCE"];
-                $meat = $_SESSION["MEAT"];
-                $veggies = $_SESSION["VEGGIES"];
                 $toppings = $_SESSION[""];
                 $size = $_SESSION["SIZE"];
                 $crust = $_SESSION["CRUST"];
@@ -32,15 +30,15 @@
                 $shape = $_SESSION["SHAPE"];
                 $quantity = $_SESSION["quantity"];
                 $delvorpick = $_SESSION["deliverypickup"];
-                $total = $_SESSION["total"];
+                $total = $_SESSION['total'];
             echo('<div>');
             echo('<p>Thank you for your purchase '.$fname.'!</p>');
             echo('<p>Your order will be ');
                 if ($delvorpick=="Delivery"){
-                    print('on its way shortly.');
+                    print('on its way shortly. ');
                     print('To be delivered to '.$address1.'');
                     if (!empty($address2)){
-                        print('Unit '.$address2.'');
+                        print(' Unit '.$address2.'');
                     }
                 }
                 else if ($delvorpick=="Pickup"){
