@@ -1,3 +1,4 @@
+/*@import url("css/styles.css");*//*use to imbed style sheets within style sheets*/
 * {/*set all margins and padding to 0 by default*/
 	/*php -S 0.0.0.0:8000*/
     margin: 0;
