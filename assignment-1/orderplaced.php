@@ -17,34 +17,55 @@
         <main>
             <h1>YOUR ORDER HAS BEEN PLACED</h1>
             <?php
-                $fname = $_GET["fname"];
-                $address1 = $_GET["address1"];
-                $address2 = $_GET["address2"];
-                $cheese = $_GET["CHEESE"];
-                $sauce = $_GET["SAUCE"];
-                $meat = $_GET["MEAT"];
-                $veggies = $_GET["VEGGIES"];
-                $size = $_GET["SIZE"];
-                $crust = $_GET["CRUST"];
-                $shape = $_GET["SHAPE"];
-                $quantity = $_GET["quantity"];
-                $delvorpick = $_GET["deliverypickup"];
+            session_start();
+                $fname = $_SESSION["fname"];
+                $address1 = $_SESSION["address1"];
+                $address2 = $_SESSION["address2"];
+                $cheese = $_SESSION["CHEESE"];
+                $sauce = $_SESSION["SAUCE"];
+                $meat = $_SESSION["MEAT"];
+                $veggies = $_SESSION["VEGGIES"];
+                $toppings = $_SESSION[""];
+                $size = $_SESSION["SIZE"];
+                $crust = $_SESSION["CRUST"];
+                $alert = $_SESSION["alert"];
+                $shape = $_SESSION["SHAPE"];
+                $quantity = $_SESSION["quantity"];
+                $delvorpick = $_SESSION["deliverypickup"];
+                $total = $_SESSION["total"];
+            echo('<div>');
+            echo('<p>Thank you for your purchase '.$fname.'!</p>');
+            echo('<p>Your order will be ');
+                if ($delvorpick=="Delivery"){
+                    print('on its way shortly.');
+                    print('To be delivered to '.$address1.'');
+                    if (!empty($address2)){
+                        print('Unit '.$address2.'');
+                    }
+                }
+                else if ($delvorpick=="Pickup"){
+                    print('ready for pickup in 15 minutes.');
+                };
+            echo('<p>You will be notified via ');
+                print($alert.' when it is ready.');
+		        
+            echo('</p>');
+            echo('<h3>Thank you for ordering from PAPAPIA PIZZERIA!</h3>');
+            echo('</div>');
+            echo('<div>');
+            echo('<h2>ORDER SUMMARY</h2>');
+            echo('<ul>');
+            echo('<li>Quantity x'.$quantity.'</li>');
+            echo('<li>Size: '.$size.'</li>');
+            echo('<li>Shape: '.$shape.'</li>');
+            echo('<li>Crust: '.$crust.'</li>');
+            echo('<li>Cheese: '.$cheese.'</li>');
+            echo('<li>Sauce: '.$sauce.'</li>');
+            echo('<li>Toppings: '.$toppings.'</li>');
+            echo('</ul>');
+            echo('<h3>Order Total: '.$total.'</h3>');
+            echo('</div>');
 			?>
-            <p>Thank you for purchase fname</p>
-            <p>Your order will be ready for pickup in 15min.</p>
-            <p>Your order will be on it's way shortly.</p>
-            <h2>Thank you for ordering from PAPAPIA PIZZERIA</h2>
-            <h3>ORDER SUMMARY</h3>
-            <ul>
-                <li>Quantity</li>
-                <li>Size</li>
-                <li>Shape</li>
-                <li>Crust</li>
-                <li>Cheese</li>
-                <li>Sauce</li>                
-                <li>Toppings</li>
-                <li>Order Total</li>
-            </ul>
         </main>
         <footer>
             <?php

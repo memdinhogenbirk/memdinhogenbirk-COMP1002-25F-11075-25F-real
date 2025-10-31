@@ -17,6 +17,7 @@
         <main class="cartmain">
                     <div class="cartitems"><!--items in cart-->
                         <?php 
+                        session_start();
                         $cheese = $_GET["CHEESE"];
                         $sauce = $_GET["SAUCE"];
                         $meat = $_GET["MEAT"];
@@ -113,10 +114,22 @@
                                 print($price * $quantity + $fee + round($taxes,2));
                             }
                             elseif ($delvorpick=="Pickup"){
-                                print($price * $quantity + round($taxes,2));
+                                $total=$price * $quantity + round($taxes,2);
+                                
+                                print($total);
                             };
                             echo('</h2>');
                         echo('</div>');
+                            $_SESSION["total"] = $total;
+                            $_SESSION["CHEESE"] = $cheese;
+                            $_SESSION["MEAT"] = $meat;
+                            $_SESSION["VEGGIES"] = $veggies;
+                            $_SESSION["SIZE"] = $size;
+                            $_SESSION["CRUST"] = $crust;
+                            $_SESSION["SHAPE"] = $shape;
+                            $_SESSION["SAUCE"] = $sauce;
+                            $_SESSION["quantity"] = $quantity;
+                            $_SESSION["deliverypickup"] = $delvorpick;
                             ?>
                         </div>                
                 
@@ -142,11 +155,11 @@
                             <input type="Phone Number" name="phone"></li>
                         </ul>
                         <div class="notifications"><!--notifications options contact info-->
-                        <input type="checkbox" name="alert[]" id="alert1" value="call" />
+                        <input type="radio" name="alert" id="alert1" value="phone call" />
                         <label for="alert1">Call Me</label>
-                        <input type="checkbox" name="alert[]" id="alert2" value="email" />
+                        <input type="radio" name="alert" id="alert2" value="email" />
                         <label for="alert2">Email Me</label>
-                        <input type="checkbox" name="alert[]" id="alert3" value="sms" />
+                        <input type="radio" name="alert" id="alert3" value="sms" />
                         <label for="alert3">Text Me</label>
                         </div>
                     </div>
