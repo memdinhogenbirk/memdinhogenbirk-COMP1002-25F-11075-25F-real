@@ -20,7 +20,7 @@
         </header>
         <main>
            <!--https://maps.app.goo.gl/aUVSdrGGXE5nE8Jy6-->
-            <div class="homepage">
+            <div class="homepage"><!--actual address I found on google maps, clicking image will open new tab using target blank-->
                 <a href="https://maps.app.goo.gl/aUVSdrGGXE5nE8Jy6" target="blank"> <img src="images/addressimage.png" alt="Restaurant Location"/></a>
                 <div>
                     <div class="address">
@@ -50,6 +50,7 @@
                                 </ul>
                                 <div class="imgcontain">
                                     <img src="images/cheffella.gif" alt="lil chef guy tossing some pizza"/>
+                                    <!--this is a gif I made, just to make the home page a little more homey-->
                                 </div>
                         </div>
                         
