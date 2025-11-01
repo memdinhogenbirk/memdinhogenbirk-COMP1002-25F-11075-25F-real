@@ -35,16 +35,16 @@
                             //if statements for the different crust types determining which picture ought to be displayed
                                 echo('<figure>');
                                     if ($crust=="Original"){
-                                        print'<img src="'.$image1.'"width="200" height="200"/>';
+                                        echo'<img src="'.$image1.'"width="200" height="200"/>';
                                     }
                                     if ($crust=="Thin"){
-                                        print'<img src="'.$image2.'"width="200" height="200"/>';
+                                        echo'<img src="'.$image2.'"width="200" height="200"/>';
                                     }
                                     if ($crust=="Deepdish"){
-                                        print'<img src="'.$image3.'"width="200" height="200"/>';
+                                        echo'<img src="'.$image3.'"width="200" height="200"/>';
                                     }
                                 echo('</figure>');
-                                    //if else that will rely on a required radio value to print a different message if no pizza was built, and the user just goes to the cart first. Ideally the cart would save your choices when you leave it, but I didn't get this far.
+                                    //if else that will rely on a required radio value to echo a different message if no pizza was built, and the user just goes to the cart first. Ideally the cart would save your choices when you leave it, but I didn't get this far.
                                     if (!empty($crust)){
                                         echo('<div class="subsideitems">');
                                             echo('<h3 class="qssc">'.$quantity.' '.$size.' '.$shape.' '.$crust.' Crust</h3>');
@@ -56,7 +56,7 @@
 	                                        		echo'<li>'.$item.' </li>';
 	                                        	};
                                                 if (empty($meat)){
-                                                    print 'none';
+                                                    echo 'none';
                                                 }	
                                             echo('</ul>');
                                             echo('<ul>Veggie Toppings: ');
@@ -64,14 +64,14 @@
 	                                        		echo'<li>'.$item.' </li>';
 	                                        	};
                                                 if (empty($veggies)){
-                                                    print 'none';
+                                                    echo 'none';
                                                 }
                                             echo('</ul>');
                                         echo('</div>');
                                     }
                                     //else for empty cart
                                     else {
-                                        print'<div><h3>CART IS EMPTY</h3><i>Please add at least one pizza to your cart</i><br><br></div>';
+                                        echo'<div><h3>CART IS EMPTY</h3><i>Please add at least one pizza to your cart</i><br><br></div>';
                                     };   
                             echo('</div>');
                             //cost calculations    
@@ -81,57 +81,57 @@
                                         echo('<p class="subtotal"><b>SubTotal:</b> $');
                                             if ($size=="Xlarge"){
                                                 $price=19.99;
-                                                print($price * $quantity);
+                                                echo($price * $quantity);
                                             }
                                             elseif ($size=="Large"){
                                                 $price=14.99;
-                                                print($price * $quantity);
+                                                echo($price * $quantity);
                                             }
                                             elseif ($size=="Medium"){
                                                 $price=11.99;
-                                                print($price * $quantity);
+                                                echo($price * $quantity);
                                             }
                                             elseif ($size=="Small"){
                                                 $price=8.99;
-                                                print($price * $quantity);
+                                                echo($price * $quantity);
                                             };
                                         echo('</p>');
                                         echo('<p><b>Delivory Fee:</b> $');
                                             if ($delvorpick=="Delivery"){
                                                 $fee=5;
-                                                print$fee;
+                                                echo$fee;
                                             }
                                             elseif ($delvorpick=="Pickup"){
                                                 $fee=0;
-                                                print'0';
+                                                echo'0';
                                             };
                                             echo('</p>');
                                             echo('<p><b>Taxes: </b> $');
                                             if ($delvorpick=="Delivery"){
                                                 $fee=5;
                                                 $taxes=number_format($price*$quantity*0.13+($fee*0.13),2);
-                                                print(round($taxes,2));
+                                                echo(round($taxes,2));
                                                 //I don't think round is necessary anymore since I added number_format, but I work all weekend, and I must spend my free time cleaning up my CSS and checking for things I missed. It's working, so it will do.
                                             }
                                             elseif ($delvorpick=="Pickup"){
                                                 $fee=0;
                                                 $taxes=number_format($price*$quantity*0.13+($fee*0.13),2);
-                                                print(round($taxes,2));
+                                                echo(round($taxes,2));
                                             };
                                         echo('</p>');
                                         echo('<h2>Total: $');
                                             if ($delvorpick=="Delivery"){
 
                                                 $total=number_format($price * $quantity + $fee + round($taxes,2),2);
-                                                print$total;
+                                                echo$total;
                                             }
                                             elseif ($delvorpick=="Pickup"){
                                                 $total=number_format($price * $quantity + round($taxes,2),2);
-                                                print$total;
+                                                echo$total;
                                             };
                                         echo('</h2>');
                             echo('</div>');
-                                    echo "SESSION: "; var_dump($_SESSION);
+                                    /*echo "SESSION: "; var_dump($_SESSION);*/
                                     //I used that above line to figure out why my total wasn't carrying to the next page. The fix I came up with is duplicating the total calculation below, with an added if else for the delivery fee.
                                     $total=number_format($price * $quantity + round($taxes,2) + ($fee==5 ? 5: 0),2);
                                     $_SESSION["total"] = $total;

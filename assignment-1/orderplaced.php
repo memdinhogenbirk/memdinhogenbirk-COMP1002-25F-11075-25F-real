@@ -46,23 +46,23 @@
                         //if and nested if for address lines
                         echo('<p>Your order will be ');
                             if ($delvorpick=="Delivery"){
-                                print('on its way shortly. ');
-                                print('<br>To be delivered to '.$address1.'');
+                                echo('on its way shortly. ');
+                                echo('<br>To be delivered to '.$address1.'');
                                 if (!empty($address2)){
-                                    print', Unit '.$address2.'.';
-                                    print'<p><br>You will be notified via ';
-                                    print$alert.' when it is on its way.';
+                                    echo', Unit '.$address2.'.';
+                                    echo'<p><br>You will be notified via ';
+                                    echo$alert.' when it is on its way.';
                                 }
                                 else{
-                                    print'.<p><br>You will be notified via ';
-                                    print$alert.' when it is on its way.';
+                                    echo'.<p><br>You will be notified via ';
+                                    echo$alert.' when it is on its way.';
                                 }
                             }
                             //else if for when its set to pickup and not delivery
                             else if ($delvorpick=="Pickup"){
-                                print'ready for pickup shortly.';
-                                print'<p><br>You will be notified via ';
-                                print$alert.' when it is ready.';
+                                echo'ready for pickup shortly.';
+                                echo'<p><br>You will be notified via ';
+                                echo$alert.' when it is ready.';
                             };
                             echo('</p>');
                         echo('<h3><br>Thank you for ordering from <i>PAPAPIA PIZZERIA</i>!</h3>');
@@ -71,28 +71,28 @@
                             echo('<h2>ORDER SUMMARY</h2>');
                             echo('<span>');//this is a span for CSS use, to distinguish it from the divs, section, etc.
                                 echo('<ul>');
-                                    print'<li><b>Quantity</b> x'.$quantity.'</li>';
-                                    print'<li><b>Size: </b>'.$size.'</li>';
-                                    print'<li><b>Shape: </b>'.$shape.'</li>';
-                                    print'<li><b>Crust: </b>'.$crust.'</li>';
-                                    print'<li><b>Cheese: </b>'.$cheese.'</li>';
-                                    print'<li><b>Sauce: </b>'.$sauce.'</li>';
+                                    echo'<li><b>Quantity</b> x'.$quantity.'</li>';
+                                    echo'<li><b>Size: </b>'.$size.'</li>';
+                                    echo'<li><b>Shape: </b>'.$shape.'</li>';
+                                    echo'<li><b>Crust: </b>'.$crust.'</li>';
+                                    echo'<li><b>Cheese: </b>'.$cheese.'</li>';
+                                    echo'<li><b>Sauce: </b>'.$sauce.'</li>';
                                 echo('</ul>');
-                                //single selection options printed above, meat and veggies print using if statements to echo the respective items that were selected previously by the user. Also seperated for CSS layout control
+                                //single selection options printed above, meat and veggies echo using if statements to echo the respective items that were selected previously by the user. Also seperated for CSS layout control
                                 echo('<ul><b>Meat Toppings </b>');
                                             foreach ($meat as $item){
-	                                    		print'<li>'.$item.' </li>';
+	                                    		echo'<li>'.$item.' </li>';
 	                                    	};
                                             if (empty($meat)){
-                                                print'<li>none</li>';
+                                                echo'<li>none</li>';
                                             }	
                                         echo('</ul>');
                                         echo('<ul><b>Veggie Toppings </b>');
 	                                    	foreach ($veggies as $item){
-	                                    		print'<li>'.$item.' </li>';
+	                                    		echo'<li>'.$item.' </li>';
 	                                    	};
                                             if (empty($veggies)){
-                                                print'<li>none</li>';
+                                                echo'<li>none</li>';
                                             }
                                             echo('</ul>');
                             echo('</span>');
@@ -100,12 +100,13 @@
                         echo('</div>');
                     echo('</section>');
                     echo('<figure>');
-                            if($delvorpick=="Delivery")
-                                print'<img src="'.$delvgif.'"width="600" height="500"/>';
+                            if($delvorpick=="Delivery"){
+                                echo'<img src="'.$delvgif.'"width="600" height="500"/>';
                                 //the gifs I made in action
-                            elseif($delvorpick=="Pickup")
-                                print'<img src="'.$pickgif.'"width="600" height="500"/>';
-                        
+                            }
+                            elseif($delvorpick=="Pickup"){
+                                echo'<img src="'.$pickgif.'"width="600" height="500"/>';
+                            };
                     echo('</figure>');
                 }
                 else{
