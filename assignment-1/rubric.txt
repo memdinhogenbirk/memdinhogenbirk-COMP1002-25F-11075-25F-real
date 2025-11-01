@@ -9,7 +9,7 @@
     Deep dish, thin crust or some other crust types
     Take out, delivery, or eat-in g. And so on…
     
-    5.Build a FORM that would allow a visitor to order their pizza(s), including a variety of form controls such as:
+    D5.Build a FORM that would allow a visitor to order their pizza(s), including a variety of form controls such as:
     labels
     fieldsets/legends
     text boxes
@@ -19,8 +19,8 @@
     text areas
     submit/reset buttons
     …and any others that you feel make sense.
-    6.As you are building out your page, be sure to make regular commits with comments that document your progress toward completion - this part is very important. Push each commit up to your remote repository on GitHub.
-    7.Include at least one <img /> element to insert a relevant illustration or photograph inside a paragraph in the page with an alt attribute. Ensure that the type of file is appropriate to the image (.jpg for a photograph, .png or .gif for an illustration/graphic).
+    D6.As you are building out your page, be sure to make regular commits with comments that document your progress toward completion - this part is very important. Push each commit up to your remote repository on GitHub.
+    D7.Include at least one <img /> element to insert a relevant illustration or photograph inside a paragraph in the page with an alt attribute. Ensure that the type of file is appropriate to the image (.jpg for a photograph, .png or .gif for an illustration/graphic).
     8.Include helpful HTML comments to make the code more friendly and easy to maintain. Ensure that your code is also formatted appropriately.
     9.Commit any and all changes to your local Git repository, then push the changes up to your remote repository on GitHub.
     Have fun.  
