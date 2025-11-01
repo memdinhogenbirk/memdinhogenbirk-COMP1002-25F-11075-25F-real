@@ -42,7 +42,7 @@
                                     }
                                     if ($crust=="Deepdish"){
                                         echo'<img src="'.$image3.'"width="200" height="200"/>';
-                                    }
+                                    };
                                 echo('</figure>');
                                     //if else that will rely on a required radio value to echo a different message if no pizza was built, and the user just goes to the cart first. Ideally the cart would save your choices when you leave it, but I didn't get this far.
                                     if (!empty($crust)){
@@ -54,18 +54,18 @@
 	            	                        echo('<ul>Meat Toppings: ');
                                                 foreach ($meat as $item){
 	                                        		echo'<li>'.$item.' </li>';
-	                                        	};
+	                                        	}
                                                 if (empty($meat)){
                                                     echo 'none';
-                                                }	
+                                                };	
                                             echo('</ul>');
                                             echo('<ul>Veggie Toppings: ');
 	                                        	foreach ($veggies as $item){
 	                                        		echo'<li>'.$item.' </li>';
-	                                        	};
+	                                        	}
                                                 if (empty($veggies)){
                                                     echo 'none';
-                                                }
+                                                };
                                             echo('</ul>');
                                         echo('</div>');
                                     }

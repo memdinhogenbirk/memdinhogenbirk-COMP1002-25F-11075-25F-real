@@ -56,7 +56,7 @@
                                 else{
                                     echo'.<p><br>You will be notified via ';
                                     echo$alert.' when it is on its way.';
-                                }
+                                };
                             }
                             //else if for when its set to pickup and not delivery
                             else if ($delvorpick=="Pickup"){
@@ -82,18 +82,18 @@
                                 echo('<ul><b>Meat Toppings </b>');
                                             foreach ($meat as $item){
 	                                    		echo'<li>'.$item.' </li>';
-	                                    	};
+	                                    	}
                                             if (empty($meat)){
                                                 echo'<li>none</li>';
-                                            }	
+                                            };	
                                         echo('</ul>');
                                         echo('<ul><b>Veggie Toppings </b>');
 	                                    	foreach ($veggies as $item){
 	                                    		echo'<li>'.$item.' </li>';
-	                                    	};
+	                                    	}
                                             if (empty($veggies)){
                                                 echo'<li>none</li>';
-                                            }
+                                            };
                                             echo('</ul>');
                             echo('</span>');
                             echo('<h3>Order Total: $'.$total.'</h3>');
