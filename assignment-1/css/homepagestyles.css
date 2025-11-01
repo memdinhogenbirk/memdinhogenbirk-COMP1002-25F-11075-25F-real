@@ -1,0 +1,54 @@
+/*index controls*/
+.homepage{
+	display: flex;
+	align-items: top;
+	padding: 1rem;
+}
+.gotopb{
+	width: 600px;
+	padding-left: 28%;
+}
+.gotopb a{
+	text-decoration: none;
+}
+.gotopb h1{
+	border: 1px solid brown;
+	background-color:gold;
+	color: black;
+	border-radius: 30px;
+	text-align: center;
+	padding: 1rem;
+}
+.gotopb h1:hover{
+	background-color:brown;
+}
+.homepage a{
+	margin-bottom: 3rem;
+}
+.address{
+	padding: 1rem;
+}
+.storehours{
+	margin-bottom: 1rem;
+	margin-left: 1rem;
+}
+.imgcontain{
+	overflow:hidden;
+	height: 450px;
+	margin-top: -6rem;
+}
+.imgcontain img{
+	width: 450px; 
+	height: 450px;
+	margin-right:-45px;
+	margin-left:-60px;
+	
+}
+.hours{
+	display: flex;
+	align-items: top;
+}
+.hours ul li{
+	padding-top: 1rem;
+	padding-right: 2rem;
+}

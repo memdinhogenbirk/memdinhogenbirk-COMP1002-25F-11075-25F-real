@@ -1,0 +1,49 @@
+/*Order placed Controls*/
+.orderp{
+	padding: 2rem;
+	padding-left: 8rem;
+	display: flex;
+}
+.orderp section{
+	display:flex;
+	flex-direction: column;
+	padding-right: 5rem;
+}
+.orderp h1, h2, h3{
+	
+	padding-bottom: 1rem;
+}
+.orderp ul > b{
+	border-bottom: 2px black solid;
+	padding-bottom: 1px;
+}
+.orderp ul {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+.orderp span{
+	display: flex;
+	
+}
+.orderp li{
+	padding-top: 1px;
+}
+.orderp div{
+	border: 1px solid grey;
+	border-radius: 10px;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	max-width: fit-content;
+}
+.orderp div h2{
+	padding-left: 9rem;
+	border-bottom: 1px solid black;
+	margin-bottom: 1rem;
+}
+.orderp div h3{
+	border-top: 1px solid black;
+	margin-top: 1rem;
+	padding-top: 1rem;
+	padding-left: 10rem;
+}
