@@ -1,0 +1,79 @@
+/*@import url("css/styles.css");*//*use to imbed style sheets within style sheets*/
+* {/*set all margins and padding to 0 by default*/
+	/*php -S 0.0.0.0:8000*/
+    margin: 0;
+    padding: 0;
+}
+html {
+	font-family: verdana;
+	background-color: white;
+}
+ul{
+	list-style: none;/*removes bullet points*/
+}
+i {
+	color: red;
+}
+/*footer controls*/
+footer{
+	display: block;
+	margin-top: 10rem;
+	border-top: solid grey 1px;
+	padding: 5rem;
+}
+/*nav bar controls*/
+header {
+	width: 100%;/*ensure header runs width of page*/
+	border-bottom: 1px solid gray;/*border line for header/navbar */
+}
+.nav-container {
+	display: inline-flex;/*makes nav bar flex with window expansion, contraction, also lines from left to right instead of top to bottom default*/
+	width: 100%;
+	padding: 1rem, 1rem;
+}
+.items.item4 strong{
+	color:orangered;
+}
+.items{
+	align-content: center;/*keeps nav bar content centered(with help from margin and padding adjustments made on and individual basis*/
+}
+.itemsimg.itemF{
+	margin-right: auto;/*automatically fills space in between first item and the rest to keep them on the left and right respectively*/
+}
+.items.item4{/*phone number*/
+	margin-right: auto;/*automatically fills space in between first item and the rest to keep them on the left and right respectively*/
+}
+.items a{
+	/*border: 1px solid black;/*may or may not keep, useful for alignment*/
+	text-decoration: none;/*removes underline*/
+	color: black;/*Text color black*/
+	
+}
+.items.item1 a{
+	padding: 1.2rem;
+	
+	margin-right: 1rem;
+}
+.items.item2 a{
+	padding: 1.2rem;
+	margin-right: 1rem;
+}
+.items.item3 a{
+	padding: 1.2rem;
+	margin-right: 1rem;
+}
+
+.items.item5 a{/*shopping cart*/
+	padding: 1.2rem;
+	padding-left: 4rem;
+	margin-left: -4.5rem;
+}
+.items a:hover {
+    background-color: rgba(0,0,0,.2); /* Slightly lighter background on hover, low alpha to allow shoppingcart icon to be seen */
+    border-radius: 5px;
+}
+.itemsimg img{
+	height: 40px;
+	width: auto;
+	padding: .5rem;
+}

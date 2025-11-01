@@ -30,7 +30,7 @@ header {
 	padding: 1rem, 1rem;
 }
 .items.item4 strong{
-	color: red;
+	color:orangered;
 }
 .items{
 	align-content: center;/*keeps nav bar content centered(with help from margin and padding adjustments made on and individual basis*/
@@ -68,7 +68,7 @@ header {
 }
 .items a:hover {
     background-color: rgba(0,0,0,.2); /* Slightly lighter background on hover, low alpha to allow shoppingcart icon to be seen */
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 5px;
 }
 .itemsimg img{
 	height: 40px;
