@@ -189,7 +189,7 @@ footer{
 }
 .toppingoptions{
 	display: flex;
-	border: solid grey 1px;
+	border-top: solid grey 1px;
 	
 }
 .toppingoptions ul{
