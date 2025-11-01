@@ -35,8 +35,8 @@
                 $shape = $_SESSION["SHAPE"];
                 $quantity = $_SESSION["quantity"];
                 $delvorpick = $_SESSION["deliverypickup"];
-                $pickgif = "images/original2.jpg";
-                $delvgif = "images/original2.jpg";
+                $pickgif = "images/pickup.gif";
+                $delvgif = "images/delivor.gif";
             if (!empty($crust)){    
             
             echo('<p>Thank you for your purchase '.$fname.'!</p><br>');
@@ -46,13 +46,16 @@
                     print('<br>To be delivered to '.$address1.',');
                     if (!empty($address2)){
                         print(' Unit '.$address2.'');
+                        echo('<p><br>You will be notified via ');
+                        print($alert.' when it is on its way.');
                     }
                 }
                 else if ($delvorpick=="Pickup"){
-                    print('ready for pickup in 15 minutes.');
+                    print('ready for pickup shortly.');
+                    echo('<p><br>You will be notified via ');
+                    print($alert.' when it is ready.');
                 };
-            echo('<p><br>You will be notified via ');
-                print($alert.' when it is ready.');
+            
 		        
             echo('</p>');
             echo('<h3><br>Thank you for ordering from <i>PAPAPIA PIZZERIA</i>!</h3>');
@@ -85,7 +88,7 @@
                         }
                         echo('</ul>');
                 echo('</span>');
-            echo('<h3>Order Total: '.$total.'</h3>');
+            echo('<h3>Order Total: $'.$total.'</h3>');
             echo('</div>');
             echo('</section>');
             echo('<figure>');

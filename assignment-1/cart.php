@@ -33,101 +33,101 @@
                     echo('<h1>YOUR ORDER</h1>');
                     echo('<div class="sideitems">'); 
                     
-                    echo('<figure>');
-                        if ($crust=="Original"){
-                            print'<img src="'.$image1.'"width="200" height="200"/>';
-                        }
-                        if ($crust=="Thin"){
-                            print'<img src="'.$image2.'"width="200" height="200"/>';
-                        }
-                        if ($crust=="Deepdish"){
-                            print'<img src="'.$image3.'"width="200" height="200"/>';
-                        }
-                    echo('</figure>');
-                    if (!empty($crust)){
-                        echo('<div class="subsideitems">');
-                            echo('<h3 class="qssc">'.$quantity.' '.$size.' '.$shape.' '.$crust.' Crust</h3>');
-
-	            	        echo('<p>'.$cheese.' Cheese</p>');
-                            echo('<p>'.$sauce.' Sauce</p>');
-	            	        echo('<ul>Meat Toppings: ');
-                                foreach ($meat as $item){
-	                        		echo('<li>'.$item.' </li>');
-	                        	};
-                                if (empty($meat)){
-                                    print ('none');
-                                }	
-                            echo('</ul>');
-                            echo('<ul>Veggie Toppings: ');
-	                        	foreach ($veggies as $item){
-	                        		echo('<li>'.$item.' </li>');
-	                        	};
-                                if (empty($veggies)){
-                                    print ('none');
-                                }
-                            echo('</ul>');
-                        echo('</div>');
-                        }
-                        else {
-                            print('<div><h3>CART IS EMPTY</h3><i>Please add at least one pizza to your cart</i><br><br></div>');
-                        };   
+                        echo('<figure>');
+                            if ($crust=="Original"){
+                                print'<img src="'.$image1.'"width="200" height="200"/>';
+                            }
+                            if ($crust=="Thin"){
+                                print'<img src="'.$image2.'"width="200" height="200"/>';
+                            }
+                            if ($crust=="Deepdish"){
+                                print'<img src="'.$image3.'"width="200" height="200"/>';
+                            }
+                        echo('</figure>');
+                            if (!empty($crust)){
+                                echo('<div class="subsideitems">');
+                                    echo('<h3 class="qssc">'.$quantity.' '.$size.' '.$shape.' '.$crust.' Crust</h3>');
+                            
+	            	                echo('<p>'.$cheese.' Cheese</p>');
+                                    echo('<p>'.$sauce.' Sauce</p>');
+	            	                echo('<ul>Meat Toppings: ');
+                                        foreach ($meat as $item){
+	                                		echo('<li>'.$item.' </li>');
+	                                	};
+                                        if (empty($meat)){
+                                            print ('none');
+                                        }	
+                                    echo('</ul>');
+                                    echo('<ul>Veggie Toppings: ');
+	                                	foreach ($veggies as $item){
+	                                		echo('<li>'.$item.' </li>');
+	                                	};
+                                        if (empty($veggies)){
+                                            print ('none');
+                                        }
+                                    echo('</ul>');
+                                echo('</div>');
+                            }
+                            else {
+                                print('<div><h3>CART IS EMPTY</h3><i>Please add at least one pizza to your cart</i><br><br></div>');
+                            };   
                     echo('</div>');
                     
                     echo('<div class="cost">');   
-                    echo('<p><b>For: </b>'.$delvorpick.'</p>');	
-	                		
-                            echo('<p class="subtotal"><b>SubTotal:</b> $');
-                            if ($size=="Xlarge"){
-                                $price=19.99;
-                                print($price * $quantity);
-                            }
-                            elseif ($size=="Large"){
-                                $price=14.99;
-                                print($price * $quantity);
-                            }
-                            elseif ($size=="Medium"){
-                                $price=11.99;
-                                print($price * $quantity);
-                            }
-                            elseif ($size=="Small"){
-                                $price=8.99;
-                                print($price * $quantity);
-                            };
-                            echo('</p>');
-                            echo('<p><b>Delivory Fee:</b> $');
-                            if ($delvorpick=="Delivery"){
-                                $fee=5;
-                                print($fee);
-                            }
-                            elseif ($delvorpick=="Pickup"){
-                                $fee=0;
-                                print('0');
-                            };
-                            echo('</p>');
-                            echo('<p><b>Taxes: </b> $');
-                            if ($delvorpick=="Delivery"){
-                                $fee=5;
-                                $taxes=(($price*$quantity*0.13)+($fee*0.13));
-                                print(round($taxes,2));
-                            }
-                            elseif ($delvorpick=="Pickup"){
-                                $fee=0;
-                                $taxes=($price*$quantity*0.13+($fee*0.13));
-                                print(round($taxes,2));
-                            };
-                            echo('</p>');
-                            echo('<h2>Total: $');
-                            if ($delvorpick=="Delivery"){
-                                
-                                $total=(number_format($price * $quantity + $fee + round($taxes,2),2));
-                                print($total);
-                            }
-                            elseif ($delvorpick=="Pickup"){
-                                $total=(number_format($price * $quantity + round($taxes,2),2));
-                                print($total);
-                            };
-                            echo('</h2>');
-                        echo('</div>');
+                        echo('<p><b>For: </b>'.$delvorpick.'</p>');	
+                            
+                                echo('<p class="subtotal"><b>SubTotal:</b> $');
+                                    if ($size=="Xlarge"){
+                                        $price=19.99;
+                                        print($price * $quantity);
+                                    }
+                                    elseif ($size=="Large"){
+                                        $price=14.99;
+                                        print($price * $quantity);
+                                    }
+                                    elseif ($size=="Medium"){
+                                        $price=11.99;
+                                        print($price * $quantity);
+                                    }
+                                    elseif ($size=="Small"){
+                                        $price=8.99;
+                                        print($price * $quantity);
+                                    };
+                                echo('</p>');
+                                echo('<p><b>Delivory Fee:</b> $');
+                                    if ($delvorpick=="Delivery"){
+                                        $fee=5;
+                                        print($fee);
+                                    }
+                                    elseif ($delvorpick=="Pickup"){
+                                        $fee=0;
+                                        print('0');
+                                    };
+                                    echo('</p>');
+                                    echo('<p><b>Taxes: </b> $');
+                                    if ($delvorpick=="Delivery"){
+                                        $fee=5;
+                                        $taxes=(number_format($price*$quantity*0.13+($fee*0.13),2));
+                                        print(round($taxes,2));
+                                    }
+                                    elseif ($delvorpick=="Pickup"){
+                                        $fee=0;
+                                        $taxes=(number_format($price*$quantity*0.13+($fee*0.13),2));
+                                        print(round($taxes,2));
+                                    };
+                                echo('</p>');
+                                echo('<h2>Total: $');
+                                    if ($delvorpick=="Delivery"){
+
+                                        $total=(number_format($price * $quantity + $fee + round($taxes,2),2));
+                                        print($total);
+                                    }
+                                    elseif ($delvorpick=="Pickup"){
+                                        $total=(number_format($price * $quantity + round($taxes,2),2));
+                                        print($total);
+                                    };
+                                echo('</h2>');
+                    echo('</div>');
                             /*echo "SESSION: "; var_dump($_SESSION);*/
                             $total=(number_format($price * $quantity + round($taxes,2) + ($fee==5 ? 5: 0),2));
                             $_SESSION["total"] = $total;
