@@ -42,7 +42,7 @@
                                     }
                                     if ($crust=="Deepdish"){
                                         echo'<img src="'.$image3.'"width="200" height="200"/>';
-                                    };
+                                    };//you may be wondering, why is this semicolon here? As far as I know, it does nothing functionally, but it does mark the end of this series of if statements. This is really the only reason I retained it, same for my other php.
                                 echo('</figure>');
                                     //if else that will rely on a required radio value to echo a different message if no pizza was built, and the user just goes to the cart first. Ideally the cart would save your choices when you leave it, but I didn't get this far.
                                     if (!empty($crust)){
