@@ -2,7 +2,7 @@
 <nav>
     <div class="nav-container">
         <div class="itemsimg itemF"><a href="index.php"><img src="images/papapialogo.png" alt="papapia logo"/></a></div>
-        <!--I made this logo in Krita-->
+        <!--I made this logo myself, citation: me-->
         <div class="items item4"><b>CALL</b> <strong>888-888-8888</strong><b> OR ORDER ONLINE</b></div>
         
         <div class="items item2"><a href="pizzabuild.php?type=delivery"><strong>DELIVERY</strong></a></div>
@@ -13,3 +13,4 @@
         <div class="items item5"><a href="cart.php" title="shopping cart"><b>CART</a></b></div>
     </div>
 </nav>
+<!--Header nav php, note that delivery and pickup both carry their values to the pizza builder page to be used by the builder selector-->

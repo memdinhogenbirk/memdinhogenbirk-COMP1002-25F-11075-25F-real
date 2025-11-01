@@ -1,4 +1,5 @@
 First of all, alt-z every one of my pages.
+Secondly, html pages are not in use, they were what I started with to work offline. Once I needed php, I swapped everything over, but kept the originals as a fallback point.
 
 This is a collection of what I will call, important notes, at the point of being mostly satisfied with the state of my website.
 Though the code is annotated, I feel this is an ideal way to convey a few important things.

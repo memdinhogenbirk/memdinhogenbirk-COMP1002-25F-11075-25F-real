@@ -99,9 +99,9 @@
                             <input type="radio" name="SIZE" id="LARGE" value="Large" /><label for="LARGE">Large (16")</label>
                             <input type="radio" name="SIZE" id="XLARGE" value="Xlarge" /><label for="XLARGE">Extra-Large (20")</label>
                             <h3>CRUST</h3>
-                            <input type="radio" name="CRUST" id="ORIGINAL" value="Original" required/><label for="ORIGINAL">Original Crust</label>
-                            <input type="radio" name="CRUST" id="THIN" value="Thin" /><label for="THIN">Thin Crust</label>
-                            <input type="radio" name="CRUST" id="DEEPDISH" value="Deepdish" /><label for="DEEPDISH">Deep Dish</label>
+                            <input type="radio" name="CRUST" id="ORIGINAL" value="Original" required <?php echo (($_GET['type'] ?? '') === 'Original') ? 'checked' : ''; ?>/><label for="ORIGINAL">Original Crust</label>
+                            <input type="radio" name="CRUST" id="THIN" value="Thin" <?php echo (($_GET['type'] ?? '') === 'Thincrust') ? 'checked' : ''; ?>/><label for="THIN">Thin Crust</label>
+                            <input type="radio" name="CRUST" id="DEEPDISH" value="Deepdish" <?php echo (($_GET['type'] ?? '') === 'Deepdish') ? 'checked' : ''; ?>/><label for="DEEPDISH">Deep Dish</label>
 
                         </div>
                         </div> 
@@ -109,7 +109,7 @@
 
                     <div class="pbaside">
                         <!--When I made this intitally, it was an aside. I was literally thinking, this will just push it to the side. Turned out that was wrong. So now it's a div, with the class pbaside-->
-                    <h2>YOUR ORDER</h2>
+                        <h2>YOUR ORDER</h2>
                     
                         <fieldset>
                             <div id="order">
@@ -139,6 +139,7 @@
                                 <!--the php here is to grab the delivery or pickup values for when the nav bar options are used to get to the pizzabuilder. Auto selects whatever the user clicked on-->
                                 <select class="delvorpick" name="deliverypickup"/>
                                     <option value="Pickup"<?php echo (($_GET['type'] ?? 'pickup') === 'pickup') ? 'selected' : ''; ?>>PICKUP</option>
+                                    <!--php here is used to select pickup or delivery based on the nav bar links-->
                                     <option value="Delivery"<?php echo (($_GET['type'] ?? 'delivery') === 'delivery') ? 'selected' : ''; ?>>DELIVERY</option>
                                 </select>
                             </div>
@@ -146,7 +147,7 @@
                             <div class="asidebuttons">
                                 <button type="submit">CHECKOUT</button>
                                 <button type="reset">CLEAR SELECTION</button>
-                            
+                            </div>
                         </fieldset>
                     </div>
                 </div>
