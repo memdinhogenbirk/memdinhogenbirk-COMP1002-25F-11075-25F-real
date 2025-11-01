@@ -12,11 +12,11 @@
             <?php
 				//Grab Site Navigation
 				include('nav.php')
-                
 			?>
         </header>
+		<!--the links from the footer to this page will target specific sections of it depending on the links clicked. I had to fill it with something, I hope you enjoy.-->
 <main class="infopage">
-	<div id="privacy">
+	<div id="privacy"><!--ids are to target page location, this one really isn't necessary, but again, time is of the essence-->
 	<h1>PRIVACY POLICY</h1>
 	<p>Here at Papapia Pizzeria, we do not value your privacy at all. In fact, every interaction with our webpage is immediately documented and shipped off to a Siberian scammer operation. We know this may upset you, but if you saw how much they were paying us, you'd understand. I'm talking enough money that we don't even have to sell a single pizza to keep this whole thing afloat. Our CEO Doug has four Maseratis, two houses, and a private island that he got for a steal, bought it off some fella named Jeffery I think. Theres about 47 pages of legal jargin that makes all this possible, but you're not gonna read any of that now are you? So here's the lyrics to "A Criminal Mind" by Gowan instead.<br><br>
 	</p>
