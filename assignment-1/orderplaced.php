@@ -35,8 +35,8 @@
                         $shape = $_SESSION["SHAPE"];
                         $quantity = $_SESSION["quantity"];
                         $delvorpick = $_SESSION["deliverypickup"];
-                        $pickgif = "images/pickup.gif";
-                        $delvgif = "images/delivor.gif";
+                        $pickgif = "images/pickup.gif";//gif I made for pickup
+                        $delvgif = "images/delivor.gif";//gif I made for delivery
                     if (!empty($crust)){    
                     
                         echo('<p>Thank you for your purchase '.$fname.'!</p><br>');
@@ -92,7 +92,7 @@
                     echo('<figure>');
                             if($delvorpick=="Delivery")
                                 print'<img src="'.$delvgif.'"width="600" height="500"/>';
-
+                                //the gifs I made in action
                             elseif($delvorpick=="Pickup")
                                 print'<img src="'.$pickgif.'"width="600" height="500"/>';
                         
@@ -100,7 +100,7 @@
                 }
                 else{
                     echo('<h1>You have placed an order for nothing. Well done.</h1>');
-                };
+                };//this only exists because the means to deactivate the submit button is more scripting, and I need to finish this
 
 			?>
         </main>
