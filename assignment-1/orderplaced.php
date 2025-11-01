@@ -15,12 +15,13 @@
 			?>
         </header>
         <main class="orderp">
-            
+            <!--php to grab session values from last page, session_start needed to make this possible-->
             <?php
                 echo('<section>');
                     echo('<h1>YOUR ORDER HAS BEEN PLACED</h1>');
                     session_start();
                     /*echo "SESSION: "; var_dump($_SESSION);*/
+                    //here's that debugging line again
                         $fname = $_GET["fname"];
                         $address1 = $_GET["address1"];
                         $address2 = $_GET["address2"];
@@ -35,11 +36,14 @@
                         $shape = $_SESSION["SHAPE"];
                         $quantity = $_SESSION["quantity"];
                         $delvorpick = $_SESSION["deliverypickup"];
-                        $pickgif = "images/pickup.gif";//gif I made for pickup
-                        $delvgif = "images/delivor.gif";//gif I made for delivery
+                        $pickgif = "images/pickup.gif";
+                        //gif I made for pickup
+                        $delvgif = "images/delivor.gif";
+                        //gif I made for delivery
                     if (!empty($crust)){    
-                    
+                    //if that I only used because I didn't have time to get the submit button on the cart page to be deactived when the cart was empty. Makes for a silly joke at least
                         echo('<p>Thank you for your purchase '.$fname.'!</p><br>');
+                        //if and nested if for address lines
                         echo('<p>Your order will be ');
                             if ($delvorpick=="Delivery"){
                                 print('on its way shortly. ');
@@ -50,6 +54,7 @@
                                     print($alert.' when it is on its way.');
                                 }
                             }
+                            //else if for when its set to pickup and not delivery
                             else if ($delvorpick=="Pickup"){
                                 print('ready for pickup shortly.');
                                 echo('<p><br>You will be notified via ');
@@ -60,7 +65,7 @@
 
                         echo('<div>');
                             echo('<h2>ORDER SUMMARY</h2>');
-                            echo('<span>');
+                            echo('<span>');//this is a span for CSS use, to distinguish it from the divs, section, etc.
                                 echo('<ul>');
                                     echo('<li><b>Quantity</b> x'.$quantity.'</li>');
                                     echo('<li><b>Size: </b>'.$size.'</li>');
@@ -69,6 +74,7 @@
                                     echo('<li><b>Cheese: </b>'.$cheese.'</li>');
                                     echo('<li><b>Sauce: </b>'.$sauce.'</li>');
                                 echo('</ul>');
+                                //single selection options printed above, meat and veggies print using if statements to echo the respective items that were selected previously by the user. Also seperated for CSS layout control
                                 echo('<ul><b>Meat Toppings </b>');
                                             foreach ($meat as $item){
 	                                    		echo('<li>'.$item.' </li>');
