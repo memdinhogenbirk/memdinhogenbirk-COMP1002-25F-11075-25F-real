@@ -1,4 +1,4 @@
-@import url("css/globalstyles.css");
+@import url("globalstyles.css");
 /*cart controls*/
 .qssc{/*quantity size shape crust heading*/
 	display: flex;
