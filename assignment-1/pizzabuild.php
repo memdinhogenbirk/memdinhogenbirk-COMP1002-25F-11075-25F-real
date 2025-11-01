@@ -274,6 +274,8 @@
                             //run updateOrder later, 0=no delay
                             //necessary little bit of code to ensure reset button actually resets the java scripted outputs
                             });
+                            
+                            updateOrder();
                             //updateOrder(); no longer needed, requires a second reset input if done this way
             </script>
                    
