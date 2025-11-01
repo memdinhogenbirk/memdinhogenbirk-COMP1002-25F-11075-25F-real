@@ -276,7 +276,6 @@
                             });
                             
                             updateOrder();
-                            //updateOrder(); no longer needed, requires a second reset input if done this way
             </script>
                    
             
