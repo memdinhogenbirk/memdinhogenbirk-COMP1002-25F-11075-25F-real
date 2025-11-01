@@ -1,7 +1,7 @@
     D1.Create a new folder in the repository for your lesson files called "/assignment-1/".
     D2.Construct a properly structured HTML document, including a proper DOCTYPE, character-encoding META tag, and a lang attribute on the HTML start tag.
     D3.Structure the page with appropriate page-level sectioning elements (header, main and footer) to construct the main document outline.
-    4.Think of the various pieces of information that you’d need to collect from someone to deliver them a pizza. This might include the following:
+    D4.Think of the various pieces of information that you’d need to collect from someone to deliver them a pizza. This might include the following:
     Number of pizzas
     Size (number of slices)
     Shape (square or round)

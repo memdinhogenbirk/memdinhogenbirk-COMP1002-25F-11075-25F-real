@@ -178,6 +178,10 @@
                             <input type="radio" name="alert" id="alert3" value="sms" />
                             <label for="alert3">Text Me</label>
                         </div>
+                        <div>
+                            <label for="instructions">Special Instructions</label>
+                            <textarea name="instructions" rows="5" cols="40"></textarea>
+                        </div>
                     </div>
                     
                     
@@ -205,6 +209,9 @@
                                 <li><input type="tel" class="ccexpire" placeholder="mm" name="mexpiry" required>
                                 <input type="tel" class="ccexpire" placeholder="yy" name="yexpiry" required></li>
                             </ul>
+                            <img src="images/payopts.png"/>
+                            <!--image source for accepted payment picture 
+                            https://www.customsigns.com/horizontal-credit-card-accepted-decal-3-x-10-->
                         </div>
                 </div>      
                     </div>
