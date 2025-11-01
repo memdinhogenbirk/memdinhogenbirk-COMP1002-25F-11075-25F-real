@@ -473,6 +473,7 @@ input::placeholder {
 /*Order placed Controls*/
 .orderp{
 	padding: 2rem;
+	padding-left: 8rem;
 	display: flex;
 }
 .orderp section{

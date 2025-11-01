@@ -160,6 +160,7 @@
                             <input type="text" name="fname"></li>
                             <li><label for="lname"><i>*</i>Last Name</label>
                             <input type="text" name="lname"></li>
+                            <!--two php additions below that make address optional if pickup is selected-->
                             <li><label for="address1"><?php if($delvorpick=='Delivery') echo '<i>*</i>';?>Address Line 1</label>
                             <input type="text" name="address1" <?php if ($delvorpick=='Delivery')echo 'required';?>></li>
                             <li><label for="address2">Address Line 2</label>
