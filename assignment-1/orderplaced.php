@@ -3,7 +3,7 @@
     <head>
 	    <meta charset="utf-8" />
 	    <title>Order Placed!</title>
-	    <link href="css/styles.css" rel="stylesheet" />
+	    <link href="css/orderplacedstyles.css" rel="stylesheet" />
         <link rel="icon" type="image/pizzaicon" href="images/pizzaicon.png">
     </head>
     <body>

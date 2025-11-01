@@ -3,7 +3,7 @@
     <head>
 	    <meta charset="utf-8" />
 	    <title>Menu</title>
-	    <link href="css/styles.css" rel="stylesheet" />
+	    <link href="css/menustyles.css" rel="stylesheet" />
         <link rel="icon" type="image/pizzaicon" href="images/pizzaicon.png">
     </head>
     <body>

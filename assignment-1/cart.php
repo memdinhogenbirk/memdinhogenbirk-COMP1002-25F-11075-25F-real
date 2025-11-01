@@ -3,7 +3,7 @@
     <head>
 	    <meta charset="utf-8" />
 	    <title>Checkout</title>
-	    <link href="css/styles.css" rel="stylesheet" />
+	    <link href="css/cartstyles.css" rel="stylesheet" />
         <link rel="icon" type="image/pizzaicon" href="images/pizzaicon.png">
     </head>
     <body>

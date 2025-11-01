@@ -3,7 +3,7 @@
     <head>
 	    <meta charset="utf-8" />
 	    <title>Customize Your Pizza</title>
-	    <link href="css/styles.css" rel="stylesheet" />
+	    <link href="css/pizzabuilderstyles.css" rel="stylesheet" />
         <link rel="icon" type="image/pizzaicon" href="images/pizzaicon.png">
     </head>
     <body>

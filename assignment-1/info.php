@@ -4,7 +4,7 @@
 	    <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 	    <title>Papapia Pizzaria | Info</title>
-	    <link href="css/styles.css" rel="stylesheet" />
+	    <link href="css/infostyles.css" rel="stylesheet" />
 		<link rel="icon" type="image/pizzaicon" href="images/pizzaicon.png">
     </head>
 <body>
