@@ -160,8 +160,8 @@
                             <input type="text" name="fname"></li>
                             <li><label for="lname"><i>*</i>Last Name</label>
                             <input type="text" name="lname"></li>
-                            <li><label for="address1"><i>*</i>Address Line 1</label>
-                            <input type="text" name="address1" required></li>
+                            <li><label for="address1"><?php if($delvorpick=='Delivery') echo '<i>*</i>';?>Address Line 1</label>
+                            <input type="text" name="address1" <?php if ($delvorpick=='Delivery')echo 'required';?>></li>
                             <li><label for="address2">Address Line 2</label>
                             <input type="text" name="address2"></li>
                             <li><label for="email"><i>*</i>Email</label>
@@ -192,8 +192,8 @@
                         <div class="carddetails">
                             <ul>
                                 <li><label for="cfname"><i>*</i>Name On Card</label></li>
-                                <li><input type="tel" class="namef" placeholder="FIRST NAME" name="cfname" required>
-                                <input type="tel" class=namel placeholder="LAST NAME" name="clname" required></li>
+                                <li><input type="text" class="namef" placeholder="FIRST NAME" name="cfname" required>
+                                <input type="text" class=namel placeholder="LAST NAME" name="clname" required></li>
                             </ul>
                             <ul>
                                 <li><label for="payment"><i>*</i>Card Number</label></li>
