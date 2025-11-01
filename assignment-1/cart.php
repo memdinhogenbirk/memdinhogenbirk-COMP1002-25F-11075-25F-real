@@ -11,14 +11,14 @@
             <?php
 				//Grab Site Navigation
 				include('nav.php')
-                
 			?>
         </header>
         <main class="cartmain">
+            <!--below is the php that grabs the info from the pizzabuilder page, and applies it where relevant on the cart page. It also grabs the info for the next page, orderplaced. Session_start is needed for the latter-->
                     <div class="cartitems"><!--items in cart-->
                         <?php 
                             session_start();
-                            $cheese = $_GET["CHEESE"];
+                            $cheese = $_GET["CHEESE"];//gets to grab pizza builder info
                             $sauce = $_GET["SAUCE"];
                             $meat = $_GET["MEAT"];
                             $veggies = $_GET["VEGGIES"];
@@ -27,12 +27,12 @@
                             $shape = $_GET["SHAPE"];
                             $quantity = $_GET["quantity"];
                             $delvorpick = $_GET["deliverypickup"];
-                            $image1 = "images/original2.jpg";
+                            $image1 = "images/original2.jpg";//needed to place images in php
                             $image2 = "images/thincrust.jpg";
                             $image3 = "images/deepdish.jpg";
                             echo('<h1>YOUR ORDER</h1>');
                             echo('<div class="sideitems">'); 
-
+                            //if statements for the different crust types determining which picture ought to be displayed
                                 echo('<figure>');
                                     if ($crust=="Original"){
                                         print'<img src="'.$image1.'"width="200" height="200"/>';
@@ -44,6 +44,7 @@
                                         print'<img src="'.$image3.'"width="200" height="200"/>';
                                     }
                                 echo('</figure>');
+                                    //if else that will rely on a required radio value to print a different message if no pizza was built, and the user just goes to the cart first. Ideally the cart would save your choices when you leave it, but I didn't get this far.
                                     if (!empty($crust)){
                                         echo('<div class="subsideitems">');
                                             echo('<h3 class="qssc">'.$quantity.' '.$size.' '.$shape.' '.$crust.' Crust</h3>');
@@ -68,11 +69,12 @@
                                             echo('</ul>');
                                         echo('</div>');
                                     }
+                                    //else for empty cart
                                     else {
                                         print('<div><h3>CART IS EMPTY</h3><i>Please add at least one pizza to your cart</i><br><br></div>');
                                     };   
                             echo('</div>');
-                                
+                            //cost calculations    
                             echo('<div class="cost">');   
                                 echo('<p><b>For: </b>'.$delvorpick.'</p>');	
 
@@ -109,6 +111,7 @@
                                                 $fee=5;
                                                 $taxes=(number_format($price*$quantity*0.13+($fee*0.13),2));
                                                 print(round($taxes,2));
+                                                //I don't think round is necessary anymore since I added number_format, but I work all weekend, and I must spend my free time cleaning up my CSS and checking for things I missed. It's working, so it will do.
                                             }
                                             elseif ($delvorpick=="Pickup"){
                                                 $fee=0;
@@ -129,6 +132,7 @@
                                         echo('</h2>');
                             echo('</div>');
                                     /*echo "SESSION: "; var_dump($_SESSION);*/
+                                    //I used that above line to figure out why my total wasn't carrying to the next page. The fix I came up with is duplicating the total calculation below, with an added if else for the delivery fee.
                                     $total=(number_format($price * $quantity + round($taxes,2) + ($fee==5 ? 5: 0),2));
                                     $_SESSION["total"] = $total;
                                     $_SESSION["CHEESE"] = $cheese;
@@ -141,11 +145,11 @@
                                     $_SESSION["toppings"] = $toppings;
                                     $_SESSION["quantity"] = $quantity;
                                     $_SESSION["deliverypickup"] = $delvorpick;
-                                    
+                                    //these sessions drag the php values to the next page
                         ?>
                     </div>                
                 
-        
+                <!--back to html, this form contains payment info and important personal info. Majority is required to submit(place order)-->
             <form action="orderplaced.php" method="get">
                 <fieldset class="infobox">
                 <div class="checkout">

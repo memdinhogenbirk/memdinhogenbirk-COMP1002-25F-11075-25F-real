@@ -1,12 +1,5 @@
 <!-- assignment 1, pizza place website-->
-<!--html to be converted to php at appropriate point in progress-->
-<!--things to include
-    Number of pizzas
-    Size (number of slices)
-    Shape (square or round)
-    Toppings
-    Deep dish, thin crust or some other crust types
-    Take out, delivery, or eat-in g. And so on…
+<!--
     php -S 0.0.0.0:8000
 -->
 <!DOCTYPE html>
@@ -64,6 +57,7 @@
                 </div>
             </div>
             <div class="gotopb">
+                <!--a "button"(not a button syntactically) I added because when I tested the site with my girlfriend, she got lost on this page briefly-->
                 <a href="pizzabuild.php"><h1>CUSTOMIZE YOUR PIZZA!</h1></a>
             </div>
         </main>
