@@ -17,137 +17,139 @@
         <main class="pbmain">
             <form id="pform" action="cart.php" method="get">
                 <div>
-                <h2 class="pizzaCust">CUSTOMIZE YOUR PIZZA</h2>
-                <fieldset class="pizzaB">
-                    <div class="pizzaBLD">
-                        <!--the pizza topping and options selectors. A lot of the seperations by div or ul were so I could control them in css
-                        Cheese, Sauce, Crust, Size, and shape are all individual selections, and are required to proceed-->
-                        <div class="pizzatoppings">
-                            
-                            <ul>
-                                <li><h3>CHEESE</h3></li>
-                                
-                                <li><input type="radio" name="CHEESE" id="CHEESE1" value="Cheddar" required/><label for="CHEESE1">Cheddar</label></li>
-                                
-                                <li><input type="radio" name="CHEESE" id="CHEESE2" value="Mozzarella" /><label for="CHEESE2">Mozzarella</label></li>
-                                
-                                <li><input type="radio" name="CHEESE" id="CHEESE3" value="Vegan" /><label for="CHEESE3">Vegan</label></li>
-                                
-                            </ul>
-                            
-                            <ul>
-                                <li><h3>SAUCE</h3></li>
-                                <li><input type="radio" name="SAUCE" id="SAUCE1" value="Tomato" required/><label for="SAUCE1">Tomato Sauce</label></li>
-                                
-                                <li><input type="radio" name="SAUCE" id="SAUCE2" value="Marinara" /><label for="SAUCE2">Marinara Sauce</label></li>
-                                
-                                <li><input type="radio" name="SAUCE" id="SAUCE3" value="Alfredo" /><label for="SAUCE3">Alfredo Sauce</label></li>
-                                
-                            </ul>
-                            <!--Veggies and Meat options are checkboxes, not required, and allow for up to 4 choices per ul-->
-                            <ul>
-                                <li><h3>MEAT</h3></li>
-                                <li><input type="checkbox" name="MEAT[]" id="MEAT1" value="Pepperoni" /><label for="MEAT1">Pepperoni</label></li>
-                                
-                                <li><input type="checkbox" name="MEAT[]" id="MEAT2" value="Bacon" /><label for="MEAT2">Bacon</label></li>
-                                
-                                <li><input type="checkbox" name="MEAT[]" id="MEAT3" value="Chicken" /><label for="MEAT3">Chicken</label></li>
-                                
-                                <li><input type="checkbox" name="MEAT[]" id="MEAT4" value="Ham" /><label for="MEAT4">Ham</label></li>
-                                
-                            </ul>
-                            
-                                
-                            <ul>
-                                <li><h3>VEGGIES</h3></li>
-                                <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES1" value="Peppers" /><label for="VEGGIES1">Peppers</label></li>
-                                
-                                <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES2" value="Onions" /><label for="VEGGIES2">Onions</label></li>
-                                
-                                <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES3" value="Tomatoes" /><label for="VEGGIES3">Tomatoes</label></li>
-                                
-                                <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES4" value="Olives" /><label for="VEGGIES4">Olives</label></li>
-                                
-                            </ul>
-                            <!--not ideal for quanity selection, but I limited the user to 9 pizzas, so it will suffice-->
-                            <div class="quantity">
-                                <label for="quantity"><h3>QUANTITY</h3></label>
-                                <select name="quantity" id="quantity">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
+                    <h2 class="pizzaCust">CUSTOMIZE YOUR PIZZA</h2>
+                    <fieldset class="pizzaB">
+                        <div class="pizzaBLD">
+                            <!--the pizza topping and options selectors. A lot of the seperations by div or ul were so I could control them in css
+                            Cheese, Sauce, Crust, Size, and shape are all individual selections, and are required to proceed-->
+                            <div class="pizzatoppings">
+
+                                <ul>
+                                    <li><h3>CHEESE</h3></li>
+
+                                    <li><input type="radio" name="CHEESE" id="CHEESE1" value="Cheddar" required/><label for="CHEESE1">Cheddar</label></li>
+
+                                    <li><input type="radio" name="CHEESE" id="CHEESE2" value="Mozzarella" /><label for="CHEESE2">Mozzarella</label></li>
+
+                                    <li><input type="radio" name="CHEESE" id="CHEESE3" value="Vegan" /><label for="CHEESE3">Vegan</label></li>
+
+                                </ul>
+
+                                <ul>
+                                    <li><h3>SAUCE</h3></li>
+                                    <li><input type="radio" name="SAUCE" id="SAUCE1" value="Tomato" required/><label for="SAUCE1">Tomato Sauce</label></li>
+
+                                    <li><input type="radio" name="SAUCE" id="SAUCE2" value="Marinara" /><label for="SAUCE2">Marinara Sauce</label></li>
+
+                                    <li><input type="radio" name="SAUCE" id="SAUCE3" value="Alfredo" /><label for="SAUCE3">Alfredo Sauce</label></li>
+
+                                </ul>
+                                <!--Veggies and Meat options are checkboxes, not required, and allow for up to 4 choices per ul-->
+                                <ul>
+                                    <li><h3>MEAT</h3></li>
+                                    <li><input type="checkbox" name="MEAT[]" id="MEAT1" value="Pepperoni" /><label for="MEAT1">Pepperoni</label></li>
+
+                                    <li><input type="checkbox" name="MEAT[]" id="MEAT2" value="Bacon" /><label for="MEAT2">Bacon</label></li>
+
+                                    <li><input type="checkbox" name="MEAT[]" id="MEAT3" value="Chicken" /><label for="MEAT3">Chicken</label></li>
+
+                                    <li><input type="checkbox" name="MEAT[]" id="MEAT4" value="Ham" /><label for="MEAT4">Ham</label></li>
+
+                                </ul>
+
+
+                                <ul>
+                                    <li><h3>VEGGIES</h3></li>
+                                    <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES1" value="Peppers" /><label for="VEGGIES1">Peppers</label></li>
+
+                                    <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES2" value="Onions" /><label for="VEGGIES2">Onions</label></li>
+
+                                    <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES3" value="Tomatoes" /><label for="VEGGIES3">Tomatoes</label></li>
+
+                                    <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES4" value="Olives" /><label for="VEGGIES4">Olives</label></li>
+
+                                </ul>
+                                <!--not ideal for quanity selection, but I limited the user to 9 pizzas, so it will suffice-->
+                                <div class="quantity">
+                                    <label for="quantity"><h3>QUANTITY</h3></label>
+                                    <select name="quantity" id="quantity">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                    </select>
+                                </div>
+
+                            </div> 
+                        </div>
+                        <div class="shape">
+                            <h3>SHAPE</h3>
+                            <input type="radio" name="SHAPE" id="SQUARE" value="Square"/><label for="SQUARE" required>Square</label>
+                            <input type="radio" name="SHAPE" id="ROUND" value="Round"/><label for="ROUND">Round</label>
+                        </div>
+                        <div class="sizes">
+                            <h3>SIZES</h3>
+                            <input type="radio" name="SIZE" id="SMALL" value="Small" required/><label for="SMALL">Small (8")</label>
+                            <input type="radio" name="SIZE" id="MEDIUM" value="Medium" /><label for="MEDIUM">Medium (12")</label>
+                            <input type="radio" name="SIZE" id="LARGE" value="Large" /><label for="LARGE">Large (16")</label>
+                            <input type="radio" name="SIZE" id="XLARGE" value="Xlarge" /><label for="XLARGE">Extra-Large (20")</label>
+                            <h3>CRUST</h3>
+                            <input type="radio" name="CRUST" id="ORIGINAL" value="Original" required/><label for="ORIGINAL">Original Crust</label>
+                            <input type="radio" name="CRUST" id="THIN" value="Thin" /><label for="THIN">Thin Crust</label>
+                            <input type="radio" name="CRUST" id="DEEPDISH" value="Deepdish" /><label for="DEEPDISH">Deep Dish</label>
+
+                        </div>
+                        </div> 
+                    </fieldset>
+
+                    <div class="pbaside">
+                        <!--When I made this intitally, it was an aside. I was literally thinking, this will just push it to the side. Turned out that was wrong. So now it's a div, with the class pbaside-->
+                    <h2>YOUR ORDER</h2>
+                    
+                        <fieldset>
+                            <div id="order">
+                                <ul class="itemdec">
+                                    <li>Size:</li>
+                                    <li>Crust:</li>
+                                    <li>Shape:</li>
+                                    <li>Cheese:</li>
+                                    <li>Sauce:</li>
+                                    <li>Meat:</li>
+                                    <li>Veggies:</li>
+                                    <li>Quantity:</li>
+                                    
+                                </ul>
+                                    <!--This is where the java will output, else it just reads what's written here. The java duplicates this when outputing so that unchanged fields remain identical-->
+                                <ul id="orderoutput">
+                                    <li>required<i>*</i></li>
+                                    <li>required<i>*</i></li>
+                                    <li>required<i>*</i></li>
+                                    <li>required<i>*</i></li>
+                                    <li>required<i>*</i></li>
+                                    <li>none</li>
+                                    <li>none</li>
+                                    <li>x1</li>
+                                    
+                                </ul>
+                                <!--the php here is to grab the delivery or pickup values for when the nav bar options are used to get to the pizzabuilder. Auto selects whatever the user clicked on-->
+                                <select class="delvorpick" name="deliverypickup"/>
+                                    <option value="Pickup"<?php echo (($_GET['type'] ?? 'pickup') === 'pickup') ? 'selected' : ''; ?>>PICKUP</option>
+                                    <option value="Delivery"<?php echo (($_GET['type'] ?? 'delivery') === 'delivery') ? 'selected' : ''; ?>>DELIVERY</option>
                                 </select>
                             </div>
                             
-                        </div>
-                           
-                        
+                            <div class="asidebuttons">
+                                <button type="submit">CHECKOUT</button>
+                                <button type="reset">CLEAR SELECTION</button>
+                            
+                        </fieldset>
                     </div>
-                    <div class="shape">
-                        <h3>SHAPE</h3>
-                        <input type="radio" name="SHAPE" id="SQUARE" value="Square"/><label for="SQUARE" required>Square</label>
-                        <input type="radio" name="SHAPE" id="ROUND" value="Round"/><label for="ROUND">Round</label>
-                    </div>
-                    <div class="sizes">
-                        <h3>SIZES</h3>
-                        <input type="radio" name="SIZE" id="SMALL" value="Small" required/><label for="SMALL">Small (8")</label>
-                        <input type="radio" name="SIZE" id="MEDIUM" value="Medium" /><label for="MEDIUM">Medium (12")</label>
-                        <input type="radio" name="SIZE" id="LARGE" value="Large" /><label for="LARGE">Large (16")</label>
-                        <input type="radio" name="SIZE" id="XLARGE" value="Xlarge" /><label for="XLARGE">Extra-Large (20")</label>
-                        <h3>CRUST</h3>
-                        <input type="radio" name="CRUST" id="ORIGINAL" value="Original" required/><label for="ORIGINAL">Original Crust</label>
-                        <input type="radio" name="CRUST" id="THIN" value="Thin" /><label for="THIN">Thin Crust</label>
-                        <input type="radio" name="CRUST" id="DEEPDISH" value="Deepdish" /><label for="DEEPDISH">Deep Dish</label>
-                                    
-                    </div>
-                    </div> 
-                </fieldset>
-            
-                <aside class="pbaside">
-                <h2>YOUR ORDER</h2>
-                
-                    <fieldset>
-                        <div id="order">
-                            <ul class="itemdec">
-                                <li>Size:</li>
-                                <li>Crust:</li>
-                                <li>Shape:</li>
-                                <li>Cheese:</li>
-                                <li>Sauce:</li>
-                                <li>Meat:</li>
-                                <li>Veggies:</li>
-                                <li>Quantity:</li>
-                                
-                            </ul>
-                            <ul id="orderoutput">
-                                <li>required<i>*</i></li>
-                                <li>required<i>*</i></li>
-                                <li>required<i>*</i></li>
-                                <li>required<i>*</i></li>
-                                <li>required<i>*</i></li>
-                                <li>none</li>
-                                <li>none</li>
-                                <li>x1</li>
-                                
-                            </ul>
-                            <select class="delvorpick" name="deliverypickup"/>
-                                <option value="Pickup"<?php echo (($_GET['type'] ?? 'pickup') === 'pickup') ? 'selected' : ''; ?>>PICKUP</option>
-                                <option value="Delivery"<?php echo (($_GET['type'] ?? 'delivery') === 'delivery') ? 'selected' : ''; ?>>DELIVERY</option>
-                            </select>
-                        </div>
-                        
-                        <div class="asidebuttons">
-                            <button type="submit">CHECKOUT</button>
-                            <button type="reset">CLEAR SELECTION</button>
-                        </div>
-                    </fieldset>
-                </aside>
+                </div>
             </form>
             <script>
                             //READ ME:
@@ -155,11 +157,13 @@
                 //most of these annotations are pour moi, not pour vous.
                 //I am explaining what the heck I wrote to myself now that it is working as I wanted it to.
                 //You did say "don't use AI". I take this as, don't have AI write your code for you.
+
                 //To learn the syntax, I asked Google and Grok, 
                 //"How do I store radio, checkbox and selection inputs from a page?"
                 //"How do I output inputs to a ul?"
                 //etc.
                 //I then used the examples they came up with to create my own code.
+                //This is naturally why everything ended up being short form, because AI's usually pick the most efficient way to do something, unless you tell them otherwise.
                 //nothing here was copied and pasted, other than syntax examples to work off of.
                 //I feel my commits will back me up on this given the multitude of errors and rewrites I had to do to get it working.
 
