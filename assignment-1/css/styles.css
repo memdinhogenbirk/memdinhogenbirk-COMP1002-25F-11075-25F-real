@@ -446,7 +446,7 @@ footer{
 .carddetails img{
 	width: 100px;
 	height:auto;
-	padding-left: 10rem;
+	margin-left: 10rem;
 	margin-top: -5rem;
 }
 .payment li{
