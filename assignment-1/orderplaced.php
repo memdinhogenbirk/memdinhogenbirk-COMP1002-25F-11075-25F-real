@@ -47,10 +47,14 @@
                         echo('<p>Your order will be ');
                             if ($delvorpick=="Delivery"){
                                 print('on its way shortly. ');
-                                print('<br>To be delivered to '.$address1.',');
+                                print('<br>To be delivered to '.$address1.'');
                                 if (!empty($address2)){
-                                    print(' Unit '.$address2.'');
+                                    print(', Unit '.$address2.'.');
                                     echo('<p><br>You will be notified via ');
+                                    print($alert.' when it is on its way.');
+                                }
+                                else{
+                                    echo('.<p><br>You will be notified via ');
                                     print($alert.' when it is on its way.');
                                 }
                             }
