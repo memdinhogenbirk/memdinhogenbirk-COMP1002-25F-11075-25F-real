@@ -285,7 +285,6 @@
             <?php
 				//Grab footer
 				include('footer.php')
-                
 			?>
         </footer>
     </body>

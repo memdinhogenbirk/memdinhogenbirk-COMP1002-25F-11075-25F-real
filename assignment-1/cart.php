@@ -53,25 +53,25 @@
                                             echo('<p>'.$sauce.' Sauce</p>');
 	            	                        echo('<ul>Meat Toppings: ');
                                                 foreach ($meat as $item){
-	                                        		echo('<li>'.$item.' </li>');
+	                                        		echo'<li>'.$item.' </li>';
 	                                        	};
                                                 if (empty($meat)){
-                                                    print ('none');
+                                                    print 'none';
                                                 }	
                                             echo('</ul>');
                                             echo('<ul>Veggie Toppings: ');
 	                                        	foreach ($veggies as $item){
-	                                        		echo('<li>'.$item.' </li>');
+	                                        		echo'<li>'.$item.' </li>';
 	                                        	};
                                                 if (empty($veggies)){
-                                                    print ('none');
+                                                    print 'none';
                                                 }
                                             echo('</ul>');
                                         echo('</div>');
                                     }
                                     //else for empty cart
                                     else {
-                                        print('<div><h3>CART IS EMPTY</h3><i>Please add at least one pizza to your cart</i><br><br></div>');
+                                        print'<div><h3>CART IS EMPTY</h3><i>Please add at least one pizza to your cart</i><br><br></div>';
                                     };   
                             echo('</div>');
                             //cost calculations    
@@ -99,41 +99,41 @@
                                         echo('<p><b>Delivory Fee:</b> $');
                                             if ($delvorpick=="Delivery"){
                                                 $fee=5;
-                                                print($fee);
+                                                print$fee;
                                             }
                                             elseif ($delvorpick=="Pickup"){
                                                 $fee=0;
-                                                print('0');
+                                                print'0';
                                             };
                                             echo('</p>');
                                             echo('<p><b>Taxes: </b> $');
                                             if ($delvorpick=="Delivery"){
                                                 $fee=5;
-                                                $taxes=(number_format($price*$quantity*0.13+($fee*0.13),2));
+                                                $taxes=number_format($price*$quantity*0.13+($fee*0.13),2);
                                                 print(round($taxes,2));
                                                 //I don't think round is necessary anymore since I added number_format, but I work all weekend, and I must spend my free time cleaning up my CSS and checking for things I missed. It's working, so it will do.
                                             }
                                             elseif ($delvorpick=="Pickup"){
                                                 $fee=0;
-                                                $taxes=(number_format($price*$quantity*0.13+($fee*0.13),2));
+                                                $taxes=number_format($price*$quantity*0.13+($fee*0.13),2);
                                                 print(round($taxes,2));
                                             };
                                         echo('</p>');
                                         echo('<h2>Total: $');
                                             if ($delvorpick=="Delivery"){
 
-                                                $total=(number_format($price * $quantity + $fee + round($taxes,2),2));
-                                                print($total);
+                                                $total=number_format($price * $quantity + $fee + round($taxes,2),2);
+                                                print$total;
                                             }
                                             elseif ($delvorpick=="Pickup"){
-                                                $total=(number_format($price * $quantity + round($taxes,2),2));
-                                                print($total);
+                                                $total=number_format($price * $quantity + round($taxes,2),2);
+                                                print$total;
                                             };
                                         echo('</h2>');
                             echo('</div>');
-                                    /*echo "SESSION: "; var_dump($_SESSION);*/
+                                    echo "SESSION: "; var_dump($_SESSION);
                                     //I used that above line to figure out why my total wasn't carrying to the next page. The fix I came up with is duplicating the total calculation below, with an added if else for the delivery fee.
-                                    $total=(number_format($price * $quantity + round($taxes,2) + ($fee==5 ? 5: 0),2));
+                                    $total=number_format($price * $quantity + round($taxes,2) + ($fee==5 ? 5: 0),2);
                                     $_SESSION["total"] = $total;
                                     $_SESSION["CHEESE"] = $cheese;
                                     $_SESSION["MEAT"] = $meat;
@@ -142,7 +142,6 @@
                                     $_SESSION["CRUST"] = $crust;
                                     $_SESSION["SHAPE"] = $shape;
                                     $_SESSION["SAUCE"] = $sauce;
-                                    $_SESSION["toppings"] = $toppings;
                                     $_SESSION["quantity"] = $quantity;
                                     $_SESSION["deliverypickup"] = $delvorpick;
                                     //these sessions drag the php values to the next page
