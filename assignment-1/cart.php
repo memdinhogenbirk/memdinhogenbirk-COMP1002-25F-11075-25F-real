@@ -201,12 +201,12 @@
                             </ul>
                             <ul>
                                 <li><label for="payment"><i>*</i>Card Number</label></li>
-                                <li><input type="tel" class="ccnumber" placeholder="xxxx-xxxx-xxxx-xxxx" name="payment" required></li>
+                                <li><input type="tel" maxlength="12" class="ccnumber" placeholder="xxxx-xxxx-xxxx-xxxx" name="payment" required></li>
                                 <li><label for="securitycode"><i>*</i>CSC <small>(3 or 4 digit security code)</small></label></li>
-                                <li><input type="tel" class="ccsecurity" placeholder="xxxx" name="securitycode" required></li>
+                                <li><input type="tel" maxlength="4" class="ccsecurity" placeholder="xxxx" name="securitycode" required></li>
                                 <li><label for="mexpiry"><i>*</i>Expiry Date</label></li>
-                                <li><input type="tel" class="ccexpire" placeholder="mm" name="mexpiry" required>
-                                <input type="tel" class="ccexpire" placeholder="yy" name="yexpiry" required></li>
+                                <li><input type="tel" maxlength="2" class="ccexpire" placeholder="mm" name="mexpiry" required>
+                                <input type="tel" maxlength="2" class="ccexpire" placeholder="yy" name="yexpiry" required></li>
                             </ul>
                             <img src="images/payopts.png"/>
                             <!--image source for accepted payment picture 
