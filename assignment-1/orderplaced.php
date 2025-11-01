@@ -49,20 +49,20 @@
                                 print('on its way shortly. ');
                                 print('<br>To be delivered to '.$address1.'');
                                 if (!empty($address2)){
-                                    print(', Unit '.$address2.'.');
-                                    echo('<p><br>You will be notified via ');
-                                    print($alert.' when it is on its way.');
+                                    print', Unit '.$address2.'.';
+                                    print'<p><br>You will be notified via ';
+                                    print$alert.' when it is on its way.';
                                 }
                                 else{
-                                    echo('.<p><br>You will be notified via ');
-                                    print($alert.' when it is on its way.');
+                                    print'.<p><br>You will be notified via ';
+                                    print$alert.' when it is on its way.';
                                 }
                             }
                             //else if for when its set to pickup and not delivery
                             else if ($delvorpick=="Pickup"){
-                                print('ready for pickup shortly.');
-                                echo('<p><br>You will be notified via ');
-                                print($alert.' when it is ready.');
+                                print'ready for pickup shortly.';
+                                print'<p><br>You will be notified via ';
+                                print$alert.' when it is ready.';
                             };
                             echo('</p>');
                         echo('<h3><br>Thank you for ordering from <i>PAPAPIA PIZZERIA</i>!</h3>');
@@ -71,28 +71,28 @@
                             echo('<h2>ORDER SUMMARY</h2>');
                             echo('<span>');//this is a span for CSS use, to distinguish it from the divs, section, etc.
                                 echo('<ul>');
-                                    echo('<li><b>Quantity</b> x'.$quantity.'</li>');
-                                    echo('<li><b>Size: </b>'.$size.'</li>');
-                                    echo('<li><b>Shape: </b>'.$shape.'</li>');
-                                    echo('<li><b>Crust: </b>'.$crust.'</li>');
-                                    echo('<li><b>Cheese: </b>'.$cheese.'</li>');
-                                    echo('<li><b>Sauce: </b>'.$sauce.'</li>');
+                                    print'<li><b>Quantity</b> x'.$quantity.'</li>';
+                                    print'<li><b>Size: </b>'.$size.'</li>';
+                                    print'<li><b>Shape: </b>'.$shape.'</li>';
+                                    print'<li><b>Crust: </b>'.$crust.'</li>';
+                                    print'<li><b>Cheese: </b>'.$cheese.'</li>';
+                                    print'<li><b>Sauce: </b>'.$sauce.'</li>';
                                 echo('</ul>');
                                 //single selection options printed above, meat and veggies print using if statements to echo the respective items that were selected previously by the user. Also seperated for CSS layout control
                                 echo('<ul><b>Meat Toppings </b>');
                                             foreach ($meat as $item){
-	                                    		echo('<li>'.$item.' </li>');
+	                                    		print'<li>'.$item.' </li>';
 	                                    	};
                                             if (empty($meat)){
-                                                echo('<li>none</li>');
+                                                print'<li>none</li>';
                                             }	
                                         echo('</ul>');
                                         echo('<ul><b>Veggie Toppings </b>');
 	                                    	foreach ($veggies as $item){
-	                                    		echo('<li>'.$item.' </li>');
+	                                    		print'<li>'.$item.' </li>';
 	                                    	};
                                             if (empty($veggies)){
-                                                echo('<li>none</li>');
+                                                print'<li>none</li>';
                                             }
                                             echo('</ul>');
                             echo('</span>');
