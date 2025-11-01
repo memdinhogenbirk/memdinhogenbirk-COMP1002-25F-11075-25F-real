@@ -23,7 +23,6 @@
             <?php
 				//Grab Site Navigation
 				include('nav.php')
-                
 			?>
         </header>
         <main>
@@ -35,34 +34,33 @@
                         <h1><strong>PAPAPIA PIZZERIA</strong></h1>
                         <address>123 Fake Lane<br>Orangeburg, SC 29118</address>
                     </div>
-                    <div class="storehours">
-                        <h2><strong>RESTAURANT HOURS</strong></h2>
-                            <div class="hours">
-                            <ul>
-                                <li>Monday</li>
-                                <li>Tuesday</li>
-                                <li>Wednesday</li>
-                                <li>Thursday</li>
-                                <li>Friday</li>
-                                <li>Saturday</li>
-                                <li>Sunday</li>
-                            </ul>
-                            <ul>
-                                <li>10:00am - 10:00pm</li>
-                                <li>10:00am - 10:00pm</li>
-                                <li>10:00am - 10:00pm</li>
-                                <li>10:00am - 12:00am</li>
-                                <li>10:00am - 2:00am</li>
-                                <li>10:00am - 2:00am</li>
-                                <li>Closed</li>
-                            </ul>
-                            <div class="imgcontain">
-                            <img src="images/cheffella.gif" alt="lil chef guy tossing some pizza"/>
-                            </div>
-                            </div>
+                        <div class="storehours">
+                            <h2><strong>RESTAURANT HOURS</strong></h2>
+                                <div class="hours">
+                                <ul>
+                                    <li>Monday</li>
+                                    <li>Tuesday</li>
+                                    <li>Wednesday</li>
+                                    <li>Thursday</li>
+                                    <li>Friday</li>
+                                    <li>Saturday</li>
+                                    <li>Sunday</li>
+                                </ul>
+                                <ul>
+                                    <li>10:00am - 10:00pm</li>
+                                    <li>10:00am - 10:00pm</li>
+                                    <li>10:00am - 10:00pm</li>
+                                    <li>10:00am - 12:00am</li>
+                                    <li>10:00am - 2:00am</li>
+                                    <li>10:00am - 2:00am</li>
+                                    <li>Closed</li>
+                                </ul>
+                                <div class="imgcontain">
+                                    <img src="images/cheffella.gif" alt="lil chef guy tossing some pizza"/>
+                                </div>
+                        </div>
                         
                     </div>
-                    
                 </div>
             </div>
             <div class="gotopb">
@@ -73,7 +71,6 @@
             <?php
 				//Grab footer
 				include('footer.php')
-                
 			?>
         </footer>
     </body>
