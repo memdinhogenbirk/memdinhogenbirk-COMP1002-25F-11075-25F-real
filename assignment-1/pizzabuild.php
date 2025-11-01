@@ -20,7 +20,8 @@
                 <h2 class="pizzaCust">CUSTOMIZE YOUR PIZZA</h2>
                 <fieldset class="pizzaB">
                     <div class="pizzaBLD">
-                        
+                        <!--the pizza topping and options selectors. A lot of the seperations by div or ul were so I could control them in css
+                        Cheese, Sauce, Crust, Size, and shape are all individual selections, and are required to proceed-->
                         <div class="pizzatoppings">
                             
                             <ul>
@@ -43,7 +44,7 @@
                                 <li><input type="radio" name="SAUCE" id="SAUCE3" value="Alfredo" /><label for="SAUCE3">Alfredo Sauce</label></li>
                                 
                             </ul>
-                            
+                            <!--Veggies and Meat options are checkboxes, not required, and allow for up to 4 choices per ul-->
                             <ul>
                                 <li><h3>MEAT</h3></li>
                                 <li><input type="checkbox" name="MEAT[]" id="MEAT1" value="Pepperoni" /><label for="MEAT1">Pepperoni</label></li>
@@ -68,6 +69,7 @@
                                 <li><input type="checkbox" name="VEGGIES[]" id="VEGGIES4" value="Olives" /><label for="VEGGIES4">Olives</label></li>
                                 
                             </ul>
+                            <!--not ideal for quanity selection, but I limited the user to 9 pizzas, so it will suffice-->
                             <div class="quantity">
                                 <label for="quantity"><h3>QUANTITY</h3></label>
                                 <select name="quantity" id="quantity">

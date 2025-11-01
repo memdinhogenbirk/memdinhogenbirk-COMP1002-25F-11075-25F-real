@@ -14,6 +14,11 @@ ul{
 i {
 	color: red;
 }
+/*privacy and whatnot*/
+.infopage{
+	display: block;
+	padding: 5rem;
+}
 /*nav bar controls*/
 header {
 	width: 100%;/*ensure header runs width of page*/
@@ -260,7 +265,7 @@ footer{
 }
 .asidebuttons{
 	padding-left: 3rem;
-	padding-bottom: 2rem;
+	padding-bottom: 2.2rem;
 }
 
 .pizzaCust{
@@ -276,14 +281,12 @@ footer{
 	height: fit-content;
 	width: 100%;
 	font-size: 16px;
+	margin-top: 1rem;
+	text-align: end;
 }
 .quantity{
 	padding-top: 2.95rem;
 	padding-right: 1rem;
-}
-.quantity select{
-	margin-top: 1rem;
-	text-align: end;
 }
 .pizzatoppings ul{
 	padding: 2rem;
@@ -297,25 +300,18 @@ footer{
 	padding-bottom: 2rem;
 }
 .sizes h3{
-	padding-top: 2rem;
+	padding-top: 1rem;
 }
 .sizes label{
 	padding-right: 2rem;
 }
 .shape{
 	padding-left: 2rem;
-	padding-bottom: 2rem;
-}
-.shape h3{
-	padding-top: 2rem;
+	padding-bottom: 1rem;
+	padding-top: 1rem;
 }
 .shape label{
 	padding-right: 2rem;
-}
-/*privacy and whatnot*/
-.infopage{
-	display: block;
-	padding: 5rem;
 }
 /*cart controls*/
 .qssc{/*quantity size shape crust heading*/
