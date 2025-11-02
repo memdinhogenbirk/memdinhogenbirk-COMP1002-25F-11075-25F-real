@@ -3,10 +3,13 @@
 .homepage{
 	display: flex;
 	align-items: top;
-	padding: 1rem;
+	padding: 1vw;
+}
+.indexmain{
+	font-size: 1vw;
 }
 .gotopb{
-	width: 600px;
+	width: 40vw;
 	padding-left: 28%;
 }
 .gotopb a{
@@ -18,31 +21,31 @@
 	color: black;
 	border-radius: 30px;
 	text-align: center;
-	padding: 1rem;
+	padding: 1vw;
 }
 .gotopb h1:hover{
 	background-color:brown;
 }
-.homepage a{
-	margin-bottom: 3rem;
+.homepage a > img{
+	width: 50vw;
 }
 .address{
-	padding: 1rem;
+	padding: 1vw;
 }
 .storehours{
-	margin-bottom: 1rem;
-	margin-left: 1rem;
+	margin-bottom: 1vh;
+	margin-left: 1vw;
 }
 .imgcontain{
 	overflow:hidden;
-	height: 450px;
-	margin-top: -6rem;
+	height: 60vh;
+	margin-top: -6vh;
 }
 .imgcontain img{
-	width: 450px; 
-	height: 450px;
-	margin-right:-45px;
-	margin-left:-60px;
+	width: 30vw; 
+	height: auto;
+	margin-right:-2vh;
+	margin-left:-2.5vw;
 	
 }
 .hours{
@@ -50,6 +53,6 @@
 	align-items: top;
 }
 .hours ul li{
-	padding-top: 1rem;
-	padding-right: 2rem;
+	padding-top: 1vh;
+	padding-right: 2vw;
 }

@@ -18,7 +18,7 @@
 				include('nav.php')
 			?>
         </header>
-        <main>
+        <main class="indexmain">
            <!--https://maps.app.goo.gl/aUVSdrGGXE5nE8Jy6-->
             <div class="homepage"><!--actual address I found on google maps, clicking image will open new tab using target blank-->
                 <a href="https://maps.app.goo.gl/aUVSdrGGXE5nE8Jy6" target="blank"> <img src="images/addressimage.png" alt="Restaurant Location"/></a>
