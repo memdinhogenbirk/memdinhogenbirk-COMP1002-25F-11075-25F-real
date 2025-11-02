@@ -1,26 +1,29 @@
 @import url("globalstyles.css");
 /*Order placed Controls*/
+main{
+	font-size: 1.1vw;
+}
 .orderp{
-	padding: 2rem;
-	padding-left: 8rem;
+	padding: 2vh 2vw 2vh 8vw;
+	padding-left: 8vw;
 	display: flex;
 }
 .orderp section{
 	display:flex;
 	flex-direction: column;
-	padding-right: 5rem;
+	padding-right: 5vw;
 }
 .orderp h1, h2, h3{
 	
-	padding-bottom: 1rem;
+	padding-bottom: 1.5vh;
 }
 .orderp ul > b{
 	border-bottom: 2px black solid;
 	padding-bottom: 1px;
 }
 .orderp ul {
-	padding-left: 1rem;
-	padding-right: 1rem;
+	padding-left: 1vw;
+	padding-right: 1vw;
 }
 .orderp span{
 	display: flex;
@@ -32,19 +35,19 @@
 .orderp div{
 	border: 1px solid grey;
 	border-radius: 10px;
-	padding: 1rem;
+	padding: 1vw;
 	display: flex;
 	flex-direction: column;
 	max-width: fit-content;
 }
 .orderp div h2{
-	padding-left: 9rem;
+	padding-left: 9vw;
 	border-bottom: 1px solid black;
-	margin-bottom: 1rem;
+	margin-bottom: 1.5vh;
 }
 .orderp div h3{
 	border-top: 1px solid black;
-	margin-top: 1rem;
-	padding-top: 1rem;
-	padding-left: 10rem;
+	margin-top: 1.5vh;
+	padding-top: 1.5vh;
+	padding-left: 10vw;
 }
