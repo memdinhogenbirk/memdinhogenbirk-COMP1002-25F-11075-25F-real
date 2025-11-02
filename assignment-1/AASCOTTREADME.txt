@@ -24,10 +24,11 @@ Like java, a lot of what I wanted to do was beyond the scope of what we had been
 CSS NOTES
 Good God man. 
 
-*My CSS at this moment in time is an abomination, totaling nearly 500 lines of code. I intend to at least clean it up and determine what things are in fact no longer needed with all the changes I made. Ideally I want to break it up into seperate style sheets, though I know this will be a can of worms, and am hesitant to do it.
-CSS is at the very least divided into page specific sheets, with a global one that also includes the nav and footer controls.
+*My CSS at this moment in time is an abomination, totaling nearly 500 lines of code.
 
-I will say though, I have a much better understanding of it now, having spent the majority of my time working on it.
+UPDATED: CSS is less of an abomination now. Some pages are too long still, but at the very least, everything scales to the viewports now. Not ideal the way it works still, but hey, at least you can see it on different screen sizes now without it being gutted and smushed.
+
+It is also divided into individual style sheets for each page.
 
 FINAL THOUGHTS
 There are things that I would like to do that I simply won't have time for.
@@ -35,7 +36,7 @@ There are things that I would like to do that I simply won't have time for.
 - The cart should save your selected items
 - The cart should also be able to display a drop down menu when clicked on
 - You should be able to build multiple different pizzas
-- The CSS should be completely overhauled so that it works in any browser without screwing up the layout of everything.
+- The CSS could definitely be better, but it has improved from where I started.
 - My custom made gifs are not my finest work, but I didn't want to waste to much time on them
 - The payment info should be numeric only but in order to remove the number incrementor buttons, more java. I'll pass on that for now.
 
