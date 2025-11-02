@@ -1,4 +1,4 @@
-/*@import url("css/styles.css");*//*use to imbed style sheets within style sheets*/
+
 * {/*set all margins and padding to 0 by default*/
 	/*php -S 0.0.0.0:8000*/
     margin: 0;
@@ -9,7 +9,7 @@ html {
 	background-color: white;
 }
 ul{
-	list-style: none;/*removes bullet points*/
+	list-style: none;/*removes bullet points from every unordered list*/
 }
 i {
 	color: red;
@@ -23,57 +23,43 @@ footer{
 }
 /*nav bar controls*/
 header {
-	width: 100%;/*ensure header runs width of page*/
-	border-bottom: 1px solid gray;/*border line for header/navbar */
-}
-.nav-container {
-	display: inline-flex;/*makes nav bar flex with window expansion, contraction, also lines from left to right instead of top to bottom default*/
 	width: 100%;
-	padding: 1rem, 1rem;
+	border-bottom: 1px solid gray;
 }
-.items.item4 strong{
-	color:orangered;
+.nav-container{
+	display: inline-flex;
+	width: 100%;
+	align-items: center;
 }
-.items{
-	align-content: center;/*keeps nav bar content centered(with help from margin and padding adjustments made on and individual basis*/
-}
-.itemsimg.itemF{
-	margin-right: auto;/*automatically fills space in between first item and the rest to keep them on the left and right respectively*/
-}
-.items.item4{/*phone number*/
-	margin-right: auto;/*automatically fills space in between first item and the rest to keep them on the left and right respectively*/
-}
-.items a{
-	/*border: 1px solid black;/*may or may not keep, useful for alignment*/
+.nav-container a{
 	text-decoration: none;/*removes underline*/
 	color: black;/*Text color black*/
-	
+	padding: 1rem;
+	margin: -1rem .5rem -1rem .5rem; /*top, right, bottom, left */
 }
-.items.item1 a{
-	padding: 1.2rem;
-	
-	margin-right: 1rem;
+.nav-container img{
+	height: 6vh;
+	width: auto;
+	padding: .5rem;
 }
-.items.item2 a{
-	padding: 1.2rem;
-	margin-right: 1rem;
+.cartimg{
+	margin-right: -5rem;
 }
-.items.item3 a{
-	padding: 1.2rem;
-	margin-right: 1rem;
+.nav-container div img + a{
+	padding-left: 4.5vw;
 }
-
-.items.item5 a{/*shopping cart*/
-	padding: 1.2rem;
-	padding-left: 4rem;
-	margin-left: -4.5rem;
+.nav-container a > img{
+	padding-right: 15vw;
 }
-.items a:hover {
+.nav-container div{
+	display: inline-flex;
+	align-items: center;
+	padding-left: 13.7vw;
+}
+.nav-container div a:hover {
     background-color: rgba(0,0,0,.2); /* Slightly lighter background on hover, low alpha to allow shoppingcart icon to be seen */
     border-radius: 5px;
 }
-.itemsimg img{
-	height: 40px;
-	width: auto;
-	padding: .5rem;
+.nav-container b > strong{
+	color:orangered;
 }
