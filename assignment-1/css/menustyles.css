@@ -1,5 +1,8 @@
 @import url("globalstyles.css");
 /*Menu controls*/
+main{
+	font-size: 1.2vw;
+}
 .pizzaoptions{
 	display: flex;
 	justify-content: center;
@@ -7,16 +10,16 @@
 	
 }
 .pizzaheadings{
-	margin-top: 2rem;
-	padding: 2rem;
+	margin-top: 2vh;
+	padding: 2vw;
 	border: 1px solid grey;
 	border-radius: 20px;
 	margin-right: auto;
 	margin-left: auto;
 }
 .pizzaoptions img{
-	width: 400px;
-	height: 400px;
+	width: 27vw;
+	height: 50vh;
 	border-radius: 50px;
 }
 .pizzaheadings a{
@@ -31,23 +34,23 @@
 	color: black;
 	border-radius: 30px;
 	text-align: center;
-	width: 400px;
-	margin-bottom: 2rem;
+	width: 27vw;
+	margin-bottom: 2vh;
 }
 .pizzaheadings a h1:hover{
 	background-color: brown;
 }
 .pizzaheadings p{
-	width: 390px;
-	padding-top: 1rem;
+	width: 28vw;
+	padding-top: 1vh;
 }
 .menutoppings{
-	padding-top: 1rem;
-	width:100%;
+	padding-top: 1vh;
+	width:100vw;
 }
 .menutoppings h2{
-	padding-left: 39%;
-	padding-bottom:1rem;
+	padding-left: 39vw;
+	padding-bottom:1vh;
 	
 }
 .toppingoptions{
@@ -56,12 +59,12 @@
 	
 }
 .toppingoptions ul{
-	padding: 1rem;
-	padding-left: 9%;
+	padding: 1vw;
+	padding-left: 8vw;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 1rem;
+	gap: 1vw;
 	
 }
 .toppingoptions li{
@@ -70,10 +73,10 @@
 	align-items: center;
 }
 .toppingoptions img{
-	width: 100px;
-	height: 100px;
+	width: 8vw;
+	height: 16vh;
 }
 .hamimg{
-	margin-right: -20px;
-	padding-left:1rem;
+	margin-right: -1vw;
+	padding-left:1vw;
 }
