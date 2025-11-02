@@ -30,6 +30,7 @@ header {
 	display: inline-flex;
 	width: 100%;
 	align-items: center;
+	font-size: 1vw;
 }
 .nav-container a{
 	text-decoration: none;/*removes underline*/
@@ -43,10 +44,10 @@ header {
 	padding: .5rem;
 }
 .cartimg{
-	margin-right: -5rem;
+	margin: 0vw -6vw 0vw 2vw;
 }
 .nav-container div img + a{
-	padding-left: 4.5vw;
+	padding-left: 5vw;
 }
 .nav-container a > img{
 	padding-right: 15vw;
