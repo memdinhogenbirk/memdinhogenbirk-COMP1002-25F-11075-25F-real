@@ -44,18 +44,18 @@ header {
 	padding: .5rem;
 }
 .cartimg{
-	margin: 0vw -6vw 0vw 2vw;
+	margin: 0vw -6vw 0vw 1vw;
 }
 .nav-container div img + a{
 	padding-left: 5vw;
 }
 .nav-container a > img{
-	padding-right: 15vw;
+	padding-right: 19vw;
 }
 .nav-container div{
 	display: inline-flex;
 	align-items: center;
-	padding-left: 13.7vw;
+	padding-left: 10.7vw;
 }
 .nav-container div a:hover {
     background-color: rgba(0,0,0,.2); /* Slightly lighter background on hover, low alpha to allow shoppingcart icon to be seen */
