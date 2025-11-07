@@ -6,7 +6,7 @@
 
 /* STEP 13: Construct a declaration for the page text using the shorthand font syntax (font-style, font-variant, font-weight, font-stretch, font-size/line-height, and font-family.) */
 html {
-
+font-family: serif;
 }
 /* STEP 3: Add a base color to the HTML element */
 html {
