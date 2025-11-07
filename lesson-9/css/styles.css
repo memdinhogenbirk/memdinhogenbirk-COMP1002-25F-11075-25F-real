@@ -13,6 +13,7 @@ html {
 /* STEP 3: Add a base color to the HTML element */
 html {
 	background-color: white;
+	color: black;
 
 }
 /* STEP 4a: Try a variety of absolute CSS length/size units (mm, cm, in, pt, pc) to set the font-size on the HTML element */
