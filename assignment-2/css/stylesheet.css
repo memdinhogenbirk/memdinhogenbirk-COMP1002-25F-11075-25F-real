@@ -22,10 +22,11 @@ main{
     margin-top: auto;
 }
 hgroup{
+    width:50%;
+    margin :auto;
     display: flex;
     flex-direction: column;
     text-align: center;
-    
 }
 hgroup i{
     font-style: normal;/*italics here only being used to control the text*/
@@ -35,11 +36,17 @@ h1{
     font-family: impact, sans-serif;
     line-height: 140px;
     margin-top: 0;
+    margin-bottom:0;
+}
+h1 :first-child{
+    font-size:200px;
+    line-height: 160px;
 }
 h2{
     display:flex;
     font-weight: normal;
     justify-content: space-between;
+    text-align: center;
     line-height: 1px;
 }
 section{
