@@ -45,24 +45,25 @@ h1{
 }
 h1 :first-child{
     font-size:200px;
-    line-height: 120px;
+    line-height: 100px;
 }
 h1 :nth-child(3){
     font-size: 140px;
-    line-height: 120px;
+    line-height: 105px;
 }
 h1 :last-child{
     font-size: 120px;
-    line-height: 100px;
+    line-height: 90px;
 }
 h1 em{
     font-style: normal;
 }
 h2{
     display:flex;
-    font-weight: normal;
+    font-family: 'Arial Narrow';
+    letter-spacing: 4px;
     justify-content: space-between;
-    width:90%;
+    width:85%;
     margin: auto;
     color:aquamarine;
     padding-bottom: 2rem;
