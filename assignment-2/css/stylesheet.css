@@ -22,10 +22,28 @@ main{
     margin-top: auto;
 }
 hgroup{
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    
+}
+hgroup i{
+    font-style: normal;/*italics here only being used to control the text*/
+}
+h1{
+    font-size: 160px;
+    font-family: impact, sans-serif;
+    line-height: 140px;
+    margin-top: 0;
+}
+h2{
+    display:flex;
+    font-weight: normal;
+    justify-content: space-between;
+    line-height: 1px;
 }
 section{
-    font-family: 'poster', arial;
+    font-family: 'poster', sans-serif;
     font-size: 20px;
     word-spacing: -3px;
     text-align: center;
