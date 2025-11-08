@@ -1,9 +1,14 @@
 @font-face {
     /*php -S 0.0.0.0:8000*/
     /*courtesy of dafont.com https://www.dafont.com/sf-movie-poster.font?text=test*/
-      font-family: 'poster';
-      src: url('/assignment-2/sf_movie_poster/SF\ Movie\ Poster.ttf') format('truetype');
+    font-family: 'SF Movie Poster';
+    src: url('/assignment-2/sf_movie_poster/SF\ Movie\ Poster.ttf') format('truetype');
     }
+@font-face{
+    /*courtesy of dafont.com https://www.dafont.com/blade-runner-movie-font.font*/
+    font-family: 'BLADRMF_';
+    src: url('/assignment-2/bladerunnerfont/BLADRMF_.TTF') format('truetype');
+}
 html{
     background-image: url('../images/2049post.jpg');
     background-size: cover;
@@ -34,18 +39,24 @@ hgroup i{
     
 }
 h1{
-    font-size: 160px;
-    font-family: impact, sans-serif;
+    font-family: 'BLADRMF_', sans-serif;
     margin-top: 0;
     margin-bottom: 0;
-    line-height: 140px;
 }
 h1 :first-child{
     font-size:200px;
+    line-height: 120px;
+}
+h1 :nth-child(3){
+    font-size: 140px;
+    line-height: 120px;
 }
 h1 :last-child{
     font-size: 120px;
     line-height: 100px;
+}
+h1 em{
+    font-style: normal;
 }
 h2{
     display:flex;
@@ -54,11 +65,11 @@ h2{
     width:90%;
     margin: auto;
     color:aquamarine;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
     border: 1px solid aqua;
 }
 section{
-    font-family: 'poster', sans-serif;
+    font-family: 'SF Movie Poster', sans-serif;
     font-size: 20px;
     word-spacing: -3px;
     text-align: center;
