@@ -17,7 +17,13 @@ body{
 hgroup{
     text-align: center;
 }
-p{
+section{
     font-family: 'poster', arial;
-    
+    font-size: 20px;
+    word-spacing: -3px;
+    text-align: center;
+    line-height: 20px;
+}
+section strong{
+    font-size: 30px;
 }
