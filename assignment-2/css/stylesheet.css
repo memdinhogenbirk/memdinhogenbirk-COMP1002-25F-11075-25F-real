@@ -71,12 +71,12 @@ h2{
     color:#95CEB6;
     padding-bottom: 2rem;
 }
-section{
+section p{
     font-family: 'SF Movie Poster', sans-serif;
     font-size: 40px;
     word-spacing: -6px;
     text-align: center;
-    line-height: 30px;
+    line-height: 33px;
 }
 section strong{
     font-size: 50px;
@@ -86,7 +86,8 @@ section span{
     display: inline-block;
     font-size: 22px;
     text-align: right;
-    line-height: 19px;
+    line-height: 18.5px;
+    word-spacing: -3px;
 }
 footer{
     padding: 1rem;
