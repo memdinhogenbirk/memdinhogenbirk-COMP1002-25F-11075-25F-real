@@ -124,7 +124,7 @@ footer > :nth-child(2){
     display: block;
     font-size: 10px;
     text-align: center;
-    line-height: 8px;
+    line-height: 10px;
     margin-top: -10px;
     letter-spacing: -1px;
 }
@@ -160,9 +160,58 @@ footer img[src="images/scottfreelogo.png"]{
     height: auto;
     margin: 0 0px 0 -9px;
 }
+footer > :nth-child(4){
+    display: block;
+    width: fit-content;
+    border: 1px solid #00B3AA;
+}
+footer > :nth-child(4) :first-child{
+    display:flex;
+    text-align: center;
+    width: fit-content;
+}
+footer > :nth-child(4) :first-child > span{/*restricted*/
+    border: 1px solid #00B3AA;
+    background-color: #00B3AA;
+    color: black;
+    font-family: Impact, sans-serif;
+    font-size: 12px;
+    padding: 1px 2px;
+    letter-spacing: 1px;
+}
+footer > :nth-child(4) :first-child div b{/*Big R letter*/
+    font-size: 60px;
+    font-family:serif;
+    font-weight: 900;
+    line-height: 50px;
+}
+footer > :nth-child(4) :first-child div{
+    display:block;
+    border-right: 1px solid #00B3AA;
+    margin-bottom: -4px;
+}
+footer > :nth-child(4) :first-child text{
+    font-size: 15px;
+    width: 10.5rem;
+    align-content: center;
+}
+footer > :nth-child(4) > span{
+    display:inline-flex;
+    white-space: nowrap;
+    align-items: center;
+    font-size: 8px;
+    font-family: arial, sans-serif;
+    padding: 0 1px;
+    margin-right: auto;
+    border-top: 1px solid #00B3AA;
+
+}
+
 footer img[src="images/mpalogo.png"]{
     width: 25px;
-    height: auto;
+    height: 10px;
+    border-left: 1px solid #00B3AA;
+    padding: 2px;
 }
 footer img[src="images/warnerbroslogo.png"]{
     width: 30px;
