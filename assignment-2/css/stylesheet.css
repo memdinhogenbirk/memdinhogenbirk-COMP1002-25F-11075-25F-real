@@ -204,14 +204,17 @@ footer > :nth-child(4) > span{
     padding: 0 1px;
     margin-right: auto;
     border-top: 1px solid #00B3AA;
-
 }
-
 footer img[src="images/mpalogo.png"]{
     width: 25px;
     height: 10px;
     border-left: 1px solid #00B3AA;
     padding: 2px;
+}
+footer > span{
+    display: flex;
+    font-size: 8px;
+    text-align: center;
 }
 footer img[src="images/warnerbroslogo.png"]{
     width: 30px;
