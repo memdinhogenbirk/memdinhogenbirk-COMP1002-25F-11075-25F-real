@@ -95,15 +95,19 @@ section span{
 footer{
     display: flex;
     padding: 1rem;
+    align-items:flex-end;
+    height: fit-content;
 }
 footer > :first-child {
     display:flex;
     border: 1px solid #00B3AA;
+    height: fit-content;
 }
 footer > :first-child p{
     font-family: serif;
     font-size: 9px;
     margin-left: 2px;
+    margin-bottom: 0;
 }
 footer > :first-child b{
     letter-spacing: 2px;
@@ -115,11 +119,28 @@ footer img[src="images/alconlogo.png"]{
     width: 20px;
     height: 35px;
 }
-footer img[src="images/scottfreelogo.png"]{
-    width: 25px;
-    height: auto;
+footer > :nth-child(2){
+    border: 1px solid #00B3AA;
+    display: block;
+    font-size: 10px;
+    text-align: center;
+    line-height: 8px;
+    margin-top: -10px;
+    letter-spacing: -1px;
+}
+footer > :nth-child(2) small{
+    font-size: 10px;
+    letter-spacing: .18px;
+    word-spacing: -1px;
+    font-family: 'SF Movie Poster', sans-serif;
 }
 footer img[src="images/columbiapictureslogo.png"]{
+    width: 110px;
+    height: auto;
+    margin-top: 0px;
+    margin-bottom:-1px;
+}
+footer img[src="images/scottfreelogo.png"]{
     width: 25px;
     height: auto;
 }
