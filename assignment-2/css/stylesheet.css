@@ -140,9 +140,25 @@ footer img[src="images/columbiapictureslogo.png"]{
     margin-top: 0px;
     margin-bottom:-1px;
 }
+footer > :nth-child(3){
+    display: flex;
+    align-items: center;
+    font-family: serif;
+    font-weight: lighter;
+    border: 1px solid #00B3AA;
+    font-size: 8px;
+    letter-spacing: 7px;
+}
+footer > :nth-child(3) b:first-letter{
+    font-size: 12px;
+}
+footer > :nth-child(3) b{
+    margin-bottom: -10px;
+}
 footer img[src="images/scottfreelogo.png"]{
-    width: 25px;
+    width: 45px;
     height: auto;
+    margin: 0 0px 0 -9px;
 }
 footer img[src="images/mpalogo.png"]{
     width: 25px;
