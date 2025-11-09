@@ -93,5 +93,45 @@ section span{
     word-spacing: -2px;
 }
 footer{
+    display: flex;
     padding: 1rem;
 }
+footer > :first-child {
+    display:flex;
+    border: 1px solid #00B3AA;
+}
+footer > :first-child p{
+    font-family: serif;
+    font-size: 9px;
+    margin-left: 2px;
+}
+footer > :first-child b{
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: lighter;
+    line-height: 16px;
+}
+footer img[src="images/alconlogo.png"]{
+    width: 20px;
+    height: 35px;
+}
+footer img[src="images/scottfreelogo.png"]{
+    width: 25px;
+    height: auto;
+}
+footer img[src="images/columbiapictureslogo.png"]{
+    width: 25px;
+    height: auto;
+}
+footer img[src="images/mpalogo.png"]{
+    width: 25px;
+    height: auto;
+}
+footer img[src="images/warnerbroslogo.png"]{
+    width: 30px;
+    height: auto;
+}
+
+
+
+
