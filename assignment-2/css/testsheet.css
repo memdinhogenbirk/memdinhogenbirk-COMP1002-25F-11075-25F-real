@@ -3,6 +3,7 @@ https://wallpaper.mob.org/gallery/tag=blade%20runner%202049/
 https://www.pinterest.com/pin/529313762456533245/
 https://static.wikia.nocookie.net/greatestmovies/images/1/11/Bladerunner204917018.jpg/revision/latest?cb=20221010005326
 https://www.pinterest.com/pin/566961040594765620/
+https://www.pinterest.com/pin/winter-storm-watch-wednesday-more-snow--535224736979013449/
 */
 /*Highly recommend the browser extension colorzilla. 
 Allows in browser color value acquiring using an eyedropper
@@ -33,22 +34,42 @@ It is how I got the color codes used in this CSS*/
     font-family: 'DimensionalBold';
     src: url('/assignment-2/dimensional/DimensionalBold.ttf') format('truetype');
 }
-body{
+html{
     background-image: url('../images/docbackground.png');
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+body{
+    margin:auto;
     color: #00B3AA;
     font-family:Arial, Helvetica, sans-serif;
-}
-main{
     background-image: url('../images/2049post.jpg');
     background-size: cover;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
     height: 145rem; 
     width: 95rem;
+}
+main{
+    position: relative;
+    isolation: isolate;
+    margin: auto;
+    height: 145rem; 
+    width: 95rem;
+    display: flex;
+    flex-direction: column;
+}
+main::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('../images/snowing.gif');
+    background-size: cover;
+    opacity: 0.6;
+    pointer-events: none;    
 }
 hgroup{
     margin:auto auto 0rem auto;
@@ -116,8 +137,8 @@ section span{
     padding: 1rem;
     align-items:flex-end;
     height: fit-content;
-    margin-top: -100px;
-    margin-bottom: 100px;
+    margin-top: -50px;
+    margin-bottom: 20px;
 }
 .footer a{
     margin-left: auto;
@@ -254,6 +275,7 @@ section span{
     font-size: 80px;
     margin-bottom: -50px;
     word-spacing: -8px;
+    margin-top: -3rem;
 }
 .footer > :nth-child(6) h1 b{/*me being extremely petty. Couldn't find a fond that exactly matched this section in the poster, so I'm mixing*/
     font-family: Arial;
