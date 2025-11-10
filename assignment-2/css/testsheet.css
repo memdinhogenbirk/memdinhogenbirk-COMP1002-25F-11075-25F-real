@@ -46,8 +46,9 @@ a{
 }
 header h1{/*snow toggle*/
     width:fit-content;
-    margin: 0 auto -6rem auto;
+    margin: 0 auto 0 auto;
     padding: 0 1rem 0 0;
+    font-family: 'BLADRMF_';
     font-size: 50px;
     background-image: linear-gradient(to right, #921D24, #005C7D);
     border-radius: 10px;
@@ -65,7 +66,7 @@ main{
     position: relative;/**/
     isolation: isolate;
     margin: auto;
-    height: 145rem; 
+    height: 140rem; 
     width: 95rem;
     display: flex;
     flex-direction: column;
@@ -77,7 +78,7 @@ main{
     background: url('../images/snowing.gif');
     background-size: contain;
     opacity: 0.3;
-    pointer-events: none;    
+    pointer-events: none;/*cant click things on main without this*/  
 }
 hgroup{
     margin:auto auto 0rem auto;
@@ -89,27 +90,27 @@ hgroup{
 hgroup i{
     font-style: normal;/*italics here only being used to control the text, so I took away the lean*/
 }
-h1{
+hgroup h1{
     font-family: 'BLADRMF_', sans-serif;
     margin-top: 0;
     margin-bottom: 0;
 }
-h1 :first-child{
+hgroup h1 :first-child{
     font-size:240px;
     line-height: 180px;
 }
-h1 :nth-child(3){
+hgroup h1 :nth-child(3){
     font-size: 180px;
     line-height: 130px;
 }
-h1 :last-child{
+hgroup h1 :last-child{
     font-size: 120px;
     line-height: 90px;
 }
-h1 em{
+hgroup h1 em{
     font-style: normal;
 }
-h2{
+hgroup h2{
     display:flex;
     font-family: 'Arial Narrow';
     font-size: 37px;
@@ -276,14 +277,14 @@ section span{
     display: block;
     text-align: center;
     color:#95CEB6;
-    line-height: 7px;
+    height: fit-content;
 }
 .footer > :nth-child(6) h1{
     font-family: 'modern_sans_serif_7', sans-serif;
     font-size: 80px;
-    margin-bottom: -50px;
     word-spacing: -8px;
-    margin-top: -3rem;
+    margin: 0;
+    padding: 0;
 }
 .footer > :nth-child(6) h1 b{/*me being extremely petty. Couldn't find a fond that exactly matched this section in the poster, so I'm mixing*/
     font-family: Arial;
