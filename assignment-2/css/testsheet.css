@@ -1,3 +1,9 @@
+/*Image credits
+https://wallpaper.mob.org/gallery/tag=blade%20runner%202049/
+https://www.pinterest.com/pin/529313762456533245/
+https://static.wikia.nocookie.net/greatestmovies/images/1/11/Bladerunner204917018.jpg/revision/latest?cb=20221010005326
+https://www.pinterest.com/pin/566961040594765620/
+*/
 /*Highly recommend the browser extension colorzilla. 
 Allows in browser color value acquiring using an eyedropper
 Extremely useful in general
@@ -27,23 +33,22 @@ It is how I got the color codes used in this CSS*/
     font-family: 'DimensionalBold';
     src: url('/assignment-2/dimensional/DimensionalBold.ttf') format('truetype');
 }
-html{
-    aspect-ratio: 25/40;
-    width: 100%;
-}
 body{
-    
+    background-image: url('../images/docbackground.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #00B3AA;
     font-family:Arial, Helvetica, sans-serif;
 }
 main{
+    background-image: url('../images/2049post.jpg');
+    background-size: cover;
     margin: auto;
     display: flex;
     flex-direction: column;
-    height: 150rem; 
+    height: 145rem; 
     width: 95rem;
-    background-image: url('../images/2049post.jpg');
-    background-size: cover;
 }
 hgroup{
     margin:auto auto 0rem auto;

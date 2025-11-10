@@ -29,14 +29,13 @@ It is how I got the color codes used in this CSS*/
 }
 html{
     
-    aspect-ratio: 25/40;
-    width: 110%;
+    width: 100%;
 }
 body{
     background-image: url('../images/2049post.jpg');
     background-size: contain;
-    height: 160rem; 
-    width: 100rem;
+    height: 140rem; 
+    width: 90rem;
     margin: auto;
     display: flex;
     flex-direction: column;
