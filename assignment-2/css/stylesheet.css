@@ -2,8 +2,8 @@
 Allows in browser color value acquiring using an eyedropper
 Extremely useful in general
 It is how I got the color codes used in this CSS*/
+/*php -S 0.0.0.0:8000*/
 @font-face {
-    /*php -S 0.0.0.0:8000*/
     /*courtesy of dafont.com https://www.dafont.com/sf-movie-poster.font?text=test*/
     font-family: 'SF Movie Poster';
     src: url('/assignment-2/sf_movie_poster/SF\ Movie\ Poster.ttf') format('truetype');
@@ -98,7 +98,7 @@ footer{
     align-items:flex-end;
     height: fit-content;
 }
-footer > :first-child {
+footer > :first-child {/*alcon*/
     display:flex;
     border: 1px solid #00B3AA;
     height: fit-content;
@@ -119,7 +119,7 @@ footer img[src="images/alconlogo.png"]{
     width: 20px;
     height: 35px;
 }
-footer > :nth-child(2){
+footer > :nth-child(2){/*columbia*/
     border: 1px solid #00B3AA;
     display: block;
     font-size: 10px;
@@ -140,7 +140,7 @@ footer img[src="images/columbiapictureslogo.png"]{
     margin-top: 0px;
     margin-bottom:-1px;
 }
-footer > :nth-child(3){
+footer > :nth-child(3){/*scott free*/
     display: flex;
     align-items: center;
     font-family: serif;
@@ -160,7 +160,7 @@ footer img[src="images/scottfreelogo.png"]{
     height: auto;
     margin: 0 0px 0 -9px;
 }
-footer > :nth-child(4){
+footer > :nth-child(4){/*mpa rating*/
     display: block;
     width: fit-content;
     border: 1px solid #00B3AA;
@@ -175,50 +175,75 @@ footer > :nth-child(4) :first-child > span{/*restricted*/
     background-color: #00B3AA;
     color: black;
     font-family: Impact, sans-serif;
-    font-size: 12px;
+    font-size: 8px;
     padding: 1px 2px;
     letter-spacing: 1px;
 }
 footer > :nth-child(4) :first-child div b{/*Big R letter*/
-    font-size: 60px;
+    font-size: 40px;
     font-family:serif;
     font-weight: 900;
-    line-height: 50px;
+    line-height: 30px;
 }
 footer > :nth-child(4) :first-child div{
     display:block;
     border-right: 1px solid #00B3AA;
-    margin-bottom: -4px;
+    margin-bottom: -1px;
 }
-footer > :nth-child(4) :first-child text{
-    font-size: 15px;
-    width: 10.5rem;
-    align-content: center;
+footer > :nth-child(4) :first-child p{
+    font-size: 10px;
+    text-align: center;
+    font-family: 'Arial Narrow', sans-serif;
+    width: max-content;
+    padding: 0px 5px 0px 5px;
+    margin: 4px 0px 0px 0px;
 }
-footer > :nth-child(4) > span{
-    display:inline-flex;
-    white-space: nowrap;
+footer > :nth-child(4) > span{/*mpa fine print*/
+    display:flex;
     align-items: center;
-    font-size: 8px;
-    font-family: arial, sans-serif;
-    padding: 0 1px;
-    margin-right: auto;
     border-top: 1px solid #00B3AA;
 }
-footer img[src="images/mpalogo.png"]{
-    width: 25px;
-    height: 10px;
-    border-left: 1px solid #00B3AA;
-    padding: 2px;
+footer > :nth-child(4) > span small{
+    display: flex;
+    padding: 0px;
+    font-size: 6px;
+    font-family: 'Arial Narrow', sans-serif;
+    word-spacing: -1px;
+    padding: 1px;
+    border-right: 1px solid #00B3AA;
 }
-footer > span{
+footer > :nth-child(4) + small{/*lil baby r-logo*/
+    font-size: 8px;
+    margin-bottom: -1px;
+    padding-left: 1px;
+}
+footer img[src="images/mpalogo.png"]{
+    width: 18px;
+    height: 6px;
+}
+footer > span{/*fine print amalgamation*/
     display: flex;
     font-size: 8px;
     text-align: center;
 }
+footer > :last-child{/*warnerbros*/
+    display: flex;
+    align-content: flex-end;
+    border: 1px solid #00B3AA;
+    font-family: serif;
+}
+footer > :last-child span{
+    display: block;
+    text-align: left;
+    margin-right: 0;
+    padding-right: 0;
+}
+footer :last-child small{
+    
+}
 footer img[src="images/warnerbroslogo.png"]{
-    width: 30px;
-    height: auto;
+    width: 40px;
+    height: 40px;
 }
 
 
