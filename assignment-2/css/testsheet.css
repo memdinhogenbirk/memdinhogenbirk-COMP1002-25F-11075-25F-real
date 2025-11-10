@@ -85,7 +85,7 @@ main{
     pointer-events: none;/*cant click things on main without this*/  
 }
 hgroup{
-    margin:auto auto 0rem auto;
+    margin:auto auto 0 auto;/*0 is telling the bottom margin to set to minimum, else the title will move up the page, don't want that*/
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -94,9 +94,13 @@ hgroup{
 hgroup i{
     font-style: normal;/*italics here only being used to control the text, so I took away the lean*/
 }
+hgroup > a{
+border: 1px solid red;
+overflow: hidden;
+}
 hgroup h1{
-    display: flex;
-    flex-direction: column;
+    margin: .5rem;
+    display: grid;
     text-align: center;
     font-family: 'BLADRMF_', sans-serif;
     line-height: .75;
@@ -123,7 +127,7 @@ hgroup h2{
     width:85%;
     margin: auto;
     color:#95CEB6;
-    padding-bottom: 1rem;
+    padding-bottom: .5rem;
     padding-left: 2rem;
 }
 section p{
@@ -282,7 +286,7 @@ section span{
     text-align: center;
     color:#95CEB6;
     height: fit-content;
-    line-height: 8px;/*due to the way i segmented the elements on the html, this ended up being the best means to control the line-height for each. .footer Global declaration, tweak h1 separately*/
+    line-height: .8;/*due to the way i segmented the elements on the html, this ended up being the best means to control the line-height for each. .footer Global declaration, tweak h1 separately*/
 }
 .footer > :nth-child(6) h1{
     font-family: 'modern_sans_serif_7', sans-serif;
@@ -290,7 +294,6 @@ section span{
     word-spacing: -8px;
     margin: 0;
     padding: 0;
-    line-height: 70px;
 }
 .footer > :nth-child(6) h1 b{/*me being extremely petty. Couldn't find a font that exactly matched this section in the poster, so I'm mixing*/
     font-family: Arial;
