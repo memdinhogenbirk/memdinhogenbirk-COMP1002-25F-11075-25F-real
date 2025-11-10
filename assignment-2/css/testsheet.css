@@ -1,0 +1,292 @@
+/*Highly recommend the browser extension colorzilla. 
+Allows in browser color value acquiring using an eyedropper
+Extremely useful in general
+It is how I got the color codes used in this CSS*/
+/*php -S 0.0.0.0:8000*/
+@font-face {
+    /*courtesy of dafont.com https://www.dafont.com/sf-movie-poster.font?
+    credit to author ShyFonts http://www.shyfonts.com*/
+    font-family: 'SF Movie Poster';
+    src: url('/assignment-2/sf_movie_poster/SF\ Movie\ Poster.ttf') format('truetype');
+    }
+@font-face{
+    /*courtesy of dafont.com https://www.dafont.com/blade-runner-movie-font.font?
+    credit to author Phil Steinschneider*/
+    font-family: 'BLADRMF_';
+    src: url('/assignment-2/bladerunnerfont/BLADRMF_.TTF') format('truetype');
+}
+@font-face {
+    /*courtest of dafont.com https://www.dafont.com/modern-sans-serif-7.font?
+    credit to author Sizenko Alexander http://www.styleseven.com*/
+    font-family: 'modern_sans_serif_7';
+    src: url('/assignment-2/sans_serif_7/modern_sans_serif_7.ttf') format('truetype');
+}
+@font-face {
+    /*courtest of dafont.com https://www.cufonfonts.com/font/dimensional
+    credit to author Daniel P. Lyons uploader LyonsType_BU*/
+    font-family: 'DimensionalBold';
+    src: url('/assignment-2/dimensional/DimensionalBold.ttf') format('truetype');
+}
+html{
+    aspect-ratio: 25/40;
+    width: 100%;
+}
+body{
+    
+    color: #00B3AA;
+    font-family:Arial, Helvetica, sans-serif;
+}
+main{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    height: 160rem; 
+    width: 95rem;
+    background-image: url('../images/2049post.jpg');
+    background-size: cover;
+}
+hgroup{
+    margin:auto auto 0rem auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width:fit-content;
+}
+hgroup i{
+    font-style: normal;/*italics here only being used to control the text, so I took away the lean*/
+}
+h1{
+    font-family: 'BLADRMF_', sans-serif;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+h1 :first-child{
+    font-size:240px;
+    line-height: 180px;
+}
+h1 :nth-child(3){
+    font-size: 180px;
+    line-height: 130px;
+}
+h1 :last-child{
+    font-size: 120px;
+    line-height: 90px;
+}
+h1 em{
+    font-style: normal;
+}
+h2{
+    display:flex;
+    font-family: 'Arial Narrow';
+    font-size: 37px;
+    letter-spacing: 6px;
+    justify-content: space-between;
+    width:85%;
+    margin: auto;
+    color:#95CEB6;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+}
+section p{
+    font-family: 'SF Movie Poster', sans-serif;
+    font-size: 38px;
+    word-spacing: -5px;
+    text-align: center;
+    line-height: 33px;
+}
+section strong{
+    font-size: 48px;
+    font-weight: normal;
+}
+section span{
+    display: inline-block;
+    font-size: 20px;
+    text-align: right;
+    line-height: 18.5px;
+    word-spacing: -2px;
+}
+/*This is where the fun begins. Wanted to try to recreate the bottom credits using CSS as much as possible. Could have dropped in images that did it all, that would've been boring*/
+.footer{
+    display: flex;
+    padding: 1rem;
+    align-items:flex-end;
+    height: fit-content;
+    margin-top: -100px;
+}
+.footer a{
+    margin-left: auto;
+    margin-right: auto;
+}
+.footer > :first-child {/*alcon*/
+    display:flex;
+    height: fit-content;
+}
+.footer > :first-child p{
+    font-family: serif;
+    font-size: 9px;
+    margin-left: 2px;
+    margin-bottom: 0;
+}
+.footer > :first-child b{
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: lighter;
+    line-height: 16px;
+}
+.footer img[src="images/alconlogo.png"]{
+    width: 20px;
+    height: 35px;
+}
+.footer > :nth-child(2){/*columbia*/
+    display: block;
+    font-size: 10px;
+    text-align: center;
+    line-height: 10px;
+    margin-top: -10px;
+    letter-spacing: -1px;
+}
+.footer > :nth-child(2) small{
+    font-size: 10px;
+    letter-spacing: .18px;
+    word-spacing: -1px;
+    font-family: 'SF Movie Poster', sans-serif;
+}
+.footer img[src="images/columbiapictureslogo.png"]{
+    width: 110px;
+    height: auto;
+    margin-top: 0px;
+    margin-bottom:-1px;
+}
+.footer > :nth-child(3){/*scott free*/
+    display: flex;
+    align-items: center;
+    font-family: serif;
+    font-weight: lighter;
+    font-size: 8px;
+    letter-spacing: 7px;
+}
+.footer > :nth-child(3) b:first-letter{
+    font-size: 12px;
+}
+.footer > :nth-child(3) b{
+    margin-bottom: -10px;
+}
+.footer img[src="images/scottfreelogo.png"]{
+    width: 45px;
+    height: auto;
+    margin: 0 0px 0 -9px;
+}
+.footer > :nth-child(4){/*mpa rating*/
+    border: 1px solid #00B3AA;
+    display: block;
+    width: fit-content;
+    margin-right: 0;
+}
+.footer > :nth-child(4) :first-child{
+    display:flex;
+    text-align: center;
+    width: fit-content;
+}
+.footer > :nth-child(4) :first-child > span{/*restricted*/
+    background-color: #00B3AA;
+    color: black;
+    font-family: Impact, sans-serif;
+    font-size: 8px;
+    padding: 1px 2px;
+    letter-spacing: 1px;
+}
+.footer > :nth-child(4) :first-child div b{/*Big R letter*/
+    font-size: 40px;
+    font-family:serif;
+    font-weight: 900;
+    line-height: 30px;
+}
+.footer > :nth-child(4) :first-child div{
+    display:block;
+    border-right: 1px solid #00B3AA;
+    margin-bottom: -1px;
+}
+.footer > :nth-child(4) :first-child p{
+    font-size: 10px;
+    text-align: center;
+    font-family: 'Arial Narrow', sans-serif;
+    width: max-content;
+    padding: 0px 5px 0px 5px;
+    margin: 4px 0px 0px 0px;
+}
+.footer > :nth-child(4) > span{/*mpa fine print*/
+    display:flex;
+    align-items: center;
+    border-top: 1px solid #00B3AA;
+}
+.footer > :nth-child(4) > span small{
+    display: flex;
+    padding: 0px;
+    font-size: 6px;
+    font-family: 'Arial Narrow', sans-serif;
+    word-spacing: -1px;
+    padding: 1px;
+    border-right: 1px solid #00B3AA;
+}
+.footer > :nth-child(4) + small{/*lil baby r-logo*/
+    font-size: 8px;
+    margin-bottom: -1px;
+    margin-right: auto;
+}
+.footer img[src="images/mpalogo.png"]{
+    width: 18px;
+    height: 6px;
+}
+.footer > :nth-child(6){/*imax bit*/
+    display: block;
+    text-align: center;
+    color:#95CEB6;
+    line-height: 7px;
+}
+.footer > :nth-child(6) h1{
+    font-family: 'modern_sans_serif_7', sans-serif;
+    font-size: 80px;
+    margin-bottom: -50px;
+    word-spacing: -8px;
+}
+.footer > :nth-child(6) h1 b{/*me being extremely petty. Couldn't find a fond that exactly matched this section in the poster, so I'm mixing*/
+    font-family: Arial;
+    font-size: 50px;
+}
+.footer > :nth-child(6) text{
+    font-size: 20px;
+}
+.footer > :nth-child(6) text b{/*you may note that the font is slightly different from the original, I presume that's how it is legal for free use*/
+    font-family: 'DimensionalBold';
+}
+.footer > :nth-child(6) small{
+    font-size: 8px;
+}
+.footer > span{/*fine print amalgamation*/
+    display: flex;
+    font-size: 8px;
+    text-align: center;
+}
+.footer > :last-child{/*warnerbros*/
+    display: flex;
+    align-content: center;
+    font-family: serif;
+}
+.footer > :last-child span{
+    display: block;
+    align-content: flex-end;
+    text-align: left;
+    font-size: 14px;
+    margin-right: 0;
+    padding-right: 0;
+    white-space: nowrap;
+    line-height: 10px;
+}
+.footer :last-child small{
+    font-size: 8px;
+}
+.footer img[src="images/warnerbroslogo.png"]{
+    width: 40px;
+    height: 40px;
+    padding-left: 1px;
+}
