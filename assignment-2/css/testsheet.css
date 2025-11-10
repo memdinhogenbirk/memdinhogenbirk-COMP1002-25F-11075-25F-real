@@ -40,7 +40,7 @@ main{
     margin: auto;
     display: flex;
     flex-direction: column;
-    height: 160rem; 
+    height: 150rem; 
     width: 95rem;
     background-image: url('../images/2049post.jpg');
     background-size: cover;
@@ -112,6 +112,7 @@ section span{
     align-items:flex-end;
     height: fit-content;
     margin-top: -100px;
+    margin-bottom: 100px;
 }
 .footer a{
     margin-left: auto;
