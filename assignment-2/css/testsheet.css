@@ -104,6 +104,7 @@ hgroup h1{
     line-height: .75;
     height: fit-content;
 }
+hgroup a:hover{border-radius: 20px}
 hgroup h1 :first-child{font-size:240px;}
 hgroup h1 :nth-child(2){font-size: 180px;}
 hgroup h1 :last-child{font-size: 120px;}
