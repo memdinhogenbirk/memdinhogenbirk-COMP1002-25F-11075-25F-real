@@ -67,8 +67,8 @@ main::before {
     position: absolute;
     inset: 0;
     background: url('../images/snowing.gif');
-    background-size: cover;
-    opacity: 0.6;
+    background-size: contain;
+    opacity: 0.3;
     pointer-events: none;    
 }
 hgroup{
