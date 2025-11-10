@@ -28,14 +28,16 @@ It is how I got the color codes used in this CSS*/
     src: url('/assignment-2/dimensional/DimensionalBold.ttf') format('truetype');
 }
 html{
-    background-image: url('../images/2049post.jpg');
-    background-size: cover;
+    
     aspect-ratio: 25/40;
     width: 110%;
 }
 body{
-    height: 100%; 
-    margin: 0;
+    background-image: url('../images/2049post.jpg');
+    background-size: contain;
+    height: 160rem; 
+    width: 100rem;
+    margin: auto;
     display: flex;
     flex-direction: column;
     color: #00B3AA;
@@ -110,7 +112,6 @@ footer{
     padding: 1rem;
     align-items:flex-end;
     height: fit-content;
-    margin-bottom: 100px;
     margin-top: -100px;
 }
 footer a{
