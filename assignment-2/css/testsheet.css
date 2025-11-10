@@ -91,14 +91,8 @@ hgroup{
     text-align: center;
     width:fit-content;
 }
-hgroup i{
-    font-style: normal;/*italics here only being used to control the text, so I took away the lean*/
-}
-hgroup > a{
-border: 1px solid red;
-overflow: hidden;
-}
 hgroup h1{
+    overflow: hidden;
     margin: .5rem;
     display: grid;
     text-align: center;
@@ -141,7 +135,7 @@ section strong{
     font-size: 48px;
     font-weight: normal;
 }
-section span{
+section span{/*stacked text bits*/
     display: inline-block;
     font-size: 20px;
     text-align: right;
