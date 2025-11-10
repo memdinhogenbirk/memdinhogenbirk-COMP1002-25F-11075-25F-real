@@ -10,7 +10,7 @@ Allows in browser color value acquiring using an eyedropper
 Extremely useful in general
 It is how I got the color codes used in this CSS*/
 /*php -S 0.0.0.0:8000*/
-@font-face {
+@font-face{
     /*courtesy of dafont.com https://www.dafont.com/sf-movie-poster.font?
     credit to author ShyFonts http://www.shyfonts.com*/
     font-family: 'SF Movie Poster';
@@ -39,6 +39,7 @@ html{
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    zoom: 30%;/*viewport now starts with 100% being equivalent to 30%, initial scale wasn't working, but this is.*/
 }
 a{/*turning of anchor defaults, making color become whatever the text is assigned*/
     text-decoration: none;
