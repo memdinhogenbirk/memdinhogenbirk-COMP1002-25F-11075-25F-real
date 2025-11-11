@@ -72,7 +72,7 @@ header a:hover{
     margin: auto;
 }
 main{
-    position: relative;/*parent for the snowing absolute.*/
+    position: relative;/*parent for snowing, so I may absolute it's position to the confines of main.*/
     margin: auto;
     height: 140rem; 
     width: 95rem;
@@ -81,11 +81,52 @@ main{
 }
 .snowing::before{/*snow overlay*/
     position: absolute;/*take up whole of main*/
-    content:'';/*make a box with no text in it, needed to get this thing working.*/
-    inset: 0;/*inset to borders of main*/
+    content:'';/*make a box with no text in it, to be used as the background gif*/
+    inset: 0;/*what I don't get is why the gif doesn't exist at all without this. Surely it'd default to appearing somewhere?*/
     background: url('../images/snowing.gif');
     background-size: contain;
     opacity: 0.3;
+    pointer-events: none;
+}
+.popouts{
+    font-size: 300px;
+    opacity: 1;
+}
+.popouts :first-child{
+    position: absolute;
+    left: 35rem;
+    top: 15rem;
+    border: 2px solid red;
+}
+.popouts :nth-child(2){
+    position: absolute;
+    left: 60rem;
+    top: 20rem;
+    border: 2px solid red;
+}
+.popouts :nth-child(3){
+    position: absolute;
+    left: 45rem;
+    top: 45rem;
+    border: 2px solid red;
+}
+.popouts :nth-child(4){
+    position: absolute;
+    left: 30rem;
+    top: 65rem;
+    border: 2px solid red;
+}
+.popouts :nth-child(5){
+    position: absolute;
+    left: 0rem;
+    top: 100rem;
+    border: 2px solid red;
+}
+.popouts :nth-child(6){
+    position: absolute;
+    left: 80rem;
+    top: 90rem;
+    border: 2px solid red;
 }
 hgroup{
     margin:auto auto 0 auto;/*0 is telling the bottom margin to set to minimum, else the title will move up the page, don't want that*/
