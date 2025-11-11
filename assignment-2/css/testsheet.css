@@ -72,13 +72,17 @@ header a:hover{
     margin: auto;
 }
 main{
+    position: relative;/*parent for the snowing absolute.*/
     margin: auto;
     height: 140rem; 
     width: 95rem;
     display: flex;
     flex-direction: column;
 }
-.snowing{/*snow overlay*/
+.snowing::before{/*snow overlay*/
+    position: absolute;/*take up whole of main*/
+    content:'';/*make a box with no text in it, needed to get this thing working.*/
+    inset: 0;/*inset to borders of main*/
     background: url('../images/snowing.gif');
     background-size: contain;
     opacity: 0.3;
