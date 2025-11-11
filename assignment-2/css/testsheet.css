@@ -92,45 +92,59 @@ main{
 .popouts a{
     width: 200px;
     height: 300px;
-    opacity: 1;
     position: absolute;
-    border: 2px solid red;
 }
 .popouts a:hover{
-    width: 320px;
-    height: 400px;
+    height: 1000px;
+    width:800px;
+    position: absolute;
 }
-.popouts :first-child{/*K*/
+.popouts :nth-child(3){/*K*/
     left: 35rem;
     top: 15rem;
 }
-.popouts :first-child:hover{/*K*/
+.popouts :nth-child(3):hover{/*K*/
     background-image: url('../images/kpopout.png');
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1550px;
+    top: 5rem;
+    left: -50rem;
 }
-.popouts :nth-child(2){/*Rick Deckard*/
+.popouts :nth-child(4){/*Rick Deckard*/
     left: 60rem;
     top: 20rem;
 }
-.popouts :nth-child(2):hover{/*Rick Deckard*/
+.popouts :nth-child(4):hover{/*Rick Deckard*/
     background-image: url('../images/deckardpopout.png');
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 1357px;
 }
-.popouts :nth-child(3){/*Joi*/
+.popouts :nth-child(2){/*Joi*/
     left: 45rem;
     top: 45rem;
 }
-.popouts :nth-child(3):hover{/*Joi*/
+.popouts :nth-child(2):hover{/*Joi*/
     background-image: url('../images/joipopout.png');
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 1600px;
+    top: 20rem;
 }
-.popouts :nth-child(4){/*Niander Wallace*/
+.popouts :first-child{/*Niander Wallace*/
     left: 30rem;
     top: 65rem;
 }
-.popouts :nth-child(4):hover{/*Niander Wallace*/
+.popouts :first-child:hover{/*Niander Wallace*/
     background-image: url('../images/wallacepopout.png');
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: -50rem;
+    width: 1470px;
+    top: 20rem;
 }
 .popouts :nth-child(5){/*Pfläger-Katsumata Series D FKM890*/
     left: 5rem;
@@ -138,15 +152,23 @@ main{
 }
 .popouts :nth-child(5):hover{/*Pfläger-Katsumata Series D FKM890*/
     background-image: url('../images/fkmpopout.png');
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: -50rem;
+    width: 1100px;
+    top: 55rem;
 }
 .popouts :nth-child(6){/*Steyr Pflager Katsumata Series-D Blaster*/
-    left: 80rem;
-    top: 95rem;
+    left: 78rem;
+    top: 90rem;
 }
 .popouts :nth-child(6):hover{/*Steyr Pflager Katsumata Series-D Blaster*/
     background-image: url('../images/d5223popout.png');
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    top: 50rem;
+    width: 1070px;
 }
 /*replicative poster content begins*/
 hgroup{
