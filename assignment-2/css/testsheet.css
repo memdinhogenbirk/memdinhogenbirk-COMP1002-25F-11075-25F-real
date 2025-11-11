@@ -88,46 +88,56 @@ main{
     opacity: 0.3;
     pointer-events: none;
 }
-.popouts{
-    font-size: 300px;
+.popouts a{
+    width: 200px;
+    height: 300px;
     opacity: 1;
-}
-.popouts :first-child{
     position: absolute;
+    border: 2px solid red;
+}
+.popouts :first-child{/*K*/
     left: 35rem;
     top: 15rem;
-    border: 2px solid red;
 }
-.popouts :nth-child(2){
-    position: absolute;
+.popouts :first-child:hover{/*K*/
+    background-image: linear-gradient(to right, blue, #078A97);
+}
+.popouts :nth-child(2){/*Rick Deckard*/
     left: 60rem;
     top: 20rem;
-    border: 2px solid red;
 }
-.popouts :nth-child(3){
-    position: absolute;
+.popouts :nth-child(2):hover{/*Rick Deckard*/
+    background-image: linear-gradient(to right, blue, #078A97);
+}
+.popouts :nth-child(3){/*Joi*/
     left: 45rem;
     top: 45rem;
-    border: 2px solid red;
 }
-.popouts :nth-child(4){
-    position: absolute;
+.popouts :nth-child(3):hover{/*Joi*/
+    background-image: linear-gradient(to right, blue, #078A97);
+}
+.popouts :nth-child(4){/*Niander Wallace*/
     left: 30rem;
     top: 65rem;
-    border: 2px solid red;
 }
-.popouts :nth-child(5){
-    position: absolute;
-    left: 0rem;
+.popouts :nth-child(4):hover{/*Niander Wallace*/
+    background-image: linear-gradient(to right, blue, #078A97);
+}
+.popouts :nth-child(5){/*Pfläger-Katsumata Series D FKM890*/
+    left: 5rem;
     top: 100rem;
-    border: 2px solid red;
 }
-.popouts :nth-child(6){
-    position: absolute;
+.popouts :nth-child(5):hover{/*Pfläger-Katsumata Series D FKM890*/
+    background-image: linear-gradient(to right, blue, #078A97);
+}
+.popouts :nth-child(6){/*Steyr Pflager Katsumata Series-D Blaster*/
     left: 80rem;
-    top: 90rem;
-    border: 2px solid red;
+    top: 95rem;
 }
+.popouts :nth-child(6):hover{/*Steyr Pflager Katsumata Series-D Blaster*/
+    background-image: linear-gradient(to right, blue, #078A97);
+}
+/*replicative poster content begins*/
 hgroup{
     margin:auto auto 0 auto;/*0 is telling the bottom margin to set to minimum, else the title will move up the page, don't want that*/
     display: flex;
