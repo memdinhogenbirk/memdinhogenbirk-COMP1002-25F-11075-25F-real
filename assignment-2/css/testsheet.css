@@ -78,7 +78,7 @@ main{
     display: flex;
     flex-direction: column;
 }
-.snowing {/*snow overlay*/
+.snowing{/*snow overlay*/
     background: url('../images/snowing.gif');
     background-size: contain;
     opacity: 0.3;
