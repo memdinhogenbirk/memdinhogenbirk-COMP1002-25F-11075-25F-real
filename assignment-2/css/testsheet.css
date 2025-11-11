@@ -101,42 +101,48 @@ main{
     top: 15rem;
 }
 .popouts :first-child:hover{/*K*/
-    background-image: linear-gradient(to right, blue, #078A97);
+    background-image: url('../images/kpopout.png');
+    background-size: cover;
 }
 .popouts :nth-child(2){/*Rick Deckard*/
     left: 60rem;
     top: 20rem;
 }
 .popouts :nth-child(2):hover{/*Rick Deckard*/
-    background-image: linear-gradient(to right, blue, #078A97);
+    background-image: url('../images/deckardpopout.png');
+    background-size: cover;
 }
 .popouts :nth-child(3){/*Joi*/
     left: 45rem;
     top: 45rem;
 }
 .popouts :nth-child(3):hover{/*Joi*/
-    background-image: linear-gradient(to right, blue, #078A97);
+    background-image: url('../images/joipopout.png');
+    background-size: cover;
 }
 .popouts :nth-child(4){/*Niander Wallace*/
     left: 30rem;
     top: 65rem;
 }
 .popouts :nth-child(4):hover{/*Niander Wallace*/
-    background-image: linear-gradient(to right, blue, #078A97);
+    background-image: url('../images/wallacepopout.png');
+    background-size: cover;
 }
 .popouts :nth-child(5){/*Pfläger-Katsumata Series D FKM890*/
     left: 5rem;
     top: 100rem;
 }
 .popouts :nth-child(5):hover{/*Pfläger-Katsumata Series D FKM890*/
-    background-image: linear-gradient(to right, blue, #078A97);
+    background-image: url('../images/fkmpopout.png');
+    background-size: cover;
 }
 .popouts :nth-child(6){/*Steyr Pflager Katsumata Series-D Blaster*/
     left: 80rem;
     top: 95rem;
 }
 .popouts :nth-child(6):hover{/*Steyr Pflager Katsumata Series-D Blaster*/
-    background-image: linear-gradient(to right, blue, #078A97);
+    background-image: url('../images/d5223popout.png');
+    background-size: cover;
 }
 /*replicative poster content begins*/
 hgroup{
