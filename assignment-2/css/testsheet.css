@@ -96,6 +96,10 @@ main{
     position: absolute;
     border: 2px solid red;
 }
+.popouts a:hover{
+    width: 320px;
+    height: 400px;
+}
 .popouts :first-child{/*K*/
     left: 35rem;
     top: 15rem;
