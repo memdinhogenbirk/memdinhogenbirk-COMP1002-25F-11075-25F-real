@@ -78,14 +78,10 @@ main{
     display: flex;
     flex-direction: column;
 }
-.snowing::before {/*snow overlay*/
-    content: "";
-    width: 100%;
-    height: 100%;
+.snowing {/*snow overlay*/
     background: url('../images/snowing.gif');
     background-size: contain;
     opacity: 0.3;
-    pointer-events: none;/*cant click things behind this overlay without this*/  
 }
 hgroup{
     margin:auto auto 0 auto;/*0 is telling the bottom margin to set to minimum, else the title will move up the page, don't want that*/
