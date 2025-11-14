@@ -1,8 +1,8 @@
-
+@charset "utf-8";
 /* STEP 3: Set character encoding (must be first line of file) */
 /* STEP 4a: Set the border properties on the DIV#container - border-width, border-style, border-color */
 div#container {
-
+  border: 5px solid purple;
 }
 /* STEP 4b: Control one of the four borders independently of the others - try border-top-style */
 
