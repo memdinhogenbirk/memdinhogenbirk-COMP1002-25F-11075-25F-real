@@ -1,5 +1,5 @@
 @charset "UTF-8";
-
+/*php -S 0.0.0.0:8000*/
 html {
 	background-color: lightskyblue;
 	font-family: "Trebuchet MS", Verdana, sans-serif;
@@ -18,7 +18,7 @@ header {
 }
 /* STEP 1: Float the HEADER IMG to the left */
 header img {
-
+	float: left;
 }
 
 header a {
@@ -27,26 +27,26 @@ header a {
 /* STEP 2: Set the text-align for both the HEADER H1 and the HEADER H2 to right */
 header h1,
 header h2 {
-
+	text-align: right;
 }
 /* STEP 3a: Reduce the margin-bottom of the HEADER H1 to zero, so that the following H2 sit up a bit closer to the H1 */
 header h1 {
-
+	margin-bottom: 0;
 }
 /* STEP 3b: The HEADER H2 has a margin-top by default, set that also to zero to bring it up a bit closer to the H1 */
 header h2 {
-
+	margin-top: 0;
 	text-transform: uppercase;
 }
 
 /* STEP 4d: There's a bit of padding-left on the UL element that contains the LI elements - set it to zero */
 header nav ul {
-
+	padding-left: 0;
 }
 
 /* STEP 4a: Apply a 1px dashed red outline around each of the LI elements inside the HEADER NAV so that we can see that each LI is a box (border-width, border-style, and border-color) */
 header nav li {
-
+	
 }
 /* STEP 4b: Set the above LI elements (which default to display: block as we can see in the browser), to display: inline-block so that they line up horizontally across the top of the page */
 
