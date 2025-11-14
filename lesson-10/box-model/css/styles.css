@@ -2,7 +2,9 @@
 /* STEP 3: Set character encoding (must be first line of file) */
 /* STEP 4a: Set the border properties on the DIV#container - border-width, border-style, border-color */
 div#container {
-  border: 5px solid purple;
+  border-width: 5px 20px;
+  border-style: solid;
+  border-color: peru;
 }
 /* STEP 4b: Control one of the four borders independently of the others - try border-top-style */
 
@@ -10,16 +12,18 @@ div#container {
 
 /* STEP 5a: Set padding values on the DIV#container element - set individual padding values, then use shorthand with the clock rule again (TRBL) */
 div#container {
-
+  padding: 5%;
   margin: 5% auto;
-
+  background-image: url("/lesson-10/box-model/images/cardboard-texture.jpg");
+  background-size: contain;
 }
 /* STEP 5b: Apply a background-image to the same element (controlling background-repeat, background-position, and background-size) */
 
 /* STEP 5c: Instead, apply the same background-image to the BODY, and apply a background-color to the DIV#container */
 body {
-
+  background-image: url("/lesson-10/box-model/images/stucco.jpg");
   font-size: 150%;
+  margin: 10%;
 }
 
 /* STEP 6a: Control the width of the DIV#container with a fixed unit (px) */
