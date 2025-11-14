@@ -14,7 +14,7 @@ It is how I got the color codes used in this CSS*/
     /*courtesy of dafont.com https://www.dafont.com/sf-movie-poster.font?
     credit to author ShyFonts http://www.shyfonts.com*/
     font-family: 'SF Movie Poster';
-    src: url('/assignment-2/sf_movie_poster/SF\ Movie\ Poster.ttf') format('truetype');
+    src: url('../sf_movie_poster/SF\ Movie\ Poster.ttf') format('truetype');
     }
 @font-face{
     /*courtesy of dafont.com https://www.dafont.com/blade-runner-movie-font.font?
