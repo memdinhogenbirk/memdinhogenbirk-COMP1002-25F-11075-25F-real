@@ -8,7 +8,12 @@ https://www.pinterest.com/pin/winter-storm-watch-wednesday-more-snow--5352247369
 /*Highly recommend the browser extension colorzilla. 
 Allows in browser color value acquiring using an eyedropper
 Extremely useful in general
-It is how I got the color codes used in this CSS*/
+It is how I got the color codes used in this CSS
+TO DO
+- Reattempt animations. May work better in github pages than local server
+- Annotate the crap outta everything
+- Preloaded images don't seem to matter in github pages, probably delete that bit
+- Find useless bits of CSS, get rid of em*/
 /*php -S 0.0.0.0:8000*/
 @font-face{
     /*courtesy of dafont.com https://www.dafont.com/sf-movie-poster.font?
