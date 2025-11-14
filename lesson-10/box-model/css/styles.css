@@ -1,6 +1,12 @@
 @charset "utf-8";
 /* STEP 3: Set character encoding (must be first line of file) */
 /* STEP 4a: Set the border properties on the DIV#container - border-width, border-style, border-color */
+html{
+  box-sizing: border-box;
+}
+*/*, *::before, *::after*/{
+  box-sizing: inherit;
+}
 div#container {
   border-width: 5px 20px;
   border-style: solid;
@@ -14,21 +20,23 @@ div#container {
 div#container {
   padding: 5%;
   margin: 5% auto;
-  background-image: url("/lesson-10/box-model/images/cardboard-texture.jpg");
-  background-size: contain;
+  background-image: url("/lesson-10/box-model/images/stucco.jpg");
 }
 /* STEP 5b: Apply a background-image to the same element (controlling background-repeat, background-position, and background-size) */
 
 /* STEP 5c: Instead, apply the same background-image to the BODY, and apply a background-color to the DIV#container */
 body {
-  background-image: url("/lesson-10/box-model/images/stucco.jpg");
-  font-size: 150%;
+  background-image: url("/lesson-10/box-model/images/cardboard-texture.jpg");
+  font-size: 1.5em;
   margin: 10%;
 }
 
 /* STEP 6a: Control the width of the DIV#container with a fixed unit (px) */
 div#container {
-
+  /*width: 1000px;*/
+  width: 50%;
+  height: 600px;
+  overflow-x: scroll;/*contains overflowing content but allows scroll-ability*/
 }
 /* STEP 6b: Change the width to a relative unit of measure (%) */
 
@@ -40,13 +48,13 @@ div#container {
 
 /* STEP 8a: Change the display property of the H1 EM element to block, then to inline-block (default for EM is inline) */
 h1 em {
-
+display: inline-block;
 }
 /* STEP 8b: Manipulate the visibility of the H1 EM element (visibility and display are different) */
 
 /* STEP 10: Comment out the width and display settings below for the MAIN SECTION elements, and use Flexbox, instead - set display to 'flex' on the MAIN element (the container of the SECTION elements) - learn more at https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
 main {
-
+display: block;
 }
 
 /* STEP 8c: Set the width of the 3 MAIN SECTION elements to 30% and arrange them with the display property using inline-block to arrange them side-by-side */
@@ -61,3 +69,9 @@ main section:nth-of-type(2) {
 }
 
 /* STEP 9: float the SECTION P IMG element to the left, then right */
+main img{
+  display: flex;
+  flex-direction: column;
+  float: flex-start;
+  margin: 0 auto;
+}
