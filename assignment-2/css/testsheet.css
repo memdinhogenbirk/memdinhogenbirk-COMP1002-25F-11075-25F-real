@@ -120,7 +120,7 @@ main{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
-    width: 1357px;
+    /* width: 1357px; */
 }
 .popouts :nth-child(2){/*Joi*/
     left: 45rem;
