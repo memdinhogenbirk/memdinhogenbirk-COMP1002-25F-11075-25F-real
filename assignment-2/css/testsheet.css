@@ -14,25 +14,25 @@ It is how I got the color codes used in this CSS*/
     /*courtesy of dafont.com https://www.dafont.com/sf-movie-poster.font?
     credit to author ShyFonts http://www.shyfonts.com*/
     font-family: 'SF Movie Poster';
-    src: url('../fonts/sf_movie_poster/SF\ Movie\ Poster.ttf') format('truetype');
+    src: url('/assignment-2/fonts/sf_movie_poster/SF\ Movie\ Poster.ttf') format('truetype');
     }
 @font-face{
     /*courtesy of dafont.com https://www.dafont.com/blade-runner-movie-font.font?
     credit to author Phil Steinschneider*/
     font-family: 'BLADRMF_';
-    src: url('../fonts/bladerunnerfont/BLADRMF_.TTF') format('truetype');
+    src: url('/assignment-2/fonts/bladerunnerfont/BLADRMF_.TTF') format('truetype');
 }
 @font-face {
     /*courtest of dafont.com https://www.dafont.com/modern-sans-serif-7.font?
     credit to author Sizenko Alexander http://www.styleseven.com*/
     font-family: 'modern_sans_serif_7';
-    src: url('../fonts/sans_serif_7/modern_sans_serif_7.ttf') format('truetype');
+    src: url('/assignment-2/fonts/sans_serif_7/modern_sans_serif_7.ttf') format('truetype');
 }
 @font-face {
     /*courtest of dafont.com https://www.cufonfonts.com/font/dimensional
     credit to author Daniel P. Lyons uploader LyonsType_BU*/
     font-family: 'DimensionalBold';
-    src: url('../fonts/dimensional/DimensionalBold.ttf') format('truetype');
+    src: url('/assignment-2/fonts/dimensional/DimensionalBold.ttf') format('truetype');
 }
 html{
     background-image: url('../images/docbackground.png');
