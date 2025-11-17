@@ -1,212 +1,345 @@
+/*Image credits
+Left side of html background: https://wallpaper.mob.org/gallery/tag=blade%20runner%202049/
+Credit to Blade Runner 2049 (the movie), minor editing to fit done by myself
+Right side of html background: https://www.pinterest.com/pin/529313762456533245/
+Unable to find original artist, google lens had no luck finding the original source
+Original Promotional Poster: https://static.wikia.nocookie.net/greatestmovies/images/1/11/Bladerunner204917018.jpg/
+Blank Movie Poster: https://www.pinterest.com/pin/566961040594765620/
+Sourced originally from: wallpapers.moviemania.io (link is broken though)
+Snowing Overlay Gif: https://www.pinterest.com/pin/winter-storm-watch-wednesday-more-snow--535224736979013449/
+*/
 /*Highly recommend the browser extension colorzilla. 
 Allows in browser color value acquiring using an eyedropper
 Extremely useful in general
-It is how I got the color codes used in this CSS*/
+It is how I got the color codes used in this CSS
+TO DO
+- Reattempt animations. May work better in github pages than local server
+- Annotate the crap outta everything
+- Find useless bits of CSS, get rid of em*/
 /*php -S 0.0.0.0:8000*/
-@font-face {
+@font-face{
     /*courtesy of dafont.com https://www.dafont.com/sf-movie-poster.font?
     credit to author ShyFonts http://www.shyfonts.com*/
     font-family: 'SF Movie Poster';
-    src: url('/assignment-2/sf_movie_poster/SF\ Movie\ Poster.ttf') format('truetype');
+    src: url('../fonts/sf_movie_poster/SF\ Movie\ Poster.ttf') format('truetype');
+    /*The readme file said don't change the font names, so I kept the original file name, which unfortunately contains spaces. Hence the backslashes.*/
     }
 @font-face{
     /*courtesy of dafont.com https://www.dafont.com/blade-runner-movie-font.font?
     credit to author Phil Steinschneider*/
     font-family: 'BLADRMF_';
-    src: url('/assignment-2/bladerunnerfont/BLADRMF_.TTF') format('truetype');
+    src: url('../fonts/bladerunnerfont/BLADRMF_.TTF') format('truetype');
 }
 @font-face {
     /*courtest of dafont.com https://www.dafont.com/modern-sans-serif-7.font?
     credit to author Sizenko Alexander http://www.styleseven.com*/
     font-family: 'modern_sans_serif_7';
-    src: url('/assignment-2/sans_serif_7/modern_sans_serif_7.ttf') format('truetype');
+    src: url('../fonts/sans_serif_7/modern_sans_serif_7.ttf') format('truetype');
 }
 @font-face {
     /*courtest of dafont.com https://www.cufonfonts.com/font/dimensional
     credit to author Daniel P. Lyons uploader LyonsType_BU*/
     font-family: 'DimensionalBold';
-    src: url('/assignment-2/dimensional/DimensionalBold.ttf') format('truetype');
+    src: url('../fonts/dimensional/DimensionalBold.ttf') format('truetype');
 }
-html{
-    
-    width: 100%;
+html{/*Html background image, takes up empty space when poster is zoomed out*/
+    background-image: url('../images/docbackground.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    zoom: 30%;/*viewport now starts with 100% being equivalent to 30%, initial scale wasn't working, but this is. Weirdly, everywhere is saying firefox doesn't support this. I'm using firefox, works fine. I assume what they mean is that it technically isn't at 30% zoom, its changed 100% zoom to equal 30%, but if anything, this makes more sense than defaulting to actual 30% zoom. I chose this zoom level as it fits the poster perfectly in my viewport when firefox is full screen, with bookmarks bar hidden*/
 }
-body{
-    background-image: url('../images/2049post.jpg');
-    background-size: contain;
-    height: 140rem; 
-    width: 90rem;
+body{/*Body contains blank poster as background, global font color set to color matched code,height and width defined to display poster/body size in desired way*/
+    margin:0 auto 0 auto;
+    color: #00B3AA;
+    font-family:Arial, Helvetica, sans-serif;/*default font*/
+    background-image: url('../images/2049post.jpg');/*blank poster*/
+    background-size: cover;
+    height:max-content;
+    width: 95rem;
+}
+main{/*contains everything but poster background*/
+    position: relative;/*parent for snowing, so I may absolute it's position to the confines of main.*/
     margin: auto;
+    height: 143rem; 
+    width: 95rem;
     display: flex;
     flex-direction: column;
-    color: #00B3AA;
-    font-family:Arial, Helvetica, sans-serif;
 }
-main{
-    margin-top: auto;
+.snowing::before{/*snow overlay. Due to use of class, on snowing page, this CSS is used, on regular page, it does nothing. PHP-less workaround for having a "toggle"*/
+    position: absolute;/*take up whole of main*/
+    content:'';/*makes a box with no text in it, to be used as the background gif*/
+    inset: 0;/*inset fills content to borders of main (.snowing container)*/
+    background: url('../images/snowing.gif');/*snowing overlay gif*/
+    background-size: contain;
+    opacity: 0.3;/*full opacity looked bad, reduced for subtler effect*/
+    pointer-events: none;/*overlay is not clickable, and can be clicked through*/
 }
-hgroup{
-    margin :auto;
+a{/*turning off anchor defaults, making color become whatever the text is assigned.
+    Added transition so the hover background will fill left to right. Original idea sourced from terrible youtube tutorial that hid half the syntax, prompted grok to get the missing syntax*/
+    text-decoration: none;
+    color: inherit;
+    background: linear-gradient(to right, #921D24, #005C7D) left / 0% 100%;/*Grok taught me the "left /0% 100% syntax. 0% is the initial width, 100% height, prior to background size transition*/
+    background-repeat: no-repeat;
+    transition: background-size 0.4s ease, color 0.4s ease;/*timing for gradient fill*/
+    border-radius: 5px;
+}
+a:hover{/*Global hover conditions defined*/
+    background-size: 100% 100%;/*width now 100% as the end point for the transition*/
+    border-radius: 5px;
+}
+header h1{/*snow toggle, uses linear gradient background, slightly darker colors from hover*/
+    width:fit-content;
+    margin: 0 auto 0 auto;/*shoves header to top of body, equadistant from left and right*/
+    font-family: 'BLADRMF_';/*uses same font as main title header*/
+    font-size: 50px;
+    background-image: linear-gradient(to right, #921D24, #005C7D);
+    border-radius: 10px;
+}
+header a{padding: 0 1rem 0 0;}/*anchor padded slightly right, so hover fills*/
+header a:hover{
+    background-image: linear-gradient(to right, #CB181C, #078A97);
+}
+/*popout controls*/
+/*The popouts below all use graphics I custom made
+References for photos and where I procured the info I used to write the blurbs
+-K Photo: https://hero.fandom.com/wiki/K?file=Joe_blade_runner.webp
+-K Information Source: https://bladerunner.fandom.com/wiki/K
+-Deckard Photo: https://www.radiotimes.com/movies/blade-runner-2049-harrison-ford-replicant/
+-Deckard Information Source: https://bladerunner.fandom.com/wiki/Rick_Deckard
+-Joi Photo: https://screenrant.com/ana-de-armas-blade-runner-2049-character-joi/
+-Joi Information Source: https://bladerunner.fandom.com/wiki/Joi
+-Wallace Photo Source: https://screenrant.com/blade-runner-2049-niander-wallaces-plan-explained/
+-Wallace Information Source: https://bladerunner.fandom.com/wiki/Niander_Wallace
+-FKM890 Photo: https://crealandia.com/shop/blade-runner-2049-officer-k-blaster-replica-prop/
+-FKM890 Information Source: https://bladerunner.fandom.com/wiki/Pfl%C3%A4ger-Katsumata_Series_D_FKM890
+-D5223 Photo: https://www.artstation.com/artwork/bll4Ld
+-D5223 Information Source: https://bladerunner.fandom.com/wiki/Pfl%C3%A4ger-Katsumata_Series_D_5223*/
+.popouts a{/*Invisible anchor size defined*/
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    transition: ease-in 0.2s;/*Brief animation for the popouts appearing*/
+}
+.popouts a:hover{/*All graphics(popout photos) set to 1000px height*/
+    height: 1000px;
+}
+.popouts :nth-child(3){/*K anchor location defined*/
+    left: 35rem;
+    top: 15rem;
+}
+.popouts :nth-child(3):hover{/*K hover popout width, location, and image*/
+    background-image: url('../images/kpopout.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1560px;
+    top: 5rem;
+    left: -50rem;
+}
+.popouts :nth-child(4){/*Rick Deckard anchor location defined*/
+    left: 60rem;
+    top: 18rem;
+}
+.popouts :nth-child(4):hover{/*Rick Deckard hover popout width, location, and image*/
+    background-image: url('../images/deckardpopout.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 1357px;
+    top: 10rem;
+}
+.popouts :nth-child(2){/*Joi anchor location defined*/
+    left: 45rem;
+    top: 45rem;
+}
+.popouts :nth-child(2):hover{/*Joi hover popout width, location, and image*/
+    background-image: url('../images/joipopout.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 1600px;
+    top: 20rem;
+}
+.popouts :first-child{/*Niander Wallace anchor location defined*/
+    left: 30rem;
+    bottom: 55rem;
+}
+.popouts :first-child:hover{/*Niander Wallace hover popout width, location, and image*/
+    background-image: url('../images/wallacepopout.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: -50rem;
+    width: 1480px;
+    bottom: 55rem;
+}
+.popouts :nth-child(5){/*Pfläger-Katsumata Series D FKM890 anchor location defined*/
+    left: 5rem;
+    bottom: 21rem;
+}
+.popouts :nth-child(5):hover{/*Pfläger-Katsumata Series D FKM890 hover popout width, location, and image*/
+    background-image: url('../images/fkmpopout.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: -50rem;
+    width: 1080px;
+    bottom: 21rem;
+}
+.popouts :nth-child(6){/*Steyr Pflager Katsumata Series-D Blaster anchor location defined*/
+    left: 78rem;
+    top: 90rem;
+}
+.popouts :nth-child(6):hover{/*Steyr Pflager Katsumata Series-D Blaster hover popout width, location, and image*/
+    background-image: url('../images/d5223popout.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    top: 50rem;
+    width: 1070px;
+}
+/*replicative poster content begins*/
+hgroup{/*contains main title, and headliners*/
+    margin:auto auto -20px auto;/*0 is telling the bottom margin to set to minimum, else the title will move up the page, don't want that*/
     display: flex;
     flex-direction: column;
     text-align: center;
     width:fit-content;
 }
-hgroup i{
-    font-style: normal;/*italics here only being used to control the text, so I took away the lean*/
-}
-h1{
-    font-family: 'BLADRMF_', sans-serif;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-h1 :first-child{
-    font-size:240px;
-    line-height: 180px;
-}
-h1 :nth-child(3){
-    font-size: 180px;
-    line-height: 130px;
-}
-h1 :last-child{
-    font-size: 120px;
-    line-height: 90px;
-}
-h1 em{
-    font-style: normal;
-}
-h2{
-    display:flex;
-    font-family: 'Arial Narrow';
-    font-size: 37px;
-    letter-spacing: 6px;
-    justify-content: space-between;
-    width:85%;
-    margin: auto;
-    color:#95CEB6;
-    padding-bottom: 1rem;
-    padding-left: 2rem;
-}
-section p{
-    font-family: 'SF Movie Poster', sans-serif;
-    font-size: 40px;
-    word-spacing: -5px;
+hgroup h1{
+    overflow: hidden; /*telling the h1s here to not extend clickable area past the visible space*/
+    margin: .5rem;
+    display: grid;
     text-align: center;
-    line-height: 33px;
+    font-family: 'BLADRMF_', sans-serif;
+    line-height: .75;/*squish them all closer together*/
+    height: fit-content;
+}
+hgroup > a:hover{border-radius: 20px}/*corner rounding increased for hgroup anchors, larger fonts, larger radius*/
+hgroup h1 :first-child{font-size:240px;}/*pseudo selectors used to define individual font size for each emphasized part of h1.*/
+hgroup h1 :nth-child(2){font-size: 180px;}
+hgroup h1 :last-child{font-size: 120px;}
+hgroup h1 em{font-style: normal;}/*emphasis visual italics not needed, removed*/
+hgroup h2{/*names are separated using anchors both for linking, and to use space between*/
+    display:flex;
+    font-family: 'Arial Narrow', Arial;/*headliners just use arial narrow*/
+    font-size: 37px;
+    letter-spacing: 6px;/*greater letter spacing to better match poster*/
+    justify-content: space-between;
+    width:85%;/*Dialed in width to match poster*/
+    margin: auto;/*centers in h2 container*/
+    color:#95CEB6;/*poster color match*/
+    padding:0 0 .5rem 0rem;/*small gap underneath, small push for second anchor to align better*/
+}
+section p{/*main credits, p container default declarations*/
+    font-family: 'SF Movie Poster', sans-serif;
+    font-size: 38px;
+    word-spacing: -5px;/*squeezed in word spacing for more accurate representation of original poster*/
+    text-align: center;/*text is centered like original poster*/
+    line-height: 33px;/*line height defined to squeeze lines closer together*/
 }
 section strong{
-    font-size: 50px;
-    font-weight: normal;
+    font-size: 48px;/*credited people have larger font size than descriptions*/
+    font-weight: normal;/*removing the bold aspect of strong*/
 }
-section span{
-    display: inline-block;
-    font-size: 22px;
-    text-align: right;
-    line-height: 18.5px;
-    word-spacing: -2px;
-}
-/*This is where the fun begins. Wanted to try to recreate the bottom credits using CSS as much as possible. Could have dropped in images that did it all, that would've been boring*/
-footer{
-    display: flex;
-    padding: 1rem;
-    align-items:flex-end;
-    height: fit-content;
-    margin-top: -100px;
-}
-footer a{
-    margin-left: auto;
-    margin-right: auto;
-}
-footer > :first-child {/*alcon*/
-    display:flex;
-    height: fit-content;
-}
-footer > :first-child p{
-    font-family: serif;
-    font-size: 9px;
-    margin-left: 2px;
-    margin-bottom: 0;
-}
-footer > :first-child b{
-    letter-spacing: 2px;
+section span{/*stacked text bits, the credited roles and original book have smaller font size and have two lines stacked on top of each other, still inline with rest of credits. Used span for unique container namely.*/
+    display: inline-block;/*stack the span lines*/
     font-size: 20px;
-    font-weight: lighter;
-    line-height: 16px;
+    text-align: right;/*align them to the right, same as original poster*/
+    line-height: 18.5px;/*less line height needed for smaller font*/
+    word-spacing: -2px;/*less word spacing needed*/
 }
-footer img[src="images/alconlogo.png"]{
+/*Below is where the fun begins. Wanted to try to recreate the bottom credits using CSS as much as possible. Could have dropped in images that did it all, that would've been boring. So there's a lot here, more than you'd actually want to use building a page. Not only does it lag the loading, it also means a lot more work anytime something need be tweaked. However, I wanted the challenge of recreating the text for the majority of the logos using CSS. I skipped columbia and just used their logo since it already matched perfectly, and I knew I had my work cut out for me with the mpa rating bit*/
+.bottomcredits{/*originally this was actually a footer, but in adding the snowing effect, I shoved all this into the main, and made it a div with a class so it would behave the same as the other main content in relation to the snow*/
+    display: flex;
+    align-items:flex-end;/*child container elements all aligned by their lowest point*/
+    height: fit-content;
+    margin:-2rem 0 2rem 0;/*brought closer to above content, pushes all of main further off the bottom of the page, better matches original poster*/
+}
+.bottomcredits a{
+    margin: 0 auto;/*keeps anchors evenly spaced, and aligned to bottom*/
+}
+.bottomcredits > :first-child {/*alcon entertainment credit*/
+    display:flex;
+    align-items: flex-end;/*image and bottom of text alignment, like poster*/
+}
+.bottomcredits > :first-child p{/*used paragraph to contain text*/
+    font-family: serif;/*No unique font needed*/
+    font-size: 9px;/*container font size declaration, only defines ENTERTAINMENT after bold font size change below*/
+    margin:0 0 0 2px;/*Micro adjustment for poster matching*/
+}
+.bottomcredits > :first-child b{/*used bold to distinguish define larger font size for ALCON*/
+    letter-spacing: 2px;/*increased letter spacing to better match poster*/
+    font-size: 20px;
+    font-weight: lighter;/*bold effect now the polar opposite to better match poster*/
+    line-height: 16px;/*bringing in line height to better match poster*/
+}
+.bottomcredits img[src="images/alconlogo.png"]{/*alcon logo, see references above for source*/
     width: 20px;
     height: 35px;
 }
-footer > :nth-child(2){/*columbia*/
-    display: block;
+.bottomcredits > :nth-child(2){/*columbia pictures credit*/
+    display: block;/*stacked items*/
     font-size: 10px;
-    text-align: center;
+    text-align: center;/*centered text, a la poster*/
     line-height: 10px;
-    margin-top: -10px;
-    letter-spacing: -1px;
+    margin-top: -10px;/*squishing the picture and text closer on the y axis*/
+    letter-spacing: -1px;/*more text squishing*/
 }
-footer > :nth-child(2) small{
-    font-size: 10px;
-    letter-spacing: .18px;
-    word-spacing: -1px;
-    font-family: 'SF Movie Poster', sans-serif;
+.bottomcredits > :nth-child(2) small{
+    font-size: 10px;/*font size jacked up due to font family being a different sizeg*/
+    letter-spacing: .18px;/*better fit with less space*/
+    word-spacing: -1px;/*better fit with less space*/
+    font-family: 'SF Movie Poster', sans-serif;/*used this font again to squeeze in all the text*/
 }
-footer img[src="images/columbiapictureslogo.png"]{
+.bottomcredits img[src="images/columbiapictureslogo.png"]{/*columbia logo, see above references for source*/
     width: 110px;
     height: auto;
     margin-top: 0px;
     margin-bottom:-1px;
 }
-footer > :nth-child(3){/*scott free*/
+.bottomcredits > :nth-child(3){/*scott free credit. Could have copy pasted logo as it already worked, but I elected to crop it in krita and make the text myself. Good practice for me*/
     display: flex;
     align-items: center;
-    font-family: serif;
-    font-weight: lighter;
+    font-family: serif;/*serif works*/
+    font-weight: lighter;/*lighter font a la poster*/
     font-size: 8px;
     letter-spacing: 7px;
 }
-footer > :nth-child(3) b:first-letter{
-    font-size: 12px;
-}
-footer > :nth-child(3) b{
-    margin-bottom: -10px;
-}
-footer img[src="images/scottfreelogo.png"]{
+.bottomcredits > :nth-child(3) b:first-letter{font-size: 12px;}/*first letters of Scott and Free are bigger than the rest a la poster*/
+.bottomcredits > :nth-child(3) b{margin-bottom: -10px;}/*micro adjustment to align image with text*/
+.bottomcredits img[src="images/scottfreelogo.png"]{
     width: 45px;
     height: auto;
     margin: 0 0px 0 -9px;
 }
-footer > :nth-child(4){/*mpa rating*/
-    border: 1px solid #00B3AA;
-    display: block;
-    width: fit-content;
-    margin-right: 0;
+.bottomcredits > :nth-child(4){/*mpa rating, way more CSS needed to make this from scratch than most other sections of the bottom credits*/
+    border: 1px solid #00B3AA;/*MPA container border to surround all inner content*/
+    display: block;/*default display is block to stack content*/
+    border-radius: 0;/*remove default anchor border radius, box is supposed to be square, not rounded*/
+    margin-right: 1px;/*keeps r copyright symbol close to mpa box*/
 }
-footer > :nth-child(4) :first-child{
-    display:flex;
-    text-align: center;
-    width: fit-content;
+.bottomcredits > :nth-child(4) :first-child{/*first child is a div that contains the RESTRICTED title, R rating, and rating content*/
+    display:flex;/*whole container will align in a row with next element of div (rating content)*/
+    text-align: center;/*aligns R and Restricted to center*/
 }
-footer > :nth-child(4) :first-child > span{/*restricted*/
+.bottomcredits > :nth-child(4) :first-child > span{/*restricted title adjustments, span will appear above R rating*/
     background-color: #00B3AA;
-    color: black;
-    font-family: Impact, sans-serif;
+    color: black;/*background now font color for this, so text is now black. Technically should be transparent but couldn't get that working so that it is transparent to the page, not its own background color*/
+    font-family: Impact, sans-serif;/*impact replicates original well enough*/
     font-size: 8px;
     padding: 1px 2px;
     letter-spacing: 1px;
 }
-footer > :nth-child(4) :first-child div b{/*Big R letter*/
-    font-size: 40px;
-    font-family:serif;
-    font-weight: 900;
-    line-height: 30px;
-}
-footer > :nth-child(4) :first-child div{
+.bottomcredits > :nth-child(4) :first-child div{/*div within a div, contains Restricted title and R rating*/
     display:block;
-    border-right: 1px solid #00B3AA;
+    border-right: 1px solid #00B3AA;/*only border needed to match poster*/
     margin-bottom: -1px;
 }
-footer > :nth-child(4) :first-child p{
+.bottomcredits > :nth-child(4) :first-child div b{/*Big R letter (rating) adjustments*/
+    font-size: 40px;
+    font-family:serif;
+    line-height: 30px;/*squished in gaps between lines*/
+}
+.bottomcredits > :nth-child(4) :first-child p{/*contains rating content words*/
     font-size: 10px;
     text-align: center;
     font-family: 'Arial Narrow', sans-serif;
@@ -214,79 +347,79 @@ footer > :nth-child(4) :first-child p{
     padding: 0px 5px 0px 5px;
     margin: 4px 0px 0px 0px;
 }
-footer > :nth-child(4) > span{/*mpa fine print*/
-    display:flex;
+.bottomcredits > :nth-child(4) > span{/*mpa fine print, span to position beneath prior content*/
+    display:flex;/*display the text in a row with mpa logo*/
     align-items: center;
-    border-top: 1px solid #00B3AA;
+    border-top: 1px solid #00B3AA;/*only border needed to match poster*/
 }
-footer > :nth-child(4) > span small{
+.bottomcredits > :nth-child(4) > span small{/*fine print of the MPA box*/
     display: flex;
     padding: 0px;
     font-size: 6px;
     font-family: 'Arial Narrow', sans-serif;
     word-spacing: -1px;
     padding: 1px;
-    border-right: 1px solid #00B3AA;
+    border-right: 1px solid #00B3AA;/*only border needed to match poster*/
 }
-footer > :nth-child(4) + small{/*lil baby r-logo*/
+.bottomcredits > :nth-child(4) + small{/*lil baby copyright r-symbol, positioned and sized to match poster*/
     font-size: 8px;
     margin-bottom: -1px;
-    margin-right: auto;
+    margin-right: auto;/*keeps the logo auto spacing with imax bit*/
 }
-footer img[src="images/mpalogo.png"]{
+.bottomcredits img[src="images/mpalogo.png"]{/*giant mpa logo, shrunk down to be tiny*/
     width: 18px;
     height: 6px;
 }
-footer > :nth-child(6){/*imax bit*/
-    display: block;
-    text-align: center;
-    color:#95CEB6;
-    line-height: 7px;
+/*imax info anchor, the sole reason this is child 6 and not 5, is that tiny little r copyright symbol, which I didn't want as part of the MPA anchor*/
+.bottomcredits > :nth-child(6){
+    display: block;/*content will be stacked*/
+    text-align: center;/*text is centered*/
+    color:#95CEB6;/*font color matched to poster*/
+    height: fit-content;/*container to not go beyond content*/
+    line-height: .8;/*due to the way i segmented the elements on the html, this ended up being the best means to control the line-height for each. .bottomcredits Global declaration, tweak h1 separately*/
 }
-footer > :nth-child(6) h1{
-    font-family: 'modern_sans_serif_7', sans-serif;
+.bottomcredits > :nth-child(6) h1{/*imax theater date*/
+    font-family: 'modern_sans_serif_7', sans-serif;/*search many fonts to find a good match for the numbers in the original poster*/
     font-size: 80px;
-    margin-bottom: -50px;
     word-spacing: -8px;
+    margin: 0;
+    padding: 0;
 }
-footer > :nth-child(6) h1 b{/*me being extremely petty. Couldn't find a fond that exactly matched this section in the poster, so I'm mixing*/
+.bottomcredits > :nth-child(6) h1 b{/*me being extremely petty. Couldn't find a font that exactly matched this section in the poster, so I'm mixing. This way the "." between numbers are squares, where-as font used above had them as circles*/
     font-family: Arial;
     font-size: 50px;
 }
-footer > :nth-child(6) text{
-    font-size: 20px;
-}
-footer > :nth-child(6) text b{/*you may note that the font is slightly different from the original, I presume that's how it is legal for free use*/
-    font-family: 'DimensionalBold';
-}
-footer > :nth-child(6) small{
-    font-size: 8px;
-}
-footer > span{/*fine print amalgamation*/
+.bottomcredits > :nth-child(6) text{font-size: 20px;}/*declared default font size of text element*/
+.bottomcredits > :nth-child(6) text b{font-family: 'DimensionalBold';}/*imax style font for specified words, not font size change needed*/
+.bottomcredits > :nth-child(6) small{font-size: 8px;}/*another baby r copyright symbol*/
+/*fine print amalgamation next to imax anchor below*/
+.bottomcredits > span{
     display: flex;
     font-size: 8px;
     text-align: center;
 }
-footer > :last-child{/*warnerbros*/
-    display: flex;
+/*warnerbros credit below*/
+.bottomcredits > :last-child{
+    display: flex;/*overall container content aligns in a row*/
     align-content: center;
     font-family: serif;
 }
-footer > :last-child span{
-    display: block;
-    align-content: flex-end;
-    text-align: left;
+.bottomcredits > :last-child span{/*span contains all text in this anchor*/
+    display: block;/*span (words) are stacked*/
+    align-content: flex-end;/*align text to bottom of anchor flex*/
+    text-align: center;
     font-size: 14px;
-    margin-right: 0;
+    margin-right: 0;/*margin and padding are to keep text pushed up against logo*/
     padding-right: 0;
-    white-space: nowrap;
     line-height: 10px;
 }
-footer :last-child small{
-    font-size: 8px;
-}
-footer img[src="images/warnerbroslogo.png"]{
+.bottomcredits :last-child small{font-size: 8px;}/*smaller text for copyright declaration*/
+.bottomcredits img[src="images/warnerbroslogo.png"]{/*warner bros logo*/
     width: 40px;
     height: 40px;
-    padding-left: 1px;
+}
+footer p{
+    display:flex;
+    margin:auto;
+    justify-content: space-around;
 }
