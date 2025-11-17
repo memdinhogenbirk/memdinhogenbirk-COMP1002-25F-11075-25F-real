@@ -1,4 +1,5 @@
-<!--https://www.alconent.com/
+<!--References also found in CSS
+https://www.alconent.com/
 https://jhmovie.fandom.com/wiki/Columbia_Pictures?file=Columbia_Pictures_logo.svg
 https://www.sonypictures.com/
 https://logos.fandom.com/wiki/Scott_Free_Productions?file=Scott_Free_Productions.svg#1998-present
@@ -13,15 +14,16 @@ https://www.warnerbros.com/
     <head>
 	    <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0"/>
-	    <title>Blade Runner 2049 Poster Snowing</title>
+	    <title>Blade Runner 2049 Poster</title>
 	    <link href="css/testsheet.css" rel="stylesheet" />
     </head>
     <body>
         <header>
-            <h1><a href="index.html">Toggle Snow: On</a></h1>
+            <h1><a href="index.html">Toggle Snow: On</a></h1><!--Links to not snowing version-->
+            <!--above is how I achieved the snow effect without php or java-->
         </header>
-        <main class="snowing">
-            <div class="popouts">
+        <main class="snowing"><!--on this page, main has class snowing to trigger snowfall overlay. On normal index, it does not-->
+            <div class="popouts"><!--popouts are blank anchors, sized and positioned in CSS, class used easily call to this div (could have used first child of main as well, but this makes it easier to read in the CSS)-->
                 <a></a>
                 <a></a>
                 <a></a>
@@ -29,37 +31,48 @@ https://www.warnerbros.com/
                 <a></a>
                 <a></a>
             </div>
-            <hgroup>
-                <h2><a href="https://www.imdb.com/name/nm0331516/" target="_blank">RYAN GOSLING</a> <a href="https://www.imdb.com/name/nm0000148/" target="_blank">HARRISON FORD</a></h2>
-                <a href="https://www.youtube.com/watch?v=gCcx85zbxz4" target="_blank"><h1><em>bLDE</em><em>rUNNEr</em><em>2049</em></h1></a>
+            <hgroup><!--The headlining actors and the movie title, target blank is used throughout html so links open in new tab-->
+                <h2><a href="https://www.imdb.com/name/nm0331516/" target="_blank" title="Ryan Gosling IMDB">RYAN GOSLING</a> <a href="https://www.imdb.com/name/nm0000148/" target="_blank" title="Harrison Ford IMDB">HARRISON FORD</a></h2>
+                <!--headliners link to imdb pages for each actor-->
+                <a href="https://www.youtube.com/watch?v=gCcx85zbxz4" target="_blank" title="Watch the Trailer"><h1><em>bLDE</em><em>rUNNEr</em><em>2049</em></h1></a>
+                <!--Movie title links to trailer, text is formated the way it is due to how the downloaded font family is structured-->
             </hgroup>
             <section>
-                <p>
+                <p><!--Strong is used both for CSS styling and to highlight the most important text (people and companies credited) in this paragraph. Spans are used to create the stacked smaller text that was present in the original poster credits, controlled in CSS-->
                     <strong>ALCON MEDIA GROUP</strong> PRESENTS IN ASSOCIATION WITH <strong>COLUMBIA PICTURES</strong> A <strong>RIDLEY SCOTT/ALCON ENTERTAINMENT/BUD YORKIN</strong> PRODUCTION IN ASSOCIATION WITH <strong>TORRIDON FILMS</strong> AND <strong>16:14 ENTERTAINMENT</strong> A <strong>DENIS VILLENEUVE</strong> FILM<br>
                     <strong>RYAN GOSLING HARRISON FORD "BLADE RUNNER 2049" ANA DE ARMAS SYLVIA HOEKS ROBIN WRIGHT MACKENZIE DAVIS CARLA JURI LENNIE JAMES</strong> WITH <strong>DAVE BAUTISTA</strong> AND <strong>JARED LETO</strong><br>
                     <span>MUSIC<br>SUPERVISOR</span> <strong>DEVA ANDERSON</strong> <span>MUSIC<br>BY</span> <strong>HANS ZIMMER</strong> AND <strong>BENJAMIN WALLFISCH</strong> <span>COSTUME<br>DESIGNER</span> <strong>RENÉE APRIL</strong> <span>VISUAL EFFECTS<br>SUPERVISOR</span> <strong>JOHN NELSON</strong> <span>EDITOR</span> <strong>JOE WALKER</strong>, ACE <span>PRODUCTION<br>DESIGNER</span> <strong>DENNIS GASSNER</strong><br>
                     <span>DIRECTOR OF<br>PHOTOGRAPHY</span> <strong>ROGER A. DEAKINS</strong>, ASC, BSC <span>CO-<br>PRODUCERS</span> <strong>CARL O. ROGERS DANA BELCASTRO STEVEN P. WEGNER</strong> <span>EXECUTIVE<br>PRODUCERS</span> <strong>RIDLEY SCOTT TIM GABLE FRANK GIUSTRA YALE BADIK VAL HILL BILL CARRARO</strong><br>
-                    <span>PRODUCED<br>BY</span> <strong>ANDREW A. KOSOVE</strong> & <strong>BRODERICK JOHNSON</strong> AND <strong>BUD YORKIN</strong> & <strong>CYNTHIA SIKES YORKIN</strong> <span>BASED ON CHARACTERS FROM THE NOVEL<br><q>DO ANDROIDS DREAM OF ELECTRIC SHEEP?</q> BY</span> <strong>PHILIP K. DICK</strong> <span>STORY<br>BY</span>  <strong>HAMPTON FANCHER</strong> <span>SCREENPLAY<br>BY</span> <strong>HAMPTON FANCHER</strong> AND <strong>MICHAEL GREEN</strong> <span>DIRECTED<br>BY</span> <strong>DENIS VILLENEUVE</strong>
+                    <span>PRODUCED<br>BY</span> <strong>ANDREW A. KOSOVE</strong> & <strong>BRODERICK JOHNSON</strong> AND <strong>BUD YORKIN</strong> & <strong>CYNTHIA SIKES YORKIN</strong> <span>BASED ON CHARACTERS FROM THE NOVEL<br><q>DO ANDROIDS DREAM OF ELECTRIC SHEEP?</q> BY</span> <strong>PHILIP K. DICK</strong> <span>STORY<br>BY</span> <strong>HAMPTON FANCHER</strong> <span>SCREENPLAY<br>BY</span> <strong>HAMPTON FANCHER</strong> AND <strong>MICHAEL GREEN</strong> <span>DIRECTED<br>BY</span> <strong>DENIS VILLENEUVE</strong>
                 </p>
             </section>
-            <div class="bottomcredits">
+            <div class="bottomcredits"><!--Originally this was all in the footer, but moved into main so the snow effect appears the same across all elements, and covers this div-->
+                <!--all credits are anchors save the fine print, all link to respective company websites-->
+                <!--Alcon Entertainment credit-->
                 <a href="https://www.alconent.com/"target=_blank""><img src="images/alconlogo.png"><p><b>ALCON</b><br>ENTERTAINMENT®</p></a>
+                <!--Columbia Pictures credit-->
                 <a href="https://www.sonypictures.com/"target=_blank""><img src="images/columbiapictureslogo.png"> <small><br>©2017 COLUMBIA PICTURES INDUSTRIES INC. ALL RIGHTS RESERVED</small> <b><br>a Sony Company</b></a>
+                <!--Scott Free Credit-->
                 <a href="https://scottfree.com/"target=_blank""><b>SCOTT</b> <img src="images/scottfreelogo.png"> <b>FREE</b></a>
+                <!--MPA rating-->
                 <a href="https://www.motionpictures.org/" target="_blank">
                     <div>
                         <div>
-                            <span>RESTRICTED</span><b>R</b>
+                            <span>RESTRICTED</span><b>R</b><!--restricted mpa title, and R rating letter, span used to efficiently stack-->
                         </div>
-                        <p><b>VIOLENCE, SOME<br>SEXUALITY, NUDITY<br>AND LANGUAGE</b></p>
+                        <p><b>VIOLENCE, SOME<br>SEXUALITY, NUDITY<br>AND LANGUAGE</b></p><!--Rating content, warnings-->
                     </div>
-                    <span><small>Under 17 Requires Accompanying Parent or Adult Guardian</small> <img src="images/mpalogo.png"></span>
-                </a><small>®</small>
+                    <span><small>Under 17 Requires Accompanying Parent or Adult Guardian</small> <img src="images/mpalogo.png"></span><!--fine print-->
+                </a><small>®</small><!--copyright r outside of anchor, no reason for it to be part of the link space I say-->
+                <!--Imax date and other text, weird html structuring was due to the use of two different font families (see CSS)-->
                 <a href="https://www.imax.com/en/ca" target="_blank"><h1>1 0<b> . </b>6<b> . </b>1 7</h1><text>SEE IT IN <b>REAL D 3D</b> AND <b>IMAX</b><small>®</small></text><br> <small>IMAX® is a registered trademark of IMAX Corporation.</small></a>
+                <!--hashtag for what would have been twitter, links to "X" feed of posts using the hashtag-->
                 <a href="https://x.com/search?q=%23bladerunner2049&src=typed_query" target="_blank">#BladeRunner2049</a>
+                <!--fine print block in credits-->
                 <span>©2017 Alcon Entertainment, LLC,<br> Warner Bros. Entertainment Inc. and<br> Columbia Pictures Industries, Inc. All Rights Reserved.</span>
+                <!--Warner Bros Company Credit-->
                 <a href="https://www.warnerbros.com/" target="_blank"><span>WARNER BROS. PICTURES<br><small>©2017 Warner Bros. Ent. All Rights Reserved</small></span> <img src="images/warnerbroslogo.png"></a>
-            </div class="footer">
+            </div>
         </main>
         <footer>
             <p>© 2025 Michael Emdin-Hogenbirk</p><!--Honestly, I put this here partly as a gag, but also incase not having a footer qualifies as improperly structured HTML-->
