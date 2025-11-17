@@ -112,12 +112,11 @@ https://bladerunner.fandom.com/wiki/Pfl%C3%A4ger-Katsumata_Series_D_5223*/
     width: 200px;
     height: 300px;
     position: absolute;
-    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: ease-in 0.2s;
 }
 
 .popouts a:hover{
     height: 1000px;
-    width:800px;
 }
 .popouts :nth-child(3){/*K*/
     left: 35rem;
@@ -133,7 +132,7 @@ https://bladerunner.fandom.com/wiki/Pfl%C3%A4ger-Katsumata_Series_D_5223*/
 }
 .popouts :nth-child(4){/*Rick Deckard*/
     left: 60rem;
-    top: 20rem;
+    top: 18rem;
 }
 .popouts :nth-child(4):hover{/*Rick Deckard*/
     background-image: url('../images/deckardpopout.png');
@@ -141,6 +140,7 @@ https://bladerunner.fandom.com/wiki/Pfl%C3%A4ger-Katsumata_Series_D_5223*/
     background-repeat: no-repeat;
     background-position: right;
     width: 1357px;
+    top: 10rem;
 }
 .popouts :nth-child(2){/*Joi*/
     left: 45rem;
