@@ -46,12 +46,17 @@ html{
     background-attachment: fixed;
     zoom: 30%;/*viewport now starts with 100% being equivalent to 30%, initial scale wasn't working, but this is. Weirdly, everywhere is saying firefox doesn't support this. I'm using firefox, works fine. I assume what they mean is that it technically isn't at 30% zoom, its changed 100% zoom to equal 30%, but if anything, this makes more sense than defaulting to actual 30% zoom*/
 }
-a{/*turning of anchor defaults, making color become whatever the text is assigned*/
+a{/*turning of anchor defaults, making color become whatever the text is assigned
+    Added transition so the hover background will fill left to right*/
     text-decoration: none;
     color: inherit;
+    background: linear-gradient(to right, #921D24, #005C7D) left / 0% 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.4s ease, color 0.4s ease;
+    border-radius: 5px;
 }
 a:hover{
-    background-image: linear-gradient(to right, #921D24, #005C7D);
+    background-size: 100% 100%;
     border-radius: 5px;
 }
 body{
@@ -74,7 +79,7 @@ header h1{/*snow toggle*/
 header a{padding: 0 1rem 0 0;}
 header a:hover{
     background-image: linear-gradient(to right, #CB181C, #078A97);
-    margin: auto;
+    margin: auto;    
 }
 main{
     position: relative;/*parent for snowing, so I may absolute it's position to the confines of main.*/
