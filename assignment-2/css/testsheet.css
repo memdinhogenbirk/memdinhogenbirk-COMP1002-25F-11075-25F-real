@@ -111,7 +111,7 @@ main{
     top: 15rem;
 }
 .popouts :nth-child(3):hover{/*K*/
-    background-image: url('../images/kpopouttest.png');
+    background-image: url('../images/kpopout.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 1560px;
