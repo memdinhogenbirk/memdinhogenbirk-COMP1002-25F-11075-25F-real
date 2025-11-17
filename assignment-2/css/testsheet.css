@@ -47,18 +47,35 @@ html{/*Html background image, takes up empty space when poster is zoomed out*/
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    zoom: 30%;/*viewport now starts with 100% being equivalent to 30%, initial scale wasn't working, but this is. Weirdly, everywhere is saying firefox doesn't support this. I'm using firefox, works fine. I assume what they mean is that it technically isn't at 30% zoom, its changed 100% zoom to equal 30%, but if anything, this makes more sense than defaulting to actual 30% zoom*/
+    zoom: 30%;/*viewport now starts with 100% being equivalent to 30%, initial scale wasn't working, but this is. Weirdly, everywhere is saying firefox doesn't support this. I'm using firefox, works fine. I assume what they mean is that it technically isn't at 30% zoom, its changed 100% zoom to equal 30%, but if anything, this makes more sense than defaulting to actual 30% zoom. I chose this zoom level as it fits the poster perfectly in my viewport when firefox is full screen, with bookmarks bar hidden*/
 }
 body{/*Body contains blank poster as background, global font color set to color matched code,height and width defined to display poster/body size in desired way*/
-    margin:auto;
+    margin:0 auto 0 auto;
     color: #00B3AA;
     font-family:Arial, Helvetica, sans-serif;/*default font*/
     background-image: url('../images/2049post.jpg');/*blank poster*/
     background-size: cover;
-    height: 145rem; 
+    height:max-content;
     width: 95rem;
 }
-a{/*turning of anchor defaults, making color become whatever the text is assigned
+main{/*contains everything but poster background*/
+    position: relative;/*parent for snowing, so I may absolute it's position to the confines of main.*/
+    margin: auto;
+    height: 143rem; 
+    width: 95rem;
+    display: flex;
+    flex-direction: column;
+}
+.snowing::before{/*snow overlay. Due to use of class, on snowing page, this CSS is used, on regular page, it does nothing. PHP-less workaround for having a "toggle"*/
+    position: absolute;/*take up whole of main*/
+    content:'';/*makes a box with no text in it, to be used as the background gif*/
+    inset: 0;/*inset fills content to borders of main (.snowing container)*/
+    background: url('../images/snowing.gif');/*snowing overlay gif*/
+    background-size: contain;
+    opacity: 0.3;/*full opacity looked bad, reduced for subtler effect*/
+    pointer-events: none;/*overlay is not clickable, and can be clicked through*/
+}
+a{/*turning off anchor defaults, making color become whatever the text is assigned.
     Added transition so the hover background will fill left to right. Original idea sourced from terrible youtube tutorial that hid half the syntax, prompted grok to get the missing syntax*/
     text-decoration: none;
     color: inherit;
@@ -83,25 +100,8 @@ header a{padding: 0 1rem 0 0;}/*anchor padded slightly right, so hover fills*/
 header a:hover{
     background-image: linear-gradient(to right, #CB181C, #078A97);
 }
-main{
-    position: relative;/*parent for snowing, so I may absolute it's position to the confines of main.*/
-    margin: auto;
-    height: 140rem; 
-    width: 95rem;
-    display: flex;
-    flex-direction: column;
-}
-.snowing::before{/*snow overlay. On snowing page, this CSS is used, on regular page, it does nothing. PHP-less workaround for having a "toggle"*/
-    position: absolute;/*take up whole of main*/
-    content:'';/*makes a box with no text in it, to be used as the background gif*/
-    inset: 0;/*inset fills content to borders of main (.snowing container)*/
-    background: url('../images/snowing.gif');/*snowing overlay gif*/
-    background-size: contain;
-    opacity: 0.3;/*full opacity looked bad, reduced for subtler effect*/
-    pointer-events: none;/*gif is not clickable, and can be clicked through*/
-}
 /*popout controls*/
-/*The popouts below all use graphics I designed
+/*The popouts below all use graphics I custom made
 References for photos and where I procured the info I used to write the blurbs
 -K Photo: https://hero.fandom.com/wiki/K?file=Joe_blade_runner.webp
 -K Information Source: https://bladerunner.fandom.com/wiki/K
@@ -198,7 +198,7 @@ References for photos and where I procured the info I used to write the blurbs
 }
 /*replicative poster content begins*/
 hgroup{/*contains main title, and headliners*/
-    margin:auto auto 0 auto;/*0 is telling the bottom margin to set to minimum, else the title will move up the page, don't want that*/
+    margin:auto auto -20px auto;/*0 is telling the bottom margin to set to minimum, else the title will move up the page, don't want that*/
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -210,7 +210,7 @@ hgroup h1{
     display: grid;
     text-align: center;
     font-family: 'BLADRMF_', sans-serif;
-    line-height: .75;
+    line-height: .75;/*squish them all closer together*/
     height: fit-content;
 }
 hgroup > a:hover{border-radius: 20px}/*corner rounding increased for hgroup anchors, larger fonts, larger radius*/
@@ -227,7 +227,7 @@ hgroup h2{/*names are separated using anchors both for linking, and to use space
     width:85%;/*Dialed in width to match poster*/
     margin: auto;/*centers in h2 container*/
     color:#95CEB6;/*poster color match*/
-    padding:0 0 .5rem 2rem;/*small gap underneath, small push for second anchor to align better*/
+    padding:0 0 .5rem 0rem;/*small gap underneath, small push for second anchor to align better*/
 }
 section p{/*main credits, p container default declarations*/
     font-family: 'SF Movie Poster', sans-serif;
@@ -250,10 +250,9 @@ section span{/*stacked text bits, the credited roles and original book have smal
 /*Below is where the fun begins. Wanted to try to recreate the bottom credits using CSS as much as possible. Could have dropped in images that did it all, that would've been boring. So there's a lot here, more than you'd actually want to use building a page. Not only does it lag the loading, it also means a lot more work anytime something need be tweaked. However, I wanted the challenge of recreating the text for the majority of the logos using CSS. I skipped columbia and just used their logo since it already matched perfectly, and I knew I had my work cut out for me with the mpa rating bit*/
 .bottomcredits{/*originally this was actually a footer, but in adding the snowing effect, I shoved all this into the main, and made it a div with a class so it would behave the same as the other main content in relation to the snow*/
     display: flex;
-    padding: 1rem;/*small gap in all directions of the div class bottomcredits container*/
     align-items:flex-end;/*child container elements all aligned by their lowest point*/
     height: fit-content;
-    margin-top: -50px 0 20px 0;/*brought closer to above content, pushes all of main further off the bottom of the page, better matches original poster*/
+    margin:-2rem 0 2rem 0;/*brought closer to above content, pushes all of main further off the bottom of the page, better matches original poster*/
 }
 .bottomcredits a{
     margin: 0 auto;/*keeps anchors evenly spaced, and aligned to bottom*/
@@ -377,7 +376,7 @@ section span{/*stacked text bits, the credited roles and original book have smal
     text-align: center;/*text is centered*/
     color:#95CEB6;/*font color matched to poster*/
     height: fit-content;/*container to not go beyond content*/
-    line-height: .8;/*due to the way i segmented the elements on the html, this ended up being the best means to control the line-height for each. .footer Global declaration, tweak h1 separately*/
+    line-height: .8;/*due to the way i segmented the elements on the html, this ended up being the best means to control the line-height for each. .bottomcredits Global declaration, tweak h1 separately*/
 }
 .bottomcredits > :nth-child(6) h1{/*imax theater date*/
     font-family: 'modern_sans_serif_7', sans-serif;/*search many fonts to find a good match for the numbers in the original poster*/
