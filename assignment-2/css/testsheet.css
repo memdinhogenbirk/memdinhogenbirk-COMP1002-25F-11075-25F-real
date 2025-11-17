@@ -99,7 +99,6 @@ main{
     width: 200px;
     height: 300px;
     position: absolute;
-    border: red solid 1px;
     transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -112,7 +111,7 @@ main{
     top: 15rem;
 }
 .popouts :nth-child(3):hover{/*K*/
-    background-image: url('../images/kpopout.png');
+    background-image: url('../images/kpopouttest.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 1560px;
