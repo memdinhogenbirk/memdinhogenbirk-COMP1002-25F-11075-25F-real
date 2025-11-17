@@ -94,7 +94,20 @@ main{
     pointer-events: none;
 }
 /*popout controls*/
-
+/*The popouts below all use graphics I designed
+references for photos and where I procured the info I used to write the blurbs
+https://hero.fandom.com/wiki/K?file=Joe_blade_runner.webp
+https://bladerunner.fandom.com/wiki/K
+https://www.radiotimes.com/movies/blade-runner-2049-harrison-ford-replicant/
+https://bladerunner.fandom.com/wiki/Rick_Deckard
+https://screenrant.com/ana-de-armas-blade-runner-2049-character-joi/
+https://bladerunner.fandom.com/wiki/Joi
+https://screenrant.com/blade-runner-2049-niander-wallaces-plan-explained/
+https://bladerunner.fandom.com/wiki/Niander_Wallace
+https://crealandia.com/shop/blade-runner-2049-officer-k-blaster-replica-prop/
+https://bladerunner.fandom.com/wiki/Pfl%C3%A4ger-Katsumata_Series_D_FKM890
+https://www.artstation.com/artwork/bll4Ld
+https://bladerunner.fandom.com/wiki/Pfl%C3%A4ger-Katsumata_Series_D_5223*/
 .popouts a{
     width: 200px;
     height: 300px;
