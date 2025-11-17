@@ -418,3 +418,8 @@ section span{/*stacked text bits, the credited roles and original book have smal
     width: 40px;
     height: 40px;
 }
+footer p{
+    display:flex;
+    margin:auto;
+    justify-content: space-around;
+}
