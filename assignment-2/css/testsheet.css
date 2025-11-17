@@ -247,37 +247,37 @@ section span{/*stacked text bits, the credited roles and original book have smal
     line-height: 18.5px;/*less line height needed for smaller font*/
     word-spacing: -2px;/*less word spacing needed*/
 }
-/*This is where the fun begins. Wanted to try to recreate the bottom credits using CSS as much as possible. Could have dropped in images that did it all, that would've been boring. So there's a lot here, more than you'd actually want to use building a page. Not only does it lag the loading, it also means a lot more work anytime something need be tweaked. However, I wanted the challenge of recreating the text for the majority of the logos using CSS. I skipped columbia and just used their logo since it already matched perfectly, and I knew I had my work cut out for me with the mpa rating bit*/
-.footer{/*originally this was actually a footer, but in adding the snowing effect, I shoved all this into the main, and made it a div with a class so it would behave the same as the other main content in relation to the snow*/
+/*Below is where the fun begins. Wanted to try to recreate the bottom credits using CSS as much as possible. Could have dropped in images that did it all, that would've been boring. So there's a lot here, more than you'd actually want to use building a page. Not only does it lag the loading, it also means a lot more work anytime something need be tweaked. However, I wanted the challenge of recreating the text for the majority of the logos using CSS. I skipped columbia and just used their logo since it already matched perfectly, and I knew I had my work cut out for me with the mpa rating bit*/
+.bottomcredits{/*originally this was actually a footer, but in adding the snowing effect, I shoved all this into the main, and made it a div with a class so it would behave the same as the other main content in relation to the snow*/
     display: flex;
-    padding: 1rem;/*small gap on all directions of the "footer" container*/
-    align-items:flex-end;
+    padding: 1rem;/*small gap in all directions of the div class bottomcredits container*/
+    align-items:flex-end;/*child container elements all aligned by their lowest point*/
     height: fit-content;
     margin-top: -50px 0 20px 0;/*brought closer to above content, pushes all of main further off the bottom of the page, better matches original poster*/
 }
-.footer a{
+.bottomcredits a{
     margin: 0 auto;/*keeps anchors evenly spaced, and aligned to bottom*/
 }
-.footer > :first-child {/*alcon entertainment credit*/
+.bottomcredits > :first-child {/*alcon entertainment credit*/
     display:flex;
     align-items: flex-end;/*image and bottom of text alignment, like poster*/
 }
-.footer > :first-child p{/*used paragraph to contain text*/
+.bottomcredits > :first-child p{/*used paragraph to contain text*/
     font-family: serif;/*No unique font needed*/
     font-size: 9px;/*container font size declaration, only defines ENTERTAINMENT after bold font size change below*/
     margin:0 0 0 2px;/*Micro adjustment for poster matching*/
 }
-.footer > :first-child b{/*used bold to distinguish define larger font size for ALCON*/
+.bottomcredits > :first-child b{/*used bold to distinguish define larger font size for ALCON*/
     letter-spacing: 2px;/*increased letter spacing to better match poster*/
     font-size: 20px;
     font-weight: lighter;/*bold effect now the polar opposite to better match poster*/
     line-height: 16px;/*bringing in line height to better match poster*/
 }
-.footer img[src="images/alconlogo.png"]{/*alcon logo, see references above for source*/
+.bottomcredits img[src="images/alconlogo.png"]{/*alcon logo, see references above for source*/
     width: 20px;
     height: 35px;
 }
-.footer > :nth-child(2){/*columbia pictures credit*/
+.bottomcredits > :nth-child(2){/*columbia pictures credit*/
     display: block;/*stacked items*/
     font-size: 10px;
     text-align: center;/*centered text, a la poster*/
@@ -285,19 +285,19 @@ section span{/*stacked text bits, the credited roles and original book have smal
     margin-top: -10px;/*squishing the picture and text closer on the y axis*/
     letter-spacing: -1px;/*more text squishing*/
 }
-.footer > :nth-child(2) small{
+.bottomcredits > :nth-child(2) small{
     font-size: 10px;/*font size jacked up due to font family being a different sizeg*/
     letter-spacing: .18px;/*better fit with less space*/
     word-spacing: -1px;/*better fit with less space*/
     font-family: 'SF Movie Poster', sans-serif;/*used this font again to squeeze in all the text*/
 }
-.footer img[src="images/columbiapictureslogo.png"]{/*columbia logo, see above references for source*/
+.bottomcredits img[src="images/columbiapictureslogo.png"]{/*columbia logo, see above references for source*/
     width: 110px;
     height: auto;
     margin-top: 0px;
     margin-bottom:-1px;
 }
-.footer > :nth-child(3){/*scott free credit. Could have copy pasted logo as it already worked, but I elected to crop it in krita and make the text myself. Good practice for me*/
+.bottomcredits > :nth-child(3){/*scott free credit. Could have copy pasted logo as it already worked, but I elected to crop it in krita and make the text myself. Good practice for me*/
     display: flex;
     align-items: center;
     font-family: serif;/*serif works*/
@@ -305,24 +305,24 @@ section span{/*stacked text bits, the credited roles and original book have smal
     font-size: 8px;
     letter-spacing: 7px;
 }
-.footer > :nth-child(3) b:first-letter{font-size: 12px;}/*first letters of Scott and Free are bigger than the rest a la poster*/
-.footer > :nth-child(3) b{margin-bottom: -10px;}/*micro adjustment to align image with text*/
-.footer img[src="images/scottfreelogo.png"]{
+.bottomcredits > :nth-child(3) b:first-letter{font-size: 12px;}/*first letters of Scott and Free are bigger than the rest a la poster*/
+.bottomcredits > :nth-child(3) b{margin-bottom: -10px;}/*micro adjustment to align image with text*/
+.bottomcredits img[src="images/scottfreelogo.png"]{
     width: 45px;
     height: auto;
     margin: 0 0px 0 -9px;
 }
-.footer > :nth-child(4){/*mpa rating, way more CSS needed to make this from scratch than most other sections of the bottom credits*/
+.bottomcredits > :nth-child(4){/*mpa rating, way more CSS needed to make this from scratch than most other sections of the bottom credits*/
     border: 1px solid #00B3AA;/*MPA container border to surround all inner content*/
     display: block;/*default display is block to stack content*/
     border-radius: 0;/*remove default anchor border radius, box is supposed to be square, not rounded*/
     margin-right: 1px;/*keeps r copyright symbol close to mpa box*/
 }
-.footer > :nth-child(4) :first-child{/*first child is a div that contains the RESTRICTED title, R rating, and rating content*/
+.bottomcredits > :nth-child(4) :first-child{/*first child is a div that contains the RESTRICTED title, R rating, and rating content*/
     display:flex;/*whole container will align in a row with next element of div (rating content)*/
     text-align: center;/*aligns R and Restricted to center*/
 }
-.footer > :nth-child(4) :first-child > span{/*restricted title adjustments, span will appear above R rating*/
+.bottomcredits > :nth-child(4) :first-child > span{/*restricted title adjustments, span will appear above R rating*/
     background-color: #00B3AA;
     color: black;/*background now font color for this, so text is now black. Technically should be transparent but couldn't get that working so that it is transparent to the page, not its own background color*/
     font-family: Impact, sans-serif;/*impact replicates original well enough*/
@@ -330,17 +330,17 @@ section span{/*stacked text bits, the credited roles and original book have smal
     padding: 1px 2px;
     letter-spacing: 1px;
 }
-.footer > :nth-child(4) :first-child div{/*div within a div, contains Restricted title and R rating*/
+.bottomcredits > :nth-child(4) :first-child div{/*div within a div, contains Restricted title and R rating*/
     display:block;
     border-right: 1px solid #00B3AA;/*only border needed to match poster*/
     margin-bottom: -1px;
 }
-.footer > :nth-child(4) :first-child div b{/*Big R letter (rating) adjustments*/
+.bottomcredits > :nth-child(4) :first-child div b{/*Big R letter (rating) adjustments*/
     font-size: 40px;
     font-family:serif;
     line-height: 30px;/*squished in gaps between lines*/
 }
-.footer > :nth-child(4) :first-child p{/*contains rating content words*/
+.bottomcredits > :nth-child(4) :first-child p{/*contains rating content words*/
     font-size: 10px;
     text-align: center;
     font-family: 'Arial Narrow', sans-serif;
@@ -348,12 +348,12 @@ section span{/*stacked text bits, the credited roles and original book have smal
     padding: 0px 5px 0px 5px;
     margin: 4px 0px 0px 0px;
 }
-.footer > :nth-child(4) > span{/*mpa fine print, span to position beneath prior content*/
+.bottomcredits > :nth-child(4) > span{/*mpa fine print, span to position beneath prior content*/
     display:flex;/*display the text in a row with mpa logo*/
     align-items: center;
     border-top: 1px solid #00B3AA;/*only border needed to match poster*/
 }
-.footer > :nth-child(4) > span small{/*fine print of the MPA box*/
+.bottomcredits > :nth-child(4) > span small{/*fine print of the MPA box*/
     display: flex;
     padding: 0px;
     font-size: 6px;
@@ -362,50 +362,50 @@ section span{/*stacked text bits, the credited roles and original book have smal
     padding: 1px;
     border-right: 1px solid #00B3AA;/*only border needed to match poster*/
 }
-.footer > :nth-child(4) + small{/*lil baby copyright r-symbol, positioned and sized to match poster*/
+.bottomcredits > :nth-child(4) + small{/*lil baby copyright r-symbol, positioned and sized to match poster*/
     font-size: 8px;
     margin-bottom: -1px;
     margin-right: auto;/*keeps the logo auto spacing with imax bit*/
 }
-.footer img[src="images/mpalogo.png"]{/*giant mpa logo, shrunk down to be tiny*/
+.bottomcredits img[src="images/mpalogo.png"]{/*giant mpa logo, shrunk down to be tiny*/
     width: 18px;
     height: 6px;
 }
 /*imax info anchor, the sole reason this is child 6 and not 5, is that tiny little r copyright symbol, which I didn't want as part of the MPA anchor*/
-.footer > :nth-child(6){
+.bottomcredits > :nth-child(6){
     display: block;/*content will be stacked*/
     text-align: center;/*text is centered*/
     color:#95CEB6;/*font color matched to poster*/
     height: fit-content;/*container to not go beyond content*/
     line-height: .8;/*due to the way i segmented the elements on the html, this ended up being the best means to control the line-height for each. .footer Global declaration, tweak h1 separately*/
 }
-.footer > :nth-child(6) h1{/*imax theater date*/
+.bottomcredits > :nth-child(6) h1{/*imax theater date*/
     font-family: 'modern_sans_serif_7', sans-serif;/*search many fonts to find a good match for the numbers in the original poster*/
     font-size: 80px;
     word-spacing: -8px;
     margin: 0;
     padding: 0;
 }
-.footer > :nth-child(6) h1 b{/*me being extremely petty. Couldn't find a font that exactly matched this section in the poster, so I'm mixing. This way the "." between numbers are squares, where-as font used above had them as circles*/
+.bottomcredits > :nth-child(6) h1 b{/*me being extremely petty. Couldn't find a font that exactly matched this section in the poster, so I'm mixing. This way the "." between numbers are squares, where-as font used above had them as circles*/
     font-family: Arial;
     font-size: 50px;
 }
-.footer > :nth-child(6) text{font-size: 20px;}/*declared default font size of text element*/
-.footer > :nth-child(6) text b{font-family: 'DimensionalBold';}/*imax style font for specified words, not font size change needed*/
-.footer > :nth-child(6) small{font-size: 8px;}/*another baby r copyright symbol*/
+.bottomcredits > :nth-child(6) text{font-size: 20px;}/*declared default font size of text element*/
+.bottomcredits > :nth-child(6) text b{font-family: 'DimensionalBold';}/*imax style font for specified words, not font size change needed*/
+.bottomcredits > :nth-child(6) small{font-size: 8px;}/*another baby r copyright symbol*/
 /*fine print amalgamation next to imax anchor below*/
-.footer > span{
+.bottomcredits > span{
     display: flex;
     font-size: 8px;
     text-align: center;
 }
 /*warnerbros credit below*/
-.footer > :last-child{
+.bottomcredits > :last-child{
     display: flex;/*overall container content aligns in a row*/
     align-content: center;
     font-family: serif;
 }
-.footer > :last-child span{/*span contains all text in this anchor*/
+.bottomcredits > :last-child span{/*span contains all text in this anchor*/
     display: block;/*span (words) are stacked*/
     align-content: flex-end;/*align text to bottom of anchor flex*/
     text-align: center;
@@ -414,8 +414,8 @@ section span{/*stacked text bits, the credited roles and original book have smal
     padding-right: 0;
     line-height: 10px;
 }
-.footer :last-child small{font-size: 8px;}/*smaller text for copyright declaration*/
-.footer img[src="images/warnerbroslogo.png"]{/*warner bros logo*/
+.bottomcredits :last-child small{font-size: 8px;}/*smaller text for copyright declaration*/
+.bottomcredits img[src="images/warnerbroslogo.png"]{/*warner bros logo*/
     width: 40px;
     height: 40px;
 }
