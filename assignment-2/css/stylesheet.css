@@ -1,21 +1,18 @@
 /*Image credits
-Left side of html background: https://wallpaper.mob.org/gallery/tag=blade%20runner%202049/
+-Left side of html background: https://wallpaper.mob.org/gallery/tag=blade%20runner%202049/
 Credit to Blade Runner 2049 (the movie), minor editing to fit done by myself
-Right side of html background: https://www.pinterest.com/pin/529313762456533245/
+-Right side of html background: https://www.pinterest.com/pin/529313762456533245/
 Unable to find original artist, google lens had no luck finding the original source
-Original Promotional Poster: https://static.wikia.nocookie.net/greatestmovies/images/1/11/Bladerunner204917018.jpg/
-Blank Movie Poster: https://www.pinterest.com/pin/566961040594765620/
+-Original Promotional Poster: https://static.wikia.nocookie.net/greatestmovies/images/1/11/Bladerunner204917018.jpg/
+-Blank Movie Poster: https://www.pinterest.com/pin/566961040594765620/
 Sourced originally from: wallpapers.moviemania.io (link is broken though)
-Snowing Overlay Gif: https://www.pinterest.com/pin/winter-storm-watch-wednesday-more-snow--535224736979013449/
+-Snowing Overlay Gif: https://www.pinterest.com/pin/winter-storm-watch-wednesday-more-snow--535224736979013449/
 */
 /*Highly recommend the browser extension colorzilla. 
 Allows in browser color value acquiring using an eyedropper
 Extremely useful in general
 It is how I got the color codes used in this CSS
-TO DO
-- Reattempt animations. May work better in github pages than local server
-- Annotate the crap outta everything
-- Find useless bits of CSS, get rid of em*/
+*/
 /*php -S 0.0.0.0:8000*/
 @font-face{
     /*courtesy of dafont.com https://www.dafont.com/sf-movie-poster.font?
