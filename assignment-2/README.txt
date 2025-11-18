@@ -3,6 +3,8 @@ Page default zoom is designed to show whole the poster on my browser, size might
 Recommend starting at default zoom, mouse over the different parts of the page, you'll find many elements are anchors.
 There are also invisible anchors for popouts. Swing that cursor around, there's six in all.
 
+NOTE: The blade runner font, for whatever reason, appears slightly off in every browser I've used except for firefox. Not enough to ruin the page or anything, but for best viewing experience, if you have firefox, I recommend pasting the github pages link there. If not, then some of the characters will not be fully filled in, but the font will retain it's original shape, size, and position on the page.
+
 Recommend side by siding the page with the original poster image
 Here's the link (referenced also on CSS page)
 https://static.wikia.nocookie.net/greatestmovies/images/1/11/Bladerunner204917018.jpg/

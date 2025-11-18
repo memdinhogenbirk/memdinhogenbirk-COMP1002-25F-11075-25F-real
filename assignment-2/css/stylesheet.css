@@ -118,9 +118,7 @@ References for photos and where I procured the info I used to write the blurbs
     position: absolute;
     transition: ease-in 0.2s;/*Brief animation for the popouts appearing*/
 }
-.popouts a:hover{/*All graphics(popout photos) set to 1000px height*/
-    height: 1000px;
-}
+.popouts a:hover{height: 1000px;}/*All graphics(popout photos) set to 1000px height*/
 .popouts :nth-child(3){/*K anchor location defined*/
     left: 35rem;
     top: 15rem;
@@ -195,7 +193,7 @@ References for photos and where I procured the info I used to write the blurbs
 }
 /*replicative poster content begins*/
 hgroup{/*contains main title, and headliners*/
-    margin:auto auto -20px auto;/*0 is telling the bottom margin to set to minimum, else the title will move up the page, don't want that*/
+    margin:auto auto -20px auto;/*squish the hgroup closer to section below*/
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -251,9 +249,7 @@ section span{/*stacked text bits, the credited roles and original book have smal
     height: fit-content;
     margin:-2rem 0 2rem 0;/*brought closer to above content, pushes all of main further off the bottom of the page, better matches original poster*/
 }
-.bottomcredits a{
-    margin: 0 auto;/*keeps anchors evenly spaced, and aligned to bottom*/
-}
+.bottomcredits a{ margin: 0 auto; }/*keeps anchors evenly spaced, and aligned to bottom*/
 .bottomcredits > :first-child {/*alcon entertainment credit*/
     display:flex;
     align-items: flex-end;/*image and bottom of text alignment, like poster*/
