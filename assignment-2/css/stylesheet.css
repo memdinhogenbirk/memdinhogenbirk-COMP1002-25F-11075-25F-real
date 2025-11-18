@@ -55,13 +55,13 @@ body{/*Body contains blank poster as background, global font color set to color 
     font-family:Arial, Helvetica, sans-serif;/*default font*/
     background-image: url('../images/2049post.jpg');/*blank poster*/
     background-size: cover;
-    height:max-content;
+    height: 143rem;
     width: 95rem;
 }
 main{/*contains everything but poster background*/
     position: relative;/*parent for snowing, so I may absolute it's position to the confines of main.*/
     margin: auto;
-    height: 143rem; 
+    height: 138rem; 
     width: 95rem;
     display: flex;
     flex-direction: column;
