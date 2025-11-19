@@ -43,7 +43,8 @@ html{/*Html background image, takes up empty space when poster is zoomed out*/
     background-image: url('../images/docbackground.png');
     background-size:cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-position: center;/*keeps the background image centered with viewport size changes*/
+    background-attachment: fixed;/*keeps the background image the same size no matter the zoom*/
     zoom: 30%;/*viewport now starts with 100% being equivalent to 30%, initial scale wasn't working, but this is. Weirdly, everywhere is saying firefox doesn't support this. I'm using firefox, works fine. I assume what they mean is that it technically isn't at 30% zoom, its changed 100% zoom to equal 30%, but if anything, this makes more sense than defaulting to actual 30% zoom. I chose this zoom level as it fits the poster perfectly in my viewport when firefox is full screen, with bookmarks bar hidden*/
 }
 body{/*Body contains blank poster as background, global font color set to color matched code,height and width defined to display poster/body size in desired way*/
@@ -199,7 +200,7 @@ hgroup{/*contains main title, and headliners*/
     text-align: center;
     width:fit-content;
 }
-hgroup h1{
+hgroup h1{/*movie title*/
     overflow: hidden; /*telling the h1s here to not extend clickable area past the visible space*/
     margin: .5rem;
     display: grid;
@@ -411,7 +412,7 @@ section span{/*stacked text bits, the credited roles and original book have smal
     width: 40px;
     height: 40px;
 }
-footer p{
+footer p{/*copyright, me*/
     display:flex;
     margin:auto;
     justify-content: space-around;
