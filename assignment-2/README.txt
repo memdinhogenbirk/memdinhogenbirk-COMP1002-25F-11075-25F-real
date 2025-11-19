@@ -3,6 +3,8 @@ Page default zoom is designed to show whole the poster on my browser, size might
 Recommend starting at default zoom, mouse over the different parts of the page, you'll find many elements are anchors.
 There are also invisible anchors for popouts. Swing that cursor around, there's six in all.
 
+300% zoom seems to be sufficient for closely examining the details, suppose it will depend on your screen size.
+
 NOTE: The blade runner font, for whatever reason, appears slightly off in every browser I've used except for firefox. Not enough to ruin the page or anything, but for best viewing experience, if you have firefox, I recommend pasting the github pages link there. If not, then some of the characters will not be fully filled in, but the font will retain it's original shape, size, and position on the page.
 
 Recommend side by siding the page with the original poster image
@@ -14,7 +16,7 @@ I aimed to replicate it as best as I possibly could, doing as much as possible w
 I should note, to achieve the snowing effect overlay, I originally googled it, gemini gave me one solution.
 Didn't like the solution so I asked grok, which gave me a very similar solution.
 Still didn't like it, so I found this https://blog.logrocket.com/css-overlay/ tutorial here. Basically the same method again.
-So I attempted to tweak and alter it and find work arounds. In the end, these three were right, and I went back to a variation 
+So I attempted to tweak and alter it and find work arounds. In the end, had to go with what I read from the above, went back to a variation 
 of this method.
 
 Last note, all references for fonts, images, and the information for popouts, are referenced in the CSS and HTML
