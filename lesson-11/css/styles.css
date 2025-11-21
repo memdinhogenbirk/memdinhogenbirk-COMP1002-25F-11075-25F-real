@@ -11,7 +11,45 @@ html {
 *::after {
     box-sizing: inherit;
 }
+html {
+			font-family: Helvetica, Arial, sans-serif;
+		}
+		/* STEP 5: Styling Lists (list-style-type, list-style-position, list-style-image) */
+		/* STEP 5a: list-style-type (none | square | circle | disc) */
+		ul {
+			/* list-style-type: square; */
+			list-style-position: inside;/*list marker moved to inside li items*/
+			list-style-image: url(images/check.png);/*custom li element marker*/
+		}
+		/* STEP 5b: Manipulate the list-style-position (inside | outside) in the rule above */
+		/* STEP 5c: Substitute regular list markers with images (list-style-image) in the rule just below */
+		ul {
 
+		}
+		/* STEP 5d: list-style-type (armenian | decimal | decimal-leading-zero | georgian | lower/upper-alpha | lower-greek | lower-latin | lower/upper-roman) - change in the rule below */
+		ol {
+			list-style-type: upper-latin; /*li marker changes to letters*/
+			/*can be upper or lower, in a variety of symbols*/
+			/* list-style-type: lower-greek; */
+			/* list-style-type: upper-roman; */
+		}
+		/* STEP 6: Laying Out Lists horizontally - use display: inline-block or inline */
+		li {
+			/* display: inline; */
+		}
+		/* STEP 7: Targetting nested lists with contextual selectors - comment out all above declarations first */
+		ul ul {
+			list-style-type: square;
+			list-style-image: none;
+		}
+		ul ul ul {
+			list-style-type: circle;
+		}
+		/* STEP 8: Target specific levels of list items with direct-descendent selectors */
+
+		h1 img {
+			float: right;
+		}
 /* STEP 12: Comment out all colored borders, and put a background-color on the below NAV element */
 nav {
     
