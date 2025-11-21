@@ -55,7 +55,8 @@ nav li a {
     display: block;
 }
 /* STEP 9: Show the 2nd-level list (UL) when the parent LI is moused over (:hover) or it is in focus (:focus-within) - you will need to build a grouped selector */
-nav li:hover ul{
+nav li:hover ul,
+nav li:focus-within ul{
     left: auto;
 }
 
