@@ -34,4 +34,5 @@ document.addEventListener('DOMContentLoaded', function(){
         // STEP 2d: End the loop through the links array
     };
 // STEP 1b: End the DOM ready function
+//lab E code 380500
 });
