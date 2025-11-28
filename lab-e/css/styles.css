@@ -6,7 +6,10 @@ html {
 	color: black;
 	font-size: 10px;
 }
-
+header nav a .current{
+	font-weight: bold;
+	background-color: white;
+}
 body {
 	margin: 0 auto;
 	min-width: 768px;
