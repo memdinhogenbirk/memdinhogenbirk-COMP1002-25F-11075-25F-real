@@ -36,6 +36,12 @@ header nav ul{
 header nav li{
     margin: 0rem 1rem;
 }
+.supportcontainer{
+    margin-left: 20rem;
+}
+.supportcontainer section{
+    display: block;
+}
 main{
     display: block;
     width: 100%;
