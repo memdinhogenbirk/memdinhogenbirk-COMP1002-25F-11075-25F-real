@@ -57,11 +57,28 @@ header nav li{
     list-style-position: inside;
     padding-left: 0;
 }
-main{
+.blockcontainer{
     display: block;
+}
+.consolespecscontainer {
+    display: flex;
+    justify-content: center;
+    border: solid red 1px;
+}
+.consolespecscontainer section ul{
+    list-style-position: inside;
+    padding-left: 0;
+    border: 1px solid red;
+}
+main{
+    display: flex;
+    justify-content: center;
     width: 100%;
 }
-main h1, section figure, section ul{
+.homecontainer{
+    display: block;
+}
+h1, .homecontainer section figure, .homecontainer section ul{
     display: flex;
     justify-content: center;
     width: 100vw;
@@ -70,7 +87,7 @@ main h1, section figure, section ul{
     margin: 0;
     font-family: Impact, sans-serif;
 }
-main section ul li{
+.homecontainer section ul li{
     padding: 1rem;
 }
 main section div{
