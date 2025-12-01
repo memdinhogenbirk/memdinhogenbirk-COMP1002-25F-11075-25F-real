@@ -47,11 +47,7 @@ header nav li{
 .gamescontainer{
     display: flex;
     padding-left: 5rem;
-    justify-content: space-between;
     width: 90%;
-}
-.gamescontainer section{
-    justify-content: space-between;
 }
 .gamescontainer ol{
     list-style-position: inside;
