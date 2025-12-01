@@ -1,4 +1,11 @@
-
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
 header {
     border-bottom: 1px black solid;
     width: 100%;
@@ -6,15 +13,42 @@ header {
     display: flex;
 }
 header nav {
+    border: 1px solid red;
     display: flex;
     justify-content: center;
+    width: 80%;
 }
-header a {
+header > a {
     padding: 1rem;
 }
 header nav ul {
     display: flex;
 }
 header nav li {
-    list-style: none;
+    margin: 0rem 1rem;
+}
+main {
+    display: block;
+    width: 100%;
+}
+main h1, section figure, section ul{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    border-bottom: 1px solid red;
+    padding: 0;
+    margin: 0;
+}
+main section ul li{
+    padding: 1rem;
+}
+main section div{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+main section div a{
+    border: 1px solid red;
+    text-align: center;
+    margin: 1rem auto;
 }
