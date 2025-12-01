@@ -38,9 +38,24 @@ header nav li{
 }
 .supportcontainer{
     margin-left: 20rem;
+    padding-bottom: 5rem;
 }
 .supportcontainer section{
     display: block;
+    padding: 1rem 0;
+}
+.gamescontainer{
+    display: flex;
+    padding-left: 5rem;
+    justify-content: space-between;
+    width: 90%;
+}
+.gamescontainer section{
+    justify-content: space-between;
+}
+.gamescontainer ol{
+    list-style-position: inside;
+    padding-left: 0;
 }
 main{
     display: block;
