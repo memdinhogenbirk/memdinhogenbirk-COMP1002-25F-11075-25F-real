@@ -1,0 +1,15 @@
+header nav{
+    display: flex;
+}
+header a{
+    padding: 1rem 1rem;
+}
+header nav ul{
+    display: flex;
+    padding: 0rem;
+}
+header nav li{
+    padding: 0rem auto;
+    list-style: none;
+    white-space: nowrap;
+}
