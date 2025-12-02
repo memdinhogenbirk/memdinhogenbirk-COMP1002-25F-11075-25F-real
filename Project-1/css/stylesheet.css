@@ -106,6 +106,10 @@ header nav li{
 .newscontainer figure > :last-child{
     padding-left: .5rem;
 }
+.feedbackcontainer{
+    display: flex;
+    flex-direction: column;
+}
 main{
     display: flex;
     justify-content: center;
