@@ -80,7 +80,7 @@ header nav li{
 .newscontainer section{
     display: flex;
     align-items: flex-end;
-    margin: 10rem 0;
+    margin-bottom: 15rem;
 }
 .newscontainer section ul{
     padding: 0;
