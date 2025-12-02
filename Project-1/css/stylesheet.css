@@ -121,13 +121,28 @@ main{
 .homecontainer{
     display: block;
 }
-h1, .homecontainer section figure, .homecontainer section ul{
+h1, .homecontainer section ul{
     display: flex;
     justify-content: center;
     width: 100vw;
     padding: 0;
     margin: 0;
     font-family: Impact, sans-serif;
+}
+#scrollingimages{
+    margin: 0 auto;
+    width: 1200px;
+    height: 538px;
+    overflow: hidden;
+}
+.slide0{
+    justify-content: left;
+}
+.slide1{
+    justify-content: center;
+}
+.slide2{
+    justify-content: right;
 }
 .homecontainer section ul li{
     padding: 1rem;
@@ -136,7 +151,7 @@ h1, .homecontainer section figure, .homecontainer section ul{
 }
 .homecontainer > :first-child{
     background-color: #041249;
-    padding-bottom: 1rem;
+    padding-bottom: 4rem;
 }
 main section div{
     display: flex;
@@ -158,13 +173,26 @@ main section div a{
     border-radius: 10px;
 }
 .arrowscontainer{
-    font-size: 100px;
-    font-family: Impact, sans-serif;
     position: absolute;
     top: 21rem;
 }
-.arrowscontainer > :first-child{
-    
+.arrowscontainer button{
+    font-size: 100px;
+    font-family: 'Arial Narrow', sans-serif;
+    color:#0233dd;
+    background-color: white;
+    border-radius: 100px;
+    padding: 0 2rem;
+    position: absolute;
+}
+.arrowscontainer button:hover{
+    background-color: #669ED5;
+}
+.previous{
+    left: 0;
+}
+.next{
+    right: 0;
 }
 footer{
     display: flex;
