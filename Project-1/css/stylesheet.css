@@ -64,7 +64,7 @@ header nav li{
     display: flex;
     justify-content: center;
 }
-.consolespecscontainer {
+.consolespecscontainer{
     display: flex;
     justify-content: center;
     border: solid red 1px;
@@ -74,18 +74,37 @@ header nav li{
     padding-left: 0;
     border: 1px solid red;
 }
-.newscontainer section {
+.newscontainer{
+    margin-bottom: 5rem;
+}
+.newscontainer section{
     display: flex;
     align-items: flex-end;
+    margin: 10rem 0;
 }
 .newscontainer section ul{
     padding: 0;
+}
+.newscontainer .blockcontainer > :first-child img{
+    padding-left: 20rem;
 }
 .newscontainer section li{
     padding: 1rem;
 }
 .newscontainer .blockcontainer > :nth-child(2){
     text-align: right;
+}
+.newscontainer figure{
+    display: block;
+    padding-right: 20rem;
+}
+.newscontainer figure > :first-child{
+    display: flex;
+    margin-left: 105px;
+    padding-bottom: .8rem;
+}
+.newscontainer figure > :last-child{
+    padding-left: .5rem;
 }
 main{
     display: flex;
