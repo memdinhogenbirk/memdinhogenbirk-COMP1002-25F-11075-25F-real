@@ -1,6 +1,7 @@
 html{
     font-family: sans-serif;
     color: black;
+    background-color: lightslategray;
 }
 body{
     width: 100%;
@@ -15,13 +16,13 @@ ul{
     list-style: none;
 }
 header{
-    border-bottom: 1px black solid;
+    background-color:darkslategray;
+    color: white;
     width: 100%;
     position: relative;
     display: flex;
 }
 header nav{
-    border: 1px solid red;
     display: flex;
     justify-content: center;
     width: 80%;
@@ -67,12 +68,10 @@ header nav li{
 .consolespecscontainer{
     display: flex;
     justify-content: center;
-    border: solid red 1px;
 }
 .consolespecscontainer section ul{
     list-style-position: inside;
     padding-left: 0;
-    border: 1px solid red;
 }
 .newscontainer{
     margin-bottom: 5rem;
@@ -122,7 +121,6 @@ h1, .homecontainer section figure, .homecontainer section ul{
     display: flex;
     justify-content: center;
     width: 100vw;
-    border-bottom: 1px solid red;
     padding: 0;
     margin: 0;
     font-family: Impact, sans-serif;
@@ -158,4 +156,11 @@ footer > :first-child{
 }
 footer li{
     padding-bottom: 1rem;
+}
+h1{
+    background-color: brown;
+    font-size: 60px;
+}
+.homecontainer > :first-child{
+    margin-bottom: 10rem;
 }
