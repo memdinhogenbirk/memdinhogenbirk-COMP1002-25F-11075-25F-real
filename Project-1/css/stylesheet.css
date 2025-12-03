@@ -138,7 +138,7 @@ h1, .homecontainer section ul{
 }
 .slidecontainer{
     display: flex;
-    width: 3600px;
+    width: 4800px;
     height: 538px;
     position: absolute;
     left: 0;
@@ -152,6 +152,9 @@ h1, .homecontainer section ul{
 }
 .slide2 .slidecontainer{
     left: -2400px;
+}
+.slide3 .slidecontainer{
+    left: -3600px;
 }
 .homecontainer section ul li{
     padding: 1rem;
