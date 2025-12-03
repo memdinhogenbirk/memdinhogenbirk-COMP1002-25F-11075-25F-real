@@ -134,15 +134,24 @@ h1, .homecontainer section ul{
     width: 1200px;
     height: 538px;
     overflow: hidden;
+    position: relative;
 }
-.slide0{
-    justify-content: left;
+.slidecontainer{
+    display: flex;
+    width: 3600px;
+    height: 538px;
+    position: absolute;
+    left: 0;
+    transition: left 0.7s ease-in-out;
 }
-.slide1{
-    justify-content: center;
+.slide0 .slidecontainer{
+    left: 0;
 }
-.slide2{
-    justify-content: right;
+.slide1 .slidecontainer{
+    left: -1200px;
+}
+.slide2 .slidecontainer{
+    left: -2400px;
 }
 .homecontainer section ul li{
     padding: 1rem;
