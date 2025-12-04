@@ -4,7 +4,7 @@ html{
     background-color: #046599;
 }
 body{
-    width: 100%;
+    width: 100vw;
     margin: 0;
     padding: 0;
 }
@@ -19,7 +19,7 @@ header{
     background-color:black;
     font-size: 20px;
     color: white;
-    width: 100%;
+    width: 100vw;
     position: relative;
     display: flex;
     align-items:center;
@@ -77,13 +77,14 @@ header nav li{
     list-style-position: inside;
     padding-left: 0;
 }
-.newscontainer{
-    margin-bottom: 5rem;
+.newscontainer article{
+    padding-left: 4rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
 }
 .newscontainer section{
     display: flex;
-    align-items: flex-end;
-    margin-bottom: 15rem;
+    align-items: center;
 }
 .newscontainer section ul{
     padding: 0;
@@ -94,8 +95,16 @@ header nav li{
 .newscontainer section li{
     padding: 1rem;
 }
+.newscontainer .blockcontainer{
+    background-image: linear-gradient(to left, #669ED5, #081543);
+}
 .newscontainer .blockcontainer > :nth-child(2){
-    text-align: right;
+    text-align: left;
+    background-image: linear-gradient(to right, #669ED5, #081543);
+    width: 100vw;
+}
+.newscontainer .blockcontainer h2, .newscontainer .blockcontainer h3{
+    text-align: center;
 }
 .newscontainer figure{
     display: block;
@@ -115,31 +124,38 @@ header nav li{
 }
 main{
     display: flex;
-    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
 }
 .homecontainer{
     display: block;
+    width: 100vw;
 }
 h1, .homecontainer section ul{
     display: flex;
     justify-content: center;
     width: 100vw;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     font-family: Impact, sans-serif;
 }
 #scrollingimages{
     margin: 0 auto;
-    width: 1200px;
-    height: 538px;
+    padding-top: 3rem;
+    width: 70vw;
+    height: 35vw;
     overflow: hidden;
     position: relative;
 }
+#scrollingimages img{
+    width: 70vw;
+    height: 35vw;
+}
 .slidecontainer{
     display: flex;
-    width: 4800px;
-    height: 538px;
+    width: 280vw;
+    height: 35vw;
     position: absolute;
     left: 0;
     transition: left 0.7s ease-in-out;
@@ -148,18 +164,23 @@ h1, .homecontainer section ul{
     left: 0;
 }
 .slide1 .slidecontainer{
-    left: -1200px;
+    left: -70vw;
 }
 .slide2 .slidecontainer{
-    left: -2400px;
+    left: -140vw;
 }
 .slide3 .slidecontainer{
-    left: -3600px;
+    left: -210vw;
 }
-.homecontainer section ul li{
+.gotoslide a{
     padding: 1rem;
+    margin: 0;
     color: white;
     background-color: grey;
+}
+.gotoslide a:hover{
+    background-color: #669ED5;
+    padding: 1rem;
 }
 .homecontainer > :first-child{
     background-color: #041249;
@@ -167,7 +188,7 @@ h1, .homecontainer section ul{
 }
 main section div{
     display: flex;
-    justify-content: center;
+
     width: 100vw;
 }
 main section div a{
