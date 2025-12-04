@@ -13,13 +13,17 @@ document.addEventListener('DOMContentLoaded', function () {
         togglers.forEach((element) => {
             element.classList.remove('active');
         });
-        inactive.forEach((element) =>{
-            stringToInt = parseInt(element.id, 10);
-            if(currentIndex = stringToInt){
+        inactive.forEach((element) => {
+        if(element.id == '0' && currentIndex == 0){
                 element.classList.add('active');
-            }
+            };
+        if(element.id == '1' && currentIndex == 1){
+                element.classList.add('active');
+            }; 
+        if(element.id == '2' && currentIndex == 2){
+                element.classList.add('active');
+            };
         });
-        
     };
     container.addEventListener('transitionend', function () {//referenced https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Transitions
         if(currentIndex == 3){
