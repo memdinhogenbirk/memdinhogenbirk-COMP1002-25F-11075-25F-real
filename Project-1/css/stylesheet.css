@@ -219,8 +219,19 @@ https://www.inverse.com/input/guides/gamers-are-rushing-to-scoop-up-retro-tvs-he
 .interactive{
     position: absolute;
     inset: 0;
+    opacity: 0;
+    width: 400px;
+}
+.interactive img{
+    width: 325px;
+    height: 246px;
+    position: relative;
+    left: 38px;
+    top: 93.5px;
+    border-radius: 15px;
 }
 .interactive:hover{
+    opacity: 1;
     background-image: url('../images/oldtv.png');
     background-size: contain;
     width: 400px;
