@@ -3,14 +3,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const previous = document.querySelector('.previous');
     const container = slides.querySelector('.slidecontainer');
     const next = document.querySelector('.next');
-    const togglers = document.querySelectorAll('.gotoslide li a');
+    const togglers = document.querySelectorAll('.gotoslide li button');
     
     let currentIndex = 0;
     function nextSlide() {
         slides.classList.remove('slide0', 'slide1', 'slide2', 'slide3');
         slides.classList.add('slide' + currentIndex);
     };
-    container.addEventListener('transitionend', function (){//referenced https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Transitions
+    container.addEventListener('transitionend', function () {//referenced https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Transitions
         if(currentIndex == 3){
             container.style.transition = 'none';//take away transition so the 4th image and the third image replace eachother instantly
             currentIndex = 0;
@@ -21,12 +21,12 @@ document.addEventListener('DOMContentLoaded', function () {
             container.style.transition = 'left 0.7s ease-in-out';//put back transition so everything keeps working as intended
         }
     });
+    
     previous.addEventListener('click', function() {
-        if(currentIndex >= 0){
+        if(currentIndex >= 0) {
             currentIndex --;
-            looper = false;
         }
-        if(currentIndex == -1){
+        if(currentIndex == -1) {
             currentIndex = 3;
             container.style.transition = 'none';//take away transition so the 4th image and the third image replace eachother instantly
             nextSlide();
@@ -37,10 +37,23 @@ document.addEventListener('DOMContentLoaded', function () {
         nextSlide();
     });
     next.addEventListener('click', function() {
-        if(currentIndex < 3){
+        if(currentIndex < 3) {
             currentIndex ++;
-            looper = true;
         }
         nextSlide();
+    });
+    togglers.forEach((element) => {
+        element.addEventListener('click', function() {
+            if(element.id == '0'){
+                currentIndex = 0;
+            };
+            if(element.id == '1'){
+                currentIndex = 1;
+            };
+            if(element.id == '2'){
+                currentIndex = 2;
+            };
+            nextSlide();
+        });
     });
 });
