@@ -31,6 +31,11 @@ header nav{
     font-family: Impact, sans-serif;
     margin: .5rem 0;
 }
+header nav a:hover{
+    background-image: linear-gradient(to top, #669ED5, grey);
+    padding: .5rem 1rem;
+    margin: 0;
+}
 header > a{
     padding: 0 1rem;
 }
@@ -38,8 +43,9 @@ header nav ul{
     display: flex;
     margin: 0;
 }
-header nav li{
-    margin: 0 1rem;
+header nav li a{
+    padding: 1rem;
+    margin: 0;
 }
 .supportcontainer{
     margin-left: 20rem;
@@ -191,24 +197,33 @@ button.active{
     background-color: #041249;
     padding-bottom: 4rem;
 }
-main section div{
+.homecontainer section div, .peripheralcontainer section div{
     display: flex;
-
     width: 100vw;
 }
-main section div a{
-    text-align: center;
-    margin: 1rem auto;
-}
-.homecontainer section div a h3{
+/*tv image source, note that the image doesn't seem to exist on the page, but google images found it anyways 
+https://www.inverse.com/input/guides/gamers-are-rushing-to-scoop-up-retro-tvs-heres-what-to-look-for*/
+.homecontainer section div figure h3{
     background-image: linear-gradient(to bottom, #669ED5, #081543);
     margin: 0;
     padding: 1rem 0;
 }
-.homecontainer section div a{
+.homecontainer section div figure{
     background-color: #669ED5;
     overflow: hidden;
     border-radius: 10px;
+    text-align: center;
+    margin: 1rem auto;
+    position: relative;
+}
+.interactive{
+    position: absolute;
+    inset: 0;
+}
+.interactive:hover{
+    background-image: url('../images/oldtv.png');
+    background-size: contain;
+    width: 400px;
 }
 .arrowscontainer{
     position: absolute;
@@ -233,8 +248,37 @@ main section div a{
     right: 0;
 }
 .aboutpage{
-    width: 80%;
+    width: 100vw;
+    justify-content: center;
+    display: flex;
+    background-image: linear-gradient(to top, #305082, #081543);
+    padding-bottom: 3rem;
+}
+.aboutpage article{
+    display: block;
+    width: 90vw;
     margin: auto;
+    border: 1px solid gray;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+.aboutpage article>div{
+    display:flex;
+}
+.aboutpage section h2{
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to top, #7C8298, #2D3D5D);
+    font-size: 50px;
+    margin: 0;
+}
+.aboutpage figure img{
+    width: 30vw;
+    height: 39vw;
+}
+.aboutpage figcaption{
+    text-align: center;
 }
 footer{
     display: flex;
