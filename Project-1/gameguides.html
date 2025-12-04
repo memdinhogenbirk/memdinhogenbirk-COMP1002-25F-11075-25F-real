@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--cntrl shift I auto indent everything-->
+
+<head>
+    <meta charset="utf-8" />
+    <title>GENESIS</title>
+    <link rel="icon" type="image/Segasmol" href="images/Segasmol.png">
+    <link href="css/stylesheet.css" rel="stylesheet" />
+    <script src="js/scripter.js" async></script>
+</head>
+
+<body>
+    <header>
+        <a href="home.html"><img src="images/Sega-Genesis-Logo.png" width="100px"></a>
+        <nav>
+            <ul>
+                <li><a href="games.html">GAMES</a></li>
+                <li><a href="gameguides.html">GUIDES</a></li>
+                <li><a href="peripherals.html">PERIPHERALS</a></li>
+                <li><a href="news.html">NEWS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <!--list was sourced from wikipedia, organized by grok to be copy paste-able. 
+                Now, you said no using AI for code, so I didn't. The original copy paste was not code, just text. 
+                How'd I get them all into options then? alt cntrl down the start of each line, paste <option>, 
+                undo to remove auto populated end tag. Next, for end of line, select all relevant lines, Alt + shift + I, puts cursor to end of line, 
+                paste </option>, Done.-->
+            <h2>Game Guide Downloads</h2>
+            <h3>Please select a GAME GUIDE from the alphabetized selector below, and click download</h3>
+            <form>
+                <select id="genesisguides">
+                    <option value="">select a game</option>
+                    <option>3 Ninjas Kick Back (1994)</option>
+                    <option>688 Attack Sub (1991)</option>
+                    <option>Aero the Acro-Bat (1993)</option>
+                    <option>Aero the Acro-Bat 2 (1994)</option>
+                    <option>Aerobiz (1992)</option>
+                    <option>Aerobiz Supersonic (1994)</option>
+                    <option>After Burner II (1990)</option>
+                    <option>Air Buster (1991)</option>
+                    <option>Air Diver (1990)</option>
+                    <option>Aladdin (1993)</option>
+                    <option>Alex Kidd in the Enchanted Castle (1989)</option>
+                    <option>Alien 3 (1992)</option>
+                    <option>Alien Storm (1991)</option>
+                    <option>Alisia Dragoon (1992)</option>
+                    <option>Altered Beast (1989)</option>
+                    <option>American Gladiators (1992)</option>
+                    <option>Andre Agassi Tennis (1992)</option>
+                    <option>Animaniacs (1994)</option>
+                    <option>Aquatic Games Starring James Pond (1992)</option>
+                    <option>Arcade Classics (1994)</option>
+                    <option>Arch Rivals (1992)</option>
+                    <option>Ariel the Little Mermaid (1992)</option>
+                    <option>Arnold Palmer Tournament Golf (1989)</option>
+                    <option>Arrow Flash (1990)</option>
+                    <option>Art Alive (1991)</option>
+                    <option>Art of Fighting (1994)</option>
+                    <option>Atomic Runner (1992)</option>
+                    <option>ATP Tour Championship Tennis (1994)</option>
+                    <option>Awesome Possum... Kicks Dr. Machino's Butt (1993)</option>
+                    <option>AWS Pro Moves Soccer (1993)</option>
+                    <option>Ayrton Senna's Super Monaco GP II (1992)</option>
+                    <option>B.O.B. (1993)</option>
+                    <option>Back to the Future Part III (1991)</option>
+                    <option>Ballz 3D (1994)</option>
+                    <option>Barbie Super Model (1993)</option>
+                    <option>Barkley Shut Up and Jam! (1994)</option>
+                    <option>Barkley Shut Up and Jam! 2 (1994)</option>
+                    <option>Barney's Hide & Seek Game (1993)</option>
+                    <option>Batman (1990)</option>
+                    <option>Batman Returns (1992)</option>
+                    <option>Batman: Revenge of the Joker (1992)</option>
+                    <option>Battle Squadron (1990)</option>
+                    <option>Battletech (1994)</option>
+                    <option>Battletoads (1993)</option>
+                    <option>Battletoads/Double Dragon (1993)</option>
+                    <option>Beast Wrestler (1991)</option>
+                    <option>Beauty and the Beast: Belle's Quest (1993)</option>
+                    <option>Beauty and the Beast: Roar of the Beast (1993)</option>
+                    <option>Beavis and Butt-Head (1994)</option>
+                    <option>Beyond Oasis (1994)</option>
+                    <option>Bill Walsh College Football (1993)</option>
+                    <option>Bill Walsh College Football '95 (1994)</option>
+                    <option>Bimini Run (1990)</option>
+                    <option>Bio-Hazard Battle (1992)</option>
+                    <option>Blades of Vengeance (1993)</option>
+                    <option>Blockout (1991)</option>
+                    <option>Bloodshot (1994)</option>
+                    <option>Boogerman: A Pick and Flick Adventure (1994)</option>
+                    <option>Boxing Legends of the Ring (1993)</option>
+                    <option>Bram Stoker's Dracula (1993)</option>
+                    <option>Brett Hull Hockey '95 (1994)</option>
+                    <option>Brutal: Paws of Fury (1994)</option>
+                    <option>Bubsy in Claws Encounters of the Furred Kind (1993)</option>
+                    <option>Bubsy II (1994)</option>
+                    <option>Buck Rogers: Countdown to Doomsday (1991)</option>
+                    <option>Budokan: The Martial Spirit (1990)</option>
+                    <option>Bugs Bunny in Double Trouble (1994)</option>
+                    <option>Bulls vs Blazers and the NBA Playoffs (1992)</option>
+                    <option>Bulls vs Lakers and the NBA Playoffs (1991)</option>
+                    <option>Burning Force (1990)</option>
+                    <option>Cadash (1992)</option>
+                    <option>Caesar's Palace (1993)</option>
+                    <option>Cal Ripken Jr. Baseball (1992)</option>
+                    <option>California Games (1991)</option>
+                    <option>Captain America and The Avengers (1992)</option>
+                    <option>Captain Planet and the Planeteers (1992)</option>
+                    <option>Castlevania: Bloodlines (1994)</option>
+                    <option>Centurion: Defender of Rome (1991)</option>
+                    <option>Chakan: The Forever Man (1992)</option>
+                    <option>Championship Bowling (1993)</option>
+                    <option>Championship Pool (1993)</option>
+                    <option>Championship Pro-Am (1992)</option>
+                    <option>Chase H.Q. II (1992)</option>
+                    <option>Chester Cheetah: Too Cool to Fool (1992)</option>
+                    <option>Chester Cheetah: Wild Wild Quest (1993)</option>
+                    <option>Chi Chi's Pro Challenge Golf (1993)</option>
+                    <option>Chiki Chiki Boys (1992)</option>
+                    <option>Chuck Rock (1991)</option>
+                    <option>Chuck Rock II: Son of Chuck (1993)</option>
+                    <option>Cliffhanger (1993)</option>
+                    <option>Clue (1992)</option>
+                    <option>Coach K College Basketball (1994)</option>
+                    <option>College Football USA '94 (1993)</option>
+                    <option>College Football's National Championship (1994)</option>
+                    <option>College Slam (1994)</option>
+                    <option>Columns (1990)</option>
+                    <option>Columns III (1993)</option>
+                    <option>Combat Cars (1994)</option>
+                    <option>Comix Zone (1994)</option>
+                    <option>Contra: Hard Corps (1994)</option>
+                    <option>Cool Spot (1993)</option>
+                    <option>Cosmic Spacehead (1993)</option>
+                    <option>Crack Down (1990)</option>
+                    <option>CrossFire (1991)</option>
+                    <option>Crüe Ball (1992)</option>
+                    <option>Crusader of Centy (1994)</option>
+                    <option>Crystal's Pony Tale (1994)</option>
+                    <option>Cutthroat Island (1994)</option>
+                    <option>Cyber-Cop (1992)</option>
+                    <option>Cyberball (1990)</option>
+                    <option>Cyborg Justice (1993)</option>
+                    <option>Daffy Duck in Hollywood (1994)</option>
+                    <option>Dark Castle (1991)</option>
+                    <option>Dashin' Desperadoes (1993)</option>
+                    <option>David Crane's Amazing Tennis (1992)</option>
+                    <option>David Robinson's Supreme Court (1992)</option>
+                    <option>Davis Cup Tennis (1993)</option>
+                    <option>Deadly Moves (1992)</option>
+                    <option>Death and Return of Superman (1994)</option>
+                    <option>Death Duel (1992)</option>
+                    <option>Decap Attack (1991)</option>
+                    <option>Demolition Man (1994)</option>
+                    <option>Desert Demolition Starring Road Runner and Wile E. Coyote (1994)</option>
+                    <option>Desert Strike: Return to the Gulf (1992)</option>
+                    <option>Dick Tracy (1990)</option>
+                    <option>Dick Vitale's "Awesome, Baby!" College Hoops (1994)</option>
+                    <option>Dino Land (1991)</option>
+                    <option>Dinosaurs for Hire (1993)</option>
+                    <option>Disney's Aladdin (1993)</option>
+                    <option>Disney's The Jungle Book (1994)</option>
+                    <option>Disney's The Lion King (1994)</option>
+                    <option>Dominus (1994)</option>
+                    <option>Doom Troopers (1994)</option>
+                    <option>Double Dragon (1992)</option>
+                    <option>Double Dragon 3: The Arcade Game (1992)</option>
+                    <option>Double Dragon V: The Shadow Falls (1994)</option>
+                    <option>Double Dribble: The Playoff Edition (1994)</option>
+                    <option>Dr. Robotnik's Mean Bean Machine (1993)</option>
+                    <option>Dragon: The Bruce Lee Story (1994)</option>
+                    <option>Dragon's Fury (1992)</option>
+                    <option>Dragon's Revenge (1994)</option>
+                    <option>Dune: The Battle for Arrakis (1994)</option>
+                    <option>Dynamite Duke (1990)</option>
+                    <option>Dynamite Headdy (1994)</option>
+                    <option>Earthworm Jim (1994)</option>
+                    <option>Earthworm Jim 2 (1994)</option>
+                    <option>Ecco the Dolphin (1992)</option>
+                    <option>Ecco: The Tides of Time (1994)</option>
+                    <option>El Viento (1991)</option>
+                    <option>Elemental Master (1993)</option>
+                    <option>ESPN Baseball Tonight (1994)</option>
+                    <option>ESPN National Hockey Night (1994)</option>
+                    <option>ESPN Speed World (1994)</option>
+                    <option>ESPN Sunday Night NFL (1994)</option>
+                    <option>ESWAT: City Under Siege (1990)</option>
+                    <option>Eternal Champions (1993)</option>
+                    <option>Evander Holyfield's "Real Deal" Boxing (1992)</option>
+                    <option>Exile (1991)</option>
+                    <option>Exo Squad (1994)</option>
+                    <option>F-117 Night Storm (1993)</option>
+                    <option>F-15 Strike Eagle II (1993)</option>
+                    <option>F-22 Interceptor (1991)</option>
+                    <option>Faery Tale Adventure (1991)</option>
+                    <option>Family Feud (1993)</option>
+                    <option>Fantasia (1991)</option>
+                    <option>Fatal Fury (1993)</option>
+                    <option>Fatal Fury 2 (1994)</option>
+                    <option>Fatal Labyrinth (1991)</option>
+                    <option>Fatal Rewind (1991)</option>
+                    <option>Ferrari Grand Prix Challenge (1992)</option>
+                    <option>FIFA International Soccer (1993)</option>
+                    <option>FIFA Soccer '95 (1994)</option>
+                    <option>Fighting Masters (1992)</option>
+                    <option>Final Zone (1990)</option>
+                    <option>Fire Shark (1990)</option>
+                    <option>Flashback: The Quest for Identity (1993)</option>
+                    <option>Flicky (1991)</option>
+                    <option>Flintstones (1993)</option>
+                    <option>Foreman for Real (1994)</option>
+                    <option>Forgotten Worlds (1989)</option>
+                    <option>Formula One (1993)</option>
+                    <option>Frank Thomas Big Hurt Baseball (1994)</option>
+                    <option>Fun 'n' Games (1993)</option>
+                    <option>Fydo Dydo (1994)</option>
+                    <option>G-LOC: Air Battle (1991)</option>
+                    <option>Gadget Twins (1992)</option>
+                    <option>Gaiares (1990)</option>
+                    <option>Gain Ground (1991)</option>
+                    <option>Galaxy Force II (1991)</option>
+                    <option>Game no Kanzume Vol. 1 (1994, Sega Channel only, not physical)</option>
+                    <option>Game no Kanzume Vol. 2 (1994, Sega Channel only, not physical)</option>
+                    <option>Garfield: Caught in the Act (1994)</option>
+                    <option>Gargoyles (1994)</option>
+                    <option>Gauntlet IV (1993)</option>
+                    <option>Gemfire (1992)</option>
+                    <option>General Chaos (1993)</option>
+                    <option>Generations Lost (1994)</option>
+                    <option>Genghis Khan II: Clan of the Gray Wolf (1993)</option>
+                    <option>George Foreman's KO Boxing (1992)</option>
+                    <option>Ghouls 'n Ghosts (1989)</option>
+                    <option>Global Gladiators (1992)</option>
+                    <option>Gods (1992)</option>
+                    <option>Golden Axe (1989)</option>
+                    <option>Golden Axe II (1991)</option>
+                    <option>Golden Axe III (1993)</option>
+                    <option>Goofy's Hysterical History Tour (1994)</option>
+                    <option>Granada (1990)</option>
+                    <option>Grand Slam Tennis (1992)</option>
+                    <option>Great Circus Mystery Starring Mickey & Minnie (1994)</option>
+                    <option>Greatest Heavyweights (1993)</option>
+                    <option>Greendog: The Beached Surfer Dude! (1992)</option>
+                    <option>Grind Stormer (1994)</option>
+                    <option>Growl (1991)</option>
+                    <option>Gunstar Heroes (1993)</option>
+                    <option>Hard Drivin' (1990)</option>
+                    <option>Hardball! (1991)</option>
+                    <option>Hardball III (1992)</option>
+                    <option>Hardball '94 (1994)</option>
+                    <option>Haunting Starring Polterguy (1993)</option>
+                    <option>Heavy Nova (1992)</option>
+                    <option>Hellfire (1990)</option>
+                    <option>Herzog Zwei (1990)</option>
+                    <option>High Seas Havoc (1993)</option>
+                    <option>Hit the Ice (1992)</option>
+                    <option>Home Alone (1992)</option>
+                    <option>Hook (1992)</option>
+                    <option>Humans (1993)</option>
+                    <option>IMG International Tour Tennis (1994)</option>
+                    <option>Immortal, The (1991)</option>
+                    <option>Insector X (1990)</option>
+                    <option>Instruments of Chaos Starring Young Indiana Jones (1994)</option>
+                    <option>International Superstar Soccer Deluxe (1994)</option>
+                    <option>Ishido: The Way of Stones (1991)</option>
+                    <option>Izzy's Quest for the Olympic Rings (1994)</option>
+                    <option>Jack Nicklaus' Power Challenge Golf (1993)</option>
+                    <option>James Bond 007: The Duel (1993)</option>
+                    <option>James Pond: Underwater Agent (1991)</option>
+                    <option>James Pond II: Codename: RoboCod (1991)</option>
+                    <option>James Pond 3: Operation Starfish (1994)</option>
+                    <option>Jammit (1994)</option>
+                    <option>Jennifer Capriati Tennis (1992)</option>
+                    <option>Jeopardy! (1992)</option>
+                    <option>Jeopardy! Deluxe Edition (1994)</option>
+                    <option>Jeopardy! Sports Edition (1994)</option>
+                    <option>Jerry Glanville's Pigskin Footbrawl (1992)</option>
+                    <option>Jewel Master (1991)</option>
+                    <option>Joe & Mac (1994)</option>
+                    <option>Joe Montana Football (1991)</option>
+                    <option>Joe Montana II: Sports Talk Football (1991)</option>
+                    <option>John Madden Football (1990)</option>
+                    <option>John Madden Football '92 (1991)</option>
+                    <option>John Madden Football '93 (1992)</option>
+                    <option>John Madden Football '94 (1993)</option>
+                    <option>Jordan vs. Bird: One on One (1992)</option>
+                    <option>Judge Dredd (1994)</option>
+                    <option>Junction (1990)</option>
+                    <option>Jungle Strike (1993)</option>
+                    <option>Jurassic Park (1993)</option>
+                    <option>Jurassic Park: Rampage Edition (1994)</option>
+                    <option>Justice League Task Force (1994)</option>
+                    <option>Ka-Ge-Ki: Fists of Steel (1991)</option>
+                    <option>Kid Chameleon (1992)</option>
+                    <option>King Salmon: The Big Catch (1992)</option>
+                    <option>King of the Monsters (1993)</option>
+                    <option>King of the Monsters 2 (1994)</option>
+                    <option>King's Bounty: The Conqueror's Quest (1991)</option>
+                    <option>Klax (1990)</option>
+                    <option>Krusty's Super Fun House (1992)</option>
+                    <option>La Russa Baseball 95 (1994)</option>
+                    <option>Lakers versus Celtics and the NBA Playoffs (1990)</option>
+                    <option>Landstalker (1993)</option>
+                    <option>Last Battle (1989)</option>
+                    <option>Legend of Wukong (1994, unlicensed)</option>
+                    <option>Lemmings (1992)</option>
+                    <option>Lemmings 2: The Tribes (1994)</option>
+                    <option>Lethal Enforcers (1993)</option>
+                    <option>Lethal Enforcers II: Gun Fighters (1994)</option>
+                    <option>LHX Attack Chopper (1992)</option>
+                    <option>Liberty or Death (1994)</option>
+                    <option>Light Crusader (1994)</option>
+                    <option>Lightening Force: Quest for the Darkstar (1992)</option>
+                    <option>M-1 Abrams Battle Tank (1991)</option>
+                    <option>M.U.S.H.A. (1990)</option>
+                    <option>Madden NFL '94 (1993)</option>
+                    <option>Madden NFL '95 (1994)</option>
+                    <option>Magical Doropie (1991)</option>
+                    <option>Mario Andretti Racing (1994)</option>
+                    <option>Marko (1994)</option>
+                    <option>Marsupilami (1994)</option>
+                    <option>Marvel Land (1991)</option>
+                    <option>Mary Shelley's Frankenstein (1994)</option>
+                    <option>Master of Monsters (1991)</option>
+                    <option>Math Blaster: Episode 1 (1994)</option>
+                    <option>Mazezam (1994)</option>
+                    <option>McDonald's Treasure Land Adventure (1993)</option>
+                    <option>Mega Bomberman (1994)</option>
+                    <option>Mega Lo Mania (1992)</option>
+                    <option>Mega Turrican (1994)</option>
+                    <option>Menacer 6-Game Cartridge (1992)</option>
+                    <option>Mercs (1991)</option>
+                    <option>Michael Jackson's Moonwalker (1990)</option>
+                    <option>Mick & Mack as the Global Gladiators (1992)</option>
+                    <option>Mickey Mania: The Timeless Adventures of Mickey Mouse (1994)</option>
+                    <option>Micro Machines (1993)</option>
+                    <option>Micro Machines 2: Turbo Tournament (1994)</option>
+                    <option>Midnight Resistance (1991)</option>
+                    <option>Mig-29 Fighter Pilot (1993)</option>
+                    <option>Might and Magic: Gates to Another World (1991)</option>
+                    <option>Mighty Morphin Power Rangers (1994)</option>
+                    <option>Mike Ditka Power Football (1991)</option>
+                    <option>MLBPA Baseball (1994)</option>
+                    <option>Monopoly (1992)</option>
+                    <option>Mortal Kombat (1993)</option>
+                    <option>Mortal Kombat II (1994)</option>
+                    <option>Mortal Kombat 3 (1994)</option>
+                    <option>Mr. Nutz (1994)</option>
+                    <option>Ms. Pac-Man (1991)</option>
+                    <option>Mutant League Football (1993)</option>
+                    <option>Mutant League Hockey (1994)</option>
+                    <option>Mystic Defender (1989)</option>
+                    <option>Mystical Fighter (1992)</option>
+                    <option>NBA Action '94 (1994)</option>
+                    <option>NBA All-Star Challenge (1992)</option>
+                    <option>NBA Hang Time (1994)</option>
+                    <option>NBA Jam (1993)</option>
+                    <option>NBA Jam Tournament Edition (1994)</option>
+                    <option>NBA Live '95 (1994)</option>
+                    <option>NBA Showdown '94 (1993)</option>
+                    <option>NHL '94 (1993)</option>
+                    <option>NHL '95 (1994)</option>
+                    <option>NHL Hockey (1991)</option>
+                    <option>NHLPA Hockey '93 (1992)</option>
+                    <option>Nightmare Circus (1994)</option>
+                    <option>Ninja Gaiden (1992)</option>
+                    <option>Nobunaga's Ambition (1993)</option>
+                    <option>Normy's Beach Babe-O-Rama (1994)</option>
+                    <option>Oh No! More Lemmings (1994)</option>
+                    <option>Olympic Gold: Barcelona '92 (1992)</option>
+                    <option>Onslaught (1991)</option>
+                    <option>Operation Europe: Path to Victory 1939-45 (1994)</option>
+                    <option>Out of This World (1992)</option>
+                    <option>OutRun (1991)</option>
+                    <option>OutRun 2019 (1993)</option>
+                    <option>OutRunners (1994)</option>
+                    <option>P.T.O.: Pacific Theater of Operations (1993)</option>
+                    <option>Pac-Attack (1993)</option>
+                    <option>Pac-Mania (1991)</option>
+                    <option>Pagemaster (1994)</option>
+                    <option>Paperboy (1991)</option>
+                    <option>Paperboy 2 (1992)</option>
+                    <option>Pat Riley Basketball (1990)</option>
+                    <option>Pele! (1993)</option>
+                    <option>PGA European Tour (1994)</option>
+                    <option>PGA Tour Golf (1991)</option>
+                    <option>PGA Tour Golf II (1992)</option>
+                    <option>PGA Tour Golf III (1994)</option>
+                    <option>Phantasy Star II (1990)</option>
+                    <option>Phantasy Star III: Generations of Doom (1991)</option>
+                    <option>Phantasy Star IV: The End of the Millennium (1994)</option>
+                    <option>Phelios (1990)</option>
+                    <option>Pinocchio (1994)</option>
+                    <option>Pirates! Gold (1993)</option>
+                    <option>Pit-Fighter (1991)</option>
+                    <option>Pitfall: The Mayan Adventure (1994)</option>
+                    <option>Pocahontas (1994)</option>
+                    <option>Populous (1990)</option>
+                    <option>Populous II: Trials of the Olympian Gods (1993)</option>
+                    <option>Porky Pig's Haunted Holiday (1994)</option>
+                    <option>Power Monger (1992)</option>
+                    <option>Powerball (1991)</option>
+                    <option>Predator 2 (1992)</option>
+                    <option>Primal Rage (1994)</option>
+                    <option>Prime Time NFL Football Starring Deion Sanders (1994)</option>
+                    <option>Prince of Persia (1993)</option>
+                    <option>Pro Quarterback (1992)</option>
+                    <option>Psycho Pinball (1994)</option>
+                    <option>Puggsy (1993)</option>
+                    <option>Pulseman (1994, Sega Channel only, not physical)</option>
+                    <option>Punisher, The (1994)</option>
+                    <option>QuackShot Starring Donald Duck (1991)</option>
+                    <option>R.B.I. Baseball 3 (1991)</option>
+                    <option>R.B.I. Baseball 4 (1992)</option>
+                    <option>R.B.I. Baseball '93 (1993)</option>
+                    <option>R.B.I. Baseball '94 (1994)</option>
+                    <option>Race Drivin' (1993)</option>
+                    <option>Radical Rex (1994)</option>
+                    <option>Raiden Trad (1991)</option>
+                    <option>Rambo III (1989)</option>
+                    <option>Rampart (1991)</option>
+                    <option>Ranger X (1993)</option>
+                    <option>Rastan Saga II (1990)</option>
+                    <option>Red Zone (1994)</option>
+                    <option>Revenge of Shinobi, The (1989)</option>
+                    <option>Rings of Power (1991)</option>
+                    <option>Risky Woods (1992)</option>
+                    <option>Ristar (1994)</option>
+                    <option>Road Rash (1991)</option>
+                    <option>Road Rash II (1992)</option>
+                    <option>Road Rash 3 (1994)</option>
+                    <option>RoboCop 3 (1993)</option>
+                    <option>RoboCop Versus The Terminator (1993)</option>
+                    <option>Rocket Knight Adventures (1993)</option>
+                    <option>Roger Clemens' MVP Baseball (1992)</option>
+                    <option>Rolling Thunder 2 (1991)</option>
+                    <option>Rolo to the Rescue (1992)</option>
+                    <option>Romance of the Three Kingdoms II (1992)</option>
+                    <option>Romance of the Three Kingdoms III: Dragon of Destiny (1993)</option>
+                    <option>Rugby World Cup '95 (1994)</option>
+                    <option>Saint Sword (1991)</option>
+                    <option>Samurai Shodown (1994)</option>
+                    <option>Saturday Night Slam Masters (1994)</option>
+                    <option>Scooby-Doo Mystery (1994)</option>
+                    <option>SeaQuest DSV (1994)</option>
+                    <option>Sega Sports 1 (1994)</option>
+                    <option>Shadow Blasters (1990)</option>
+                    <option>Shadow Dancer: The Secret of Shinobi (1990)</option>
+                    <option>Shadow of the Beast (1991)</option>
+                    <option>Shadow of the Beast II (1992)</option>
+                    <option>Shadowrun (1994)</option>
+                    <option>Shanghai II: Dragon's Eye (1994)</option>
+                    <option>Shaq Fu (1994)</option>
+                    <option>Shining Force (1993)</option>
+                    <option>Shining Force II (1994)</option>
+                    <option>Shining in the Darkness (1991)</option>
+                    <option>Shinobi III: Return of the Ninja Master (1993)</option>
+                    <option>Shove It! ...The Warehouse Game (1990)</option>
+                    <option>Side Pocket (1992)</option>
+                    <option>Simpsons, The: Bart vs. the Space Mutants (1992)</option>
+                    <option>Simpsons, The: Bart's Nightmare (1992)</option>
+                    <option>Skitchin' (1994)</option>
+                    <option>Slaughter Sport (1990)</option>
+                    <option>Socket (1993)</option>
+                    <option>Sol-Deace (1992)</option>
+                    <option>Sonic & Knuckles (1994)</option>
+                    <option>Sonic Spinball (1993)</option>
+                    <option>Sonic the Hedgehog (1991)</option>
+                    <option>Sonic the Hedgehog 2 (1992)</option>
+                    <option>Sonic the Hedgehog 3 (1994)</option>
+                    <option>Sorcerer's Kingdom (1993)</option>
+                    <option>Space Harrier II (1989)</option>
+                    <option>Space Invaders '91 (1991)</option>
+                    <option>Sparkster (1994)</option>
+                    <option>Speedball 2: Brutal Deluxe (1992)</option>
+                    <option>Spider-Man (1991)</option>
+                    <option>Spider-Man and Venom: Maximum Carnage (1994)</option>
+                    <option>Spider-Man and X-Men: Arcade's Revenge (1992)</option>
+                    <option>Spiritual Warfare (1994, unlicensed)</option>
+                    <option>Splatterhouse 2 (1992)</option>
+                    <option>Splatterhouse 3 (1993)</option>
+                    <option>Spot Goes to Hollywood (1994)</option>
+                    <option>Star Control (1991)</option>
+                    <option>Star Trek: Deep Space Nine – Crossroads of Time (1994)</option>
+                    <option>Star Trek: The Next Generation – Echoes from the Past (1994)</option>
+                    <option>Starflight (1991)</option>
+                    <option>Stargate (1994)</option>
+                    <option>Steel Empire (1992)</option>
+                    <option>Steel Talons (1992)</option>
+                    <option>Stormlord (1990)</option>
+                    <option>Street Fighter II': Special Champion Edition (1993)</option>
+                    <option>Street Smart (1991)</option>
+                    <option>Streets of Rage (1991)</option>
+                    <option>Streets of Rage 2 (1992)</option>
+                    <option>Streets of Rage 3 (1994)</option>
+                    <option>Strider (1990)</option>
+                    <option>Sub-Terrania (1994)</option>
+                    <option>Summer Challenge (1993)</option>
+                    <option>Sunset Riders (1993)</option>
+                    <option>Super Baseball 2020 (1993)</option>
+                    <option>Super Battletank: War in the Gulf (1992)</option>
+                    <option>Super Hang-On (1989)</option>
+                    <option>Super High Impact (1991)</option>
+                    <option>Super Hydlide (1990)</option>
+                    <option>Super Monaco GP (1990)</option>
+                    <option>Super Off Road (1992)</option>
+                    <option>Super Smash T.V. (1992)</option>
+                    <option>Super Street Fighter II (1994)</option>
+                    <option>Super Thunder Blade (1989)</option>
+                    <option>Super Volleyball (1991)</option>
+                    <option>Superman (1992)</option>
+                    <option>Sword of Sodan (1990)</option>
+                    <option>Sword of Vermilion (1990)</option>
+                    <option>Syd of Valis (1992)</option>
+                    <option>Sylvester and Tweety in Cagey Capers (1994)</option>
+                    <option>Syndicate (1994)</option>
+                    <option>T2: The Arcade Game (1991)</option>
+                    <option>T2: Terminator 2 – Judgment Day (1993)</option>
+                    <option>Task Force Harrier EX (1991)</option>
+                    <option>Taz in Escape from Mars (1994)</option>
+                    <option>Taz-Mania (1992)</option>
+                    <option>Team USA Basketball (1992)</option>
+                    <option>TechnoClash (1993)</option>
+                    <option>Technocop (1990)</option>
+                    <option>Tecmo Super Baseball (1994)</option>
+                    <option>Tecmo Super Bowl (1993)</option>
+                    <option>Tecmo Super Bowl II: Special Edition (1994)</option>
+                    <option>Tecmo Super NBA Basketball (1993)</option>
+                    <option>Tecmo World Cup (1992)</option>
+                    <option>Teenage Mutant Ninja Turtles: The Hyperstone Heist (1992)</option>
+                    <option>Teenage Mutant Ninja Turtles: Tournament Fighters (1993)</option>
+                    <option>Tel-Tel Stadium (1990)</option>
+                    <option>Test Drive II: The Duel (1992)</option>
+                    <option>Theme Park (1994)</option>
+                    <option>Thomas the Tank Engine & Friends (1993)</option>
+                    <option>Thunder Force II (1989)</option>
+                    <option>Thunder Force III (1990)</option>
+                    <option>Thunder Fox (1991)</option>
+                    <option>Tick, The (1994)</option>
+                    <option>Time Killers (1993)</option>
+                    <option>Tinhead (1993)</option>
+                    <option>Tiny Toon Adventures: ACME All-Stars (1994)</option>
+                    <option>Tiny Toon Adventures: Buster's Hidden Treasure (1993)</option>
+                    <option>ToeJam & Earl (1991)</option>
+                    <option>ToeJam & Earl in Panic on Funkotron (1993)</option>
+                    <option>Toki: Going Ape Spit (1991)</option>
+                    <option>Tom and Jerry: Frantic Antics (1993)</option>
+                    <option>Tommy Lasorda Baseball (1989)</option>
+                    <option>Tony La Russa Baseball (1993)</option>
+                    <option>Top Gear 2 (1994)</option>
+                    <option>Toughman Contest (1994)</option>
+                    <option>Toxic Crusaders (1992)</option>
+                    <option>Toy Story (1994)</option>
+                    <option>Toys (1993)</option>
+                    <option>Trampoline Terror! (1990)</option>
+                    <option>Traysia (1992)</option>
+                    <option>Triple Play: Gold Edition (1994)</option>
+                    <option>Triple Score: 3 Games in 1 (1993)</option>
+                    <option>Trouble Shooter (1991)</option>
+                    <option>Troy Aikman NFL Football (1994)</option>
+                    <option>True Lies (1994)</option>
+                    <option>Truxton (1989)</option>
+                    <option>Turbo OutRun (1992)</option>
+                    <option>Turrican (1991)</option>
+                    <option>Twin Cobra (1991)</option>
+                    <option>Twinkle Tale (1992)</option>
+                    <option>Two Crude Dudes (1992)</option>
+                    <option>Tyrants: Fight Through Time (1992)</option>
+                    <option>Ultimate Mortal Kombat 3 (1994)</option>
+                    <option>Ultimate Soccer (1993)</option>
+                    <option>Universal Soldier (1992)</option>
+                    <option>Urban Strike (1994)</option>
+                    <option>Valis: The Fantasm Soldier (1991)</option>
+                    <option>Valis III (1991)</option>
+                    <option>Vapor Trail (1991)</option>
+                    <option>Vectorman (1994)</option>
+                    <option>Venom/Spider-Man: Separation Anxiety (1994)</option>
+                    <option>Viewpoint (1994)</option>
+                    <option>Virtua Racing (1994)</option>
+                    <option>Virtual Bart (1994)</option>
+                    <option>Virtual Pinball (1993)</option>
+                    <option>Wacky Worlds Creativity Studio (1994)</option>
+                    <option>Wardner (1990)</option>
+                    <option>Warlock (1994)</option>
+                    <option>Warrior of Rome (1991)</option>
+                    <option>Warrior of Rome II (1992)</option>
+                    <option>Warsong (1991)</option>
+                    <option>Wayne Gretzky and the NHLPA All-Stars (1994)</option>
+                    <option>Wayne's World (1993)</option>
+                    <option>Weaponlord (1994)</option>
+                    <option>Wheel of Fortune (1992)</option>
+                    <option>Where in Time Is Carmen Sandiego? (1992)</option>
+                    <option>Where in the World Is Carmen Sandiego? (1992)</option>
+                    <option>Whip Rush (1990)</option>
+                    <option>Williams Arcade's Greatest Hits (1994)</option>
+                    <option>Wimbledon Championship Tennis (1993)</option>
+                    <option>Winter Challenge (1992)</option>
+                    <option>Winter Olympic Games: Lillehammer '94 (1994)</option>
+                    <option>Wiz 'n' Liz (1993)</option>
+                    <option>Wolfchild (1992)</option>
+                    <option>Wolverine: Adamantium Rage (1994)</option>
+                    <option>Wonder Boy in Monster World (1992)</option>
+                    <option>World Championship Soccer (1989)</option>
+                    <option>World Championship Soccer II (1994)</option>
+                    <option>World Class Leader Board Golf (1992)</option>
+                    <option>World Cup USA '94 (1994)</option>
+                    <option>World of Illusion Starring Mickey Mouse and Donald Duck (1992)</option>
+                    <option>World Series Baseball (1994)</option>
+                    <option>World Series Baseball '94 (1994)</option>
+                    <option>World Trophy Soccer (1992)</option>
+                    <option>Worms (1994)</option>
+                    <option>Wrestle War (1991)</option>
+                    <option>WWF Raw (1994)</option>
+                    <option>WWF Super WrestleMania (1992)</option>
+                    <option>WWF WrestleMania: The Arcade Game (1994)</option>
+                    <option>X-Men (1993)</option>
+                    <option>X-Men 2: Clone Wars (1994)</option>
+                    <option>Yogi Bear: Cartoon Capers (1994)</option>
+                    <option>Young Indiana Jones Chronicles (1992)</option>
+                    <option>Ys III: Wanderers from Ys (1991)</option>
+                    <option>Zero the Kamikaze Squirrel (1994)</option>
+                    <option>Zero Tolerance (1994)</option>
+                    <option>Zero Wing (1991)</option>
+                    <option>Zombies Ate My Neighbors (1993)</option>
+                    <option>Zool (1993)</option>
+                    <option>Zoom! (1989)</option>
+                    <option>Zoop (1994)</option>
+                </select>
+                <button>DOWNLOAD PDF</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <h3>SEGA</h3>
+            <p>©SEGA. All Rights Reserved. SEGA and the SEGA logo are registered trademarks of SEGA CORPORATION. SEGA is
+                registered in the U.S. Patent and Trademark Office. All other trademarks, logos and copyrights are
+                property of their respective owners.</p>
+            <!--airlifted from segas official website https://www.sega.com/-->
+        </div>
+        <div>
+            <h3>About</h3>
+            <ul>
+                <li><a href="about.html">Our Story</a></li>
+                <li><a href="consolespecs.html">Console Specs</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Support</h3>
+            <ul>
+                <li><a href="support.html">Trouble Shooting</a></li>
+                <li><a href="support.html">Warranty</a></li>
+                <li><a href="gameguides.html">Game Guides</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
