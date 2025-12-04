@@ -184,6 +184,9 @@ h1, .homecontainer section ul{
     background-color: #669ED5;
     padding: 1rem;
 }
+button.active{
+    background-color: black;
+}
 .homecontainer > :first-child{
     background-color: #041249;
     padding-bottom: 4rem;

@@ -4,11 +4,22 @@ document.addEventListener('DOMContentLoaded', function () {
     const container = slides.querySelector('.slidecontainer');
     const next = document.querySelector('.next');
     const togglers = document.querySelectorAll('.gotoslide li button');
+    const inactive = [document.getElementById('0'), document.getElementById('1'), document.getElementById('2')];
     
     let currentIndex = 0;
     function nextSlide() {
         slides.classList.remove('slide0', 'slide1', 'slide2', 'slide3');
         slides.classList.add('slide' + currentIndex);
+        togglers.forEach((element) => {
+            element.classList.remove('active');
+        });
+        inactive.forEach((element) =>{
+            stringToInt = parseInt(element.id, 10);
+            if(currentIndex = stringToInt){
+                element.classList.add('active');
+            }
+        });
+        
     };
     container.addEventListener('transitionend', function () {//referenced https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Transitions
         if(currentIndex == 3){
