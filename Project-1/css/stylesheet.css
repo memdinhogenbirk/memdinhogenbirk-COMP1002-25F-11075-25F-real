@@ -69,9 +69,11 @@ header nav li a {
     margin: 5rem auto;
     border-radius: 10px;
 }
+
 .supportcontainer section p {
     margin: 1rem;
 }
+
 .peripheralcontainer section h2,
 .genesisguidescontainer h2,
 .supportcontainer h2 {
@@ -421,7 +423,8 @@ https://www.inverse.com/input/guides/gamers-are-rushing-to-scoop-up-retro-tvs-he
 }
 
 .aboutpage a,
-.consolespecscontainer a {
+.consolespecscontainer a,
+.supportcontainer a {
     color: red;
     margin-left: 2rem;
 }
