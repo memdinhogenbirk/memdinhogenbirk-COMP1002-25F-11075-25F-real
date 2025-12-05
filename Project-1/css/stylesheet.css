@@ -76,8 +76,21 @@ header nav li a{
 }
 .gamescontainer{
     display: flex;
-    padding-left: 5rem;
-    width: 90%;
+    justify-content: center;
+    width: 100%;
+}
+.gamescontainer section{
+    border: 1px solid white;
+    padding: 1rem;
+    margin: 2rem 1rem;
+    border-radius: 1rem;
+    height:fit-content;
+}
+.gamescontainer section h2{
+    margin-top: -2rem;
+    background-color: #046599;
+    width: fit-content;
+    padding: 0 .5rem;
 }
 .gamescontainer ol{
     list-style-position: inside;
@@ -317,6 +330,9 @@ https://www.inverse.com/input/guides/gamers-are-rushing-to-scoop-up-retro-tvs-he
 }
 .aboutpage figcaption{
     text-align: center;
+}
+.aboutpage a{
+    color: #0233dd;
 }
 footer{
     display: flex;
