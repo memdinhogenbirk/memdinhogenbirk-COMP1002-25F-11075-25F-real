@@ -310,7 +310,7 @@ button.active {
     background-color: #669ED5;
 }
 
-.homecontainer> :first-child {
+.homecontainer> :first-child {/*different background color for carousel*/
     background-color: #041249;
     padding-bottom: 4rem;
 }
@@ -318,8 +318,8 @@ button.active {
 .homecontainer section div {
     display: flex;
     width: 100vw;
+    flex-wrap: wrap;
 }
-
 /*tv image source, note that the image doesn't seem to exist on the page, but google images found it anyways 
 https://www.inverse.com/input/guides/gamers-are-rushing-to-scoop-up-retro-tvs-heres-what-to-look-for*/
 .homecontainer section div figure h3 {
