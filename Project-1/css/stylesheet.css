@@ -57,7 +57,11 @@ header nav li a {
     padding: 1rem;
     margin: 0;
 }
-
+.privacycontainer {
+    display: block;
+    margin: auto;
+    padding: 5rem;
+}
 .supportcontainer {
     margin: auto;
     padding: 5rem;
