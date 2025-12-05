@@ -57,7 +57,22 @@ header nav li a{
 }
 .peripheralcontainer section h2{
     display: flex;
+    margin: auto;
+    font-size: 50px;
+    width:fit-content;
+    padding: 0 1rem;
+    background-color: #046599;
+    margin-top: -2rem;
+}
+.peripheralcontainer section div{
+    display: flex;
     justify-content: center;
+}
+.peripheralcontainer section {
+    border: 1px solid white;
+    width: 90vw;
+    margin: 5rem auto;
+    border-radius: 10px;
 }
 .gamescontainer{
     display: flex;
@@ -100,6 +115,7 @@ header nav li a{
 }
 .newscontainer section li{
     padding: 1rem;
+    list-style: inside square;
 }
 .newscontainer .blockcontainer{
     background-image: linear-gradient(to left, #669ED5, #081543);
@@ -112,16 +128,27 @@ header nav li a{
 .newscontainer .blockcontainer h2, .newscontainer .blockcontainer h3{
     text-align: center;
 }
-.newscontainer figure{
-    display: block;
-    padding-right: 20rem;
+.newscontainer .blockcontainer h2{
+    font-size: 50px;
+    margin: 0;
+    padding: 1rem 0;
 }
-.newscontainer figure > :first-child{
+.newscontainer figure{
     display: flex;
-    margin-left: 105px;
+    margin: 0;
+}
+.threeimages figure{
+    display: block;
+    width: 700px;
+    padding-right: 0rem;
+    margin-left: 5rem;
+}
+.threeimages figure > :first-child{
+    display: flex;
+    margin-left: 160px;
     padding-bottom: .8rem;
 }
-.newscontainer figure > :last-child{
+.threeimages figure > :last-child{
     padding-left: .5rem;
 }
 .feedbackcontainer{
@@ -197,7 +224,7 @@ button.active{
     background-color: #041249;
     padding-bottom: 4rem;
 }
-.homecontainer section div, .peripheralcontainer section div{
+.homecontainer section div{
     display: flex;
     width: 100vw;
 }
@@ -208,7 +235,7 @@ https://www.inverse.com/input/guides/gamers-are-rushing-to-scoop-up-retro-tvs-he
     margin: 0;
     padding: 1rem 0;
 }
-.homecontainer section div figure{
+.homecontainer section div figure, .peripheralcontainer section figure{
     background-color: #669ED5;
     overflow: hidden;
     border-radius: 10px;
