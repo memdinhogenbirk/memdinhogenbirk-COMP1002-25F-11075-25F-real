@@ -170,6 +170,7 @@ header nav li a {
 .newscontainer section {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .newscontainer section ul {
