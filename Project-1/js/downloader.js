@@ -8,4 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const optionHref = selected.getAttribute('href');//get that href
         downloadButton.setAttribute('href', optionHref);//shove it in the download button anchor
     })
+    downloadButton.addEventListener('click', function () {
+        if (downloadButton.getAttribute('href') === 'null')
+        alert('No Guide Available');//since I only added 2 pdfs, all the other options are gonna give you this alert
+    });
 });

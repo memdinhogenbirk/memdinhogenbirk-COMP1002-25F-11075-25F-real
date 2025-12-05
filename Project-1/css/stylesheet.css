@@ -1,102 +1,130 @@
-html{
+html {
     font-family: sans-serif;
     color: white;
     background-color: #046599;
 }
-body{
+
+body {
     width: 100vw;
     margin: 0;
     padding: 0;
 }
-a{
+
+a {
     color: inherit;
     text-decoration: none;
 }
-ul{
+
+ul {
     list-style: none;
 }
-header{
-    background-color:black;
+
+header {
+    background-color: black;
     font-size: 20px;
     color: white;
     width: 100vw;
     position: relative;
     display: flex;
-    align-items:center;
+    align-items: center;
 }
-header nav{
+
+header nav {
     display: flex;
     justify-content: center;
     width: 80%;
     font-family: Impact, sans-serif;
     margin: .5rem 0;
 }
-header nav a:hover{
+
+header nav a:hover {
     background-image: linear-gradient(to top, #669ED5, grey);
     padding: .5rem 1rem;
     margin: 0;
 }
-header > a{
+
+header>a {
     padding: 0 1rem;
 }
-header nav ul{
+
+header nav ul {
     display: flex;
     margin: 0;
 }
-header nav li a{
+
+header nav li a {
     padding: 1rem;
     margin: 0;
 }
-.supportcontainer{
-    margin-left: 20rem;
-    padding-bottom: 5rem;
+
+.supportcontainer {
+    margin: auto;
+    padding: 5rem;
 }
-.supportcontainer section{
+
+.supportcontainer section {
     display: block;
-    padding: 1rem 0;
+    padding: 0 1rem;
+    border: 1px solid white;
+    margin: 5rem auto;
+    border-radius: 10px;
 }
-.peripheralcontainer section h2, .genesisguidescontainer h2{
+.supportcontainer section p {
+    margin: 1rem;
+}
+.peripheralcontainer section h2,
+.genesisguidescontainer h2,
+.supportcontainer h2 {
     display: flex;
     margin: auto;
     font-size: 50px;
-    width:fit-content;
+    width: fit-content;
     padding: 0 1rem;
     background-color: #046599;
     margin-top: -2rem;
 }
-.peripheralcontainer section div{
+
+.peripheralcontainer section div {
     display: flex;
     justify-content: center;
 }
+
 .peripheralcontainer section {
     border: 1px solid white;
     width: 90vw;
     margin: 5rem auto;
     border-radius: 10px;
 }
-.gamescontainer{
+
+.gamescontainer {
     display: flex;
     justify-content: center;
     width: 100%;
 }
-.gamescontainer section{
+
+.gamescontainer section,
+.consolespecscontainer section {
     border: 1px solid white;
     padding: 1rem;
     margin: 2rem 1rem;
     border-radius: 1rem;
-    height:fit-content;
+    height: fit-content;
 }
-.gamescontainer section h2{
+
+.gamescontainer section h2,
+.consolespecscontainer section h2 {
     margin-top: -2rem;
     background-color: #046599;
     width: fit-content;
     padding: 0 .5rem;
 }
-.gamescontainer ol{
+
+.gamescontainer ol {
     list-style-position: inside;
     padding-left: 0;
 }
-.genesisguidescontainer{
+
+.genesisguidescontainer {
     display: block;
     margin: 4rem auto;
     height: 500px;
@@ -104,89 +132,112 @@ header nav li a{
     border-radius: 1rem;
     padding: 0 1rem;
 }
-.blockcontainer{
+
+.blockcontainer {
     display: block;
 }
-.flexcontainer{
+
+.flexcontainer {
     display: flex;
     justify-content: center;
 }
-.consolespecscontainer{
+
+.consolespecscontainer {
     display: flex;
     justify-content: center;
 }
-.consolespecscontainer section ul{
+
+.consolespecscontainer section ul {
     list-style-position: inside;
     padding-left: 0;
 }
-.newscontainer article{
+
+.newscontainer article {
     padding-left: 4rem;
     padding-top: 10rem;
     padding-bottom: 10rem;
 }
-.newscontainer section{
+
+.newscontainer section {
     display: flex;
     align-items: center;
 }
-.newscontainer section ul{
+
+.newscontainer section ul {
     padding: 0;
 }
-.newscontainer .blockcontainer > :first-child img{
+
+.newscontainer .blockcontainer> :first-child img {
     padding-left: 20rem;
 }
-.newscontainer section li{
+
+.newscontainer section li {
     padding: 1rem;
     list-style: inside square;
 }
-.newscontainer .blockcontainer{
+
+.newscontainer .blockcontainer {
     background-image: linear-gradient(to left, #669ED5, #081543);
 }
-.newscontainer .blockcontainer > :nth-child(2){
+
+.newscontainer .blockcontainer> :nth-child(2) {
     text-align: left;
     background-image: linear-gradient(to right, #669ED5, #081543);
     width: 100vw;
 }
-.newscontainer .blockcontainer h2, .newscontainer .blockcontainer h3{
+
+.newscontainer .blockcontainer h2,
+.newscontainer .blockcontainer h3 {
     text-align: center;
 }
-.newscontainer .blockcontainer h2{
+
+.newscontainer .blockcontainer h2 {
     font-size: 50px;
     margin: 0;
     padding: 1rem 0;
 }
-.newscontainer figure{
+
+.newscontainer figure {
     display: flex;
     margin: 0;
 }
-.threeimages figure{
+
+.threeimages figure {
     display: block;
     width: 700px;
     padding-right: 0rem;
     margin-left: 5rem;
 }
-.threeimages figure > :first-child{
+
+.threeimages figure> :first-child {
     display: flex;
     margin-left: 160px;
     padding-bottom: .8rem;
 }
-.threeimages figure > :last-child{
+
+.threeimages figure> :last-child {
     padding-left: .5rem;
 }
-.feedbackcontainer{
+
+.feedbackcontainer {
     display: flex;
     flex-direction: column;
 }
-main{
+
+main {
     display: flex;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
 }
-.homecontainer{
+
+.homecontainer {
     display: block;
     width: 100vw;
 }
-h1, .homecontainer section ul{
+
+h1,
+.homecontainer section ul {
     display: flex;
     justify-content: center;
     width: 100vw;
@@ -194,7 +245,8 @@ h1, .homecontainer section ul{
     margin: 0 auto;
     font-family: Impact, sans-serif;
 }
-#scrollingimages{
+
+#scrollingimages {
     margin: 0 auto;
     padding-top: 3rem;
     width: 70vw;
@@ -202,11 +254,13 @@ h1, .homecontainer section ul{
     overflow: hidden;
     position: relative;
 }
-#scrollingimages img{
+
+#scrollingimages img {
     width: 70vw;
     height: 35vw;
 }
-.slidecontainer{
+
+.slidecontainer {
     display: flex;
     width: 280vw;
     height: 35vw;
@@ -214,19 +268,24 @@ h1, .homecontainer section ul{
     left: 0;
     transition: left 0.7s ease-in-out;
 }
-.slide0 .slidecontainer{
+
+.slide0 .slidecontainer {
     left: 0;
 }
-.slide1 .slidecontainer{
+
+.slide1 .slidecontainer {
     left: -70vw;
 }
-.slide2 .slidecontainer{
+
+.slide2 .slidecontainer {
     left: -140vw;
 }
-.slide3 .slidecontainer{
+
+.slide3 .slidecontainer {
     left: -210vw;
 }
-.gotoslide button{
+
+.gotoslide button {
     padding: 1rem;
     margin: 0;
     color: white;
@@ -234,29 +293,36 @@ h1, .homecontainer section ul{
     background-color: grey;
     font: inherit;
 }
-.gotoslide button:hover{
+
+.gotoslide button:hover {
     background-color: #669ED5;
     padding: 1rem;
 }
-button.active{
+
+button.active {
     background-color: #669ED5;
 }
-.homecontainer > :first-child{
+
+.homecontainer> :first-child {
     background-color: #041249;
     padding-bottom: 4rem;
 }
-.homecontainer section div{
+
+.homecontainer section div {
     display: flex;
     width: 100vw;
 }
+
 /*tv image source, note that the image doesn't seem to exist on the page, but google images found it anyways 
 https://www.inverse.com/input/guides/gamers-are-rushing-to-scoop-up-retro-tvs-heres-what-to-look-for*/
-.homecontainer section div figure h3{
+.homecontainer section div figure h3 {
     background-image: linear-gradient(to bottom, #669ED5, #081543);
     margin: 0;
     padding: 1rem 0;
 }
-.homecontainer section div figure, .peripheralcontainer section figure{
+
+.homecontainer section div figure,
+.peripheralcontainer section figure {
     background-color: #669ED5;
     overflow: hidden;
     border-radius: 10px;
@@ -264,13 +330,15 @@ https://www.inverse.com/input/guides/gamers-are-rushing-to-scoop-up-retro-tvs-he
     margin: 1rem auto;
     position: relative;
 }
-.interactive{
+
+.interactive {
     position: absolute;
     inset: 0;
     opacity: 0;
     width: 400px;
 }
-.interactive img{
+
+.interactive img {
     width: 325px;
     height: 246px;
     position: relative;
@@ -278,42 +346,50 @@ https://www.inverse.com/input/guides/gamers-are-rushing-to-scoop-up-retro-tvs-he
     top: 93.5px;
     border-radius: 15px;
 }
-.interactive:hover{
+
+.interactive:hover {
     opacity: 1;
     background-image: url('../images/oldtv.png');
     background-size: contain;
     width: 400px;
 }
-.arrowscontainer{
+
+.arrowscontainer {
     position: absolute;
     top: 21rem;
 }
-.arrowscontainer button{
+
+.arrowscontainer button {
     font-size: 100px;
     font-family: 'Arial Narrow', sans-serif;
-    color:#0233dd;
+    color: #0233dd;
     background-color: white;
     border-radius: 100px;
     padding: 0 2rem;
     position: absolute;
 }
-.arrowscontainer button:hover{
+
+.arrowscontainer button:hover {
     background-color: #669ED5;
 }
-.previous{
+
+.previous {
     left: 0;
 }
-.next{
+
+.next {
     right: 0;
 }
-.aboutpage{
+
+.aboutpage {
     width: 100vw;
     justify-content: center;
     display: flex;
     background-image: linear-gradient(to top, #305082, #081543);
     padding-bottom: 3rem;
 }
-.aboutpage article{
+
+.aboutpage article {
     display: block;
     width: 90vw;
     margin: auto;
@@ -322,47 +398,60 @@ https://www.inverse.com/input/guides/gamers-are-rushing-to-scoop-up-retro-tvs-he
     overflow: hidden;
     margin-top: 1rem;
 }
-.aboutpage article>div{
-    display:flex;
+
+.aboutpage article>div {
+    display: flex;
 }
-.aboutpage section h2{
+
+.aboutpage section h2 {
     display: flex;
     justify-content: center;
     background-image: linear-gradient(to top, #7C8298, #2D3D5D);
     font-size: 50px;
     margin: 0;
 }
-.aboutpage figure img{
+
+.aboutpage figure img {
     width: 30vw;
     height: 39vw;
 }
-.aboutpage figcaption{
+
+.aboutpage figcaption {
     text-align: center;
 }
-.aboutpage a{
-    color: #0233dd;
+
+.aboutpage a,
+.consolespecscontainer a {
+    color: red;
+    margin-left: 2rem;
 }
-footer{
+
+footer {
     display: flex;
     justify-content: center;
     padding: 1rem 2rem;
     background-color: #0D1126;
     color: white;
 }
-footer div{
+
+footer div {
     padding: 0 2rem;
 }
-footer div ul{
+
+footer div ul {
     padding: 0;
 }
-footer > :first-child{
+
+footer> :first-child {
     width: 30%;
     padding-right: 10rem;
 }
-footer li{
+
+footer li {
     padding-bottom: 1rem;
 }
-h1{
+
+h1 {
     background-color: #0233dd;
     font-size: 60px;
     color: white;
