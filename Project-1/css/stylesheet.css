@@ -321,6 +321,8 @@ button.active {
 .homecontainer section div {
     display: flex;
     width: 100vw;
+}
+.homecontainer > :last-child div{
     flex-wrap: wrap;
 }
 /*tv image source, note that the image doesn't seem to exist on the page, but google images found it anyways 
