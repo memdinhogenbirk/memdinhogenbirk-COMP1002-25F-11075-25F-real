@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     const slides = document.getElementById('scrollingimages');//acquire the main div that holds all the slides, id so class can be used to change slides
     const previous = document.querySelector('.previous');//previous/back button
-    const container = slides.querySelector('.slidecontainer');//acquire the container div that holds all the slides
     const next = document.querySelector('.next');//next/forward button
+    const container = slides.querySelector('.slidecontainer');//acquire the container div that holds all the slides
     const togglers = document.querySelectorAll('.gotoslide li button');//acquire each header button
     
     let currentIndex = 0;

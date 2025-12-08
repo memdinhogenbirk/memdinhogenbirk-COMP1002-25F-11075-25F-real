@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>GENESIS</title>
+    <title>FEEDBACK</title>
     <link rel="icon" type="image/Segasmol" href="images/Segasmol.png">
     <link href="css/stylesheet.css" rel="stylesheet" media="screen"/>
+    <script src="js/feedback.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
@@ -30,19 +31,23 @@
                     <legend>
                         <h2>Please fill out the from below</h2>
                     </legend>
-                    <label for="name">Your Name</label><br>
-                    <input type="text" id="fname" name="fname" placeholder="First Name">
-                    <input type="text" id="lname" name="lname" placeholder="Last Name"><br>
-                    <label for="email">Your Email</label><br>
-                    <input type="text" id="email" name="email" placeholder="Email"><br>
+                    <label for="name">Your Name (required)</label><br>
+                    <input type="text" id="fname" name="fname" placeholder="First Name" required>
+                    <input type="text" id="lname" name="lname" placeholder="Last Name" required><br>
+                    <label for="email">Your Email (required)</label><br>
+                    <input type="text" id="email" name="email" placeholder="Email" required><br>
                     <label for="phone">Your Phone Number (optional)</label><br>
                     <input type="text" id="phone" name="phone" placeholder="000-000-0000"><br>
-                    <label for="feedback">Enter Your Feedback Here</label><br>
+                    <label for="feedback">Enter Your Feedback Here (required)</label><br>
                     <textarea id="feedback" name="feedback" rows="20" cols="60" required></textarea><br>
-                    <input type="submit" value="Submit">
-                    <input type="Reset" value="Reset">
+                    <input type="button" value="Submit" id="submit"><!--given the lack of php, I am using javascript to handle the submission-->
+                    <input type="Reset" value="Reset" id="reset">
                 </fieldset>
             </form>
+            <div class="" id="thankyoumsg">
+                <h2>Thank you for your feedback fname!</h2>
+                <p>Your feedback will be passed on to the appropriate team.<br> We appreciate you taking the time to share your thoughts with us.</p>
+            </div>
         </div>
     </main>
     <footer>
