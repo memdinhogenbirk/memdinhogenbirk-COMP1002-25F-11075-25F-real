@@ -57,6 +57,26 @@ header nav li a {
     padding: 1rem;
     margin: 0;
 }
+.feedbackcontainer form fieldset {
+    position: relative;
+    width:95%;
+    margin: auto;
+}
+.feedbackcontainer form fieldset div {
+    position: absolute;
+    width: 95%;
+    height: 100%;
+    left: 0;
+    margin-left: .5rem;
+    top: 0;
+    background-color: #046599;
+    opacity: 0;
+    pointer-events: none;
+}
+.feedbackcontainer form fieldset div.cover {
+    opacity: 1;
+    pointer-events: visible;
+}
 .privacycontainer {
     display: block;
     margin: auto;
