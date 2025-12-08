@@ -62,6 +62,15 @@ header nav li a {
     margin: auto;
     padding: 5rem;
 }
+.privacycontainer ul {
+    list-style-type: disc;
+}
+.numerals ol li {
+    list-style-type: lower-roman;
+}
+.alphabetical ol li {
+    list-style-type: lower-alpha;
+}
 .supportcontainer {
     margin: auto;
     padding: 5rem;
@@ -454,6 +463,7 @@ https://www.inverse.com/input/guides/gamers-are-rushing-to-scoop-up-retro-tvs-he
 
 .aboutpage a,
 .consolespecscontainer a,
+.privacycontainer a,
 .supportcontainer a {
     color: red;
     margin-left: 2rem;
