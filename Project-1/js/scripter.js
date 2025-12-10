@@ -10,10 +10,11 @@ document.addEventListener('DOMContentLoaded', function () {
         slides.classList.remove('slide0', 'slide1', 'slide2', 'slide3');//third slide is duplicate of first for transition purposes
         slides.classList.add('slide' + currentIndex);//change slide by changing class, add current index number onto 'slide'
         togglers.forEach((element) => {//remove active class from all toggler buttons before adding it back to one of them below
-            element.classList.remove('active');
+            element.classList.remove('active');//removes active class from all buttons
         });
-        togglers.forEach((element) => {//was trying to use parse but realized I could just do this, it works and saved me time
+        togglers.forEach((element) => {//was trying to use parse in some way but realized I could just do this, it works and saved me time
         if(element.id == '0' && currentIndex == 0){
+            //when id an current index match, add active class to that button, CSS highlights it, regardless if toggled by next/previous or by toggler buttons
                 element.classList.add('active');
             };
         if(element.id == '1' && currentIndex == 1){
@@ -24,14 +25,14 @@ document.addEventListener('DOMContentLoaded', function () {
             };
         });
     };
-    container.addEventListener('transitionend', function () {//referenced https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Transitions
+    container.addEventListener('transitionend', function () {//referenced https://developer.mozilla.org/en-US/docs/Web/API/Element/transitionend_event
         if(currentIndex == 3){
             container.style.transition = 'none';//take away transition so the 4th image and the third image replace eachother instantly
-            currentIndex = 0;
-            nextSlide();
+            currentIndex = 0;//reset current index to 0
+            nextSlide();//run next slide to change class back to first slide
             void container.offsetWidth;
             //^this is apparently a common way to force the browser to apply css before continuing with the code. In truth, I hate that this works
-            //I googled "easiest way to force css to apply before continuing with javascript code"
+            //I googled "easiest way to force css to apply before continuing with javascript code", I got this
             container.style.transition = 'left 0.7s ease-in-out';//put back transition so everything keeps working as intended
         }
     });
