@@ -5,14 +5,14 @@
 <head>
     <meta charset="utf-8" />
     <title>SEGA GENESIS</title>
-    <link rel="icon" type="image/Segasmol" href="images/Segasmol.png">
+    <link rel="icon" type="image/Segasmol" href="images/Segasmol.png"><!--sega logo (shrunk down by me) sourced from https://logos-world.net/sega-logo/-->
     <link href="css/stylesheet.css" rel="stylesheet" media="screen" />
-    <script src="js/scripter.js"></script>
+    <script src="js/scripter.js"></script><!--this javascript file handles the image slider (carousel) on the homepage-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
-    <header>
+    <header><!--header common to every page, ideally would do this with PHP but due to GitPages, I've copied and pasted it. Pain for changes but oh well-->
         <a href="home.html"><img src="images/Sega-Genesis-Logo.png" width="100px"></a>
         <!--image source https://gamerant.com/reasons-sega-genesis-better-snes-super-nintendo/-->
         <nav>
@@ -24,16 +24,18 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main><!--main css displays as a flex, divs are used to structure the layout-->
         <div>
-            <h1>GENESIS DOES WHAT NINTENDON'T</h1>
-            <div class="homecontainer">
+            <h1>GENESIS DOES WHAT NINTENDON'T</h1><!--classic sega shade throwing-->
+            <div class="homecontainer"><!--class for controlling the majority of the homepage layout-->
                 <section>
-                    <div class="arrowscontainer">
-                        <button class="previous">&lt;</button>
+                    <div class="arrowscontainer"><!--class for layout control of next and previous arrows on carousel-->
+                        <button class="previous">&lt;</button><!--cant use "<>" so I used the HTML entities &lt; and &gt;-->
                         <button class="next">&gt;</button>
                     </div>
                     <div class="slide0" id="scrollingimages">
+                        <!--the class here is used to apply different positions to the container "slidecontainer" (carousel)
+                        slide0, slide1, slide2, etc. all move the container by the width of the container/images (see javascript and CSS)-->
                         <div class="slidecontainer">
                             <div>
                                 <img src="images/Sega_Genesis_Model_1.webp" alt="Sega Genesis Model 1">
