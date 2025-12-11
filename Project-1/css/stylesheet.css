@@ -345,6 +345,9 @@ h1, .homecontainer section ul {/*h1 and homecontainer section ul just happened t
     overflow: hidden;
     margin-top: 1rem;
 }
+.aboutpage p{
+    padding: 0 0.5rem;
+}
 .aboutpage article>div {display: flex;}
 .aboutpage section h2 {
     background-image: linear-gradient(to top, #7C8298, #2D3D5D);
