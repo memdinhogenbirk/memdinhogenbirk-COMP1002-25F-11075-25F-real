@@ -293,6 +293,7 @@ h1, .homecontainer section ul {/*h1 and homecontainer section ul just happened t
     align-items: center;
     flex-wrap: wrap;
 }
+.newscontainer i{margin-left: 50%; line-height: 40px;}
 .newscontainer section ul {padding: 0;}
 .newscontainer .blockcontainer> :first-child img {padding-left: 20rem;}/*32x image needed a nudge*/
 .newscontainer section li {
