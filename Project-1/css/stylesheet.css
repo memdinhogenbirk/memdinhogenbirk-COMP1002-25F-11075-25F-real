@@ -1,4 +1,5 @@
 @charset "utf-8";
+/*global controls*/
 html {
     font-family: sans-serif;
     color: white;
@@ -9,11 +10,24 @@ body {
     margin: 0;
     padding: 0;
 }
+main {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
 a {
     color: inherit;
     text-decoration: none;
 }
 ul {list-style: none;}
+h1 {
+    background-color: #0233dd;
+    font-size: 60px;
+    color: white;
+}
+.blockcontainer {display: block;}/*generic class for making elements block-level*/
+/*head controls*/
 header {
     background-color: black;
     font-size: 20px;
@@ -24,8 +38,6 @@ header {
     align-items: center;
 }
 header nav {
-    display: flex;
-    justify-content: center;
     width: 80%;
     font-family: Impact, sans-serif;
     margin: .5rem 0;
@@ -45,6 +57,115 @@ header nav li a {
     padding: 1rem;
     margin: 0;
 }
+/*home page controls*/
+.homecontainer {
+    display: block;
+    width: 100vw;
+}
+h1, .homecontainer section ul {/*h1 and homecontainer section ul just happened to work with the same CSS, so consolidated to reduce lines*/
+    width: 100vw;
+    padding: 0;
+    margin: 0 auto;
+    font-family: Impact, sans-serif;
+}
+#scrollingimages {/*carousel container, sized to hide overflowing images from slidecontainer*/
+    margin: 0 auto;
+    padding-top: 3rem;
+    width: 70vw;
+    height: 35vw;
+    overflow: hidden;
+    position: relative;
+}
+#scrollingimages img {/*carousel images sized*/
+    width: 70vw;
+    height: 35vw;
+}
+.slidecontainer {/*container for all images in carousel, has the images lined up left to right, each taking up 70vw*/
+    display: flex;
+    width: 280vw;/*4 images(3 and 1 duplicate for circle around) 4 x 70 = 280*/
+    height: 35vw;
+    position: absolute;
+    left: 0;
+    transition: left 0.7s ease-in-out;
+}
+.slide0 .slidecontainer {left: 0;}
+.slide1 .slidecontainer {left: -70vw;}
+.slide2 .slidecontainer {left: -140vw;}
+.slide3 .slidecontainer {left: -210vw;}
+.gotoslide button {/*heading buttons for carousel, default appearance*/
+    padding: 1rem;
+    margin: 0;
+    color: white;
+    border: none;
+    background-color: grey;
+    font: inherit;
+}
+.gotoslide button:hover {/*needed padding to keep button size consistent on hover*/
+    padding: 1rem;
+}
+.homecontainer> :first-child {/*different background color for carousel*/
+    background-color: #041249;
+    padding-bottom: 4rem;
+}
+.homecontainer section div {
+    display: flex;
+    width: 100vw;
+}
+.homecontainer > :last-child div{flex-wrap: wrap;}/*wrap only for second section div*/
+.homecontainer section div figure h3 {
+    background-image: linear-gradient(to bottom, #669ED5, #081543);
+    margin: 0;
+    padding: 1rem 0;
+}
+.homecontainer section div figure, .peripheralcontainer section figure {/*again, two elements that share all the same CSS, so consolidated to reduce lines*/
+    overflow: hidden;
+    border-radius: 10px;
+    text-align: center;
+    margin: 1rem auto;
+    position: relative;
+}
+.interactive {/*container for interactive hover gifs*/
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    width: 400px;
+}
+.interactive img {/*styling for gifs that pop up when you hover over the top picks*/
+    width: 325px;
+    height: 246px;
+    position: relative;
+    left: 38px;
+    top: 93.5px;
+    border-radius: 15px;
+}
+.interactive:hover {/*tv image applied to spice up the hover images, no transition, would have had to do this differently if I wanted to use movement*/
+    opacity: 1;
+    background-image: url('../images/oldtv.png');
+    /*tv image source, note that the image doesn't seem to exist on the page, but google images found it anyways 
+    https://www.inverse.com/input/guides/gamers-are-rushing-to-scoop-up-retro-tvs-heres-what-to-look-for*/
+    background-size: contain;
+    width: 400px;
+}
+.arrowscontainer {/*container for both arrow buttons*/
+    position: absolute;
+    top: 21rem;
+}
+.arrowscontainer button {/*container for styling for both arrow buttons*/
+    font-size: 100px;
+    font-family: 'Arial Narrow', sans-serif;
+    color: #0233dd;
+    background-color: white;
+    border-radius: 100px;
+    padding: 0 2rem;
+    position: absolute;
+}
+.previous {left: 0;}/*individual arrow button controls for carousel*/
+.next {right: 0;}
+/*feedback page controls*/
+.feedbackcontainer {
+    display: flex;
+    flex-direction: column;
+}
 .feedbackcontainer form fieldset {
     position: relative;
     width:95%;
@@ -57,7 +178,6 @@ header nav li a {
     left: 0;
     margin-left: .5rem;
     top: 0;
-    background-color: #046599;
     opacity: 0;
     pointer-events: none;
 }
@@ -65,14 +185,16 @@ header nav li a {
     opacity: 1;
     pointer-events: visible;
 }
+/*privacy page controls*/
 .privacycontainer {
     display: block;
     margin: auto;
     padding: 5rem;
 }
 .privacycontainer ul {list-style-type: disc;}
-.numerals ol li {list-style-type: lower-roman;}
+.numerals ol li {list-style-type: lower-roman;}/*mimicing original sega privacy policy layout, some lists are lower roman, others lower alpha, some are just bullets*/
 .alphabetical ol li {list-style-type: lower-alpha;}
+/*support page controls*/
 .supportcontainer {
     margin: auto;
     padding: 5rem;
@@ -87,20 +209,16 @@ header nav li a {
 .supportcontainer section p {
     margin: 1rem;
 }
-.peripheralcontainer section h2,
-.genesisguidescontainer h2,
-.supportcontainer h2 {
+/*peripherals page controls*/
+.peripheralcontainer section h2, .genesisguidescontainer h2, .supportcontainer h2 {/*another group of elements with shared CSS, consolidated for reduced lines*/
     display: flex;
     margin: auto;
     font-size: 50px;
     width: fit-content;
     padding: 0 1rem;
-    background-color: #046599;
     margin-top: -2rem;
 }
 .peripheralcontainer section > div {
-    display: flex;
-    justify-content: center;
     flex-wrap: wrap;
 }
 .peripheralcontainer section {
@@ -108,187 +226,6 @@ header nav li a {
     width: 90vw;
     margin: 5rem auto;
     border-radius: 10px;
-}
-.gamescontainer {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    flex-wrap: wrap;
-}
-.gamescontainer section,
-.consolespecscontainer section {
-    border: 1px solid white;
-    padding: 1rem;
-    margin: 2rem 1rem;
-    border-radius: 1rem;
-    height: fit-content;
-}
-.gamescontainer section h2,
-.consolespecscontainer section h2 {
-    margin-top: -2rem;
-    background-color: #046599;
-    width: fit-content;
-    padding: 0 .5rem;
-}
-.gamescontainer ol {
-    list-style-position: inside;
-    padding-left: 0;
-}
-.genesisguidescontainer {
-    display: block;
-    margin: 4rem auto;
-    height: 500px;
-    border: 1px solid white;
-    border-radius: 1rem;
-    padding: 0 1rem;
-}
-.blockcontainer {display: block;}
-.newscontainer {
-    display: flex;
-    justify-content: center;
-}
-.consolespecscontainer {
-    display: flex;
-    justify-content: center;
-}
-.consolespecscontainer section ul {
-    list-style-position: inside;
-    padding-left: 0;
-}
-.newscontainer article {
-    padding-left: 4rem;
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-}
-.newscontainer section {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.newscontainer section ul {padding: 0;}
-.newscontainer .blockcontainer> :first-child img {padding-left: 20rem;}
-.newscontainer section li {
-    padding: 1rem;
-    list-style: inside square;
-}
-.newscontainer .blockcontainer {background-image: linear-gradient(to left, #669ED5, #081543);}
-.newscontainer .blockcontainer> :nth-child(2) {
-    text-align: left;
-    background-image: linear-gradient(to right, #669ED5, #081543);
-    width: 100vw;
-}
-.newscontainer .blockcontainer h2,
-.newscontainer .blockcontainer h3 {text-align: center;}
-.newscontainer .blockcontainer h2 {
-    font-size: 50px;
-    margin: 0;
-    padding: 1rem 0;
-}
-.newscontainer figure {
-    display: flex;
-    margin: 0;
-}
-.threeimages figure {
-    display: block;
-    width: 700px;
-    padding-right: 0rem;
-    margin-left: 5rem;
-}
-.threeimages figure> :first-child {
-    display: flex;
-    margin-left: 160px;
-    padding-bottom: .8rem;
-}
-.threeimages figure> :last-child {padding-left: .5rem;}
-.feedbackcontainer {
-    display: flex;
-    flex-direction: column;
-}
-main {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-}
-.homecontainer {
-    display: block;
-    width: 100vw;
-}
-h1,
-.homecontainer section ul {
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-    padding: 0;
-    margin: 0 auto;
-    font-family: Impact, sans-serif;
-}
-h1 {
-    background-color: #0233dd;
-    font-size: 60px;
-    color: white;
-}
-#scrollingimages {
-    margin: 0 auto;
-    padding-top: 3rem;
-    width: 70vw;
-    height: 35vw;
-    overflow: hidden;
-    position: relative;
-}
-#scrollingimages img {
-    width: 70vw;
-    height: 35vw;
-}
-.slidecontainer {
-    display: flex;
-    width: 280vw;
-    height: 35vw;
-    position: absolute;
-    left: 0;
-    transition: left 0.7s ease-in-out;
-}
-.slide0 .slidecontainer {left: 0;}
-.slide1 .slidecontainer {left: -70vw;}
-.slide2 .slidecontainer {left: -140vw;}
-.slide3 .slidecontainer {left: -210vw;}
-.gotoslide button {
-    padding: 1rem;
-    margin: 0;
-    color: white;
-    border: none;
-    background-color: grey;
-    font: inherit;
-}
-.gotoslide button:hover {
-    background-color: #669ED5;
-    padding: 1rem;
-}
-button.active {background-color: #669ED5;}
-.homecontainer> :first-child {/*different background color for carousel*/
-    background-color: #041249;
-    padding-bottom: 4rem;
-}
-.homecontainer section div {
-    display: flex;
-    width: 100vw;
-}
-.homecontainer > :last-child div{flex-wrap: wrap;}/*wrap only for second section div*/
-/*tv image source, note that the image doesn't seem to exist on the page, but google images found it anyways 
-https://www.inverse.com/input/guides/gamers-are-rushing-to-scoop-up-retro-tvs-heres-what-to-look-for*/
-.homecontainer section div figure h3 {
-    background-image: linear-gradient(to bottom, #669ED5, #081543);
-    margin: 0;
-    padding: 1rem 0;
-}
-.homecontainer section div figure,
-.peripheralcontainer section figure {
-    background-color: #669ED5;
-    overflow: hidden;
-    border-radius: 10px;
-    text-align: center;
-    margin: 1rem auto;
-    position: relative;
 }
 .peripheralinfo {
     position: absolute;
@@ -308,45 +245,89 @@ https://www.inverse.com/input/guides/gamers-are-rushing-to-scoop-up-retro-tvs-he
 }
 .peripheralinfo ul {
     list-style-type: square;
-    background-color: #669ED5;
     margin-top: 0;
 }
-.interactive {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    width: 400px;
+/*games page controls*/
+.gamescontainer {
+    width: 100%;
+    flex-wrap: wrap;
 }
-.interactive img {
-    width: 325px;
-    height: 246px;
-    position: relative;
-    left: 38px;
-    top: 93.5px;
-    border-radius: 15px;
+.gamescontainer section, .consolespecscontainer section {
+    border: 1px solid white;
+    padding: 1rem;
+    margin: 2rem 1rem;
+    border-radius: 1rem;
+    height: fit-content;
 }
-.interactive:hover {
-    opacity: 1;
-    background-image: url('../images/oldtv.png');
-    background-size: contain;
-    width: 400px;
+.gamescontainer section h2, .consolespecscontainer section h2 {
+    margin-top: -2rem;
+    width: fit-content;
+    padding: 0 .5rem;
 }
-.arrowscontainer {
-    position: absolute;
-    top: 21rem;
+.gamescontainer ol {
+    list-style-position: inside;
+    padding-left: 0;
 }
-.arrowscontainer button {
-    font-size: 100px;
-    font-family: 'Arial Narrow', sans-serif;
-    color: #0233dd;
-    background-color: white;
-    border-radius: 100px;
-    padding: 0 2rem;
-    position: absolute;
+/*game guides page controls*/
+.genesisguidescontainer {
+    display: block;
+    margin: 4rem auto;
+    height: 500px;
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding: 0 1rem;
 }
-.arrowscontainer button:hover {background-color: #669ED5;}
-.previous {left: 0;}
-.next {right: 0;}
+/*console specs page controls*/
+.consolespecscontainer section ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+/*news page controls*/
+.newscontainer article {
+    padding-left: 4rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+.newscontainer section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.newscontainer section ul {padding: 0;}
+.newscontainer .blockcontainer> :first-child img {padding-left: 20rem;}/*32x image needed a nudge*/
+.newscontainer section li {
+    padding: 1rem;
+    list-style: inside square;
+}
+.newscontainer .blockcontainer {background-image: linear-gradient(to left, #669ED5, #081543);}/*gradient asthetic goes one way for two of the articles, one the other way*/
+.newscontainer .blockcontainer> :nth-child(2) {
+    text-align: left;
+    background-image: linear-gradient(to right, #669ED5, #081543);/*said other way*/
+    width: 100vw;
+}
+.newscontainer .blockcontainer h2, .newscontainer .blockcontainer h3 {text-align: center;}
+.newscontainer .blockcontainer h2 {
+    font-size: 50px;
+    margin: 0;
+    padding: 1rem 0;
+}
+.newscontainer figure {
+    display: flex;
+    margin: 0;
+}
+.threeimages figure {
+    display: block;
+    width: 700px;
+    padding-right: 0rem;
+    margin-left: 5rem;
+}
+.threeimages figure> :first-child {/*in the three image pyramid, the first image is pushed right to center it with the other two images*/
+    display: flex;
+    margin-left: 160px;
+    padding-bottom: .8rem;
+}
+.threeimages figure> :last-child {padding-left: .5rem;}
+/*about page controls*/
 .aboutpage {
     width: 100vw;
     justify-content: center;
@@ -365,8 +346,6 @@ https://www.inverse.com/input/guides/gamers-are-rushing-to-scoop-up-retro-tvs-he
 }
 .aboutpage article>div {display: flex;}
 .aboutpage section h2 {
-    display: flex;
-    justify-content: center;
     background-image: linear-gradient(to top, #7C8298, #2D3D5D);
     font-size: 50px;
     margin: 0;
@@ -376,16 +355,12 @@ https://www.inverse.com/input/guides/gamers-are-rushing-to-scoop-up-retro-tvs-he
     height: 39vw;
 }
 .aboutpage figcaption {text-align: center;}
-.aboutpage a,
-.consolespecscontainer a,
-.privacycontainer a,
-.supportcontainer a {
+.aboutpage a, .consolespecscontainer a, .privacycontainer a, .supportcontainer a {
     color: red;
     margin-left: 2rem;
 }
+/*footer controls*/
 footer {
-    display: flex;
-    justify-content: center;
     padding: 1rem 2rem;
     background-color: #0D1126;
     color: white;
@@ -397,3 +372,14 @@ footer> :first-child {
     padding-right: 10rem;
 }
 footer li {padding-bottom: 1rem;}
+/*consolidated elements using same controls*/
+.gotoslide button:hover, button.active, .homecontainer section div figure, .peripheralcontainer section figure, .peripheralinfo ul, .arrowscontainer button:hover {
+    background-color: #669ED5;
+}
+.feedbackcontainer form fieldset div, .gamescontainer section h2, .consolespecscontainer section h2, .peripheralcontainer section h2, .genesisguidescontainer h2, .supportcontainer h2 {
+    background-color: #046599;
+}
+footer, .aboutpage section h2, .newscontainer, .consolespecscontainer, .gamescontainer, .peripheralcontainer section > div, h1, .homecontainer section ul, header nav {
+    display: flex;
+    justify-content: center;
+}
