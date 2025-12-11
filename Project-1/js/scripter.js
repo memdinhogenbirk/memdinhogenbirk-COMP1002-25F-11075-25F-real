@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
             void container.offsetWidth;
             //^this is apparently a common way to force the browser to apply css before continuing with the code. In truth, I hate that this works
             //I googled "easiest way to force css to apply before continuing with javascript code", I got this
+            //google sourced the info from https://stackoverflow.com/questions/60686489/what-purpose-does-void-element-offsetwidth-serve
             container.style.transition = 'left 0.7s ease-in-out';//put back transition so everything keeps working as intended
         }
     });
