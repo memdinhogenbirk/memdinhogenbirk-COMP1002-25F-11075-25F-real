@@ -2,8 +2,34 @@ OVERVIEW
 I elected to make my site about the SEGA GENESIS video game console, which originally launched in 1989.
 It is immediately worth noting that some of the content on the site technically came out after the release of the world wide web in 1993
 My reason for including games and accessories from 1994 is so that I could have more content on the site.
-The time frame intended for this site is just on the cusp of the launch of sega saturn and sega 32x, both released at the end of 1994.
+The time frame intended for this site is just on the cusp of the launch of SEGA SATURN and SEGA 32x, both released at the end of 1994.
 For the sake of the project requirements, assume this site existed since the launch of the GENESIS, and the current iteration is the end of it's lifespan.
+
+Classes were used on numerous occasions for both javascripting and better CSS control
+ID used seldomly, only for scripting
+
+Three individual js documents were used for three different pages
+    -home page for carousel
+    -game guides for download selector
+    -feedback form for submission
+I avoided using PHP due to it not agreeing with Git Pages, so the feedback form is operating as a functional but purely visual placeholder, where only the first name of the person
+is grabbed using javascript, and displayed in a thank you message.
+
+I am certain you will find all the features on your own but to summarize the most interesting parts of this site
+    -homepage contains a functional carousel for 3 unique images, with both directional arrows and togglable image specific buttons
+    -homepage also contains hover interactable gameplay gifs for the TOP PICKS section
+    -peripherals page contains hover interactable info blurbs for all peripheral/addon elements
+    -game guides page contains two downloadable game guide pdfs for the games sonic and sonic 2, error message for all other games on the list
+    -feedback page has a submission message for when form is filled and submitted
+    -about page contains a short but interesting history of sega
+    -games list page contains over 700 genesis games, and is divided by base model, sega cd, and 32x (with the message coming soon since they would not have released yet)
+
+CSS is extensive but organized mainly based on page, with the exeption of grouped elements to save lines. 
+CSS was used in tandom with JS for the carousel, peripherals, and feedback from.
+After the last class, I modified all pages to wrap when viewport is shrunk. Since this was built from the ground up without mobile in mind, it is still not perfect.
+
+The content for the about page, privacy policy, warranty, trouble shooting, lists of games, and console specs were either directly copied and pasted from listed sources,
+or minorly modified for period correctness. No code was copied and pasted from external sources, only raw text. Git commits will back me up.
 
 SOURCES
     IMAGES
@@ -64,11 +90,17 @@ SOURCES
         sega saturn article reference https://www.segasaturnshiro.com/2020/05/03/saturn-lands-in-america/
     COPY AND PASTED/MINORLY MODIFIED INFORMATION
         footer copyright paragraph from segas official website https://www.sega.com/
+        Support page 
+            copied warranty and trouble shooting sega genesis manual reference http://www.videogameconsolelibrary.com/images/Manuals/89_Sega_Genesis_Model_2-Manual.pdf
+        privacy policy
+            content directly copied from https://privacy.sega.com/sega-of-america-inc-privacy-policy formatting and minor tweaks by me
+        console specs
+            copy pasted from https://en.wikipedia.org/wiki/Sega_Genesis#Technical_specifications with formatting and minor tweaks by me
         genesis games lists 
             https://en.wikipedia.org/wiki/List_of_Sega_Genesis_games# 
             https://en.wikipedia.org/wiki/List_of_Sega_CD_games 
             https://en.wikipedia.org/wiki/List_of_32X_games
-            Organized into copy pastable format by https://grok.com/
+            Organized into copy pastable format by https://grok.com/ formatted by me
         about page
             sega history https://en.wikipedia.org/wiki/Sega#1940%E2%80%931982:_Origins_and_arcade_success
             periscope https://en.wikipedia.org/wiki/Periscope_(arcade_game)
