@@ -27,7 +27,7 @@ h1 {
     color: white;
 }
 .blockcontainer {display: block;}/*generic class for making elements block-level*/
-/*head controls*/
+/*header controls*/
 header {
     background-color: black;
     font-size: 20px;
@@ -311,11 +311,11 @@ h1, .homecontainer section ul {/*h1 and homecontainer section ul just happened t
     margin: 0;
     padding: 1rem 0;
 }
-.newscontainer figure {
+.newscontainer figure {/*flex is solely for the two side by side saturn images*/
     display: flex;
     margin: 0;
 }
-.threeimages figure {
+.threeimages figure {/*2nd article has a 3 image pyramid so they are defined as a block*/
     display: block;
     width: 700px;
     padding-right: 0rem;
@@ -355,10 +355,6 @@ h1, .homecontainer section ul {/*h1 and homecontainer section ul just happened t
     height: 39vw;
 }
 .aboutpage figcaption {text-align: center;}
-.aboutpage a, .consolespecscontainer a, .privacycontainer a, .supportcontainer a {
-    color: red;
-    margin-left: 2rem;
-}
 /*footer controls*/
 footer {
     padding: 1rem 2rem;
@@ -372,7 +368,7 @@ footer> :first-child {
     padding-right: 10rem;
 }
 footer li {padding-bottom: 1rem;}
-/*consolidated elements using same controls*/
+/*majority of consolidated elements using same controls*/
 .gotoslide button:hover, button.active, .homecontainer section div figure, .peripheralcontainer section figure, .peripheralinfo ul, .arrowscontainer button:hover {
     background-color: #669ED5;
 }
@@ -383,3 +379,10 @@ footer, .aboutpage section h2, .newscontainer, .consolespecscontainer, .gamescon
     display: flex;
     justify-content: center;
 }
+.aboutpage a, .consolespecscontainer a, .privacycontainer a, .supportcontainer a {/*source hyperlinks*/
+    color: red;
+    margin-left: 2rem;
+}
+/*the inherent problem with consolidating everything like this is, if I only need to change one of these shared properties for only one element, I now have to remove it from this block
+and add it to it's own space, if I don't, I may see a bunch get messed up at once. I could consolidate more, but for this reason I have elected not to. Specifity may also become messed up
+by moving things from one part of the CSS to another*/
