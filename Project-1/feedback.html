@@ -34,7 +34,7 @@
                     <label for="name">Your Name (required)</label><br><!--I mean you can lie about who you are but we need to call you something-->
                     <input type="text" id="fname" name="fname" placeholder="First Name" required>
                     <input type="text" id="lname" name="lname" placeholder="Last Name" required><br>
-                    <label for="email">Your Email (required)</label><br><!--so we can get back to you if needed-->
+                    <label for="email">Your Email (required)</label><br><!--so there is a point of contact if needed (i.e. your feedback is you saying your console broke, maybe sega can help)-->
                     <input type="text" id="email" name="email" placeholder="Email" required><br>
                     <label for="phone">Your Phone Number (optional)</label><br>
                     <input type="text" id="phone" name="phone" placeholder="000-000-0000"><br>
@@ -43,7 +43,8 @@
                     <input type="button" value="Submit" id="submit"><!--given the lack of php, I am using javascript to handle the submission-->
                     <input type="Reset" value="Reset" id="reset">
                     <div class="" id="thankyoumsg"><!--fake submission completion message, all its actually doing is covering the fieldset content-->
-                        <h2>Thank you for your feedback </h2>
+                        <h2>Thank you for your feedback </h2><!--technically this div needs nothing in it as this whole message is added with the person's first name in javascript
+                        I think it's good to have a placeholder none the less-->
                         <p>Your feedback will be passed on to the appropriate team.<br> We appreciate you taking the time to share your thoughts with us.</p>
                     </div>
                 </fieldset>
